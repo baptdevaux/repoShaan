@@ -72,6 +72,10 @@ public class Application {
 	private Application() {
 	}
 
+	public ISpecialisationAcquisRepository getSpecialisationAcquisRepo() {
+		return specialisationAcquisRepo;
+	}
+
 	public static Application getInstance() {
 		if (instance == null) {
 			instance = new Application();
