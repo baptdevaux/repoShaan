@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?PowerDesigner AppLocale="UTF16" ID="{E7B54C78-FDB5-492F-96B4-D7B18F0DC369}" Label="" LastModificationDate="1573633708" Name="ModeleOrienteObjet_2" Objects="147" Symbols="41" Target="Java" TargetLink="Reference" Type="{18112060-1A4B-11D1-83D9-444553540000}" signature="CLD_OBJECT_MODEL" version="15.1.0.2850"?>
+<?PowerDesigner AppLocale="UTF16" ID="{E7B54C78-FDB5-492F-96B4-D7B18F0DC369}" Label="" LastModificationDate="1573634782" Name="ModeleOrienteObjet_2" Objects="147" Symbols="41" Target="Java" TargetLink="Reference" Type="{18112060-1A4B-11D1-83D9-444553540000}" signature="CLD_OBJECT_MODEL" version="15.1.0.2850"?>
 <!-- Veuillez ne pas modifier ce fichier -->
 
 <Model xmlns:a="attribute" xmlns:c="collection" xmlns:o="object">
@@ -1745,13 +1745,13 @@ MULA 0 Arial,8,N</a:FontList>
 </o:AssociationSymbol>
 <o:AssociationSymbol Id="o52">
 <a:CreationDate>1573570353</a:CreationDate>
-<a:ModificationDate>1573633708</a:ModificationDate>
+<a:ModificationDate>1573634778</a:ModificationDate>
 <a:SourceTextOffset>(-1172, -512)</a:SourceTextOffset>
 <a:DestinationTextOffset>(2887, -1600)</a:DestinationTextOffset>
-<a:Rect>((11466,-53605), (19137,-21644))</a:Rect>
-<a:ListOfPoints>((16215,-21644),(16215,-50932),(11466,-50932))</a:ListOfPoints>
+<a:Rect>((11466,-53605), (19137,-21479))</a:Rect>
+<a:ListOfPoints>((16133,-21479),(16133,-50932),(11466,-50932))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
-<a:ArrowStyle>8</a:ArrowStyle>
+<a:ArrowStyle>0</a:ArrowStyle>
 <a:LineColor>16744448</a:LineColor>
 <a:ShadowColor>12632256</a:ShadowColor>
 <a:FontList>DISPNAME 0 Arial,8,N
@@ -2476,7 +2476,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Code>Personnage</a:Code>
 <a:CreationDate>1573556749</a:CreationDate>
 <a:Creator>utilisateur</a:Creator>
-<a:ModificationDate>1573633542</a:ModificationDate>
+<a:ModificationDate>1573634782</a:ModificationDate>
 <a:Modifier>utilisateur</a:Modifier>
 <a:UseParentNamespace>0</a:UseParentNamespace>
 <c:Attributes>
@@ -3458,7 +3458,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Code>Specialisation</a:Code>
 <a:CreationDate>1573565550</a:CreationDate>
 <a:Creator>utilisateur</a:Creator>
-<a:ModificationDate>1573633216</a:ModificationDate>
+<a:ModificationDate>1573634782</a:ModificationDate>
 <a:Modifier>utilisateur</a:Modifier>
 <a:UseParentNamespace>0</a:UseParentNamespace>
 <c:Attributes>
@@ -3980,11 +3980,12 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Code>association15</a:Code>
 <a:CreationDate>1573570353</a:CreationDate>
 <a:Creator>utilisateur</a:Creator>
-<a:ModificationDate>1573570398</a:ModificationDate>
+<a:ModificationDate>1573634782</a:ModificationDate>
 <a:Modifier>utilisateur</a:Modifier>
 <a:RoleBName>specialisations</a:RoleBName>
 <a:RoleAMultiplicity>0..*</a:RoleAMultiplicity>
 <a:RoleBMultiplicity>0..*</a:RoleBMultiplicity>
+<a:RoleANavigability>1</a:RoleANavigability>
 <a:ExtendedAttributesText>{0DEDDB90-46E2-45A0-886E-411709DA0DC9},Java,224={72FA5C48-5524-4DF7-8187-ABB19AB5AF9E},roleAContainer,6=&lt;None&gt;
 {F6FFC71C-C472-4261-A710-B0BCC0BF4D58},roleAImplementationClass,6=&lt;None&gt;
 {C11C9F66-6453-43A2-8824-6654518CF65A},roleBImplementationClass,17=java.util.HashSet
