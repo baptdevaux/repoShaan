@@ -7,15 +7,14 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.TypedQuery;
 
 import createurShaan.Application;
-import createurShaan.model.Personnage;
-import createurShaan.repository.IPersonnageRepository;
+import createurShaan.model.Race;
+import createurShaan.repository.IRaceRepository;
 
+public class RaceRepositoryJpa implements IRaceRepository {
 
-public class PersonnageRepositoryJpa implements IPersonnageRepository{
-	
 	@Override
-	public List<Personnage> findAll() {
-		List<Personnage> list = null;
+	public List<Race> findAll() {
+		List<Race> list = null;
 		
 		EntityManager em = null;
 		EntityTransaction tx = null;
@@ -26,7 +25,7 @@ public class PersonnageRepositoryJpa implements IPersonnageRepository{
 			
 			tx.begin();
 			
-			TypedQuery<Personnage> query = em.createQuery("from Personnage", Personnage.class);
+			TypedQuery<Race> query = em.createQuery("from Race", Race.class);
 			
 			list = query.getResultList();
 			
@@ -46,8 +45,8 @@ public class PersonnageRepositoryJpa implements IPersonnageRepository{
 	}
 
 	@Override
-	public Personnage find(Long id) {
-		Personnage obj = null;
+	public Race find(Long id) {
+		Race obj = null;
 
 		EntityManager em = null;
 		EntityTransaction tx = null;
@@ -58,7 +57,7 @@ public class PersonnageRepositoryJpa implements IPersonnageRepository{
 
 			tx.begin();
 
-			obj = em.find(Personnage.class, id);
+			obj = em.find(Race.class, id);
 
 			tx.commit();
 
@@ -77,7 +76,7 @@ public class PersonnageRepositoryJpa implements IPersonnageRepository{
 	}
 
 	@Override
-	public Personnage save(Personnage obj) {
+	public Race save(Race obj) {
 		EntityManager em = null;
 		EntityTransaction tx = null;
 
@@ -105,7 +104,7 @@ public class PersonnageRepositoryJpa implements IPersonnageRepository{
 	}
 
 	@Override
-	public void delete(Personnage obj) {
+	public void delete(Race obj) {
 		EntityManager em = null;
 		EntityTransaction tx = null;
 

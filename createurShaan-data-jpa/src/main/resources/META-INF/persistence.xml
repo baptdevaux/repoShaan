@@ -16,6 +16,15 @@
 		<class>createurShaan.model.PouvoirPersonnage</class>
 		<class>createurShaan.model.Specialisation</class>
 
+		<class>createurShaan.model.Utilisateur</class>
+		<class>createurShaan.model.TableDeJeu</class>
+		<class>createurShaan.model.AlterationEtat</class>
+		<class>createurShaan.model.AlterationPersonnage</class>
+		<class>createurShaan.model.Race</class>
+		<class>createurShaan.model.Peuple</class>
+		<class>createurShaan.model.Metier</class>
+		<class>createurShaan.model.Caste</class>
+
 		<properties>
 			<property name="javax.persistence.jdbc.driver"
 				value="org.postgresql.Driver" />

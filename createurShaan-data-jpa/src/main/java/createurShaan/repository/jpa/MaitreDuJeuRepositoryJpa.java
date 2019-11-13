@@ -7,15 +7,15 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.TypedQuery;
 
 import createurShaan.Application;
-import createurShaan.model.Personnage;
-import createurShaan.repository.IPersonnageRepository;
+import createurShaan.model.MaitreDuJeu;
+import createurShaan.repository.IMaitreDuJeuRepository;
 
 
-public class PersonnageRepositoryJpa implements IPersonnageRepository{
+public class MaitreDuJeuRepositoryJpa implements IMaitreDuJeuRepository{
 	
 	@Override
-	public List<Personnage> findAll() {
-		List<Personnage> list = null;
+	public List<MaitreDuJeu> findAll() {
+		List<MaitreDuJeu> list = null;
 		
 		EntityManager em = null;
 		EntityTransaction tx = null;
@@ -26,7 +26,7 @@ public class PersonnageRepositoryJpa implements IPersonnageRepository{
 			
 			tx.begin();
 			
-			TypedQuery<Personnage> query = em.createQuery("from Personnage", Personnage.class);
+			TypedQuery<MaitreDuJeu> query = em.createQuery("from MaitreDuJeu", MaitreDuJeu.class);
 			
 			list = query.getResultList();
 			
@@ -46,8 +46,8 @@ public class PersonnageRepositoryJpa implements IPersonnageRepository{
 	}
 
 	@Override
-	public Personnage find(Long id) {
-		Personnage obj = null;
+	public MaitreDuJeu find(Long id) {
+		MaitreDuJeu obj = null;
 
 		EntityManager em = null;
 		EntityTransaction tx = null;
@@ -58,7 +58,7 @@ public class PersonnageRepositoryJpa implements IPersonnageRepository{
 
 			tx.begin();
 
-			obj = em.find(Personnage.class, id);
+			obj = em.find(MaitreDuJeu.class, id);
 
 			tx.commit();
 
@@ -77,7 +77,7 @@ public class PersonnageRepositoryJpa implements IPersonnageRepository{
 	}
 
 	@Override
-	public Personnage save(Personnage obj) {
+	public MaitreDuJeu save(MaitreDuJeu obj) {
 		EntityManager em = null;
 		EntityTransaction tx = null;
 
@@ -105,7 +105,7 @@ public class PersonnageRepositoryJpa implements IPersonnageRepository{
 	}
 
 	@Override
-	public void delete(Personnage obj) {
+	public void delete(MaitreDuJeu obj) {
 		EntityManager em = null;
 		EntityTransaction tx = null;
 

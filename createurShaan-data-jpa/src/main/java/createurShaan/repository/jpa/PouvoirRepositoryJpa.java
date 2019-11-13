@@ -7,31 +7,29 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.TypedQuery;
 
 import createurShaan.Application;
-import createurShaan.model.Personnage;
-import createurShaan.repository.IPersonnageRepository;
+import createurShaan.repository.IPouvoirRepository;
+import createurShaan.model.Pouvoir;
 
-
-public class PersonnageRepositoryJpa implements IPersonnageRepository{
-	
+public class PouvoirRepositoryJpa  implements IPouvoirRepository{
 	@Override
-	public List<Personnage> findAll() {
-		List<Personnage> list = null;
-		
+	public List<Pouvoir> findAll() {
+		List<Pouvoir> list = null;
+
 		EntityManager em = null;
 		EntityTransaction tx = null;
-		
+
 		try {
 			em = Application.getInstance().getEmf().createEntityManager();
 			tx = em.getTransaction();
-			
+
 			tx.begin();
-			
-			TypedQuery<Personnage> query = em.createQuery("from Personnage", Personnage.class);
-			
+
+			TypedQuery<Pouvoir> query = em.createQuery("from Pouvoir", Pouvoir.class);
+
 			list = query.getResultList();
-			
+
 			tx.commit();
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 			if (tx != null && tx.isActive()) {
@@ -42,12 +40,13 @@ public class PersonnageRepositoryJpa implements IPersonnageRepository{
 				em.close();
 			}
 		}
+
 		return list;
 	}
 
 	@Override
-	public Personnage find(Long id) {
-		Personnage obj = null;
+	public Pouvoir find(Long id) {
+		Pouvoir obj = null;
 
 		EntityManager em = null;
 		EntityTransaction tx = null;
@@ -58,7 +57,7 @@ public class PersonnageRepositoryJpa implements IPersonnageRepository{
 
 			tx.begin();
 
-			obj = em.find(Personnage.class, id);
+			obj = em.find(Pouvoir.class, id);
 
 			tx.commit();
 
@@ -77,7 +76,7 @@ public class PersonnageRepositoryJpa implements IPersonnageRepository{
 	}
 
 	@Override
-	public Personnage save(Personnage obj) {
+	public Pouvoir save(Pouvoir obj) {
 		EntityManager em = null;
 		EntityTransaction tx = null;
 
@@ -101,11 +100,10 @@ public class PersonnageRepositoryJpa implements IPersonnageRepository{
 			}
 		}
 		return obj;
-	
 	}
 
 	@Override
-	public void delete(Personnage obj) {
+	public void delete(Pouvoir obj) {
 		EntityManager em = null;
 		EntityTransaction tx = null;
 
@@ -129,5 +127,4 @@ public class PersonnageRepositoryJpa implements IPersonnageRepository{
 			}
 		}
 	}
-
 }
