@@ -21,11 +21,6 @@ import createurShaan.repository.jpa.MotivationRepositoryJpa;
 import createurShaan.repository.jpa.PouvoirPersonnageRepositoryJpa;
 import createurShaan.repository.jpa.PouvoirRepositoryJpa;
 import createurShaan.repository.jpa.SpecialisationRepositoryJpa;
-import tpVolRepository.IAeroportRepository;
-import tpVolRepository.ICompagnieVolRepository;
-import tpVolRepository.Jpa.AeroportRepositoryJpa;
-
-
 import createurShaan.repository.IAlterationEtatRepository;
 import createurShaan.repository.IAlterationPersonnageRepository;
 import createurShaan.repository.ICasteRepository;
@@ -47,12 +42,11 @@ import createurShaan.repository.jpa.PeupleRepositoryJpa;
 import createurShaan.repository.jpa.RaceRepositoryJpa;
 import createurShaan.repository.jpa.TableDeJeuRepositoryJpa;
 
-
 public class Application {
 	private static Application instance = null;
-	
+
 	private final EntityManagerFactory emf = Persistence.createEntityManagerFactory("createurShaan");
-	
+
 	private final IAlterationPersonnageRepository alterationPersonnageRepo = new AlterationPersonnageRepositoryJpa();
 	private final IAlterationEtatRepository alterationEtatRepo = new AlterationEtatRepositoryJpa();
 	private final ICasteRepository casteRepo = new CasteRepositoryJpa();
@@ -62,12 +56,20 @@ public class Application {
 	private final IPersonnageRepository personnageRepo = new PersonnageRepositoryJpa();
 	private final IPeupleRepository peupleRepo = new PeupleRepositoryJpa();
 	private final IRaceRepository raceRepo = new RaceRepositoryJpa();
-	private final ITableDeJeuRepository tableDeJeuRepo = new TableDeJeuRepositoryJpa();
-	
-	
+	private final ITableDeJeuRepository tableDeJeuRepo = new TableDeJeuRepositoryJpa();	
+	private final IAcquisRepository acquisRepo = new AcquisRepositoryJpa();
+	private final IBonusPersonnageRepository bonusPersonageRepo = new BonusPersonnageRepositoryJpa();
+	private final IDomainePersonnageRepository domainePersonnageRepo = new DomainePersonnageRepositoryJpa();
+	private final IDomaineRepository domaineRepo = new DomaineRepositoryJpa();
+	private final IMotivationPersonnageRepository motivationPersonnageRepo = new MotivationPersonnageRepositoryJpa();
+	private final IMotivationRepository motivationRepo = new MotivationRepositoryJpa();
+	private final IPouvoirPersonnageRepository pouvoirPersonnageRepo = new PouvoirPersonnageRepositoryJpa();
+	private final IPouvoirRepository pouvoirRepo = new PouvoirRepositoryJpa();
+	private final ISpecialisationRepository specialisationRepo = new SpecialisationRepositoryJpa();
+
 	private Application() {
 	}
-	
+
 	public static Application getInstance() {
 		if (instance == null) {
 			instance = new Application();
@@ -79,40 +81,82 @@ public class Application {
 	public EntityManagerFactory getEmf() {
 		return emf;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	private final IAcquisRepository acquisRepo = new AcquisRepositoryJpa();
-	private final IBonusPersonnageRepository bonusPersonageRepo = new BonusPersonnageRepositoryJpa();
-	private final IDomainePersonnageRepository domainePersonnageRepo = new DomainePersonnageRepositoryJpa();
-	private final IDomaineRepository domaineRepo = new DomaineRepositoryJpa();
-	private final IMotivationPersonnageRepository motivationPersonnageRepo = new MotivationPersonnageRepositoryJpa();
-	private final IMotivationRepository motivationRepo = new MotivationRepositoryJpa();
-	private final IPouvoirPersonnageRepository pouvoirPersonnageRepo = new PouvoirPersonnageRepositoryJpa();
-	private final IPouvoirRepository pouvoirRepo = new PouvoirRepositoryJpa();
-	private final ISpecialisationRepository specialisationRepo = new SpecialisationRepositoryJpa();
-	
-	
-	
+
+	public IAlterationPersonnageRepository getAlterationPersonnageRepo() {
+		return alterationPersonnageRepo;
+	}
+
+	public IAlterationEtatRepository getAlterationEtatRepo() {
+		return alterationEtatRepo;
+	}
+
+	public ICasteRepository getCasteRepo() {
+		return casteRepo;
+	}
+
+	public IJoueurRepository getJoueurRepo() {
+		return joueurRepo;
+	}
+
+	public IMaitreDuJeuRepository getMaitreDuJeuRepo() {
+		return maitreDuJeuRepo;
+	}
+
+	public IMetierRepository getMetierRepo() {
+		return metierRepo;
+	}
+
+	public IPersonnageRepository getPersonnageRepo() {
+		return personnageRepo;
+	}
+
+	public IPeupleRepository getPeupleRepo() {
+		return peupleRepo;
+	}
+
+	public IRaceRepository getRaceRepo() {
+		return raceRepo;
+	}
+
+	public ITableDeJeuRepository getTableDeJeuRepo() {
+		return tableDeJeuRepo;
+	}
+
+	public IAcquisRepository getAcquisRepo() {
+		return acquisRepo;
+	}
+
+	public IBonusPersonnageRepository getBonusPersonageRepo() {
+		return bonusPersonageRepo;
+	}
+
+	public IDomainePersonnageRepository getDomainePersonnageRepo() {
+		return domainePersonnageRepo;
+	}
+
+	public IDomaineRepository getDomaineRepo() {
+		return domaineRepo;
+	}
+
+	public IMotivationPersonnageRepository getMotivationPersonnageRepo() {
+		return motivationPersonnageRepo;
+	}
+
+	public IMotivationRepository getMotivationRepo() {
+		return motivationRepo;
+	}
+
+	public IPouvoirPersonnageRepository getPouvoirPersonnageRepo() {
+		return pouvoirPersonnageRepo;
+	}
+
+	public IPouvoirRepository getPouvoirRepo() {
+		return pouvoirRepo;
+	}
+
+	public ISpecialisationRepository getSpecialisationRepo() {
+		return specialisationRepo;
+	}
+
+
 }
