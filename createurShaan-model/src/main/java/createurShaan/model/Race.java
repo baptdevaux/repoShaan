@@ -4,7 +4,10 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 import javax.persistence.Version;
 
 @Entity
@@ -17,11 +20,14 @@ public class Race {
 	private int version;
 	@Column
 	private String nomRace;
-	@Column
+	@OneToOne
+	@JoinColumn(name = "Domaine_ID")
 	private Domaine domaine;
-	@Column
+	@OneToOne
+	@JoinColumn(name = "Specialisation_1_ID")
 	private Specialisation specialisation1;
-	@Column
+	@OneToOne
+	@JoinColumn(name = "Specialisation_2_ID")
 	private Specialisation specialisation2;
 	@Column
 	private String tailleEstimation;
@@ -31,9 +37,11 @@ public class Race {
 	private String langues;
 	@Column
 	private String pouvoirDeRace;
-	@Column
+	@OneToOne
+	@JoinColumn(name = "Peuple_ID")
 	private Peuple peupleOrigine;
-	@Column
+	@OneToOne
+	@JoinColumn(name = "Caste_ID")
 	private Caste castePredilection;
 	@Column
 	private String elementTotem;

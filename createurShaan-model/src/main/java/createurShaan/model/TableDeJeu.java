@@ -7,6 +7,10 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 import javax.persistence.Version;
@@ -23,9 +27,10 @@ public class TableDeJeu {
 	private String notes;
 	@Column
 	private String timer;
-	@Transient
+	@ManyToOne
+	@JoinColumn(name = "Maitre_Du_Jeu_ID")
 	private MaitreDuJeu maitreDuJeu;
-	@Transient
+	@OneToMany(mappedBy = "parties")
 	private List<Personnage> personnages = new ArrayList<Personnage>();
 
 	public TableDeJeu() {

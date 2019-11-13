@@ -4,7 +4,10 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 import javax.persistence.Version;
 
 @Entity
@@ -17,11 +20,14 @@ public class Peuple {
 	private int version;
 	@Column
 	private String nomPeuple;
-	@Column
+	@OneToOne
+	@JoinColumn(name = "Domaine_ID")
 	private Domaine domaine;
-	@Column
+	@OneToOne
+	@JoinColumn(name = "Specialisation_1_ID")
 	private Specialisation specialisation1;
-	@Column
+	@OneToOne
+	@JoinColumn(name = "Specialisation_2_ID")
 	private Specialisation specialisation2;
 
 	public Peuple() {

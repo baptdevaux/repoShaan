@@ -6,6 +6,8 @@ import javax.persistence.Version;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Entity
 @Table
@@ -15,9 +17,11 @@ public class AlterationPersonnage {
 	private Long id;
 	@Version
 	private int version;
-	@Transient
+	@ManyToOne
+	@JoinColumn(name = "Alteration_ID")
 	private Personnage persoLie;
-	@Transient
+	@ManyToOne
+	@JoinColumn(name = "Personnage_ID")
 	private AlterationEtat alterationEtat;
 
 	public AlterationPersonnage() {

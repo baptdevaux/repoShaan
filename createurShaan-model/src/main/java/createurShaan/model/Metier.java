@@ -4,6 +4,8 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 import javax.persistence.Version;
@@ -20,9 +22,11 @@ public class Metier {
 	private String nomMetier;
 	@Column
 	private String voie;
-	@Column
+	@OneToOne
+	@JoinColumn(name = "Specialisation_ID")
 	private Specialisation specialisation;
-	@Transient
+	@OneToOne
+	@JoinColumn(name = "Caste_ID")
 	private Caste casteLie;
 
 	public Metier() {

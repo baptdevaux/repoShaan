@@ -5,13 +5,16 @@ import java.util.List;
 
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 
 @Entity
 @DiscriminatorValue("Joueur")
 public class Joueur extends Utilisateur{
-	@Transient
+	@OneToMany
+	@JoinColumn(name = "Personnage_ID")
 	private List<Personnage> personnages = new ArrayList<Personnage>();
 
 	public Joueur() {

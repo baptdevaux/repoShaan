@@ -7,6 +7,9 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 import javax.persistence.Version;
@@ -21,9 +24,10 @@ public class Caste {
 	private int version;
 	@Column
 	private String nomCaste;
-	@Column
+	@OneToOne
+	@JoinColumn(name = "Domaine_ID")
 	private Domaine domaine;
-	@Transient
+	@OneToMany(mappedBy = "casteLie")
 	private List<Metier> metiers = new ArrayList<Metier>();
 
 	public Caste() {

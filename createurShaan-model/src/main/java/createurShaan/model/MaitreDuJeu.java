@@ -5,14 +5,15 @@ import java.util.List;
 
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
+import javax.persistence.OneToMany;
 import javax.persistence.Transient;
 
 @Entity
 @DiscriminatorValue("Maitre du jeu")
 public class MaitreDuJeu extends Utilisateur {
-	@Transient
+	@OneToMany(mappedBy = "createur")
 	private List<PersonnageNonJoueur> pnj = new ArrayList<PersonnageNonJoueur>();
-	@Transient
+	@OneToMany(mappedBy = "maitreDuJeu")
 	private List<TableDeJeu> creation = new ArrayList<TableDeJeu>();
 
 	public MaitreDuJeu() {
