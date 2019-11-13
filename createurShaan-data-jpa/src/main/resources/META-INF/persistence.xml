@@ -24,6 +24,10 @@
 		<class>createurShaan.model.Metier</class>
 		<class>createurShaan.model.Caste</class>
 		<class>createurShaan.model.SpecialisationAcquis</class>
+		<class>createurShaan.model.Personnage</class>
+		<class>createurShaan.model.MaitreDuJeu</class>
+		<class>createurShaan.model.Joueur</class>
+		<class>createurShaan.model.PersonnageNonJoueur</class>
 
 		<properties>
 			<property name="javax.persistence.jdbc.driver"

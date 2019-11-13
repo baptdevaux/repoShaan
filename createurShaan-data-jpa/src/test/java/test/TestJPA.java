@@ -9,21 +9,37 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
 import createurShaan.Application;
+import createurShaan.model.Acquis;
 import createurShaan.model.AlterationEtat;
+import createurShaan.model.BonusPersonnage;
 import createurShaan.model.Caste;
+import createurShaan.model.Domaine;
 import createurShaan.model.DomainePersonnage;
 import createurShaan.model.Metier;
+import createurShaan.model.Motivation;
+import createurShaan.model.MotivationPersonnage;
 import createurShaan.model.Personnage;
 import createurShaan.model.Peuple;
+import createurShaan.model.Pouvoir;
+import createurShaan.model.PouvoirPersonnage;
 import createurShaan.model.Race;
+import createurShaan.model.Specialisation;
 import createurShaan.model.TableDeJeu;
+import createurShaan.repository.IAcquisRepository;
 import createurShaan.repository.IAlterationEtatRepository;
+import createurShaan.repository.IBonusPersonnageRepository;
 import createurShaan.repository.ICasteRepository;
 import createurShaan.repository.IDomainePersonnageRepository;
+import createurShaan.repository.IDomaineRepository;
 import createurShaan.repository.IMetierRepository;
+import createurShaan.repository.IMotivationPersonnageRepository;
+import createurShaan.repository.IMotivationRepository;
 import createurShaan.repository.IPersonnageRepository;
 import createurShaan.repository.IPeupleRepository;
+import createurShaan.repository.IPouvoirPersonnageRepository;
+import createurShaan.repository.IPouvoirRepository;
 import createurShaan.repository.IRaceRepository;
+import createurShaan.repository.ISpecialisationRepository;
 import createurShaan.repository.ITableDeJeuRepository;
 
 
@@ -39,7 +55,10 @@ public class TestJPA {
 	
 	IPersonnageRepository personnageRepository = Application.getInstance().getPersonnageRepo();
 	
-	
+	theau.setAge(22);
+	theau.setAme(5);
+	theau=personnageRepository.save(theau);
+
 	
 	
 	Peuple sable = new Peuple();
@@ -47,6 +66,7 @@ public class TestJPA {
 	IPeupleRepository peupleRepository = Application.getInstance().getPeupleRepo();
 	
 	sable.setNomPeuple("Sable");
+
 	
 	sable = peupleRepository.save(sable);
 	
@@ -114,6 +134,77 @@ public class TestJPA {
 	combatTheau.setRangDomaine(5);
 	
 	combatTheau = domainePersonnageRepository.save(combatTheau);
+	
+	
+	
+	Domaine rituel = new Domaine();
+	
+	IDomaineRepository domaineRepository = Application.getInstance().getDomaineRepo();
+	
+	rituel.setDescription("Représente la foi dans ");
+	rituel.setNom("Rituels");
+	
+	rituel = domaineRepository.save(rituel);
+	
+	
+	
+	BonusPersonnage bonus = new BonusPersonnage();
+	
+	IBonusPersonnageRepository bonusPersonnageRepository =  Application.getInstance().getBonusPersonageRepo();
+	
+	bonus.setBonusPerso(5);
+	bonus.setBonusAcquis(3);
+	
+	bonus = bonusPersonnageRepository.save(bonus);
+	
+	
+	
+	Acquis roulotte = new Acquis();
+	
+	IAcquisRepository acquisRepository = Application.getInstance().getAcquisRepo();
+	
+	roulotte.setCategorie("roulotte attelée");
+	roulotte.setType("véhicule");
+	roulotte.setDescription("Ceci est une roulotte attelée");
+	
+	roulotte = acquisRepository.save(roulotte);
+	
+	
+	Specialisation vigilance = new Specialisation();
+	
+	ISpecialisationRepository specialisationRepository = Application.getInstance().getSpecialisationRepo();
+	
+	vigilance.setDescription("Parce qu'il faut toujours être à l'affût");
+	vigilance.setNom("vigilance");
+	
+	vigilance = specialisationRepository.save(vigilance);
+	
+	MotivationPersonnage motivTheau = new MotivationPersonnage();
+	IMotivationPersonnageRepository motivationPersonnageRepository = Application.getInstance().getMotivationPersonnageRepo();
+	motivTheau=motivationPersonnageRepository.save(motivTheau);
+	
+	Motivation motiv = new Motivation();
+	motiv.setDescription("aucune");
+	motiv.setNomMotivation("motivé");
+	IMotivationRepository motivRepository = Application.getInstance().getMotivationRepo();
+	motiv=motivRepository.save(motiv);
+	
+	PouvoirPersonnage artsThéau = new PouvoirPersonnage();
+	IPouvoirPersonnageRepository pouvoirPersonnageRepository = Application.getInstance().getPouvoirPersonnageRepo();
+	artsThéau= pouvoirPersonnageRepository.save(artsThéau);
+	
+	Pouvoir power = new Pouvoir();
+	IPouvoirRepository pouvoirRepository = Application.getInstance().getPouvoirRepo();
+	power.setActivation("activaio");
+	power=pouvoirRepository.save(power);
+	
+	
+		
+		
+	
+	
+	
+	
 	
 	
 	

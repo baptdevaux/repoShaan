@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.DiscriminatorColumn;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
@@ -14,7 +15,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Transient;
 import javax.persistence.Version;
-
+@Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name = "type")
 public class Personnage {
@@ -41,7 +42,7 @@ public class Personnage {
 	private int esprit;
 	
 	@OneToMany(mappedBy = "persoLie")
-	private List<AlterationEtat> alterationPersonnage = new ArrayList<AlterationEtat>();
+	private List<AlterationPersonnage> alterationPersonnage = new ArrayList<AlterationPersonnage>();
 	@ManyToOne
 	@JoinColumn(name = "Joueur_ID")
 	private Joueur joueur;
@@ -153,11 +154,11 @@ public class Personnage {
 		this.esprit = esprit;
 	}
 
-	public List<AlterationEtat> getAlterationPersonnage() {
+	public List<AlterationPersonnage> getAlterationPersonnage() {
 		return alterationPersonnage;
 	}
 
-	public void setAlterationPersonnage(List<AlterationEtat> alterationPersonnage) {
+	public void setAlterationPersonnage(List<AlterationPersonnage> alterationPersonnage) {
 		this.alterationPersonnage = alterationPersonnage;
 	}
 
