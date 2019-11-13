@@ -3,6 +3,8 @@ package createurShaan.model;
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Transient;
 import javax.persistence.Version;
 
@@ -40,7 +42,8 @@ public class Pouvoir {
 	@Column
 	private String description;
 	
-	@Transient
+	@ManyToOne
+	@JoinColumn (name = "pouvoirsDomaine")
 	private Domaine domaineLie;
 
 	public Long getId() {

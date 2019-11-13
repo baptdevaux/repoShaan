@@ -1,29 +1,33 @@
 package createurShaan.model;
 
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 import javax.persistence.Version;
 
 @Entity
 @Table
-public class MotivationPersonnage {
-	
+public class SpecialisationAcquis {
+
 	@Id
 	@GeneratedValue
 	private Long id;
 	@Version
 	private Integer version;
 	
-	@Transient
-	private Personnage persoLie;
 	@ManyToOne
-	@JoinColumn (name = "motivation_id")
-	private Motivation motivation;
+	@JoinColumn(name = "acquisSpe")
+	private Specialisation specialisation;
+	@ManyToOne
+	@JoinColumn (name = "speAcquis")
+	private Acquis acquis;
+	
 	
 	public Long getId() {
 		return id;
@@ -37,22 +41,21 @@ public class MotivationPersonnage {
 	public void setVersion(Integer version) {
 		this.version = version;
 	}
-	public Personnage getPersoLie() {
-		return persoLie;
+	public Specialisation getSpecialisation() {
+		return specialisation;
 	}
-	public void setPersoLie(Personnage persoLie) {
-		this.persoLie = persoLie;
+	public void setSpecialisation(Specialisation specialisation) {
+		this.specialisation = specialisation;
 	}
-	public Motivation getMotivation() {
-		return motivation;
+	public Acquis getAcquis() {
+		return acquis;
 	}
-	public void setMotivation(Motivation motivation) {
-		this.motivation = motivation;
+	public void setAcquis(Acquis acquis) {
+		this.acquis = acquis;
 	}
-	public MotivationPersonnage() {
+	public SpecialisationAcquis() {
 		super();
 	}
 	
 	
-
 }

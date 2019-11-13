@@ -7,6 +7,9 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 import javax.persistence.Version;
@@ -27,10 +30,11 @@ public class Specialisation {
 	@Column
 	private String metier;
 	
-	@Transient
+	@ManyToOne
+	@JoinColumn (name = "domaineSpecilisation")
 	private Domaine domaineLie;
-	@Transient
-	private List <Acquis>bonusAcquis = new ArrayList <Acquis>();
+	@OneToMany (mappedBy = "specialisation")
+	private List <SpecialisationAcquis> bonusAcquis = new ArrayList <SpecialisationAcquis>();
 	
 	public Long getId() {
 		return id;
@@ -68,10 +72,11 @@ public class Specialisation {
 	public void setDomaineLie(Domaine domaineLie) {
 		this.domaineLie = domaineLie;
 	}
-	public List<Acquis> getBonusAcquis() {
+	
+	public List<SpecialisationAcquis> getBonusAcquis() {
 		return bonusAcquis;
 	}
-	public void setBonusAcquis(List<Acquis> bonusAcquis) {
+	public void setBonusAcquis(List<SpecialisationAcquis> bonusAcquis) {
 		this.bonusAcquis = bonusAcquis;
 	}
 	public Specialisation() {

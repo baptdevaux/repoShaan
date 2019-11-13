@@ -23,6 +23,7 @@
 		<class>createurShaan.model.Peuple</class>
 		<class>createurShaan.model.Metier</class>
 		<class>createurShaan.model.Caste</class>
+		<class>createurShaan.model.SpecialisationAcquis</class>
 
 		<properties>
 			<property name="javax.persistence.jdbc.driver"
