@@ -29,7 +29,8 @@ public class BonusPersonnage {
 	@ManyToOne 
 	@JoinColumn (name = "acquisId")
 	private Acquis acquis;
-	@Transient
+	@ManyToOne
+	@JoinColumn(name = "Personnage_ID")
 	private Personnage persoLie;
 	
 	public Long getId() {

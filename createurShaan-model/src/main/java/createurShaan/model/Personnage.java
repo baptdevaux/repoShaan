@@ -9,6 +9,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Transient;
 import javax.persistence.Version;
 
@@ -36,27 +39,34 @@ public class Personnage {
 	private int corps;
 	@Column
 	private int esprit;
-	@Transient
+	
+	@OneToMany(mappedBy = "persoLie")
 	private List<AlterationEtat> alterationPersonnage = new ArrayList<AlterationEtat>();
-	@Transient
+	@ManyToOne
+	@JoinColumn(name = "Joueur_ID")
 	private Joueur joueur;
-	@Transient
+	@ManyToOne
+	@JoinColumn(name = "Race_ID")
 	private Race racePerso;
-	@Transient
+	@ManyToOne
+	@JoinColumn(name = "Peuple_ID")
 	private Peuple peuplePerso;
-	@Transient
+	@ManyToOne
+	@JoinColumn(name = "Metier_ID")
 	private Metier metierPerso;
-	@Transient
+	@ManyToOne
+	@JoinColumn(name = "Caste_ID")
 	private Caste castePerso;
-	@Transient
+	@OneToMany(mappedBy = "persoLie")
 	private List<BonusPersonnage> bonusPerso = new ArrayList<BonusPersonnage>();
-	@Transient
+	@OneToMany(mappedBy = "persoLie")
 	private List<DomainePersonnage> domainesPerso = new ArrayList<DomainePersonnage>();
-	@Transient
+	@OneToMany(mappedBy = "persoLie")
 	private List<PouvoirPersonnage> pouvoirsPerso = new ArrayList<PouvoirPersonnage>();
-	@Transient
+	@OneToMany(mappedBy = "persoLie")
 	private List<MotivationPersonnage> motivationsPerso = new ArrayList<MotivationPersonnage>();
-	@Transient
+	@ManyToOne
+	@JoinColumn(name = "Partie_ID")
 	private TableDeJeu parties;
 
 	public Personnage() {

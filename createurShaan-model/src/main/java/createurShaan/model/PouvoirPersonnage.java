@@ -19,7 +19,8 @@ public class PouvoirPersonnage {
 	@Version
 	private Integer version;
 	
-	@Transient
+	@ManyToOne
+	@JoinColumn(name = "Personnage_ID")
 	private Personnage persoLie;
 	@ManyToOne
 	@JoinColumn (name ="pouvoirsPersos")

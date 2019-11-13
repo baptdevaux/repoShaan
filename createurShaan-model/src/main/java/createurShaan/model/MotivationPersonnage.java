@@ -19,7 +19,8 @@ public class MotivationPersonnage {
 	@Version
 	private Integer version;
 	
-	@Transient
+	@ManyToOne
+	@JoinColumn(name = "Personnage_ID")
 	private Personnage persoLie;
 	@ManyToOne
 	@JoinColumn (name = "motivation_id")

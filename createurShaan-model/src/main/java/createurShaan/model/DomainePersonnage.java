@@ -25,7 +25,8 @@ public class DomainePersonnage {
 	@ManyToOne
 	@JoinColumn (name = "domainesPerso")
 	private Domaine domaineLie;
-	@Transient
+	@ManyToOne
+	@JoinColumn(name = "Personnage_ID")
 	private Personnage persoLie;
 
 	public Long getId() {

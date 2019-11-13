@@ -18,10 +18,10 @@ public class AlterationPersonnage {
 	@Version
 	private int version;
 	@ManyToOne
-	@JoinColumn(name = "Alteration_ID")
+	@JoinColumn(name = "Personnage_ID")
 	private Personnage persoLie;
 	@ManyToOne
-	@JoinColumn(name = "Personnage_ID")
+	@JoinColumn(name = "Alteration_ID")
 	private AlterationEtat alterationEtat;
 
 	public AlterationPersonnage() {
