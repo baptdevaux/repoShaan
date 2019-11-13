@@ -6,7 +6,15 @@
 	<persistence-unit name="createurShaan"
 		transaction-type="RESOURCE_LOCAL">
 		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-
+		<class>createurShaan.model.Acquis</class>
+		<class>createurShaan.model.BonusPersonnage</class>
+		<class>createurShaan.model.Domaine</class>
+		<class>createurShaan.model.DomainePersonnage</class>
+		<class>createurShaan.model.Motivation</class>
+		<class>createurShaan.model.MotivationPersonnage</class>
+		<class>createurShaan.model.Pouvoir</class>
+		<class>createurShaan.model.PouvoirPersonnage</class>
+		<class>createurShaan.model.Specialisation</class>
 
 		<properties>
 			<property name="javax.persistence.jdbc.driver"
