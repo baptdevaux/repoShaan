@@ -7,6 +7,8 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 import javax.persistence.Version;
@@ -27,13 +29,13 @@ public class Domaine {
 	@Column
 	private String description;
 	
-	@Transient
+	@OneToMany (mappedBy = "domaineLie")
 	private List<Motivation> typeMotivation = new ArrayList <Motivation>();
-	@Transient
+	@OneToMany (mappedBy = "domaineLie")
 	private List<Specialisation> listeSpe = new ArrayList <Specialisation>();
-	@Transient
+	@OneToMany (mappedBy = "domaineLie")
 	private List<DomainePersonnage> domainePerso = new ArrayList <DomainePersonnage>();
-	@Transient
+	@OneToMany (mappedBy = "domaineLie")
 	private List<Pouvoir> listePouvoir = new ArrayList <Pouvoir>();
 	
 	

@@ -15,7 +15,6 @@
 		<class>createurShaan.model.Pouvoir</class>
 		<class>createurShaan.model.PouvoirPersonnage</class>
 		<class>createurShaan.model.Specialisation</class>
-
 		<class>createurShaan.model.Utilisateur</class>
 		<class>createurShaan.model.TableDeJeu</class>
 		<class>createurShaan.model.AlterationEtat</class>
@@ -24,6 +23,7 @@
 		<class>createurShaan.model.Peuple</class>
 		<class>createurShaan.model.Metier</class>
 		<class>createurShaan.model.Caste</class>
+		<class>createurShaan.model.SpecialisationAcquis</class>
 
 		<properties>
 			<property name="javax.persistence.jdbc.driver"
