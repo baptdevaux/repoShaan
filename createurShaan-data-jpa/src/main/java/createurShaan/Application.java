@@ -30,6 +30,7 @@ import createurShaan.repository.IMetierRepository;
 import createurShaan.repository.IPersonnageRepository;
 import createurShaan.repository.IPeupleRepository;
 import createurShaan.repository.IRaceRepository;
+import createurShaan.repository.ISpecialisationAcquisRepository;
 import createurShaan.repository.ITableDeJeuRepository;
 import createurShaan.repository.jpa.AlterationEtatRepositoryJpa;
 import createurShaan.repository.jpa.AlterationPersonnageRepositoryJpa;
@@ -40,6 +41,7 @@ import createurShaan.repository.jpa.MetierRepositoryJpa;
 import createurShaan.repository.jpa.PersonnageRepositoryJpa;
 import createurShaan.repository.jpa.PeupleRepositoryJpa;
 import createurShaan.repository.jpa.RaceRepositoryJpa;
+import createurShaan.repository.jpa.SpecialisationAcquisRepositoryJpa;
 import createurShaan.repository.jpa.TableDeJeuRepositoryJpa;
 
 public class Application {
@@ -66,7 +68,7 @@ public class Application {
 	private final IPouvoirPersonnageRepository pouvoirPersonnageRepo = new PouvoirPersonnageRepositoryJpa();
 	private final IPouvoirRepository pouvoirRepo = new PouvoirRepositoryJpa();
 	private final ISpecialisationRepository specialisationRepo = new SpecialisationRepositoryJpa();
-
+	private final ISpecialisationAcquisRepository specialisationAcquisRepo = new SpecialisationAcquisRepositoryJpa();
 	private Application() {
 	}
 
