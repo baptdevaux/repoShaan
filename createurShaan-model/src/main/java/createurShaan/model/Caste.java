@@ -24,6 +24,9 @@ public class Caste {
 	private int version;
 	@Column(nullable = false)
 	private String nomCaste;
+	@Column(length = 500)
+	private String description;
+	
 	@OneToOne
 	@JoinColumn(name = "Domaine_ID")
 	private Domaine domaine;
@@ -40,6 +43,14 @@ public class Caste {
 
 	public void setId(Long id) {
 		this.id = id;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
 	public int getVersion() {
