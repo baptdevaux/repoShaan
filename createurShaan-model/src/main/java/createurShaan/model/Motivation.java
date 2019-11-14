@@ -20,7 +20,7 @@ public class Motivation {
 	private Integer version;
 	@Column (length = 500)
 	private String nomMotivation;
-	@Column (length = 500)
+	@Column (length = 2000)
 	private String description;
 	
 	@ManyToOne

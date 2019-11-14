@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?PowerDesigner AppLocale="UTF16" ID="{E7B54C78-FDB5-492F-96B4-D7B18F0DC369}" Label="" LastModificationDate="1573728046" Name="ModeleOrienteObjet_2" Objects="170" Symbols="51" Target="Java" TargetLink="Reference" Type="{18112060-1A4B-11D1-83D9-444553540000}" signature="CLD_OBJECT_MODEL" version="15.1.0.2850"?>
+<?PowerDesigner AppLocale="UTF16" ID="{E7B54C78-FDB5-492F-96B4-D7B18F0DC369}" Label="" LastModificationDate="1573735486" Name="ModeleOrienteObjet_2" Objects="170" Symbols="51" Target="Java" TargetLink="Reference" Type="{18112060-1A4B-11D1-83D9-444553540000}" signature="CLD_OBJECT_MODEL" version="15.1.0.2850"?>
 <!-- Veuillez ne pas modifier ce fichier -->
 
 <Model xmlns:a="attribute" xmlns:c="collection" xmlns:o="object">
@@ -1571,7 +1571,7 @@ MULA 0 Arial,8,N</a:FontList>
 <o:AssociationSymbol Id="o30">
 <a:CreationDate>1573568301</a:CreationDate>
 <a:ModificationDate>1573638108</a:ModificationDate>
-<a:Rect>((32437,-45895), (39261,-32220))</a:Rect>
+<a:Rect>((32475,-45895), (39224,-32220))</a:Rect>
 <a:ListOfPoints>((36037,-45895),(36037,-32220))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
 <a:ArrowStyle>0</a:ArrowStyle>
@@ -1684,10 +1684,10 @@ MULA 0 Arial,8,N</a:FontList>
 <a:ModificationDate>1573633569</a:ModificationDate>
 <a:SourceTextOffset>(2859, 91)</a:SourceTextOffset>
 <a:DestinationTextOffset>(2388, 376)</a:DestinationTextOffset>
-<a:Rect>((-5246,-48564), (614,-30267))</a:Rect>
+<a:Rect>((-5447,-48564), (-296,-30267))</a:Rect>
 <a:ListOfPoints>((-5131,-30267),(-5162,-48564))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
-<a:ArrowStyle>0</a:ArrowStyle>
+<a:ArrowStyle>8</a:ArrowStyle>
 <a:LineColor>16744448</a:LineColor>
 <a:ShadowColor>12632256</a:ShadowColor>
 <a:FontList>DISPNAME 0 Arial,8,N
@@ -1900,7 +1900,7 @@ MULA 0 Arial,8,N</a:FontList>
 <o:AssociationSymbol Id="o71">
 <a:CreationDate>1573639497</a:CreationDate>
 <a:ModificationDate>1573639517</a:ModificationDate>
-<a:Rect>((-41695,-50880), (-37803,-34065))</a:Rect>
+<a:Rect>((-41658,-50880), (-37840,-34065))</a:Rect>
 <a:ListOfPoints>((-39679,-34065),(-39670,-50880))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
 <a:ArrowStyle>8</a:ArrowStyle>
@@ -1968,7 +1968,7 @@ MULA 0 Arial,8,N</a:FontList>
 <a:Rect>((2326,-83696), (7276,-69450))</a:Rect>
 <a:ListOfPoints>((2326,-69450),(2326,-82523),(7276,-82523))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
-<a:ArrowStyle>0</a:ArrowStyle>
+<a:ArrowStyle>2048</a:ArrowStyle>
 <a:LineColor>16744448</a:LineColor>
 <a:ShadowColor>12632256</a:ShadowColor>
 <a:FontList>DISPNAME 0 Arial,8,N
@@ -3619,7 +3619,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Code>Domaine</a:Code>
 <a:CreationDate>1573565549</a:CreationDate>
 <a:Creator>utilisateur</a:Creator>
-<a:ModificationDate>1573633223</a:ModificationDate>
+<a:ModificationDate>1573735486</a:ModificationDate>
 <a:Modifier>utilisateur</a:Modifier>
 <a:UseParentNamespace>0</a:UseParentNamespace>
 <c:Attributes>
@@ -3686,7 +3686,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Code>Specialisation</a:Code>
 <a:CreationDate>1573565550</a:CreationDate>
 <a:Creator>utilisateur</a:Creator>
-<a:ModificationDate>1573652328</a:ModificationDate>
+<a:ModificationDate>1573735340</a:ModificationDate>
 <a:Modifier>utilisateur</a:Modifier>
 <a:UseParentNamespace>0</a:UseParentNamespace>
 <c:Attributes>
@@ -3756,7 +3756,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Code>DomainePersonnage</a:Code>
 <a:CreationDate>1573570756</a:CreationDate>
 <a:Creator>utilisateur</a:Creator>
-<a:ModificationDate>1573633205</a:ModificationDate>
+<a:ModificationDate>1573735486</a:ModificationDate>
 <a:Modifier>utilisateur</a:Modifier>
 <a:UseParentNamespace>0</a:UseParentNamespace>
 <c:Attributes>
@@ -4015,7 +4015,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Code>SpecialisationAcquis</a:Code>
 <a:CreationDate>1573652274</a:CreationDate>
 <a:Creator>utilisateur</a:Creator>
-<a:ModificationDate>1573652429</a:ModificationDate>
+<a:ModificationDate>1573735340</a:ModificationDate>
 <a:Modifier>utilisateur</a:Modifier>
 <a:UseParentNamespace>0</a:UseParentNamespace>
 <c:Attributes>
@@ -4371,13 +4371,11 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Code>association17</a:Code>
 <a:CreationDate>1573570898</a:CreationDate>
 <a:Creator>utilisateur</a:Creator>
-<a:ModificationDate>1573572681</a:ModificationDate>
+<a:ModificationDate>1573735486</a:ModificationDate>
 <a:Modifier>utilisateur</a:Modifier>
-<a:RoleAName>domainePerso</a:RoleAName>
 <a:RoleBName>domaineLie</a:RoleBName>
 <a:RoleAMultiplicity>0..*</a:RoleAMultiplicity>
 <a:RoleBMultiplicity>0..1</a:RoleBMultiplicity>
-<a:RoleANavigability>1</a:RoleANavigability>
 <a:ExtendedAttributesText>{0DEDDB90-46E2-45A0-886E-411709DA0DC9},Java,276={72FA5C48-5524-4DF7-8187-ABB19AB5AF9E},roleAContainer,6=&lt;None&gt;
 {F6FFC71C-C472-4261-A710-B0BCC0BF4D58},roleAImplementationClass,6=&lt;None&gt;
 {C11C9F66-6453-43A2-8824-6654518CF65A},roleBImplementationClass,6=&lt;None&gt;
@@ -4658,11 +4656,12 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Code>association30</a:Code>
 <a:CreationDate>1573652303</a:CreationDate>
 <a:Creator>utilisateur</a:Creator>
-<a:ModificationDate>1573652328</a:ModificationDate>
+<a:ModificationDate>1573735340</a:ModificationDate>
 <a:Modifier>utilisateur</a:Modifier>
 <a:RoleAMultiplicity>0..1</a:RoleAMultiplicity>
 <a:RoleBMultiplicity>0..*</a:RoleBMultiplicity>
 <a:RoleANavigability>1</a:RoleANavigability>
+<a:RoleBNavigability>0</a:RoleBNavigability>
 <a:ExtendedAttributesText>{0DEDDB90-46E2-45A0-886E-411709DA0DC9},Java,224={72FA5C48-5524-4DF7-8187-ABB19AB5AF9E},roleAContainer,6=&lt;None&gt;
 {F6FFC71C-C472-4261-A710-B0BCC0BF4D58},roleAImplementationClass,6=&lt;None&gt;
 {C11C9F66-6453-43A2-8824-6654518CF65A},roleBImplementationClass,17=java.util.HashSet
