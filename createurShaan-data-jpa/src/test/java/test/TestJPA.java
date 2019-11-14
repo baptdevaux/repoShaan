@@ -102,7 +102,6 @@ public class TestJPA {
 
 		rituel.setDescription("Représente la foi dans ");
 		rituel.setNom("Rituels");
-		rituel.getDomainePerso().add(combatTheau);
 		rituel.getListePouvoir().add(power);
 		rituel.getListeSpe().add(vigilance);
 		rituel.getTypeMotivation().add(motiv);
