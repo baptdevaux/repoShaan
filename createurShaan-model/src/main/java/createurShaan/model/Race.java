@@ -18,7 +18,7 @@ public class Race {
 	private Long id;
 	@Version
 	private int version;
-	@Column
+	@Column(nullable = false)
 	private String nomRace;
 	@OneToOne
 	@JoinColumn(name = "Domaine_ID")
