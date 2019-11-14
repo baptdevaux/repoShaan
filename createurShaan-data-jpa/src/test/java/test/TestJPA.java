@@ -98,6 +98,7 @@ public class TestJPA {
 		IMotivationRepository motivRepository = Application.getInstance().getMotivationRepo();
 		IPouvoirPersonnageRepository pouvoirPersonnageRepository = Application.getInstance().getPouvoirPersonnageRepo();
 		IPouvoirRepository pouvoirRepository = Application.getInstance().getPouvoirRepo();
+		
 
 		rituel.setDescription("Représente la foi dans ");
 		rituel.setNom("Rituels");

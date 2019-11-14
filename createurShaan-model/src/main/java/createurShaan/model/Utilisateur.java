@@ -20,11 +20,11 @@ public class Utilisateur {
 	private Long id;
 	@Version
 	private int version;
-	@Column(nullable = false)
+	@Column
 	private String pseudo;
-	@Column(nullable = false)
+	@Column
 	private String motDePasse;
-	@Column(nullable = false)
+	@Column
 	private String email;
 	
 	public Utilisateur() {

@@ -18,10 +18,12 @@ public class Peuple {
 	private Long id;
 	@Version
 	private int version;
-	@Column (nullable = false)
+	@Column(nullable = false)
 	private String nomPeuple;
+	@Column(length = 500)
+	private String description;
 	@OneToOne
-	@JoinColumn(name = "Domaine_ID") 
+	@JoinColumn(name = "Domaine_ID")
 	private Domaine domaine;
 	@OneToOne
 	@JoinColumn(name = "Specialisation_1_ID")
@@ -80,6 +82,14 @@ public class Peuple {
 
 	public void setSpecialisation2(Specialisation specialisation2) {
 		this.specialisation2 = specialisation2;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
 }
