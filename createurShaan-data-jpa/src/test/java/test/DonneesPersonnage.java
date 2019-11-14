@@ -102,6 +102,8 @@ public class DonneesPersonnage {
 //		CREATION OBJET METIER
 //-------------------------------------------------------------------------------------------------------------------------	
 
+		Metier batisseur =new Metier();
+		
 //-------------------------------------------------------------------------------------------------------------------------
 //		CREATION OBJET MOTIVATION
 //-------------------------------------------------------------------------------------------------------------------------		
@@ -149,6 +151,11 @@ public class DonneesPersonnage {
 //		REMPLISSAGE OBJET METIER
 //-------------------------------------------------------------------------------------------------------------------------	
 
+		batisseur.setNomMetier("Batisseur");
+//		batisseur.setVoie(voie);
+//		batisseur.setSpecialisation(specialisation);
+		batisseur.setDescription("Les Bâtisseurs savent construire des ponts, des maisons, des routes, tailler la pierre et préparer la Trihnite afin qu'elle soit enchantée. Irascibles aux mains cagneuses, ils passent leur temps à râler car rien ne se passe jamais comme ils avaient prévu. Il faut dire que l'exigence des Bâtisseurs est légendaire, car ils restent conscients que la plus petite erreur de calcul, ou le moindre défaut de construction peut être à l'origine de terribles accidents et causer la mort... Ce sens des responsabilités leur met une pression permanente qu'ils entretiennent, même s'ils n'ont pas de chantier à gérer. Mais c'est ainsi, les Bâtisseurs se sentent responsables des autres...");
+		
 //-------------------------------------------------------------------------------------------------------------------------
 //		REMPLISSAGE OBJET MOTIVATION
 //-------------------------------------------------------------------------------------------------------------------------		
