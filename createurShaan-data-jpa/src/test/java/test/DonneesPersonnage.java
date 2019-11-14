@@ -111,6 +111,7 @@ public class DonneesPersonnage {
 		Specialisation medecine = new Specialisation();
 		Specialisation protocoles = new Specialisation();
 		Specialisation zoologie = new Specialisation();
+		
 //-------------------------------------------------------------------------------------------------------------------------
 //		CREATION OBJET RACE
 //-------------------------------------------------------------------------------------------------------------------------	
@@ -293,7 +294,7 @@ public class DonneesPersonnage {
 //-------------------------------------------------------------------------------------------------------------------------
 
 		foretsBlanches.setNomPeuple("Forêts Blanches");
-//		foretsBlanches.setDomaine(rituels);
+		foretsBlanches.setDomaine(rituels);
 //		foretsBlanches.setSpecialisation1(langageDuCorps);
 //		foretsBlanches.setSpecialisation2(educationPhysique);
 		foretsBlanches.setDescription(
@@ -301,7 +302,7 @@ public class DonneesPersonnage {
 		foretsBlanches = peupleRepository.save(foretsBlanches);
 
 		glaces.setNomPeuple("Glaces");
-//		glaces.setDomaine(magie);
+		glaces.setDomaine(magie);
 //		glaces.setSpecialisation1(arcanes);
 //		glaces.setSpecialisation2(langagePrimal);
 		glaces.setDescription(
@@ -309,7 +310,7 @@ public class DonneesPersonnage {
 		glaces = peupleRepository.save(glaces);
 
 		grandsarbres.setNomPeuple("Grands Arbres");
-//		grandsarbres.setDomaine(shaan);
+		grandsarbres.setDomaine(shaan);
 //		grandsarbres.setSpecialisation1(empathieVegetale);
 //		grandsarbres.setSpecialisation2(empathieAnimale);
 		grandsarbres.setDescription(
@@ -317,7 +318,7 @@ public class DonneesPersonnage {
 		grandsarbres = peupleRepository.save(grandsarbres);
 
 		hautesHerbes.setNomPeuple("Hautes Herbes");
-//		hautesHerbes.setDomaine(arts);
+		hautesHerbes.setDomaine(arts);
 //		hautesHerbes.setSpecialisation1(musique);
 //		hautesHerbes.setSpecialisation2(commerce);
 		hautesHerbes.setDescription(
@@ -325,7 +326,7 @@ public class DonneesPersonnage {
 		hautesHerbes = peupleRepository.save(hautesHerbes);
 
 		marais.setNomPeuple("Hautes Herbes");
-//		marais.setDomaine(savoir);
+		marais.setDomaine(savoir);
 //		marais.setSpecialisation1(zoologie);
 //		marais.setSpecialisation2(botanique);
 		marais.setDescription(
@@ -333,7 +334,7 @@ public class DonneesPersonnage {
 		marais = peupleRepository.save(marais);
 
 		montagnes.setNomPeuple("Montagnes");
-//		montagnes.setDomaine(social);
+		montagnes.setDomaine(social);
 //		montagnes.setSpecialisation1(educationPhysique);
 //		montagnes.setSpecialisation2(languesExotiques);
 		montagnes.setDescription(
@@ -341,7 +342,7 @@ public class DonneesPersonnage {
 		montagnes = peupleRepository.save(montagnes);
 
 		rivages.setNomPeuple("Rivages");
-//		rivages.setDomaine(survie);
+		rivages.setDomaine(survie);
 //		rivages.setSpecialisation1(navigation);
 //		rivages.setSpecialisation2(educationPhysique);
 		rivages.setDescription(
@@ -349,7 +350,7 @@ public class DonneesPersonnage {
 		rivages = peupleRepository.save(rivages);
 
 		sables.setNomPeuple("Sables");
-//		sables.setDomaine(combat);
+		sables.setDomaine(combat);
 //		sables.setSpecialisation1(monture);
 //		sables.setSpecialisation2(histoireDHeos);
 		sables.setDescription(
@@ -357,7 +358,7 @@ public class DonneesPersonnage {
 		sables = peupleRepository.save(sables);
 
 		terresBurulees.setNomPeuple("Terres Brûlées");
-//		terresBurulees.setDomaine(technique);
+		terresBurulees.setDomaine(technique);
 //		terresBurulees.setSpecialisation1(navigation);
 //		terresBurulees.setSpecialisation2(recuperation);
 		terresBurulees.setDescription(
@@ -365,7 +366,7 @@ public class DonneesPersonnage {
 		terresBurulees = peupleRepository.save(sables);
 
 		cites.setNomPeuple("Cités");
-//		cites.setDomaine(necrose);
+		cites.setDomaine(necrose);
 //		cites.setSpecialisation1(cultureHumaine);
 //		cites.setSpecialisation2(vieUrbaine);
 		cites.setDescription("Cités tentaculaires de bâtiments aux formes improbables, dressant leurs tours de pierre et de verre en offrande au ciel, ou au contraire plongeant leurs souterrains (égouts et habitations troglodytes) dans les entrailles de la terre, les mégalopoles héossiennes regorgent de vie . . . et de mort. Car si la vie y est agréable et animée dans les beaux quartiers et dans les secteurs résidentiels, les bas-fonds restent de vrais coupe-gorges et constituent des enclaves où l'Ombre impose ses lois.");
