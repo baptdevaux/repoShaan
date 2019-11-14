@@ -60,6 +60,7 @@ public class DonneesPersonnage {
 //		CREATION OBJET PEUPLE
 //-------------------------------------------------------------------------------------------------------------------------
 		Peuple foretsBlanches = new Peuple();
+		Peuple sable = new Peuple();
 
 		IAlterationPersonnageRepository alterationPersonnageRepository = Application.getInstance()
 				.getAlterationPersonnageRepo();
