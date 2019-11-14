@@ -22,6 +22,8 @@ public class Metier {
 	private String nomMetier;
 	@Column
 	private String voie;
+	@Column(length = 500)
+	private String description;
 	@OneToOne
 	@JoinColumn(name = "Specialisation_ID")
 	private Specialisation specialisation;
@@ -79,6 +81,14 @@ public class Metier {
 
 	public void setCasteLie(Caste casteLie) {
 		this.casteLie = casteLie;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
 }
