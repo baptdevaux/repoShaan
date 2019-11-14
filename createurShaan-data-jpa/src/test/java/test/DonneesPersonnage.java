@@ -94,6 +94,24 @@ public class DonneesPersonnage {
 		Specialisation engrenages = new Specialisation();
 		Specialisation pilotage = new Specialisation();
 		Specialisation recuperation = new Specialisation();
+		Specialisation sensDeLaPierre = new Specialisation();
+		Specialisation sensDuBois = new Specialisation();
+		Specialisation sensDuCuir = new Specialisation();
+		Specialisation sensDuMetal = new Specialisation();
+		Specialisation sensDuTissu = new Specialisation();
+		Specialisation sensDuVerre = new Specialisation();
+		Specialisation technologie = new Specialisation();
+		Specialisation alchimie = new Specialisation();
+		Specialisation bibliotheque = new Specialisation();
+		Specialisation botanique = new Specialisation();
+		Specialisation cultureHumaine = new Specialisation();
+		Specialisation esoterisme = new Specialisation();
+		Specialisation geologie = new Specialisation();
+		Specialisation histoireDHeos = new Specialisation();
+		Specialisation medecine = new Specialisation();
+		Specialisation protocoles = new Specialisation();
+		Specialisation zoologie = new Specialisation();
+		
 //-------------------------------------------------------------------------------------------------------------------------
 //		CREATION OBJET RACE
 //-------------------------------------------------------------------------------------------------------------------------	
@@ -111,7 +129,15 @@ public class DonneesPersonnage {
 //		CREATION OBJET PEUPLE
 //-------------------------------------------------------------------------------------------------------------------------
 		Peuple foretsBlanches = new Peuple();
-		Peuple sable = new Peuple();
+		Peuple glaces = new Peuple();
+		Peuple grandsarbres = new Peuple();
+		Peuple hautesHerbes = new Peuple();
+		Peuple marais = new Peuple();
+		Peuple montagnes = new Peuple();
+		Peuple rivages = new Peuple();
+		Peuple sables = new Peuple();
+		Peuple terresBurulees = new Peuple();
+		Peuple cites = new Peuple();
 
 //-------------------------------------------------------------------------------------------------------------------------
 //		CREATION OBJET CASTE
@@ -396,11 +422,83 @@ public class DonneesPersonnage {
 //-------------------------------------------------------------------------------------------------------------------------
 
 		foretsBlanches.setNomPeuple("Forêts Blanches");
-//		foretsBlanches.setDomaine(domaine);
-//		foretsBlanches.setSpecialisation1(specialisation1);
-//		foretsBlanches.setSpecialisation2(specialisation2);
+		foretsBlanches.setDomaine(rituels);
+//		foretsBlanches.setSpecialisation1(langageDuCorps);
+//		foretsBlanches.setSpecialisation2(educationPhysique);
 		foretsBlanches.setDescription(
 				"De vastes forêts de conifères se recouvrent de neige l'hiver venu. La taïga, ou forêt boréale, étonne par sa densité et sa persistance à des altitudes défiant l'imagination. Les arbres sont moins grands que dans les régions chaudes mais les variétés de plantes sont tout aussi foisonnantes. De nombreux Temples rythment les haltes des Voyageurs.");
+		foretsBlanches = peupleRepository.save(foretsBlanches);
+
+		glaces.setNomPeuple("Glaces");
+		glaces.setDomaine(magie);
+//		glaces.setSpecialisation1(arcanes);
+//		glaces.setSpecialisation2(langagePrimal);
+		glaces.setDescription(
+				"Les côtes sont bordées par une zone de glace aux contours instables. De nombreux plateaux recouverts de glaciers s'élèvent à plus de deux mille mètres. La vie au milieu des terres est impossible. Seul le littoral offre une réserve de gibier susceptible de nourrir les populations locales.");
+		glaces = peupleRepository.save(glaces);
+
+		grandsarbres.setNomPeuple("Grands Arbres");
+		grandsarbres.setDomaine(shaan);
+//		grandsarbres.setSpecialisation1(empathieVegetale);
+//		grandsarbres.setSpecialisation2(empathieAnimale);
+		grandsarbres.setDescription(
+				"Cette épaisse forêt de gigantesques arbres verts peut atteindre une centaine de mètres de hauteur et son feuillage est persistant.");
+		grandsarbres = peupleRepository.save(grandsarbres);
+
+		hautesHerbes.setNomPeuple("Hautes Herbes");
+		hautesHerbes.setDomaine(arts);
+//		hautesHerbes.setSpecialisation1(musique);
+//		hautesHerbes.setSpecialisation2(commerce);
+		hautesHerbes.setDescription(
+				"De vastes plaines d'herbe grasse s'étendent à l'infini. Parsemées d'arbres et de petits bosquets, ces régions sont principalement exploitées pour l'agriculture et l'élevage.");
+		hautesHerbes = peupleRepository.save(hautesHerbes);
+
+		marais.setNomPeuple("Hautes Herbes");
+		marais.setDomaine(savoir);
+//		marais.setSpecialisation1(zoologie);
+//		marais.setSpecialisation2(botanique);
+		marais.setDescription(
+				"De hauts arbres plongent leurs puissantes racines dans les vastes étendues d'eau peu profondes des marais verts, jaunes et rouges. On ne trouve quasiment que des Ygwans dans les Marais, car eux seuls semblent apprécier la constante humidité et la chaleur de l'endroit.");
+		marais = peupleRepository.save(marais);
+
+		montagnes.setNomPeuple("Montagnes");
+		montagnes.setDomaine(social);
+//		montagnes.setSpecialisation1(educationPhysique);
+//		montagnes.setSpecialisation2(languesExotiques);
+		montagnes.setDescription(
+				"De roches et de pics, cette région froide a été prise d'assaut par les Delhions. Des conifères parsèment le pied des Montagnes, pour rapidement laisser place à la roche puis à la neige. Les conditions de vie y sont rigoureuses, car l'oxygène se raréfie en haute altitude. La montagne est un environnement très dangereux pour celui qui ne la connait pas. L'.entre-aide reste donc une priorité pour ceux qui doivent survivre dans ce milieu. Habitués à cotoyer des natifs de tous horizons, les montagnards ont développé une facilité à communiquer dans d'autres langages que les leurs.");
+		montagnes = peupleRepository.save(montagnes);
+
+		rivages.setNomPeuple("Rivages");
+		rivages.setDomaine(survie);
+//		rivages.setSpecialisation1(navigation);
+//		rivages.setSpecialisation2(educationPhysique);
+		rivages.setDescription(
+				"Le milieu varie selon le climat de la région, allant de la plage de sable fin bordée d'arbres enchanteurs dans les régions chaudes aux gigantesques falaises abruptes des contrées plus froides. Sur Héos, les marées ont une amplitude colossale. Cela oblige les Peuples de la mer à consolider constamment les digues et barrages nécessaires à leur survie. Les Ygwans et les Kelwi ns de ces milieux maîtrisent la construction de ces édifices protecteurs et un maçon a droit au même respect qu'un grand navigateur. Le littoral et les fonds marins offrent une profusion de plantes et d' animaux divers. Les cités lacustres peuvent s'étendre sur des kilomètres le long des côtes et se prolongent dans la mer grâce aux ports.");
+		rivages = peupleRepository.save(rivages);
+
+		sables.setNomPeuple("Sables");
+		sables.setDomaine(combat);
+//		sables.setSpecialisation1(monture);
+//		sables.setSpecialisation2(histoireDHeos);
+		sables.setDescription(
+				"Les Sables sont de vastes étendues arides de sable tassé ou en formation dunaire et de rochers plus ou moins saillants. Perpétuellement balayé par de terribles vents, le désert est une transition entre les Terres Brûlées et les Hautes Herbes chaudes. Selon la présence ou l'absence des pluies, il oscillera entre ces deux régions.");
+		sables = peupleRepository.save(sables);
+
+		terresBurulees.setNomPeuple("Terres Brûlées");
+		terresBurulees.setDomaine(technique);
+//		terresBurulees.setSpecialisation1(navigation);
+//		terresBurulees.setSpecialisation2(recuperation);
+		terresBurulees.setDescription(
+				"De gigantesques canyons, des plateaux qui s'élèvent à l'infini, des gouffres et des ravins qui transforment la lumière en ténèbres, tel est le décor des Terres Brûlées. Les Peuples des Terres Brûlées sont obligés de compenser la dureté de leur environnement par de rastuce et des trouvailles techniques. Si personne ne veut habiter les Terres Brûlées, nombreux sont ceux qui rêvent d'en récupérer toutes les richesses ...");
+		terresBurulees = peupleRepository.save(sables);
+
+		cites.setNomPeuple("Cités");
+		cites.setDomaine(necrose);
+//		cites.setSpecialisation1(cultureHumaine);
+//		cites.setSpecialisation2(vieUrbaine);
+		cites.setDescription("Cités tentaculaires de bâtiments aux formes improbables, dressant leurs tours de pierre et de verre en offrande au ciel, ou au contraire plongeant leurs souterrains (égouts et habitations troglodytes) dans les entrailles de la terre, les mégalopoles héossiennes regorgent de vie . . . et de mort. Car si la vie y est agréable et animée dans les beaux quartiers et dans les secteurs résidentiels, les bas-fonds restent de vrais coupe-gorges et constituent des enclaves où l'Ombre impose ses lois.");
+		cites = peupleRepository.save(cites);
 
 //-------------------------------------------------------------------------------------------------------------------------
 //		REMPLISSAGE OBJET CASTE
