@@ -262,7 +262,135 @@ public class DonneesPersonnage {
 //-------------------------------------------------------------------------------------------------------------------------
 //		REMPLISSAGE OBJET RACE
 //-------------------------------------------------------------------------------------------------------------------------	
-
+		boreals.setNomRace("Boreals");
+		boreals.setDomaine(survie);
+//		boreals.setSpecialisation1(specialisation1);
+//		boreals.setSpecialisation2(specialisation2);
+		boreals.setTailleEstimation("1,6m à 1,9 m");
+		boreals.setPoidsEstimation("60 à 120 kg");
+		boreals.setLangues("Héossien, Boréal");
+		boreals.setPouvoirDeRace("Vision Boréal");
+//		boreals.setPeupleOrigine(e);
+//		boreals.setCastePredilection(castePredilection);;
+		boreals.setElementTotem("Eau");
+		boreals.setCouleurSymbolique("Bleu marine");
+		
+		darkens.setNomRace("Darkens");
+		darkens.setDomaine(combat);
+//		darkens.setSpecialisation1(specialisation1);
+//		darkens.setSpecialisation2(specialisation2);
+		darkens.setTailleEstimation("1,9m à 2,3 m");
+		darkens.setPoidsEstimation("80 à 200 kg");
+		darkens.setLangues("Héossien, Darken");
+		darkens.setPouvoirDeRace("Rage Darken");
+//		darkens.setPeupleOrigine(e);
+//		darkens.setCastePredilection(castePredilection);
+		darkens.setElementTotem("Feu");
+		darkens.setCouleurSymbolique("Rouge");
+		
+		delhions.setNomRace("Delhions");
+		delhions.setDomaine(social);
+//		delhions.setSpecialisation1(specialisation1);
+//		delhions.setSpecialisation2(specialisation2);
+		delhions.setTailleEstimation("1,7m à 1,9 m");
+		delhions.setPoidsEstimation("70 à 100 kg");
+		delhions.setLangues("Héossien, Delhion");
+		delhions.setPouvoirDeRace("Vol Delhion");
+//		delhions.setPeupleOrigine(e);
+		delhions.setCastePredilection(negociants);
+		delhions.setElementTotem("Air");
+		delhions.setCouleurSymbolique("Bleu ciel");
+		
+		felings.setNomRace("Felings");
+		felings.setDomaine(shaan);
+//		felings.setSpecialisation1(specialisation1);
+//		felings.setSpecialisation2(specialisation2);
+		felings.setTailleEstimation("1,5m à 1,9 m");
+		felings.setPoidsEstimation("50 à 100 kg");
+		felings.setLangues("Héossien, Feling");
+		felings.setPouvoirDeRace("Soutien Feling");
+//		felings.setPeupleOrigine(e)
+		felings.setCastePredilection(shaanistes);
+		felings.setElementTotem("Terre");
+		felings.setCouleurSymbolique("Blanc");
+		
+		kelwins.setNomRace("Kelwins");
+		kelwins.setDomaine(technique);
+//		kelwins.setSpecialisation1(specialisation1);
+//		kelwins.setSpecialisation2(specialisation2);
+		kelwins.setTailleEstimation("0,9 m à 1,3 m");
+		kelwins.setPoidsEstimation("30 à 100 kg");
+		kelwins.setLangues("Héossien, Kelwinian");
+		kelwins.setPouvoirDeRace("Logique Kelwin");
+//		kelwins.setPeupleOrigine(e)
+		kelwins.setCastePredilection(novateurs);
+		kelwins.setElementTotem("Objet");
+		kelwins.setCouleurSymbolique("Orange");
+		
+		melodiens.setNomRace("Melodiens");
+		melodiens.setDomaine(arts);
+//		melodiens.setSpecialisation1(specialisation1);
+//		melodiens.setSpecialisation2(specialisation2);
+		melodiens.setTailleEstimation("1,5 m à 1,9 m");
+		melodiens.setPoidsEstimation("30 à 80 kg");
+		melodiens.setLangues("Héossien, Mélodian");
+		melodiens.setPouvoirDeRace("Aura Mélodienne");
+//		melodiens.setPeupleOrigine(e)
+		melodiens.setCastePredilection(artistes);
+		melodiens.setElementTotem("Autre");
+		melodiens.setCouleurSymbolique("Violet");
+		
+		nomois.setNomRace("Nomoïs");
+		nomois.setDomaine(magie);
+//		nomois.setSpecialisation1(specialisation1);
+//		nomois.setSpecialisation2(specialisation2);
+		nomois.setTailleEstimation("1,5 m à 1,9 m");
+		nomois.setPoidsEstimation("40 à 80 kg");
+		nomois.setLangues("Héossien, Nomoï");
+		nomois.setPouvoirDeRace("Sagesse Nomoï");
+//		nomois.setPeupleOrigine(e)
+//		nomois.setCastePredilection(castePredilection);;
+		nomois.setElementTotem("Moi");
+		nomois.setCouleurSymbolique("Argent");
+		
+		woons.setNomRace("Woons");
+		woons.setDomaine(rituels);
+//		woons.setSpecialisation1(specialisation1);
+//		woons.setSpecialisation2(specialisation2);
+		woons.setTailleEstimation("2,2 m à 2,7 m");
+		woons.setPoidsEstimation("100 à 300 kg");
+		woons.setLangues("Héossien, Woon");
+		woons.setPouvoirDeRace("Résistance Woon");
+//		woons.setPeupleOrigine(e)
+//		woons.setCastePredilection(castePredilection);;
+		woons.setElementTotem("Animal");
+		woons.setCouleurSymbolique("Or");
+		
+		ygwans.setNomRace("Ygwans");
+		ygwans.setDomaine(savoir);
+//		ygwans.setSpecialisation1(specialisation1);
+//		ygwans.setSpecialisation2(specialisation2);
+		ygwans.setTailleEstimation("1,5 m à 1,9 m");
+		ygwans.setPoidsEstimation("60 à 150 kg");
+		ygwans.setLangues("Héossien, Ygwan");
+		ygwans.setPouvoirDeRace("Regénération Ygwan");
+//		ygwans.setPeupleOrigine(e)
+//		ygwans.setCastePredilection(castePredilection);
+		ygwans.setElementTotem("Végétal");
+		ygwans.setCouleurSymbolique("Vert");
+		
+		humains.setNomRace("Humains");
+		humains.setDomaine(necrose);
+//		humains.setSpecialisation1(specialisation1);
+//		humains.setSpecialisation2(specialisation2);
+		humains.setTailleEstimation("1,6 m à 1,9 m");
+		humains.setPoidsEstimation("60 à 120 kg");
+		humains.setLangues("Héossien, Langdiv");
+		humains.setPouvoirDeRace("Névrose Humain");
+//		humains.setPeupleOrigine(e)
+//		humains.setCastePredilection(castePredilection);
+		humains.setElementTotem("Limbes");
+		humains.setCouleurSymbolique("Noir");
 //-------------------------------------------------------------------------------------------------------------------------
 //		REMPLISSAGE OBJET PEUPLE
 //-------------------------------------------------------------------------------------------------------------------------
