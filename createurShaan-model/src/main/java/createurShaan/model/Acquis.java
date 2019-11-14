@@ -3,6 +3,7 @@ package createurShaan.model;
 import java.util.ArrayList;
 import java.util.List;
 
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -22,13 +23,15 @@ public class Acquis {
 	private Long id;
 	@Version
 	private Integer version;
+	@Column(nullable = false)
+	private String nom;
 	@Column
 	private String categorie;
 	@Column
 	private Integer classe;
 	@Column
 	private String protection;
-	@Column
+	@Column(length = 500)
 	private String description;
 	@Column
 	private String capacité;

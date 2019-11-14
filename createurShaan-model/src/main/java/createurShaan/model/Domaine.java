@@ -22,11 +22,11 @@ public class Domaine {
 	private Long id;
 	@Version
 	private Integer version;
-	@Column
+	@Column(nullable = false)
 	private String nom;
 	@Column
 	private String elementLie;
-	@Column
+	@Column(length = 500)
 	private String description;
 	
 	@OneToMany (mappedBy = "domaineLie")

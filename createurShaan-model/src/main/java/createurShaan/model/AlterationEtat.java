@@ -15,7 +15,7 @@ public class AlterationEtat {
 	private Long id;
 	@Version
 	private int version;
-	@Column
+	@Column(nullable = false)
 	private String nom;
 	@Column
 	private String effet;
