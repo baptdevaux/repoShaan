@@ -83,7 +83,9 @@ public class DonneesPersonnage {
 //-------------------------------------------------------------------------------------------------------------------------
 //		CREATION OBJET SPECIALISATION
 //-------------------------------------------------------------------------------------------------------------------------	
-
+		Specialisation engrenages = new Specialisation();
+		Specialisation pilotage = new Specialisation();
+		Specialisation recuperation = new Specialisation();
 //-------------------------------------------------------------------------------------------------------------------------
 //		CREATION OBJET RACE
 //-------------------------------------------------------------------------------------------------------------------------	
@@ -228,7 +230,16 @@ public class DonneesPersonnage {
 //-------------------------------------------------------------------------------------------------------------------------
 //		REMPLISSAGE OBJET SPECIALISATION
 //-------------------------------------------------------------------------------------------------------------------------	
-
+		engrenages.setDescription("Manipuler des petits mécanismes tels que serrures ou horloges. Poser et désarmocer des pièges complexes. Comprendre les systèmes à engrenages et poulies, mais également les machines à vapeur.");
+		engrenages.setNom("Engrenages");
+//		engrenages.setDomaineLie(technique);
+//		engrenages.setMetier(mecaniste);
+//		engrenages.getBonusAcquis().add(speAcquis);
+		engrenages=specialisationRepository.save(engrenages);
+		pilotage.setDescription("Conduire tout type de véhicule motorisé, du tank à la moto à réaction, en passant par l'aérojet, ou l'hydroglisseur. Connaître des rudiments techniques nécessaires à l'entretien et au bon fonctionnement du véhicule.");
+//		pilotage.setNom("Pilotage");
+//		pilotage.setDomaineLie(technique);
+	
 //-------------------------------------------------------------------------------------------------------------------------
 //		REMPLISSAGE OBJET RACE
 //-------------------------------------------------------------------------------------------------------------------------	
