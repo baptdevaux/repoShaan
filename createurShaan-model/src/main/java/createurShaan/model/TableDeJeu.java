@@ -23,7 +23,7 @@ public class TableDeJeu {
 	private Long id;
 	@Version
 	private int version;
-	@Column
+	@Column(length = 500)
 	private String notes;
 	@Column
 	private String timer;

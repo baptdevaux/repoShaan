@@ -25,6 +25,7 @@ public class PouvoirPersonnage {
 	@ManyToOne
 	@JoinColumn (name ="pouvoirsPersos")
 	private Pouvoir pouvoir;
+	
 	public Long getId() {
 		return id;
 	}
