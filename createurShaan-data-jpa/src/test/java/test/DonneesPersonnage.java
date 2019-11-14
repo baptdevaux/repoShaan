@@ -86,6 +86,23 @@ public class DonneesPersonnage {
 		Specialisation engrenages = new Specialisation();
 		Specialisation pilotage = new Specialisation();
 		Specialisation recuperation = new Specialisation();
+		Specialisation sensDeLaPierre = new Specialisation();
+		Specialisation sensDuBois = new Specialisation();
+		Specialisation sensDuCuir = new Specialisation();
+		Specialisation sensDuMetal = new Specialisation();
+		Specialisation sensDuTissu = new Specialisation();
+		Specialisation sensDuVerre = new Specialisation();
+		Specialisation technologie = new Specialisation();
+		Specialisation alchimie = new Specialisation();
+		Specialisation bibliotheque = new Specialisation();
+		Specialisation botanique = new Specialisation();
+		Specialisation cultureHumaine = new Specialisation();
+		Specialisation esoterisme = new Specialisation();
+		Specialisation geologie = new Specialisation();
+		Specialisation histoireDHeos = new Specialisation();
+		Specialisation medecine = new Specialisation();
+		Specialisation protocoles = new Specialisation();
+		Specialisation zoologie = new Specialisation();
 //-------------------------------------------------------------------------------------------------------------------------
 //		CREATION OBJET RACE
 //-------------------------------------------------------------------------------------------------------------------------	
@@ -212,11 +229,53 @@ public class DonneesPersonnage {
 		engrenages.setNom("Engrenages");
 //		engrenages.setDomaineLie(technique);
 //		engrenages.setMetier(mecaniste);
-//		engrenages.getBonusAcquis().add(speAcquis);
 		engrenages=specialisationRepository.save(engrenages);
-		pilotage.setDescription("Conduire tout type de véhicule motorisé, du tank à la moto à réaction, en passant par l'aérojet, ou l'hydroglisseur. Connaître des rudiments techniques nécessaires à l'entretien et au bon fonctionnement du véhicule.");
-//		pilotage.setNom("Pilotage");
+		pilotage.setDescription("Créer un objet à partir de déchets ou de pièces détachées. Cette Spécialisation peut être comparée aux pouvoirs des adeptes de Win, l’Objet, car elle permet d’obtenir des résultats sans aucun rapport avec la nature et la fonction originale des pièces détachées. Les objets créés pourront être de nature technologique.");
+		pilotage.setNom("Pilotage");
 //		pilotage.setDomaineLie(technique);
+//		pilotage.setMetier(pilote);
+		pilotage=specialisationRepository.save(pilotage);
+		recuperation.setDescription("Conduire tout type de véhicule motorisé, du tank à la moto à réaction, en passant par l'aérojet, ou l'hydroglisseur. Connaître des rudiments techniques nécessaires à l'entretien et au bon fonctionnement du véhicule.");
+		recuperation.setNom("Récupération");
+//		recuperation.setDomaineLie(technique);
+//		recuperation.setMetier(recuperateur);
+		recuperation=specialisationRepository.save(recuperation);
+		sensDeLaPierre.setDescription("Construire des murs, des ponts, des sols et des routes. Préparer de la trihnite pour en faire des portes de transfert. Connaître le modelage, la taille de pierre et l'architecture. Situer les sites riches en roche, en trihnite et savoir en extraire de la matière première. Apprécier la qualité, la valeur et la résistance d'un bâtiment ou d'une caverne.");
+		sensDeLaPierre.setNom("Sens de la pierre");
+//		sensDeLaPierre.setDomaineLie(technique);
+//		sensDeLaPierre.setMetier(batisseur);
+		sensDeLaPierre=specialisationRepository.save(sensDeLaPierre);
+		sensDuBois.setDescription("Fabriquer du mobilier, du papier, de la corde, des bateaux, des charpentes. Connaître la menuiserie, la charpenterie, la papeterie, la découpe et le traitement du bois pour en faire une bonne matière première. Apprécier la qualité, la valeur et la résistance d'un bateau, d'un meuble, d'un plancher.");
+		sensDuBois.setNom("Sens du bois");
+//		sensDuBois.setDomaineLie(technique);
+//		sensDuBois.setMetier(charpentier);
+		sensDuBois=specialisationRepository.save(sensDuBois);
+		sensDuCuir.setDescription("Confectionner des sacs, des armures en cuir, des lanières, des chaussures, des sièges. Connaître la tannerie, la zoologie et le traitement de la peau d'un animal pour en faire une bonne matière première. Apprécier la qualité, la valeur et la résistance d'un objet ou d'une pièce de cuir.");
+		sensDuCuir.setNom("Sens du cuir");
+//		sensDuCuir.setDomaineLie(technique);
+//		sensDuCuir.setMetier(tanneur);
+		sensDuCuir=specialisationRepository.save(sensDuCuir);
+		sensDuMetal.setDescription("Fabriquer des engrenages, des armes, des armures et des pièces mécaniques. Connaître la métallurgie et l'armurerie. Situer les sites riches en métaux et savoir en extraire de la matière première. Apprécier la qualité, la valeur et la résistance d'un objet ou d'une pièce en métal.");
+		sensDuMetal.setNom("Sens du metal");
+//		sensDuMetal.setDomaineLie(technique);
+//		sensDuMetal.setMetier(forgeron);
+		sensDuMetal=specialisationRepository.save(sensDuMetal);
+		sensDuTissu.setDescription("Tisser des vêtements, des voiles pour les bateaux, des coussins, des draps, des tapis. Connaître le tissage, le stylisme et le traitement du coton ou de la soie pour en faire une bonne matière première. Apprécier la qualité, la valeur et la résistance d'une étoffe ou d'une voile.");
+		sensDuTissu.setNom("Sens du tissu");
+//		sensDuTissu.setDomaineLie(technique);
+//		sensDuTissu.setMetier(couturier);
+		sensDuTissu=specialisationRepository.save(sensDuTissu);
+		sensDuVerre.setDescription("Façonner des bijoux, des outils, des fioles, mais aussi des armes, des artefacts, des loupes, des miroirs, des lunettes et des écrans. Connaître l’orfèvrerie. Apprécier la qualité, la valeur et la résistance d'un bijou, d'une fiole...");
+		sensDuVerre.setNom("Sens du verre");
+//		sensDuVerre.setDomaineLie(technique);
+//		sensDuVerre.setMetier(joaillier);
+		sensDuVerre=specialisationRepository.save(sensDuVerre);
+		technologie.setDescription("Connaître les sources d'énergie et leurs applications pour faire fonctionner un appareil régi par la technologie humaine. Construire ou réparer une arme à feu, un moteur de véhicule, un appareil électronique, etc. Composer des programmes informatiques en \"Code Note\" qui tournent sur le rézo Arpège (logiciels, interfaces, virus, démons, espions, lutins, judas, cryptographie...)");
+		technologie.setNom("Technologie");
+//		technologie.setDomaineLie(technique);
+//		technologie.setMetier(infotek);
+		technologie=specialisationRepository.save(technologie);
+		
 	
 //-------------------------------------------------------------------------------------------------------------------------
 //		REMPLISSAGE OBJET RACE
