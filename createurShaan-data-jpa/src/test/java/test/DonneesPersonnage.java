@@ -315,7 +315,51 @@ public class DonneesPersonnage {
 //		technologie.setDomaineLie(technique);
 //		technologie.setMetier(infotek);
 		technologie=specialisationRepository.save(technologie);
-		
+		alchimie.setDescription("Connaître les éléments de base qui constituent la matière et les forces qui agissent entre eux. Analyser la nature d'un matériau et en déduire ce qu'il faut pour le creuser, le percer, le briser, le faire fondre, le rendre friable, en un mot, changer son état...");
+		alchimie.setNom("Alchimie");
+//		alchimie.setDomaineLie(savoir);
+//		alchimie.setMetier(alchimiste);
+		alchimie=specialisationRepository.save(alchimie);
+		bibliotheque.setDescription("Savoir tirer le meilleur d’une source conséquente de documents pour obtenir des informations sur un sujet précis.");
+		bibliotheque.setNom("Bibliotheque");
+//		bibliotheque.setDomaineLie(savoir);
+//		bibliotheque.setMetier(archiviste);
+		bibliotheque=specialisationRepository.save(bibliotheque);
+		botanique.setDescription("Connaître le règne végétal terrestre et marin, ainsi que toutes les variétés de champignons. Reconnaître les végétaux empoisonnés des comestibles. Confectionner des cataplasmes et autres mixtures aux facultés curatives dont les effets dépendent des végétaux et de leurs propriétés.");
+		botanique.setNom("Botanique");
+//		botanique.setDomaineLie(savoir);
+//		botanique.setMetier(botaniste);
+		botanique=specialisationRepository.save(botanique);
+		cultureHumaine.setDescription("Connaître la vie et les mœurs des Humains, mais aussi leur technologie. Avoir une idée de la puissance du Nouvel Ordre et du pouvoir qu’exercent les Grandes Familles. Savoir lire et écrire le Langdiv");
+		cultureHumaine.setNom("Culture Humaine");
+//		cultureHumaine.setDomaineLie(savoir);
+//		cultureHumaine.setMetier(percepteur);
+		cultureHumaine=specialisationRepository.save(cultureHumaine);
+		esoterisme.setDescription("Consulter les astres à l'aide de tarots, d'osselets, de dés, de plateaux de divination, ou même dans le cercle des réalités pour percer les secrets du temps, des lieux et des individus. L'ésotérisme peut constituer un refuge contre les agressions mentales.");
+		esoterisme.setNom("Esoterisme");
+//		esoterisme.setDomaineLie(savoir);
+//		esoterisme.setMetier(esoteriste);
+		esoterisme=specialisationRepository.save(esoterisme);
+		geologie.setDescription("Connaître l'histoire de la formation des gouffres et des montagnes, des volcans et des séismes. Évaluer la constitution d'un sol et l'énergie que l'on peut en tirer. Cette Spécialisation est également utilisée pour l'archéologie");
+		geologie.setNom("Geologie");
+//		geologie.setDomaineLie(savoir);
+//		geologie.setMetier(geologue);
+		geologie=specialisationRepository.save(geologie);
+		histoireDHeos.setDescription("Connaître l'histoire générale d’Héos, mais aussi les contes, légendes et mythes existants, qui relatent les épopées d'êtres imaginaires, des dieux de l'ancien panthéon ou de héros ayant réellement vécu en Héossie. Connaître les flux migratoires, les grandes guerres et l'évolution des civilisations.");
+		histoireDHeos.setNom("Histoire d'Héos");
+//		histoireDHeos.setDomaineLie(savoir);
+//		histoireDHeos.setMetier(historien);
+		histoireDHeos=specialisationRepository.save(histoireDHeos);
+		medecine.setDescription("Diagnostiquer une maladie. Procéder à des opérations chirurgicales. Connaître parfaitement l'anatomie anthéenne. Savoir quel antidote correspond à chaque poison, sa composition et son mode de fabrication. Soigner le Corps d'une personne atteinte de maladie, d'une intoxication ou qui a subi des blessures physiques.");
+		medecine.setNom("Médecine");
+//		medecine.setDomaineLie(savoir);
+//		medecine.setMetier(medecin);
+		medecine=specialisationRepository.save(medecine);
+		protocoles.setDescription("Connaître les diverses formes de gouvernement, ainsi que les lois régissant administration et pouvoir. Mettre en place les procédures pour accéder à n’importe quel tribunal ou obtenir des laissez-passer. Être à l’aise avec la paperasse qui va avec. Fait également office de Diplomatie vis à vis de cultures inconnues.");
+		protocoles.setNom("Protocoles");
+//		protocoles.setDomaineLie(savoir);
+//		protocoles.setMetier(juriste);
+		protocoles=specialisationRepository.save(protocoles);
 	
 //-------------------------------------------------------------------------------------------------------------------------
 //		REMPLISSAGE OBJET RACE
