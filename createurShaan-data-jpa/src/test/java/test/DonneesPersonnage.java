@@ -78,7 +78,15 @@ public class DonneesPersonnage {
 //		CREATION OBJET DOMAINE
 //-------------------------------------------------------------------------------------------------------------------------
 		Domaine technique = new Domaine();
-		Domaine Savoir = new Domaine();
+		Domaine savoir = new Domaine();
+		Domaine social = new Domaine();
+		Domaine arts = new Domaine();
+		Domaine shaan = new Domaine();
+		Domaine magie = new Domaine();
+		Domaine rituels = new Domaine();
+		Domaine survie = new Domaine();
+		Domaine combat = new Domaine();
+		Domaine necrose = new Domaine();
 
 //-------------------------------------------------------------------------------------------------------------------------
 //		CREATION OBJET SPECIALISATION
@@ -86,10 +94,36 @@ public class DonneesPersonnage {
 		Specialisation engrenages = new Specialisation();
 		Specialisation pilotage = new Specialisation();
 		Specialisation recuperation = new Specialisation();
+		Specialisation sensDeLaPierre = new Specialisation();
+		Specialisation sensDuBois = new Specialisation();
+		Specialisation sensDuCuir = new Specialisation();
+		Specialisation sensDuMetal = new Specialisation();
+		Specialisation sensDuTissu = new Specialisation();
+		Specialisation sensDuVerre = new Specialisation();
+		Specialisation technologie = new Specialisation();
+		Specialisation alchimie = new Specialisation();
+		Specialisation bibliotheque = new Specialisation();
+		Specialisation botanique = new Specialisation();
+		Specialisation cultureHumaine = new Specialisation();
+		Specialisation esoterisme = new Specialisation();
+		Specialisation geologie = new Specialisation();
+		Specialisation histoireDHeos = new Specialisation();
+		Specialisation medecine = new Specialisation();
+		Specialisation protocoles = new Specialisation();
+		Specialisation zoologie = new Specialisation();
 //-------------------------------------------------------------------------------------------------------------------------
 //		CREATION OBJET RACE
 //-------------------------------------------------------------------------------------------------------------------------	
-
+		Race boreals = new Race();
+		Race darkens = new Race();
+		Race delhions = new Race();
+		Race felings = new Race();
+		Race kelwins = new Race();
+		Race melodiens = new Race();
+		Race nomois = new Race();
+		Race woons = new Race();
+		Race ygwans = new Race();
+		Race humains = new Race();
 //-------------------------------------------------------------------------------------------------------------------------
 //		CREATION OBJET PEUPLE
 //-------------------------------------------------------------------------------------------------------------------------
@@ -138,9 +172,103 @@ public class DonneesPersonnage {
 //-------------------------------------------------------------------------------------------------------------------------
 //		REMPLISSAGE OBJET DOMAINE
 //-------------------------------------------------------------------------------------------------------------------------
-		technique.setDescription("traduit le savoir-faire");
 		technique.setNom("Technique");
 		technique.setElementLie("Objet");
+		technique.setDescription(
+				"traduit le savoir-faire, l'intelligence de la main et la maitrise de la matière. Monter, démonter pour réinventer et à nouveau construire.");
+//		technique.getTypeMotivation().add(e);
+//		technique.getListeSpe().add(e);
+//		technique.getDomainePerso().add(e);
+//		technique.getListePouvoir().add(e);
+		technique = domaineRepository.save(technique);
+
+		savoir.setNom("Savoir");
+		savoir.setElementLie("Végétal");
+		savoir.setDescription("Evoque la soif de connaissance, la mémoire, l'intelect et l'analyse");
+//		savoir.getTypeMotivation().add(e);
+//		savoir.getListeSpe().add(e);
+//		savoir.getDomainePerso().add(e);
+//		savoir.getListePouvoir().add(e);
+		savoir = domaineRepository.save(savoir);
+
+		social.setNom("Social");
+		social.setElementLie("Air");
+		social.setDescription(
+				"Reflète le relationnel avec les autres Anthéens, l'éloquence, l'art d'articuler un discours, la séduction");
+//		social.getTypeMotivation().add(e);
+//		social.getListeSpe().add(e);
+//		social.getDomainePerso().add(e);
+//		social.getListePouvoir().add(e);
+		social = domaineRepository.save(social);
+
+		arts.setNom("Arts");
+		arts.setElementLie("Autre");
+		arts.setDescription("Exprime la firme artistique, la sensualité et la créativité");
+//		arts.getTypeMotivation().add(e);
+//		arts.getListeSpe().add(e);
+//		arts.getDomainePerso().add(e);
+//		arts.getListePouvoir().add(e);
+		arts = domaineRepository.save(arts);
+
+		shaan.setNom("Savoir");
+		shaan.setElementLie("Moi");
+		shaan.setDescription(
+				"Symbolise l'harmonie avec l'environnement, la magnétisme, la chance brute et la lutte contre les LImbes pour le règne de la paix et de l'équilibre");
+//		shaan.getTypeMotivation().add(e);
+//		shaan.getListeSpe().add(e);
+//		shaan.getDomainePerso().add(e);
+//		shaan.getListePouvoir().add(e);
+		shaan = domaineRepository.save(shaan);
+
+		magie.setNom("Magie");
+		magie.setElementLie("Végétal");
+		magie.setDescription(
+				"Incarne les facultés magiques qui permettent de déceler et contrôler les flux d'énergies Trihnique.");
+//		magie.getTypeMotivation().add(e);
+//		magie.getListeSpe().add(e);
+//		magie.getDomainePerso().add(e);
+//		magie.getListePouvoir().add(e);
+		magie = domaineRepository.save(magie);
+
+		rituels.setNom("Rituels");
+		rituels.setElementLie("Animal");
+		rituels.setDescription(
+				"Représente la foi dans les Eléments et la capacité à manipuler leur énergie primale pour s'approprier leurs facultés.");
+//		rituels.getTypeMotivation().add(e);
+//		rituels.getListeSpe().add(e);
+//		rituels.getDomainePerso().add(e);
+//		rituels.getListePouvoir().add(e);
+		rituels = domaineRepository.save(rituels);
+
+		survie.setNom("Survie");
+		survie.setElementLie("Eau");
+		survie.setDescription(
+				"Réunit les capacités de déplacement, de perception et d'adaptation à un environnement naturel.");
+//		technique.getTypeMotivation().add(e);
+//		technique.getListeSpe().add(e);
+//		technique.getDomainePerso().add(e);
+//		technique.getListePouvoir().add(e);
+		survie = domaineRepository.save(survie);
+
+		combat.setNom("Combat");
+		combat.setElementLie("Feu");
+		combat.setDescription(
+				"Utilisé dans toute confrontation physique, tant qu'il s'agit de manier une arme non-humaine.");
+//		technique.getTypeMotivation().add(e);
+//		technique.getListeSpe().add(e);
+//		technique.getDomainePerso().add(e);
+//		technique.getListePouvoir().add(e);
+		combat = domaineRepository.save(combat);
+
+		necrose.setNom("Necrose");
+		necrose.setElementLie("Limbes");
+		necrose.setDescription(
+				"Personnifie le côté sombre, le chamin parcouru par le personnage sur la voie des Limbes. Il sert à faire beaucoup d'actions peu recommandable et à mesurer son degré de décomposition et l'accumulations de pulsions incontrôlables.");
+//		technique.getTypeMotivation().add(e);
+//		technique.getListeSpe().add(e);
+//		technique.getDomainePerso().add(e);
+//		technique.getListePouvoir().add(e);
+		necrose = domaineRepository.save(necrose);
 //-------------------------------------------------------------------------------------------------------------------------
 //		REMPLISSAGE OBJET SPECIALISATION
 //-------------------------------------------------------------------------------------------------------------------------	
