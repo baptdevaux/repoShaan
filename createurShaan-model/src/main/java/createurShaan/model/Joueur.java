@@ -13,8 +13,7 @@ import javax.persistence.Transient;
 @Entity
 @DiscriminatorValue("Joueur")
 public class Joueur extends Utilisateur{
-	@OneToMany
-	@JoinColumn(name = "Personnage_ID")
+	@OneToMany(mappedBy = "joueur")
 	private List<Personnage> personnages = new ArrayList<Personnage>();
 
 	public Joueur() {
