@@ -179,6 +179,28 @@ public class DonneesPersonnage {
 //		artistes.getMetiers().add(prestidigitateur);
 			
 		artistes = casteRepository.save(artistes);
+		
+		
+		Caste shaanistes = new Caste();
+		
+		shaanistes.setNomCaste("Les Shaanistes");
+		
+		shaanistes.setDescription("Les Shaanistes sont des porteurs de lumière. Transmettant le Shaan à qui l'accepte, ils ont pour charge d'apaiser les Âmes, d'harmoniser les Esprits et de réguler toute sorte de fanatisme. Le Nouvel Ordre a systématiquement persécuté les Shaanistes. Les génocides qui se sont produits ont, pendant un moment, rendu la pratique du Shaan dangereuse, mais aucun de ses adeptes ne s'est détourné de sa voie.");
+		
+//		shaanistes.setDomaine(shaan);
+		
+//		shaanistes.getMetiers().add(ameVive);
+//		shaanistes.getMetiers().add(chasseurDeSteles);
+//		shaanistes.getMetiers().add(cultivateur);
+//		shaanistes.getMetiers().add(eleveur);
+//		shaanistes.getMetiers().add(gardeFou);
+//		shaanistes.getMetiers().add(marcheurDeReves);
+//		shaanistes.getMetiers().add(mentaliste);
+//		shaanistes.getMetiers().add(prescient);
+//		shaanistes.getMetiers().add(radiant);
+//		shaanistes.getMetiers().add(telluriste);
+			
+		shaanistes = casteRepository.save(shaanistes);
 //-------------------------------------------------------------------------------------------------------------------------
 //		CREATION OBJET METIER
 //-------------------------------------------------------------------------------------------------------------------------	
