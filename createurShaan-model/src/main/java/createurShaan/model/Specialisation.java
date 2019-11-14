@@ -10,6 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 import javax.persistence.Version;
@@ -23,12 +24,13 @@ public class Specialisation {
 	private Long id;
 	@Version
 	private Integer version;
-	@Column
+	@Column(nullable = false)
 	private String nom;
-	@Column
+	@Column(length = 500)
 	private String description;
-	@Column
-	private String metier;
+	@OneToOne
+	@JoinColumn(name = "Metier_ID")
+	private Metier metier;
 	
 	@ManyToOne
 	@JoinColumn (name = "domaineSpecilisation")
@@ -60,10 +62,10 @@ public class Specialisation {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public String getMetier() {
+	public Metier getMetier() {
 		return metier;
 	}
-	public void setMetier(String metier) {
+	public void setMetier(Metier metier) {
 		this.metier = metier;
 	}
 	public Domaine getDomaineLie() {
