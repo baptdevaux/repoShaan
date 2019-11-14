@@ -18,10 +18,10 @@ public class Peuple {
 	private Long id;
 	@Version
 	private int version;
-	@Column
+	@Column (nullable = false)
 	private String nomPeuple;
 	@OneToOne
-	@JoinColumn(name = "Domaine_ID")
+	@JoinColumn(name = "Domaine_ID") 
 	private Domaine domaine;
 	@OneToOne
 	@JoinColumn(name = "Specialisation_1_ID")

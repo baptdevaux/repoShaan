@@ -18,11 +18,11 @@ public class Pouvoir {
 	private Long id;
 	@Version
 	private Integer version;
-	@Column
+	@Column (nullable = false)
 	private String nomPouvoir;
-	@Column
+	@Column (nullable = false)
 	private String rang;
-	@Column
+	@Column (nullable = false)
 	private String type;
 	@Column
 	private String test;
@@ -42,7 +42,7 @@ public class Pouvoir {
 	private String duree;
 	@Column
 	private String cout;
-	@Column
+	@Column (length = 500)
 	private String description;
 	
 	@ManyToOne

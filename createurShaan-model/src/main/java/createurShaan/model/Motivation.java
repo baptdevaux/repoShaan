@@ -7,7 +7,6 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import javax.persistence.Transient;
 import javax.persistence.Version;
 
 @Entity
@@ -19,9 +18,9 @@ public class Motivation {
 	private Long id;
 	@Version
 	private Integer version;
-	@Column
+	@Column (length = 500)
 	private String nomMotivation;
-	@Column
+	@Column (length = 500)
 	private String description;
 	
 	@ManyToOne
