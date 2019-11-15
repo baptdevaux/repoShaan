@@ -112,7 +112,16 @@ public class DonneesPersonnage {
 		Specialisation medecine = new Specialisation();
 		Specialisation protocoles = new Specialisation();
 		Specialisation zoologie = new Specialisation();
-
+		Specialisation arpege = new Specialisation();
+		Specialisation bluff = new Specialisation();
+		Specialisation commerce = new Specialisation();
+		Specialisation diplomatie = new Specialisation();
+		Specialisation enseignement = new Specialisation();
+		Specialisation langagePrimal = new Specialisation();
+		Specialisation languesExotiques = new Specialisation();
+		Specialisation psychologie = new Specialisation();
+		Specialisation seduction = new Specialisation();
+		Specialisation vieUrbaine = new Specialisation();
 //-------------------------------------------------------------------------------------------------------------------------
 //		CREATION OBJET RACE
 //-------------------------------------------------------------------------------------------------------------------------	
@@ -387,6 +396,66 @@ public class DonneesPersonnage {
 		zoologie.setDomaineLie(savoir);
 //		zoologie.setMetier(zoologue);
 		zoologie=specialisationRepository.save(zoologie);
+		
+		arpege.setDescription("Naviguer sur le rézo Arpège en utilisant une console dotée d'une interface graphique. Connaître ce monde virtuel tentaculaire de l'information et de la communication. Maîtriser les logiciels de capture et de restitution d'images 2D ou 3D pour réaliser des trucages et effets spéciaux. Forcer certains barrages informatiques pour obtenir des données confidentielles. Utiliser des logiciels pour composer des programmes compilés en lignes de notes.");
+		arpege.setNom("Arpege");
+		arpege.setDomaineLie(social);
+//		arpege.setMetier(cyberien);
+		arpege=specialisationRepository.save(arpege);
+		
+		bluff.setDescription("Mentir ou baratiner quelqu'un. L’effet d’un bluff est en général temporaire, la victime mettra quelques minutes à se rendre compte qu'elle s’est fait berner.");
+		bluff.setNom("Bluff");
+		bluff.setDomaineLie(social);
+//		bluff.setMetier(politicien);
+		bluff=specialisationRepository.save(bluff);
+		
+		commerce.setDescription("Marchander. Estimer des objets de valeur. Acheter les services de quelqu’un. Connaître le niveau de rareté d'un Acquis à un endroit donné et donc les fluctuations des prix du marché en fonction de la localité.");
+		commerce.setNom("Commerce");
+		commerce.setDomaineLie(social);
+//		commerce.setMetier(marchand);
+		commerce=specialisationRepository.save(commerce);
+		
+		diplomatie.setDescription("Savoir faire passer ses idées en douceur. Réussir à détendre un climat tendu. Négocier des traités entre deux belligérants. Parler à un auditoire en faisant preuve d'éloquence. Chercher à convaincre un interlocuteur grâce à des arguments cohérents. Calmer des personnes hostiles. Avoir une idée des divers conflits qui peuvent tourmenter une région. Connaître le rang de quelqu'un dans n'importe quel milieu social, du plus élevé au plus primitif. Savoir comment se comporter pour ne pas commettre d'impairs, même si on ne parle pas la langue.");
+		diplomatie.setNom("Diplomatie");
+		diplomatie.setDomaineLie(social);
+//		diplomatie.setMetier(diplomate);
+		diplomatie=specialisationRepository.save(diplomatie);
+		
+		enseignement.setDescription("Enseigner une Spécialisation à une autre personne. Faire preuve de pédagogie. Mettre en place un programme d’apprentissage. Apprendre plus vite d’un autre enseignant.");
+		enseignement.setNom("Enseignement");
+		enseignement.setDomaineLie(social);
+//		enseignement.setMetier(enseignant);
+		enseignement=specialisationRepository.save(enseignement);
+		
+		langagePrimal.setDescription("Communiquer de façon très basique, par des gestes, des attitudes et des expressions faciales avec des êtres primitifs ou dotés d'un langage complètement inconnu. Communiquer sommairement avec les animaux.");
+		langagePrimal.setNom("Langage primal");
+		langagePrimal.setDomaineLie(social);
+//		langagePrimal.setMetier(prospecteur);
+		langagePrimal=specialisationRepository.save(langagePrimal);
+		
+		languesExotiques.setDescription("Se baser sur diverses langues existantes pour aborder un dialecte inconnu et le maîtriser par la pratique. Un anthéen parle l'héossien (langue commune) et le langdiv (langue humaine), ainsi que sa langue raciale, mais cette Spécialisation devient fort utile pour comprendre et parler les autres langages raciaux et dialectes dérivés.");
+		languesExotiques.setNom("Langues exotiques");
+		languesExotiques.setDomaineLie(social);
+//		languesExotiques.setMetier(traducteur);
+		languesExotiques=specialisationRepository.save(languesExotiques);
+		
+		psychologie.setDescription("Soigner l'Esprit d'une personne qui a subi des blessures mentales en la rassurant, et en lui redonnant confiance en elle. Déterminer les pensées d'autrui par ses attitudes et son comportement. Anticiper les intentions. Comprendre la folie. Contrairement au Bluff, la Psychologie a des effets durables.");
+		psychologie.setNom("Psychologie");
+		psychologie.setDomaineLie(social);
+//		psychologie.setMetier(tenancier);
+		psychologie=specialisationRepository.save(psychologie);
+		
+		seduction.setDescription("S'attirer les faveurs et l'admiration du sexe opposé. La séduction peut se tenter sur un individu du même sexe, mais la réaction de l'individu en question dépendra largement des dispositions de la cible.");
+		seduction.setNom("Seduction");
+		seduction.setDomaineLie(social);
+//		seduction.setMetier(courtisan);
+		seduction=specialisationRepository.save(seduction);
+		
+		vieUrbaine.setDescription("Connaître les villes et les différentes structures sociales. Se repérer en agglomération. Semer quelqu'un. Se procurer des renseignements anodins ou secrets. Être à l'aise dans tout milieu urbain.");
+		vieUrbaine.setNom("Vie Urbaine");
+		vieUrbaine.setDomaineLie(social);
+//		vieUrbaine.setMetier(informateur);
+		vieUrbaine=specialisationRepository.save(vieUrbaine);
 		
 //-------------------------------------------------------------------------------------------------------------------------
 //		REMPLISSAGE OBJET RACE
