@@ -276,95 +276,118 @@ public class DonneesPersonnage {
 		pilotage.setDescription(
 				"Conduire tout type de véhicule motorisé, du tank à la moto à réaction, en passant par l'aérojet, ou l'hydroglisseur. Connaître des rudiments techniques nécessaires à l'entretien et au bon fonctionnement du véhicule.");
 		pilotage.setNom("Pilotage");
-//		pilotage.setDomaineLie(technique);
+		pilotage.setDomaineLie(technique);
 //		pilotage.setMetier(pilote);
 		pilotage=specialisationRepository.save(pilotage);
+		
 		recuperation.setDescription("Conduire tout type de véhicule motorisé, du tank à la moto à réaction, en passant par l'aérojet, ou l'hydroglisseur. Connaître des rudiments techniques nécessaires à l'entretien et au bon fonctionnement du véhicule.");
 		recuperation.setNom("Récupération");
-//		recuperation.setDomaineLie(technique);
+		recuperation.setDomaineLie(technique);
 //		recuperation.setMetier(recuperateur);
 		recuperation=specialisationRepository.save(recuperation);
+		
 		sensDeLaPierre.setDescription("Construire des murs, des ponts, des sols et des routes. Préparer de la trihnite pour en faire des portes de transfert. Connaître le modelage, la taille de pierre et l'architecture. Situer les sites riches en roche, en trihnite et savoir en extraire de la matière première. Apprécier la qualité, la valeur et la résistance d'un bâtiment ou d'une caverne.");
 		sensDeLaPierre.setNom("Sens de la pierre");
-//		sensDeLaPierre.setDomaineLie(technique);
+		sensDeLaPierre.setDomaineLie(technique);
 //		sensDeLaPierre.setMetier(batisseur);
 		sensDeLaPierre=specialisationRepository.save(sensDeLaPierre);
+		
 		sensDuBois.setDescription("Fabriquer du mobilier, du papier, de la corde, des bateaux, des charpentes. Connaître la menuiserie, la charpenterie, la papeterie, la découpe et le traitement du bois pour en faire une bonne matière première. Apprécier la qualité, la valeur et la résistance d'un bateau, d'un meuble, d'un plancher.");
 		sensDuBois.setNom("Sens du bois");
-//		sensDuBois.setDomaineLie(technique);
+		sensDuBois.setDomaineLie(technique);
 //		sensDuBois.setMetier(charpentier);
 		sensDuBois=specialisationRepository.save(sensDuBois);
+		
 		sensDuCuir.setDescription("Confectionner des sacs, des armures en cuir, des lanières, des chaussures, des sièges. Connaître la tannerie, la zoologie et le traitement de la peau d'un animal pour en faire une bonne matière première. Apprécier la qualité, la valeur et la résistance d'un objet ou d'une pièce de cuir.");
 		sensDuCuir.setNom("Sens du cuir");
-//		sensDuCuir.setDomaineLie(technique);
+		sensDuCuir.setDomaineLie(technique);
 //		sensDuCuir.setMetier(tanneur);
 		sensDuCuir=specialisationRepository.save(sensDuCuir);
+		
 		sensDuMetal.setDescription("Fabriquer des engrenages, des armes, des armures et des pièces mécaniques. Connaître la métallurgie et l'armurerie. Situer les sites riches en métaux et savoir en extraire de la matière première. Apprécier la qualité, la valeur et la résistance d'un objet ou d'une pièce en métal.");
 		sensDuMetal.setNom("Sens du metal");
-//		sensDuMetal.setDomaineLie(technique);
+		sensDuMetal.setDomaineLie(technique);
 //		sensDuMetal.setMetier(forgeron);
 		sensDuMetal=specialisationRepository.save(sensDuMetal);
+		
 		sensDuTissu.setDescription("Tisser des vêtements, des voiles pour les bateaux, des coussins, des draps, des tapis. Connaître le tissage, le stylisme et le traitement du coton ou de la soie pour en faire une bonne matière première. Apprécier la qualité, la valeur et la résistance d'une étoffe ou d'une voile.");
 		sensDuTissu.setNom("Sens du tissu");
-//		sensDuTissu.setDomaineLie(technique);
+		sensDuTissu.setDomaineLie(technique);
 //		sensDuTissu.setMetier(couturier);
 		sensDuTissu=specialisationRepository.save(sensDuTissu);
+		
 		sensDuVerre.setDescription("Façonner des bijoux, des outils, des fioles, mais aussi des armes, des artefacts, des loupes, des miroirs, des lunettes et des écrans. Connaître l’orfèvrerie. Apprécier la qualité, la valeur et la résistance d'un bijou, d'une fiole...");
 		sensDuVerre.setNom("Sens du verre");
-//		sensDuVerre.setDomaineLie(technique);
+		sensDuVerre.setDomaineLie(technique);
 //		sensDuVerre.setMetier(joaillier);
 		sensDuVerre=specialisationRepository.save(sensDuVerre);
+		
 		technologie.setDescription("Connaître les sources d'énergie et leurs applications pour faire fonctionner un appareil régi par la technologie humaine. Construire ou réparer une arme à feu, un moteur de véhicule, un appareil électronique, etc. Composer des programmes informatiques en \"Code Note\" qui tournent sur le rézo Arpège (logiciels, interfaces, virus, démons, espions, lutins, judas, cryptographie...)");
 		technologie.setNom("Technologie");
-//		technologie.setDomaineLie(technique);
+		technologie.setDomaineLie(technique);
 //		technologie.setMetier(infotek);
 		technologie=specialisationRepository.save(technologie);
+		
 		alchimie.setDescription("Connaître les éléments de base qui constituent la matière et les forces qui agissent entre eux. Analyser la nature d'un matériau et en déduire ce qu'il faut pour le creuser, le percer, le briser, le faire fondre, le rendre friable, en un mot, changer son état...");
 		alchimie.setNom("Alchimie");
-//		alchimie.setDomaineLie(savoir);
+		alchimie.setDomaineLie(savoir);
 //		alchimie.setMetier(alchimiste);
 		alchimie=specialisationRepository.save(alchimie);
+		
 		bibliotheque.setDescription("Savoir tirer le meilleur d’une source conséquente de documents pour obtenir des informations sur un sujet précis.");
 		bibliotheque.setNom("Bibliotheque");
-//		bibliotheque.setDomaineLie(savoir);
+		bibliotheque.setDomaineLie(savoir);
 //		bibliotheque.setMetier(archiviste);
 		bibliotheque=specialisationRepository.save(bibliotheque);
+		
 		botanique.setDescription("Connaître le règne végétal terrestre et marin, ainsi que toutes les variétés de champignons. Reconnaître les végétaux empoisonnés des comestibles. Confectionner des cataplasmes et autres mixtures aux facultés curatives dont les effets dépendent des végétaux et de leurs propriétés.");
 		botanique.setNom("Botanique");
-//		botanique.setDomaineLie(savoir);
+		botanique.setDomaineLie(savoir);
 //		botanique.setMetier(botaniste);
 		botanique=specialisationRepository.save(botanique);
+		
 		cultureHumaine.setDescription("Connaître la vie et les mœurs des Humains, mais aussi leur technologie. Avoir une idée de la puissance du Nouvel Ordre et du pouvoir qu’exercent les Grandes Familles. Savoir lire et écrire le Langdiv");
 		cultureHumaine.setNom("Culture Humaine");
-//		cultureHumaine.setDomaineLie(savoir);
+		cultureHumaine.setDomaineLie(savoir);
 //		cultureHumaine.setMetier(percepteur);
 		cultureHumaine=specialisationRepository.save(cultureHumaine);
+		
 		esoterisme.setDescription("Consulter les astres à l'aide de tarots, d'osselets, de dés, de plateaux de divination, ou même dans le cercle des réalités pour percer les secrets du temps, des lieux et des individus. L'ésotérisme peut constituer un refuge contre les agressions mentales.");
 		esoterisme.setNom("Esoterisme");
-//		esoterisme.setDomaineLie(savoir);
+		esoterisme.setDomaineLie(savoir);
 //		esoterisme.setMetier(esoteriste);
 		esoterisme=specialisationRepository.save(esoterisme);
+		
 		geologie.setDescription("Connaître l'histoire de la formation des gouffres et des montagnes, des volcans et des séismes. Évaluer la constitution d'un sol et l'énergie que l'on peut en tirer. Cette Spécialisation est également utilisée pour l'archéologie");
 		geologie.setNom("Geologie");
-//		geologie.setDomaineLie(savoir);
+		geologie.setDomaineLie(savoir);
 //		geologie.setMetier(geologue);
 		geologie=specialisationRepository.save(geologie);
+		
 		histoireDHeos.setDescription("Connaître l'histoire générale d’Héos, mais aussi les contes, légendes et mythes existants, qui relatent les épopées d'êtres imaginaires, des dieux de l'ancien panthéon ou de héros ayant réellement vécu en Héossie. Connaître les flux migratoires, les grandes guerres et l'évolution des civilisations.");
 		histoireDHeos.setNom("Histoire d'Héos");
-//		histoireDHeos.setDomaineLie(savoir);
+		histoireDHeos.setDomaineLie(savoir);
 //		histoireDHeos.setMetier(historien);
 		histoireDHeos=specialisationRepository.save(histoireDHeos);
+		
 		medecine.setDescription("Diagnostiquer une maladie. Procéder à des opérations chirurgicales. Connaître parfaitement l'anatomie anthéenne. Savoir quel antidote correspond à chaque poison, sa composition et son mode de fabrication. Soigner le Corps d'une personne atteinte de maladie, d'une intoxication ou qui a subi des blessures physiques.");
 		medecine.setNom("Médecine");
-//		medecine.setDomaineLie(savoir);
+		medecine.setDomaineLie(savoir);
 //		medecine.setMetier(medecin);
 		medecine=specialisationRepository.save(medecine);
+		
 		protocoles.setDescription("Connaître les diverses formes de gouvernement, ainsi que les lois régissant administration et pouvoir. Mettre en place les procédures pour accéder à n’importe quel tribunal ou obtenir des laissez-passer. Être à l’aise avec la paperasse qui va avec. Fait également office de Diplomatie vis à vis de cultures inconnues.");
 		protocoles.setNom("Protocoles");
-//		protocoles.setDomaineLie(savoir);
+		protocoles.setDomaineLie(savoir);
 //		protocoles.setMetier(juriste);
 		protocoles=specialisationRepository.save(protocoles);
 	
+		zoologie.setDescription("Connaître le règne animal, de la cellule aux mammifères, en passant par les poissons, les insectes et les oiseaux. Connaître les divers écosystèmes qui régissent un lieu, les modes de vie des diverses espèces qui le peuplent, ainsi que les propriétés des organes des animaux.");
+		zoologie.setNom("Zoologie");
+		zoologie.setDomaineLie(savoir);
+//		zoologie.setMetier(zoologue);
+		zoologie=specialisationRepository.save(zoologie);
+		
 //-------------------------------------------------------------------------------------------------------------------------
 //		REMPLISSAGE OBJET RACE
 //-------------------------------------------------------------------------------------------------------------------------	
@@ -469,7 +492,7 @@ public class DonneesPersonnage {
 		woons.setNomRace("Woons");
 		woons.setDomaine(rituels);
 //		woons.setSpecialisation1(educationPhysique);
-//		woons.setSpecialisation2(Intimidation);
+//		woons.setSpecialisation2(intimidation);
 		woons.setTailleEstimation("2,2 m à 2,7 m");
 		woons.setPoidsEstimation("100 à 300 kg");
 		woons.setLangues("Héossien, Woon");
@@ -669,6 +692,30 @@ public class DonneesPersonnage {
 				"Vous êtes atteint d'un sentiment d'insécurité chronique. Vous passez votre temps à imaginer des systèmes de protection les plus improbables pourfortifier une ville et la rendre inattaquable. Vous vez besoin de protéger des vies pour vous sentir bien.");
 		forteresse.setDomaineLie(technique);
 		forteresse = motivationRepository.save(forteresse);
+		
+		palais.setNomMotivation("Bâtir un palais");
+		palais.setDescription(
+				"Vous aimez vous mettre au service d'un Notable afin de lui confectionner une demeure sur mesure. L'idée est de saisir la personnalité de celui que vous servez afin de traduireles principaux traits de caractères en éléments architecturaux.");
+		palais.setDomaineLie(technique);
+		palais = motivationRepository.save(palais);
+		
+		machineSousMarine.setNomMotivation("Construire une machine sous-marine");
+		machineSousMarine.setDescription(
+				"Vous préférez explorer les profondeurs abyssales des océans à bords de sumersibles extravagants mais la plupart du temps fiable. Défier les profondeur impose une grande rigueur technique mais cela ne vous arrêtera pas et vous ferez tout pour arriver à explorer ce monde encore inconnu de tous.");
+		machineSousMarine.setDomaineLie(technique);
+		machineSousMarine = motivationRepository.save(machineSousMarine);
+		
+		ouvrage.setNomMotivation("Ecrire un ouvrage");
+		ouvrage.setDescription(
+				"Pour vous, l'encyclopédie de la connaissance absolue est une quête de longue haleine, car il existe déjà quantité d'ouvrages pertinents sur tout un tas de sujets. Vous devrez donc trouver un axe créatif original qui vous permettrea de présenter votre savoir senlon des thématiques novatrices.");
+		ouvrage.setDomaineLie(savoir);
+		ouvrage = motivationRepository.save(ouvrage);
+		
+		universite.setNomMotivation("");
+		universite.setDescription(
+				".");
+		universite.setDomaineLie(savoir);
+		universite = motivationRepository.save(universite);
 //-------------------------------------------------------------------------------------------------------------------------
 //		REMPLISSAGE OBJET POUVOIR
 //-------------------------------------------------------------------------------------------------------------------------	
