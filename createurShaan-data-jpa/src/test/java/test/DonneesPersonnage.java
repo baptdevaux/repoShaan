@@ -275,19 +275,22 @@ public class DonneesPersonnage {
 		pilotage.setDescription(
 				"Conduire tout type de véhicule motorisé, du tank à la moto à réaction, en passant par l'aérojet, ou l'hydroglisseur. Connaître des rudiments techniques nécessaires à l'entretien et au bon fonctionnement du véhicule.");
 		pilotage.setNom("Pilotage");
-//		pilotage.setDomaineLie(technique);
+		pilotage.setDomaineLie(technique);
 //		pilotage.setMetier(pilote);
 		pilotage=specialisationRepository.save(pilotage);
+
 		recuperation.setDescription("Conduire tout type de véhicule motorisé, du tank à la moto à réaction, en passant par l'aérojet, ou l'hydroglisseur. Connaître des rudiments techniques nécessaires à l'entretien et au bon fonctionnement du véhicule.");
 		recuperation.setNom("Récupération");
 //		recuperation.setDomaineLie(technique);
 //		recuperation.setMetier(recuperateur);
 		recuperation=specialisationRepository.save(recuperation);
+		
 		sensDeLaPierre.setDescription("Construire des murs, des ponts, des sols et des routes. Préparer de la trihnite pour en faire des portes de transfert. Connaître le modelage, la taille de pierre et l'architecture. Situer les sites riches en roche, en trihnite et savoir en extraire de la matière première. Apprécier la qualité, la valeur et la résistance d'un bâtiment ou d'une caverne.");
 		sensDeLaPierre.setNom("Sens de la pierre");
-//		sensDeLaPierre.setDomaineLie(technique);
+		sensDeLaPierre.setDomaineLie(technique);
 //		sensDeLaPierre.setMetier(batisseur);
 		sensDeLaPierre=specialisationRepository.save(sensDeLaPierre);
+		
 		sensDuBois.setDescription("Fabriquer du mobilier, du papier, de la corde, des bateaux, des charpentes. Connaître la menuiserie, la charpenterie, la papeterie, la découpe et le traitement du bois pour en faire une bonne matière première. Apprécier la qualité, la valeur et la résistance d'un bateau, d'un meuble, d'un plancher.");
 		sensDuBois.setNom("Sens du bois");
 //		sensDuBois.setDomaineLie(technique);
@@ -626,61 +629,21 @@ public class DonneesPersonnage {
 		magiciens.setNomCaste("Les Magiciens");
 		magiciens.setDescription("Les Magiciens utilisent les Trihns qui voyagent sur Héos et s'en servent comme combustible pour leurs Pouvoirs. Souvent en contact avec les autres Castes, ils les aident par leur savoir et leur pratique.");
 //		magiciens.setDomaine(magie);
-//		magiciens.getMetiers().add(arcanien);
-//		magiciens.getMetiers().add(conjurateur);
-//		magiciens.getMetiers().add(illusionniste);
-//		magiciens.getMetiers().add(enchanteur);
-//		magiciens.getMetiers().add(mageItinerant);
-//		magiciens.getMetiers().add(regenerateur);
-//		magiciens.getMetiers().add(revocateur);
-//		magiciens.getMetiers().add(shaman);
-//		magiciens.getMetiers().add(sorcier);
-//		magiciens.getMetiers().add(voleurDeTrihn);
 		magiciens = casteRepository.save(magiciens);
 		
 		elementalistes.setNomCaste("Les Élémentalistes");
 		elementalistes.setDescription("Les Élémentalistes échappent au système de classement des autres Castes. Ils vouent un culte aux Éléments tels qu'ils sont représentés au sein du Cercle des Réalités. Chacun de ces Éléments constitue une voie qu'un Élémentaliste peut choisir de suivre. Si un Élémentaliste transgresse volontairement un de ses tabous, il attire la colère de l'Élément offensé. Pendant trois Jours, tous ses Tests de RITUELS impliquant cet Élément lui feront perdre un point de Corps supplémentaire à cause de cette agressivité élémentaire. Il sera en pénitence et devra passer ce temps à prier son Élément.");
 //		elementalistes.setDomaine(rituels);
-//		elementalistes.getMetiers().add(feu);
-//		elementalistes.getMetiers().add(air);
-//		elementalistes.getMetiers().add(limbes);
-//		elementalistes.getMetiers().add(terre);
-//		elementalistes.getMetiers().add(autre);
-//		elementalistes.getMetiers().add(moi);
-//		elementalistes.getMetiers().add(animal);
-//		elementalistes.getMetiers().add(eau);
-//		elementalistes.getMetiers().add(objet);
-//		elementalistes.getMetiers().add(vegetal);
 		elementalistes = casteRepository.save(elementalistes);
 		
 		voyageurs.setNomCaste("Les Voyageurs");
 		voyageurs.setDescription("Cette Caste rassemble les anthéens chargés de transporter quelque chose ou quelqu'un d'un point à un autre. Les Sportifs qui vont de ville en ville font également partie de cette Caste. Les Voyageurs ont pu conserver une importance malgré la démocratisation des Portes de Transfert, car bien que plus lents, ils restent tout de même bien meilleur marché");
 //		voyageurs.setDomaine(survie);
-//		voyageurs.getMetiers().add(athlete);
-//		voyageurs.getMetiers().add(caravanier);
-//		voyageurs.getMetiers().add(chasseur);
-//		voyageurs.getMetiers().add(eclaireur);
-//		voyageurs.getMetiers().add(espion);
-//		voyageurs.getMetiers().add(guide);
-//		voyageurs.getMetiers().add(messager);
-//		voyageurs.getMetiers().add(navigateur);
-//		voyageurs.getMetiers().add(traqueurDeStele);
-//		voyageurs.getMetiers().add(voltigeur);
 		voyageurs = casteRepository.save(voyageurs);
 		
 		combattants.setNomCaste("Les Combattants");
 		combattants.setDescription("Cette Caste rassemble tous ceux qui ne vivent que par la guerre et le respect de l'ordre. Soldats, miliciens, gladiateurs, hommes de main en sont les dignes représentants. Entre les Castes, les Guildes, les Notables et les Grandes Familles, nombreux sont ceux qui les utilisent à tour de bras pour régler des conflits, protéger un lieu ou récupérer quelque chose.");
 //		combattants.setDomaine(combat);
-//		combattants.getMetiers().add(archer);
-//		combattants.getMetiers().add(animalier);
-//		combattants.getMetiers().add(artilleur);
-//		combattants.getMetiers().add(fantassin);
-//		combattants.getMetiers().add(francTireur);
-//		combattants.getMetiers().add(gardeMine);
-//		combattants.getMetiers().add(gardinDesForets);
-//		combattants.getMetiers().add(gladiateur);
-//		combattants.getMetiers().add(protecteur);
-//		combattants.getMetiers().add(soldat);
 		combattants = casteRepository.save(combattants);
 		
 //-------------------------------------------------------------------------------------------------------------------------
@@ -702,6 +665,24 @@ public class DonneesPersonnage {
 				"Vous êtes atteint d'un sentiment d'insécurité chronique. Vous passez votre temps à imaginer des systèmes de protection les plus improbables pourfortifier une ville et la rendre inattaquable. Vous vez besoin de protéger des vies pour vous sentir bien.");
 		forteresse.setDomaineLie(technique);
 		forteresse = motivationRepository.save(forteresse);
+		
+		palais.setNomMotivation("Bâtir un palais");
+		palais.setDescription(
+				"Vous aimez vous mettre au service d'un Notable afin de lui confectionner une demeure sur mesure. L'idée est de saisir la personnalité de celui que vous servez afin de traduireles principaux traits de caractères en éléments architecturaux.");
+		palais.setDomaineLie(technique);
+		palais = motivationRepository.save(palais);
+		
+		machineSousMarine.setNomMotivation("Construire une machine sous-marine");
+		machineSousMarine.setDescription(
+				"Vous préférez explorer les profondeurs abyssales des océans à bords de sumersibles extravagants mais la plupart du temps fiable. Défier les profondeur impose une grande rigueur technique mais cela ne vous arrêtera pas et vous ferez tout pour arriver à explorer ce monde encore inconnu de tous.");
+		machineSousMarine.setDomaineLie(technique);
+		machineSousMarine = motivationRepository.save(machineSousMarine);
+		
+		ouvrage.setNomMotivation("Ecrire un ouvrage");
+		ouvrage.setDescription(
+				"Pour vous, l'encyclopédie de la connaissance absolue est une quête de longue haleine, car il existe déjà quantité d'ouvrages pertinents sur tout un tas de sujets. Vous devrez donc trouver un axe créatif original qui vous permettrea de présenter votre savoir senlon des thématiques novatrices.");
+		ouvrage.setDomaineLie(savor);
+		ouvrage = motivationRepository.save(ouvrage);
 //-------------------------------------------------------------------------------------------------------------------------
 //		REMPLISSAGE OBJET POUVOIR
 //-------------------------------------------------------------------------------------------------------------------------	
