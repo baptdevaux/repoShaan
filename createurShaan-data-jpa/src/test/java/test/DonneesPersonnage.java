@@ -152,7 +152,7 @@ public class DonneesPersonnage {
 		Caste voyageurs = new Caste();
 		Caste combattants = new Caste();
 		Caste ombres = new Caste();
-		
+
 //-------------------------------------------------------------------------------------------------------------------------
 //		CREATION OBJET METIER
 //-------------------------------------------------------------------------------------------------------------------------	
@@ -278,116 +278,134 @@ public class DonneesPersonnage {
 		pilotage.setNom("Pilotage");
 		pilotage.setDomaineLie(technique);
 //		pilotage.setMetier(pilote);
-		pilotage=specialisationRepository.save(pilotage);
-		
-		recuperation.setDescription("Conduire tout type de véhicule motorisé, du tank à la moto à réaction, en passant par l'aérojet, ou l'hydroglisseur. Connaître des rudiments techniques nécessaires à l'entretien et au bon fonctionnement du véhicule.");
+		pilotage = specialisationRepository.save(pilotage);
+
+		recuperation.setDescription(
+				"Conduire tout type de véhicule motorisé, du tank à la moto à réaction, en passant par l'aérojet, ou l'hydroglisseur. Connaître des rudiments techniques nécessaires à l'entretien et au bon fonctionnement du véhicule.");
 		recuperation.setNom("Récupération");
 		recuperation.setDomaineLie(technique);
 //		recuperation.setMetier(recuperateur);
-		recuperation=specialisationRepository.save(recuperation);
-		
-		sensDeLaPierre.setDescription("Construire des murs, des ponts, des sols et des routes. Préparer de la trihnite pour en faire des portes de transfert. Connaître le modelage, la taille de pierre et l'architecture. Situer les sites riches en roche, en trihnite et savoir en extraire de la matière première. Apprécier la qualité, la valeur et la résistance d'un bâtiment ou d'une caverne.");
+		recuperation = specialisationRepository.save(recuperation);
+
+		sensDeLaPierre.setDescription(
+				"Construire des murs, des ponts, des sols et des routes. Préparer de la trihnite pour en faire des portes de transfert. Connaître le modelage, la taille de pierre et l'architecture. Situer les sites riches en roche, en trihnite et savoir en extraire de la matière première. Apprécier la qualité, la valeur et la résistance d'un bâtiment ou d'une caverne.");
 		sensDeLaPierre.setNom("Sens de la pierre");
 		sensDeLaPierre.setDomaineLie(technique);
 //		sensDeLaPierre.setMetier(batisseur);
-		sensDeLaPierre=specialisationRepository.save(sensDeLaPierre);
-		
-		sensDuBois.setDescription("Fabriquer du mobilier, du papier, de la corde, des bateaux, des charpentes. Connaître la menuiserie, la charpenterie, la papeterie, la découpe et le traitement du bois pour en faire une bonne matière première. Apprécier la qualité, la valeur et la résistance d'un bateau, d'un meuble, d'un plancher.");
+		sensDeLaPierre = specialisationRepository.save(sensDeLaPierre);
+
+		sensDuBois.setDescription(
+				"Fabriquer du mobilier, du papier, de la corde, des bateaux, des charpentes. Connaître la menuiserie, la charpenterie, la papeterie, la découpe et le traitement du bois pour en faire une bonne matière première. Apprécier la qualité, la valeur et la résistance d'un bateau, d'un meuble, d'un plancher.");
 		sensDuBois.setNom("Sens du bois");
 		sensDuBois.setDomaineLie(technique);
 //		sensDuBois.setMetier(charpentier);
-		sensDuBois=specialisationRepository.save(sensDuBois);
-		
-		sensDuCuir.setDescription("Confectionner des sacs, des armures en cuir, des lanières, des chaussures, des sièges. Connaître la tannerie, la zoologie et le traitement de la peau d'un animal pour en faire une bonne matière première. Apprécier la qualité, la valeur et la résistance d'un objet ou d'une pièce de cuir.");
+		sensDuBois = specialisationRepository.save(sensDuBois);
+
+		sensDuCuir.setDescription(
+				"Confectionner des sacs, des armures en cuir, des lanières, des chaussures, des sièges. Connaître la tannerie, la zoologie et le traitement de la peau d'un animal pour en faire une bonne matière première. Apprécier la qualité, la valeur et la résistance d'un objet ou d'une pièce de cuir.");
 		sensDuCuir.setNom("Sens du cuir");
 		sensDuCuir.setDomaineLie(technique);
 //		sensDuCuir.setMetier(tanneur);
-		sensDuCuir=specialisationRepository.save(sensDuCuir);
-		
-		sensDuMetal.setDescription("Fabriquer des engrenages, des armes, des armures et des pièces mécaniques. Connaître la métallurgie et l'armurerie. Situer les sites riches en métaux et savoir en extraire de la matière première. Apprécier la qualité, la valeur et la résistance d'un objet ou d'une pièce en métal.");
+		sensDuCuir = specialisationRepository.save(sensDuCuir);
+
+		sensDuMetal.setDescription(
+				"Fabriquer des engrenages, des armes, des armures et des pièces mécaniques. Connaître la métallurgie et l'armurerie. Situer les sites riches en métaux et savoir en extraire de la matière première. Apprécier la qualité, la valeur et la résistance d'un objet ou d'une pièce en métal.");
 		sensDuMetal.setNom("Sens du metal");
 		sensDuMetal.setDomaineLie(technique);
 //		sensDuMetal.setMetier(forgeron);
-		sensDuMetal=specialisationRepository.save(sensDuMetal);
-		
-		sensDuTissu.setDescription("Tisser des vêtements, des voiles pour les bateaux, des coussins, des draps, des tapis. Connaître le tissage, le stylisme et le traitement du coton ou de la soie pour en faire une bonne matière première. Apprécier la qualité, la valeur et la résistance d'une étoffe ou d'une voile.");
+		sensDuMetal = specialisationRepository.save(sensDuMetal);
+
+		sensDuTissu.setDescription(
+				"Tisser des vêtements, des voiles pour les bateaux, des coussins, des draps, des tapis. Connaître le tissage, le stylisme et le traitement du coton ou de la soie pour en faire une bonne matière première. Apprécier la qualité, la valeur et la résistance d'une étoffe ou d'une voile.");
 		sensDuTissu.setNom("Sens du tissu");
 		sensDuTissu.setDomaineLie(technique);
 //		sensDuTissu.setMetier(couturier);
-		sensDuTissu=specialisationRepository.save(sensDuTissu);
-		
-		sensDuVerre.setDescription("Façonner des bijoux, des outils, des fioles, mais aussi des armes, des artefacts, des loupes, des miroirs, des lunettes et des écrans. Connaître l’orfèvrerie. Apprécier la qualité, la valeur et la résistance d'un bijou, d'une fiole...");
+		sensDuTissu = specialisationRepository.save(sensDuTissu);
+
+		sensDuVerre.setDescription(
+				"Façonner des bijoux, des outils, des fioles, mais aussi des armes, des artefacts, des loupes, des miroirs, des lunettes et des écrans. Connaître l’orfèvrerie. Apprécier la qualité, la valeur et la résistance d'un bijou, d'une fiole...");
 		sensDuVerre.setNom("Sens du verre");
 		sensDuVerre.setDomaineLie(technique);
 //		sensDuVerre.setMetier(joaillier);
-		sensDuVerre=specialisationRepository.save(sensDuVerre);
-		
-		technologie.setDescription("Connaître les sources d'énergie et leurs applications pour faire fonctionner un appareil régi par la technologie humaine. Construire ou réparer une arme à feu, un moteur de véhicule, un appareil électronique, etc. Composer des programmes informatiques en \"Code Note\" qui tournent sur le rézo Arpège (logiciels, interfaces, virus, démons, espions, lutins, judas, cryptographie...)");
+		sensDuVerre = specialisationRepository.save(sensDuVerre);
+
+		technologie.setDescription(
+				"Connaître les sources d'énergie et leurs applications pour faire fonctionner un appareil régi par la technologie humaine. Construire ou réparer une arme à feu, un moteur de véhicule, un appareil électronique, etc. Composer des programmes informatiques en \"Code Note\" qui tournent sur le rézo Arpège (logiciels, interfaces, virus, démons, espions, lutins, judas, cryptographie...)");
 		technologie.setNom("Technologie");
 		technologie.setDomaineLie(technique);
 //		technologie.setMetier(infotek);
-		technologie=specialisationRepository.save(technologie);
-		
-		alchimie.setDescription("Connaître les éléments de base qui constituent la matière et les forces qui agissent entre eux. Analyser la nature d'un matériau et en déduire ce qu'il faut pour le creuser, le percer, le briser, le faire fondre, le rendre friable, en un mot, changer son état...");
+		technologie = specialisationRepository.save(technologie);
+
+		alchimie.setDescription(
+				"Connaître les éléments de base qui constituent la matière et les forces qui agissent entre eux. Analyser la nature d'un matériau et en déduire ce qu'il faut pour le creuser, le percer, le briser, le faire fondre, le rendre friable, en un mot, changer son état...");
 		alchimie.setNom("Alchimie");
 		alchimie.setDomaineLie(savoir);
 //		alchimie.setMetier(alchimiste);
-		alchimie=specialisationRepository.save(alchimie);
-		
-		bibliotheque.setDescription("Savoir tirer le meilleur d’une source conséquente de documents pour obtenir des informations sur un sujet précis.");
+		alchimie = specialisationRepository.save(alchimie);
+
+		bibliotheque.setDescription(
+				"Savoir tirer le meilleur d’une source conséquente de documents pour obtenir des informations sur un sujet précis.");
 		bibliotheque.setNom("Bibliotheque");
 		bibliotheque.setDomaineLie(savoir);
 //		bibliotheque.setMetier(archiviste);
-		bibliotheque=specialisationRepository.save(bibliotheque);
-		
-		botanique.setDescription("Connaître le règne végétal terrestre et marin, ainsi que toutes les variétés de champignons. Reconnaître les végétaux empoisonnés des comestibles. Confectionner des cataplasmes et autres mixtures aux facultés curatives dont les effets dépendent des végétaux et de leurs propriétés.");
+		bibliotheque = specialisationRepository.save(bibliotheque);
+
+		botanique.setDescription(
+				"Connaître le règne végétal terrestre et marin, ainsi que toutes les variétés de champignons. Reconnaître les végétaux empoisonnés des comestibles. Confectionner des cataplasmes et autres mixtures aux facultés curatives dont les effets dépendent des végétaux et de leurs propriétés.");
 		botanique.setNom("Botanique");
 		botanique.setDomaineLie(savoir);
 //		botanique.setMetier(botaniste);
-		botanique=specialisationRepository.save(botanique);
-		
-		cultureHumaine.setDescription("Connaître la vie et les mœurs des Humains, mais aussi leur technologie. Avoir une idée de la puissance du Nouvel Ordre et du pouvoir qu’exercent les Grandes Familles. Savoir lire et écrire le Langdiv");
+		botanique = specialisationRepository.save(botanique);
+
+		cultureHumaine.setDescription(
+				"Connaître la vie et les mœurs des Humains, mais aussi leur technologie. Avoir une idée de la puissance du Nouvel Ordre et du pouvoir qu’exercent les Grandes Familles. Savoir lire et écrire le Langdiv");
 		cultureHumaine.setNom("Culture Humaine");
 		cultureHumaine.setDomaineLie(savoir);
 //		cultureHumaine.setMetier(percepteur);
-		cultureHumaine=specialisationRepository.save(cultureHumaine);
-		
-		esoterisme.setDescription("Consulter les astres à l'aide de tarots, d'osselets, de dés, de plateaux de divination, ou même dans le cercle des réalités pour percer les secrets du temps, des lieux et des individus. L'ésotérisme peut constituer un refuge contre les agressions mentales.");
+		cultureHumaine = specialisationRepository.save(cultureHumaine);
+
+		esoterisme.setDescription(
+				"Consulter les astres à l'aide de tarots, d'osselets, de dés, de plateaux de divination, ou même dans le cercle des réalités pour percer les secrets du temps, des lieux et des individus. L'ésotérisme peut constituer un refuge contre les agressions mentales.");
 		esoterisme.setNom("Esoterisme");
 		esoterisme.setDomaineLie(savoir);
 //		esoterisme.setMetier(esoteriste);
-		esoterisme=specialisationRepository.save(esoterisme);
-		
-		geologie.setDescription("Connaître l'histoire de la formation des gouffres et des montagnes, des volcans et des séismes. Évaluer la constitution d'un sol et l'énergie que l'on peut en tirer. Cette Spécialisation est également utilisée pour l'archéologie");
+		esoterisme = specialisationRepository.save(esoterisme);
+
+		geologie.setDescription(
+				"Connaître l'histoire de la formation des gouffres et des montagnes, des volcans et des séismes. Évaluer la constitution d'un sol et l'énergie que l'on peut en tirer. Cette Spécialisation est également utilisée pour l'archéologie");
 		geologie.setNom("Geologie");
 		geologie.setDomaineLie(savoir);
 //		geologie.setMetier(geologue);
-		geologie=specialisationRepository.save(geologie);
-		
-		histoireDHeos.setDescription("Connaître l'histoire générale d’Héos, mais aussi les contes, légendes et mythes existants, qui relatent les épopées d'êtres imaginaires, des dieux de l'ancien panthéon ou de héros ayant réellement vécu en Héossie. Connaître les flux migratoires, les grandes guerres et l'évolution des civilisations.");
+		geologie = specialisationRepository.save(geologie);
+
+		histoireDHeos.setDescription(
+				"Connaître l'histoire générale d’Héos, mais aussi les contes, légendes et mythes existants, qui relatent les épopées d'êtres imaginaires, des dieux de l'ancien panthéon ou de héros ayant réellement vécu en Héossie. Connaître les flux migratoires, les grandes guerres et l'évolution des civilisations.");
 		histoireDHeos.setNom("Histoire d'Héos");
 		histoireDHeos.setDomaineLie(savoir);
 //		histoireDHeos.setMetier(historien);
-		histoireDHeos=specialisationRepository.save(histoireDHeos);
-		
-		medecine.setDescription("Diagnostiquer une maladie. Procéder à des opérations chirurgicales. Connaître parfaitement l'anatomie anthéenne. Savoir quel antidote correspond à chaque poison, sa composition et son mode de fabrication. Soigner le Corps d'une personne atteinte de maladie, d'une intoxication ou qui a subi des blessures physiques.");
+		histoireDHeos = specialisationRepository.save(histoireDHeos);
+
+		medecine.setDescription(
+				"Diagnostiquer une maladie. Procéder à des opérations chirurgicales. Connaître parfaitement l'anatomie anthéenne. Savoir quel antidote correspond à chaque poison, sa composition et son mode de fabrication. Soigner le Corps d'une personne atteinte de maladie, d'une intoxication ou qui a subi des blessures physiques.");
 		medecine.setNom("Médecine");
 		medecine.setDomaineLie(savoir);
 //		medecine.setMetier(medecin);
-		medecine=specialisationRepository.save(medecine);
-		
-		protocoles.setDescription("Connaître les diverses formes de gouvernement, ainsi que les lois régissant administration et pouvoir. Mettre en place les procédures pour accéder à n’importe quel tribunal ou obtenir des laissez-passer. Être à l’aise avec la paperasse qui va avec. Fait également office de Diplomatie vis à vis de cultures inconnues.");
+		medecine = specialisationRepository.save(medecine);
+
+		protocoles.setDescription(
+				"Connaître les diverses formes de gouvernement, ainsi que les lois régissant administration et pouvoir. Mettre en place les procédures pour accéder à n’importe quel tribunal ou obtenir des laissez-passer. Être à l’aise avec la paperasse qui va avec. Fait également office de Diplomatie vis à vis de cultures inconnues.");
 		protocoles.setNom("Protocoles");
 		protocoles.setDomaineLie(savoir);
 //		protocoles.setMetier(juriste);
-		protocoles=specialisationRepository.save(protocoles);
-	
-		zoologie.setDescription("Connaître le règne animal, de la cellule aux mammifères, en passant par les poissons, les insectes et les oiseaux. Connaître les divers écosystèmes qui régissent un lieu, les modes de vie des diverses espèces qui le peuplent, ainsi que les propriétés des organes des animaux.");
+		protocoles = specialisationRepository.save(protocoles);
+
+		zoologie.setDescription(
+				"Connaître le règne animal, de la cellule aux mammifères, en passant par les poissons, les insectes et les oiseaux. Connaître les divers écosystèmes qui régissent un lieu, les modes de vie des diverses espèces qui le peuplent, ainsi que les propriétés des organes des animaux.");
 		zoologie.setNom("Zoologie");
 		zoologie.setDomaineLie(savoir);
 //		zoologie.setMetier(zoologue);
-		zoologie=specialisationRepository.save(zoologie);
-		
+		zoologie = specialisationRepository.save(zoologie);
+
 //-------------------------------------------------------------------------------------------------------------------------
 //		REMPLISSAGE OBJET RACE
 //-------------------------------------------------------------------------------------------------------------------------	
@@ -484,7 +502,8 @@ public class DonneesPersonnage {
 		nomois.setLangues("Héossien, Nomoï");
 		nomois.setPouvoirDeRace("Sagesse Nomoï");
 		nomois.setPeupleOrigine(glaces);
-		nomois.setCastePredilection(magiciens);;
+		nomois.setCastePredilection(magiciens);
+		;
 		nomois.setElementTotem("Moi");
 		nomois.setCouleurSymbolique("Argent");
 		nomois = raceRepository.save(nomois);
@@ -498,7 +517,8 @@ public class DonneesPersonnage {
 		woons.setLangues("Héossien, Woon");
 		woons.setPouvoirDeRace("Résistance Woon");
 		woons.setPeupleOrigine(foretsBlanches);
-		woons.setCastePredilection(elementalistes);;
+		woons.setCastePredilection(elementalistes);
+		;
 		woons.setElementTotem("Animal");
 		woons.setCouleurSymbolique("Or");
 		woons = raceRepository.save(woons);
@@ -646,33 +666,37 @@ public class DonneesPersonnage {
 				"Les Shaanistes sont des porteurs de lumière. Transmettant le Shaan à qui l'accepte, ils ont pour charge d'apaiser les Âmes, d'harmoniser les Esprits et de réguler toute sorte de fanatisme. Le Nouvel Ordre a systématiquement persécuté les Shaanistes. Les génocides qui se sont produits ont, pendant un moment, rendu la pratique du Shaan dangereuse, mais aucun de ses adeptes ne s'est détourné de sa voie.");
 		shaanistes.setDomaine(shaan);
 		shaanistes = casteRepository.save(shaanistes);
-		
+
 		magiciens.setNomCaste("Les Magiciens");
-		magiciens.setDescription("Les Magiciens utilisent les Trihns qui voyagent sur Héos et s'en servent comme combustible pour leurs Pouvoirs. Souvent en contact avec les autres Castes, ils les aident par leur savoir et leur pratique.");
+		magiciens.setDescription(
+				"Les Magiciens utilisent les Trihns qui voyagent sur Héos et s'en servent comme combustible pour leurs Pouvoirs. Souvent en contact avec les autres Castes, ils les aident par leur savoir et leur pratique.");
 		magiciens.setDomaine(magie);
 		magiciens = casteRepository.save(magiciens);
-		
+
 		elementalistes.setNomCaste("Les Élémentalistes");
-		elementalistes.setDescription("Les Élémentalistes échappent au système de classement des autres Castes. Ils vouent un culte aux Éléments tels qu'ils sont représentés au sein du Cercle des Réalités. Chacun de ces Éléments constitue une voie qu'un Élémentaliste peut choisir de suivre. Si un Élémentaliste transgresse volontairement un de ses tabous, il attire la colère de l'Élément offensé. Pendant trois Jours, tous ses Tests de RITUELS impliquant cet Élément lui feront perdre un point de Corps supplémentaire à cause de cette agressivité élémentaire. Il sera en pénitence et devra passer ce temps à prier son Élément.");
+		elementalistes.setDescription(
+				"Les Élémentalistes échappent au système de classement des autres Castes. Ils vouent un culte aux Éléments tels qu'ils sont représentés au sein du Cercle des Réalités. Chacun de ces Éléments constitue une voie qu'un Élémentaliste peut choisir de suivre. Si un Élémentaliste transgresse volontairement un de ses tabous, il attire la colère de l'Élément offensé. Pendant trois Jours, tous ses Tests de RITUELS impliquant cet Élément lui feront perdre un point de Corps supplémentaire à cause de cette agressivité élémentaire. Il sera en pénitence et devra passer ce temps à prier son Élément.");
 		elementalistes.setDomaine(rituels);
 		elementalistes = casteRepository.save(elementalistes);
-		
+
 		voyageurs.setNomCaste("Les Voyageurs");
-		voyageurs.setDescription("Cette Caste rassemble les anthéens chargés de transporter quelque chose ou quelqu'un d'un point à un autre. Les Sportifs qui vont de ville en ville font également partie de cette Caste. Les Voyageurs ont pu conserver une importance malgré la démocratisation des Portes de Transfert, car bien que plus lents, ils restent tout de même bien meilleur marché");
+		voyageurs.setDescription(
+				"Cette Caste rassemble les anthéens chargés de transporter quelque chose ou quelqu'un d'un point à un autre. Les Sportifs qui vont de ville en ville font également partie de cette Caste. Les Voyageurs ont pu conserver une importance malgré la démocratisation des Portes de Transfert, car bien que plus lents, ils restent tout de même bien meilleur marché");
 		voyageurs.setDomaine(survie);
 		voyageurs = casteRepository.save(voyageurs);
-		
+
 		combattants.setNomCaste("Les Combattants");
-		combattants.setDescription("Cette Caste rassemble tous ceux qui ne vivent que par la guerre et le respect de l'ordre. Soldats, miliciens, gladiateurs, hommes de main en sont les dignes représentants. Entre les Castes, les Guildes, les Notables et les Grandes Familles, nombreux sont ceux qui les utilisent à tour de bras pour régler des conflits, protéger un lieu ou récupérer quelque chose.");
+		combattants.setDescription(
+				"Cette Caste rassemble tous ceux qui ne vivent que par la guerre et le respect de l'ordre. Soldats, miliciens, gladiateurs, hommes de main en sont les dignes représentants. Entre les Castes, les Guildes, les Notables et les Grandes Familles, nombreux sont ceux qui les utilisent à tour de bras pour régler des conflits, protéger un lieu ou récupérer quelque chose.");
 		combattants.setDomaine(combat);
 		combattants = casteRepository.save(combattants);
-		
 
 		ombres.setNomCaste("Les Ombres");
-		ombres.setDescription("Cette Caste siège à l'Assemblée Héossienne et dans les Conseils des Castes. Organisée de façon assez anarchique, elle suit malgré tout une hiérarchie pyramidale, chapeauté par plusieurs Parrains dont l'identité n'est jamais clairement établie, mais qui imposent leur autorité par la peur.");
+		ombres.setDescription(
+				"Cette Caste siège à l'Assemblée Héossienne et dans les Conseils des Castes. Organisée de façon assez anarchique, elle suit malgré tout une hiérarchie pyramidale, chapeauté par plusieurs Parrains dont l'identité n'est jamais clairement établie, mais qui imposent leur autorité par la peur.");
 		ombres.setDomaine(necrose);
 		ombres = casteRepository.save(ombres);
-		
+
 //-------------------------------------------------------------------------------------------------------------------------
 //		REMPLISSAGE OBJET METIER
 //-------------------------------------------------------------------------------------------------------------------------	
@@ -692,43 +716,108 @@ public class DonneesPersonnage {
 				"Vous êtes atteint d'un sentiment d'insécurité chronique. Vous passez votre temps à imaginer des systèmes de protection les plus improbables pourfortifier une ville et la rendre inattaquable. Vous vez besoin de protéger des vies pour vous sentir bien.");
 		forteresse.setDomaineLie(technique);
 		forteresse = motivationRepository.save(forteresse);
-		
+
 		palais.setNomMotivation("Bâtir un palais");
 		palais.setDescription(
 				"Vous aimez vous mettre au service d'un Notable afin de lui confectionner une demeure sur mesure. L'idée est de saisir la personnalité de celui que vous servez afin de traduireles principaux traits de caractères en éléments architecturaux.");
 		palais.setDomaineLie(technique);
 		palais = motivationRepository.save(palais);
-		
+
 		machineSousMarine.setNomMotivation("Construire une machine sous-marine");
 		machineSousMarine.setDescription(
 				"Vous préférez explorer les profondeurs abyssales des océans à bords de sumersibles extravagants mais la plupart du temps fiable. Défier les profondeur impose une grande rigueur technique mais cela ne vous arrêtera pas et vous ferez tout pour arriver à explorer ce monde encore inconnu de tous.");
 		machineSousMarine.setDomaineLie(technique);
 		machineSousMarine = motivationRepository.save(machineSousMarine);
-		
+
 		ouvrage.setNomMotivation("Ecrire un ouvrage");
 		ouvrage.setDescription(
 				"Pour vous, l'encyclopédie de la connaissance absolue est une quête de longue haleine, car il existe déjà quantité d'ouvrages pertinents sur tout un tas de sujets. Vous devrez donc trouver un axe créatif original qui vous permettrea de présenter votre savoir senlon des thématiques novatrices.");
 		ouvrage.setDomaineLie(savoir);
 		ouvrage = motivationRepository.save(ouvrage);
-		
-		universite.setNomMotivation("");
+
+		universite.setNomMotivation("Fonder une Université");
 		universite.setDescription(
-				".");
+				"Vous voulez fonder une Université et en être le dirigeant afin de vous élever au statut de Notable. Même si les premières années attirent rarement de bon élèves, le temps aide à obtenir de meilleur résultat et mettre en avant le fondateur.");
 		universite.setDomaineLie(savoir);
 		universite = motivationRepository.save(universite);
-		
-		transmettreSavoir.setNomMotivation("");
+
+		transmettreSavoir.setNomMotivation("Transmettre son Savoir");
 		transmettreSavoir.setDescription(
-				".");
+				"Vous vous situez dans une filiation et reproduisez le schéma qu'on vous a enseigné. Le Savoir est le bien le plus précieux et doit être partagé par tous pour rendre chacun meilleur et plus armé pour survivre dans un environnement en constante évolution.");
 		transmettreSavoir.setDomaineLie(savoir);
 		transmettreSavoir = motivationRepository.save(transmettreSavoir);
-		
+
 		riche.setNomMotivation("Devenir riche");
 		riche.setDescription(
-				".");
+				"le Gain d'argent reste la Motivation partagée par la majoritée des individus. L'argent donne du pouvoir et le pouvoir procure un peu de liberté. Et la liberté est quelque chose dont tout le monde à besoin actuellement.");
 		riche.setDomaineLie(social);
 		riche = motivationRepository.save(riche);
-		
+
+		notable.setNomMotivation("Devenir un Notable");
+		notable.setDescription(
+				"Le sentiment de réussite personnelle peut passer par une certaine forme de reconnaissance. Devenir un/une Notable constitue pour n'importe quel marchand une Motivation très importante.");
+		notable.setDomaineLie(social);
+		notable = motivationRepository.save(notable);
+
+		seduire.setNomMotivation("Seduire les autres");
+		seduire.setDescription(
+				"Vous connaissez le pouvoir que vous exercez sur autrui et vous aimez en abuser. Cela constitue pour vous une Motivation qui occupe chaque instant de votre vie. Dès que vous rencontrez une nouvelle personne, vous éprouvez le besoin d'user de votre charisme pour le mettre dans votre poche.");
+		seduire.setDomaineLie(social);
+		seduire = motivationRepository.save(seduire);
+
+		charmer.setNomMotivation("Charmer les puissants");
+		charmer.setDescription(
+				"l'Art est universel car il traverse les frontières et s'affranchit des modes et des clivages. Connaissant votre influence sur les autres vous aimez jouer avec votre public, le sentir vaciller au contact de votre art. Et lorsqu'il sagit de puissants Notables, ivre de pouvoir, vous pouvez vous transcender pour vous attirer des faveurs.");
+		charmer.setDomaineLie(arts);
+		charmer = motivationRepository.save(charmer);
+
+		celebre.setNomMotivation("Devenir célèbre");
+		celebre.setDescription(
+				"Vous chercher la célébrité à tout prix. Vous voulez être connu et reconnu par vos pairs, pour vos oeuvres autant que pour votre personnalité et votre style.");
+		celebre.setDomaineLie(arts);
+		celebre = motivationRepository.save(celebre);
+
+		mode.setNomMotivation("Créer un courant de mode");
+		mode.setDescription(
+				"Les modes font et défont les Artistes donc autant créer ses propres courants. A la recherche des tendances en vogues en peinture, musique, littératures, spectacles et autres divertissements, vous cherchez l'opportunité qui vous permettra de placer au bon moment, le bon concept pour les bonnes personnes.");
+		mode.setDomaineLie(arts);
+		mode = motivationRepository.save(mode);
+
+		genereux.setNomMotivation("Etre généreux");
+		genereux.setDescription(
+				"Vous vous positionnez comme un bon samaritain et partagerez toujours vos richesses avec plus pauvres que vous afin d'éradiquer la misère. Votre générositése traduit aussi par la façon que vous avez d'offrir des cadeaux à votre entourageet d'êtres pleins de bonnes intentions.");
+		genereux.setDomaineLie(shaan);
+		genereux = motivationRepository.save(genereux);
+
+		trouverAmeSoeur.setNomMotivation("Trouver son Âme soeur");
+		trouverAmeSoeur.setDescription(
+				"Vous êtes en quête d'amour. Vous cherchez votre Âme soeur, pour faire le reste du chemin avec elle. Romantique et fleur bleue, vous savez déployer des trésors de séduction si la personne que vous avez repérée reste sourdeou aveugle à votre amour. Vous préservant pour une seule personne, vous attendez la bonne en vivant comme un ascète en évitant soigneusement les pièges de la tentation.");
+		trouverAmeSoeur.setDomaineLie(shaan);
+		trouverAmeSoeur = motivationRepository.save(trouverAmeSoeur);
+
+		aider.setNomMotivation("Aider les autres");
+		aider.setDescription("Pour vous l'Autre est une partie du Moi. En aidant l'Autre, vous vous aidez vous-même. Le coeur sur la main, vous offrez vos service à tous ceux que vous croiser et qui en ont besoin. Avec le temps, vous avez su repérer ceux qui veulent profiter de vous et ceux qui ont véritablement besoin de vous.");
+		aider.setDomaineLie(shaan);
+		aider = motivationRepository.save(aider);
+
+		charmer.setNomMotivation("");
+		charmer.setDescription(".");
+		charmer.setDomaineLie(arts);
+		charmer = motivationRepository.save(charmer);
+		charmer.setNomMotivation("");
+		charmer.setDescription(".");
+		charmer.setDomaineLie(arts);
+		charmer = motivationRepository.save(charmer);
+
+		charmer.setNomMotivation("");
+		charmer.setDescription(".");
+		charmer.setDomaineLie(arts);
+		charmer = motivationRepository.save(charmer);
+
+		charmer.setNomMotivation("");
+		charmer.setDescription(".");
+		charmer.setDomaineLie(arts);
+		charmer = motivationRepository.save(charmer);
 //-------------------------------------------------------------------------------------------------------------------------
 //		REMPLISSAGE OBJET POUVOIR
 //-------------------------------------------------------------------------------------------------------------------------	
