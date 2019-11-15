@@ -400,7 +400,7 @@ public class DonneesPersonnage {
 		boreals.setLangues("Héossien, Boréal");
 		boreals.setPouvoirDeRace("Vision Boréal");
 		boreals.setPeupleOrigine(rivages);
-//		boreals.setCastePredilection(voyageurs);
+		boreals.setCastePredilection(voyageurs);
 		boreals.setElementTotem("Eau");
 		boreals.setCouleurSymbolique("Bleu marine");
 		boreals = raceRepository.save(boreals);
@@ -414,7 +414,7 @@ public class DonneesPersonnage {
 		darkens.setLangues("Héossien, Darken");
 		darkens.setPouvoirDeRace("Rage Darken");
 		darkens.setPeupleOrigine(sables);
-//		darkens.setCastePredilection(combattants);
+		darkens.setCastePredilection(combattants);
 		darkens.setElementTotem("Feu");
 		darkens.setCouleurSymbolique("Rouge");
 		darkens = raceRepository.save(darkens);
@@ -484,7 +484,7 @@ public class DonneesPersonnage {
 		nomois.setLangues("Héossien, Nomoï");
 		nomois.setPouvoirDeRace("Sagesse Nomoï");
 		nomois.setPeupleOrigine(glaces);
-//		nomois.setCastePredilection(magiciens);;
+		nomois.setCastePredilection(magiciens);;
 		nomois.setElementTotem("Moi");
 		nomois.setCouleurSymbolique("Argent");
 		nomois = raceRepository.save(nomois);
@@ -498,7 +498,7 @@ public class DonneesPersonnage {
 		woons.setLangues("Héossien, Woon");
 		woons.setPouvoirDeRace("Résistance Woon");
 		woons.setPeupleOrigine(foretsBlanches);
-//		woons.setCastePredilection(elementalistes);;
+		woons.setCastePredilection(elementalistes);;
 		woons.setElementTotem("Animal");
 		woons.setCouleurSymbolique("Or");
 		woons = raceRepository.save(woons);
@@ -526,7 +526,7 @@ public class DonneesPersonnage {
 		humains.setLangues("Héossien, Langdiv");
 		humains.setPouvoirDeRace("Névrose Humain");
 		humains.setPeupleOrigine(cites);
-//		humains.setCastePredilection(ombres);
+		humains.setCastePredilection(ombres);
 		humains.setElementTotem("Limbes");
 		humains.setCouleurSymbolique("Noir");
 		humains = raceRepository.save(humains);
@@ -716,6 +716,19 @@ public class DonneesPersonnage {
 				".");
 		universite.setDomaineLie(savoir);
 		universite = motivationRepository.save(universite);
+		
+		transmettreSavoir.setNomMotivation("");
+		transmettreSavoir.setDescription(
+				".");
+		transmettreSavoir.setDomaineLie(savoir);
+		transmettreSavoir = motivationRepository.save(transmettreSavoir);
+		
+		riche.setNomMotivation("Devenir riche");
+		riche.setDescription(
+				".");
+		riche.setDomaineLie(social);
+		riche = motivationRepository.save(riche);
+		
 //-------------------------------------------------------------------------------------------------------------------------
 //		REMPLISSAGE OBJET POUVOIR
 //-------------------------------------------------------------------------------------------------------------------------	
