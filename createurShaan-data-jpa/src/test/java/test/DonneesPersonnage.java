@@ -701,7 +701,7 @@ public class DonneesPersonnage {
 		ouvrage.setNomMotivation("Ecrire un ouvrage");
 		ouvrage.setDescription(
 				"Pour vous, l'encyclopédie de la connaissance absolue est une quête de longue haleine, car il existe déjà quantité d'ouvrages pertinents sur tout un tas de sujets. Vous devrez donc trouver un axe créatif original qui vous permettrea de présenter votre savoir senlon des thématiques novatrices.");
-		ouvrage.setDomaineLie(savor);
+		ouvrage.setDomaineLie(savoir);
 		ouvrage = motivationRepository.save(ouvrage);
 //-------------------------------------------------------------------------------------------------------------------------
 //		REMPLISSAGE OBJET POUVOIR
