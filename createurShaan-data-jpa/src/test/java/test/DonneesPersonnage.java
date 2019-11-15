@@ -151,6 +151,7 @@ public class DonneesPersonnage {
 		Caste elementalistes = new Caste();
 		Caste voyageurs = new Caste();
 		Caste combattants = new Caste();
+		Caste ombres = new Caste();
 		
 //-------------------------------------------------------------------------------------------------------------------------
 //		CREATION OBJET METIER
@@ -625,63 +626,29 @@ public class DonneesPersonnage {
 		
 		magiciens.setNomCaste("Les Magiciens");
 		magiciens.setDescription("Les Magiciens utilisent les Trihns qui voyagent sur Héos et s'en servent comme combustible pour leurs Pouvoirs. Souvent en contact avec les autres Castes, ils les aident par leur savoir et leur pratique.");
-//		magiciens.setDomaine(magie);
-//		magiciens.getMetiers().add(arcanien);
-//		magiciens.getMetiers().add(conjurateur);
-//		magiciens.getMetiers().add(illusionniste);
-//		magiciens.getMetiers().add(enchanteur);
-//		magiciens.getMetiers().add(mageItinerant);
-//		magiciens.getMetiers().add(regenerateur);
-//		magiciens.getMetiers().add(revocateur);
-//		magiciens.getMetiers().add(shaman);
-//		magiciens.getMetiers().add(sorcier);
-//		magiciens.getMetiers().add(voleurDeTrihn);
+		magiciens.setDomaine(magie);
 		magiciens = casteRepository.save(magiciens);
 		
 		elementalistes.setNomCaste("Les Élémentalistes");
 		elementalistes.setDescription("Les Élémentalistes échappent au système de classement des autres Castes. Ils vouent un culte aux Éléments tels qu'ils sont représentés au sein du Cercle des Réalités. Chacun de ces Éléments constitue une voie qu'un Élémentaliste peut choisir de suivre. Si un Élémentaliste transgresse volontairement un de ses tabous, il attire la colère de l'Élément offensé. Pendant trois Jours, tous ses Tests de RITUELS impliquant cet Élément lui feront perdre un point de Corps supplémentaire à cause de cette agressivité élémentaire. Il sera en pénitence et devra passer ce temps à prier son Élément.");
-//		elementalistes.setDomaine(rituels);
-//		elementalistes.getMetiers().add(feu);
-//		elementalistes.getMetiers().add(air);
-//		elementalistes.getMetiers().add(limbes);
-//		elementalistes.getMetiers().add(terre);
-//		elementalistes.getMetiers().add(autre);
-//		elementalistes.getMetiers().add(moi);
-//		elementalistes.getMetiers().add(animal);
-//		elementalistes.getMetiers().add(eau);
-//		elementalistes.getMetiers().add(objet);
-//		elementalistes.getMetiers().add(vegetal);
+		elementalistes.setDomaine(rituels);
 		elementalistes = casteRepository.save(elementalistes);
 		
 		voyageurs.setNomCaste("Les Voyageurs");
 		voyageurs.setDescription("Cette Caste rassemble les anthéens chargés de transporter quelque chose ou quelqu'un d'un point à un autre. Les Sportifs qui vont de ville en ville font également partie de cette Caste. Les Voyageurs ont pu conserver une importance malgré la démocratisation des Portes de Transfert, car bien que plus lents, ils restent tout de même bien meilleur marché");
-//		voyageurs.setDomaine(survie);
-//		voyageurs.getMetiers().add(athlete);
-//		voyageurs.getMetiers().add(caravanier);
-//		voyageurs.getMetiers().add(chasseur);
-//		voyageurs.getMetiers().add(eclaireur);
-//		voyageurs.getMetiers().add(espion);
-//		voyageurs.getMetiers().add(guide);
-//		voyageurs.getMetiers().add(messager);
-//		voyageurs.getMetiers().add(navigateur);
-//		voyageurs.getMetiers().add(traqueurDeStele);
-//		voyageurs.getMetiers().add(voltigeur);
+		voyageurs.setDomaine(survie);
 		voyageurs = casteRepository.save(voyageurs);
 		
 		combattants.setNomCaste("Les Combattants");
 		combattants.setDescription("Cette Caste rassemble tous ceux qui ne vivent que par la guerre et le respect de l'ordre. Soldats, miliciens, gladiateurs, hommes de main en sont les dignes représentants. Entre les Castes, les Guildes, les Notables et les Grandes Familles, nombreux sont ceux qui les utilisent à tour de bras pour régler des conflits, protéger un lieu ou récupérer quelque chose.");
-//		combattants.setDomaine(combat);
-//		combattants.getMetiers().add(archer);
-//		combattants.getMetiers().add(animalier);
-//		combattants.getMetiers().add(artilleur);
-//		combattants.getMetiers().add(fantassin);
-//		combattants.getMetiers().add(francTireur);
-//		combattants.getMetiers().add(gardeMine);
-//		combattants.getMetiers().add(gardinDesForets);
-//		combattants.getMetiers().add(gladiateur);
-//		combattants.getMetiers().add(protecteur);
-//		combattants.getMetiers().add(soldat);
+		combattants.setDomaine(combat);
 		combattants = casteRepository.save(combattants);
+		
+
+		ombres.setNomCaste("Les Ombres");
+		ombres.setDescription("Cette Caste siège à l'Assemblée Héossienne et dans les Conseils des Castes. Organisée de façon assez anarchique, elle suit malgré tout une hiérarchie pyramidale, chapeauté par plusieurs Parrains dont l'identité n'est jamais clairement établie, mais qui imposent leur autorité par la peur.");
+		ombres.setDomaine(necrose);
+		ombres = casteRepository.save(ombres);
 		
 //-------------------------------------------------------------------------------------------------------------------------
 //		REMPLISSAGE OBJET METIER
