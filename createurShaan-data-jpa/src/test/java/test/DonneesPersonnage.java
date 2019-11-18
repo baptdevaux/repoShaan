@@ -285,6 +285,16 @@ public class DonneesPersonnage {
 		Metier discipleDuFeu = new Metier();
 		Metier discipleDuMoi = new Metier();
 		Metier discipleDuVegetal = new Metier();
+		Metier athlete = new Metier();
+		Metier caravanier = new Metier();
+		Metier chasseur = new Metier();
+		Metier eclaireur = new Metier();
+		Metier espion = new Metier();
+		Metier guide = new Metier();
+		Metier messager = new Metier();
+		Metier navigateur = new Metier();
+		Metier traqueurDeStele = new Metier();
+		Metier voltigeur = new Metier();
 
 //-------------------------------------------------------------------------------------------------------------------------
 //		CREATION OBJET MOTIVATION
@@ -818,143 +828,72 @@ public class DonneesPersonnage {
 				"S'investir de l'élément \"Autre\" afin de bénéficier de pouvoirs surnaturels. Effectuer un Rite consacré à l'Autre d'une Heure environ, pour augmenter de 1 le niveau d'ARTS des participants pendant une Situation.");
 		riteDArts.setNom("Rite d'arts");
 		riteDArts.setDomaineLie(rituels);
-//		riteDArts.setMetier(lod);
+		riteDArts.setMetier(discipleDeLautre);
 		riteDArts = specialisationRepository.save(riteDArts);
 
 		riteDeCombat.setDescription(
 				"S'investir de l'élément \"Feu\" afin de bénéficier de pouvoirs surnaturels. Effectuer un Rite consacré au Feu d'une Heure environ, pour augmenter de 1 le niveau de COMBAT des participants pendant une Situation.");
 		riteDeCombat.setNom("Rite de combat");
 		riteDeCombat.setDomaineLie(rituels);
-//		riteDeCombat.setMetier(aken);
+		riteDeCombat.setMetier(discipleDuFeu);
 		riteDeCombat = specialisationRepository.save(riteDeCombat);
 
 		riteDeLAnimal.setDescription(
 				"S'investir de l'élément \"Animal\" afin de bénéficier de pouvoirs surnaturels. Effectuer un Rite consacré à l'Animal d'une Heure environ, pour accorder un Bonus de 1 aux participants pendant une Situation. Ce Bonus s'applique aux Spécialisations suivantes : Sens du cuir (TECHNIQUE), Zoologie (SAVOIR), Langage Primal (SOCIAL), Langage du corps (ARTS), Empathie Animale (SHAAN), Invocation (MAGIE), Monture (SURVIE), Armimales (COMBAT), Harcèlement (NÉCROSE)");
 		riteDeLAnimal.setNom("Rite de l'animal");
 		riteDeLAnimal.setDomaineLie(rituels);
-//		riteDeLAnimal.setMetier(on);
+		riteDeLAnimal.setMetier(discipleDeLAnimal);
 		riteDeLAnimal = specialisationRepository.save(riteDeLAnimal);
 
 		riteDeMagie.setDescription(
 				"S'investir de l'élément \"Moi\" afin de bénéficier de pouvoirs surnaturels.Effectuer un Rite consacré au Moi d'une Heure environ, pour augmenter de 1 le niveau de MAGIE des participants pendant une Situation.");
 		riteDeMagie.setNom("Rite de l'animal");
 		riteDeMagie.setDomaineLie(rituels);
-//		riteDeMagie.setMetier(moi);
+		riteDeMagie.setMetier(discipleDuMoi);
 		riteDeMagie = specialisationRepository.save(riteDeMagie);
 
 		riteDeNecrose.setDescription(
 				"S'investir de l'élément \"Limbes\" afin de bénéficier de pouvoirs surnaturels. Effectuer un Rite consacré aux Limbes d'une Heure environ, pour augmenter de 1 le niveau de NÉCROSE des participants pendant une Situation.");
 		riteDeNecrose.setNom("Rite de nécrose");
 		riteDeNecrose.setDomaineLie(rituels);
-//		riteDeNecrose.setMetier(gargan);
+		riteDeNecrose.setMetier(discipleDesLimbes);
 		riteDeNecrose = specialisationRepository.save(riteDeNecrose);
 
 		riteDeSavoir.setDescription(
 				"S'investir de l'élément \"Végétal\" afin de bénéficier de pouvoirs surnaturels. Effectuer un Rite consacré au Végétal d'une Heure environ, pour augmenter de 1 le niveau de SAVOIR des participants pendant une Situation.");
 		riteDeSavoir.setNom("Rite de savoir");
 		riteDeSavoir.setDomaineLie(rituels);
-//		riteDeSavoir.setMetier(wan);
+		riteDeSavoir.setMetier(discipleDuVegetal);
 		riteDeSavoir = specialisationRepository.save(riteDeSavoir);
 
 		riteDeShaan.setDescription(
 				"S'investir de l'élément \"Terre\" afin de bénéficier de pouvoirs surnaturels. Effectuer un Rite consacré à la Terre d'une Heure environ, pour augmenter de 1 le niveau de SHAAN des participants pendant une Situation.");
 		riteDeShaan.setNom("Rite de shaan");
 		riteDeShaan.setDomaineLie(rituels);
-//		riteDeShaan.setMetier(ling);
+		riteDeShaan.setMetier(discipleDaLaTerre);
 		riteDeShaan = specialisationRepository.save(riteDeShaan);
 
 		riteDeSocial.setDescription(
 				"S'investir de l'élément \"Air\" afin de bénéficier de pouvoirs surnaturels. Effectuer un Rite consacré à l'Air d'une Heure environ, pour augmenter de 1 le niveau de SOCIAL des participants pendant une Situation.");
 		riteDeSocial.setNom("Rite de social");
 		riteDeSocial.setDomaineLie(rituels);
-//		riteDeSocial.setMetier(elhi);
+		riteDeSocial.setMetier(discipleDeLAir);
 		riteDeSocial = specialisationRepository.save(riteDeSocial);
 
 		riteDeSurvie.setDescription(
 				"S'investir de l'élément \"Eau\" afin de bénéficier de pouvoirs surnaturels. Effectuer un Rite consacré à l'Eau d'une Heure environ, pour augmenter de 1 le niveau de SURVIE des participants pendant une Situation.");
 		riteDeSurvie.setNom("Rite de survie");
 		riteDeSurvie.setDomaineLie(rituels);
-//		riteDeSurvie.setMetier(rea);
+		riteDeSurvie.setMetier(discipleDeLEau);
 		riteDeSurvie = specialisationRepository.save(riteDeSurvie);
 
 		riteDeTechnique.setDescription(
 				"S'investir de l'élément \"Objet\" afin de bénéficier de pouvoirs surnaturels. Effectuer un Rite consacré à l'Objet d'une Heure environ, pour augmenter de 1 le niveau de TECHNIQUE des participants pendant une Situation.");
 		riteDeTechnique.setNom("Rite de technique");
 		riteDeTechnique.setDomaineLie(rituels);
-//		riteDeTechnique.setMetier(win);
-		riteDeTechnique=specialisationRepository.save(riteDeTechnique);
-		
-		acrobatie.setDescription("Être dynamique, souple, et rapide. Avoir le sens de l'équilibre. Faire des prouesses acrobatiques, faire l’équilibriste, amortir une chute, se contorsionner… Esquiver une attaque physique.");
-		acrobatie.setNom("Acrobatie");
-		acrobatie.setDomaineLie(survie);
-//		acrobatie.setMetier(voltigeur);
-		acrobatie=specialisationRepository.save(acrobatie);
-		
-		caravane.setDescription("Manœuvrer un attelage, une charrette, un carrosse, un char. Gérer une caravane et la logistique de ravitaillement qu'elle nécessite. Connaître les dispositifs de sécurité à mettre en place lorsqu'une menace survient.");
-		caravane.setNom("Caravane");
-		caravane.setDomaineLie(survie);
-//		caravane.setMetier(caravanier);
-		caravane=specialisationRepository.save(caravane);
-		
-		cultureHeossienne.setDescription("Connaître les us et coutumes des peuples héossiens, ainsi que la géographie de l'Héossie. Cette Spécialisation est principalement ancrée dans le présent. Le passé des peuples héossiens sont plus du ressort de la Spécialisation Histoire d'Héos (SAVOIR).");
-		cultureHeossienne.setNom("Culture héossienne");
-		cultureHeossienne.setDomaineLie(survie);
-//		cultureHeossienne.setMetier(guide);
-		cultureHeossienne=specialisationRepository.save(cultureHeossienne);
-		
-		cultureNecrosienne.setDescription("Connaître les différents stades de la nécrose, du maudit à l'incarnation, ainsi que des différentes voies qui mènent aux Limbes. Situer les divers empires nécrosiens, leurs modes de non-vie, leurs lois et leurs rituels. Rechercher l'emplacement de stèles d'Embiose.");
-		cultureNecrosienne.setNom("Culture nécrosienne");
-		cultureNecrosienne.setDomaineLie(survie);
-//		cultureNecrosienne.setMetier(traqueurdestele);
-		cultureNecrosienne=specialisationRepository.save(cultureNecrosienne);
-		
-		discretion.setDescription("Se déplacer en silence, se cacher dans les ombres, se camoufler dans la nature. Tendre une embuscade. Semer quelqu'un autrement que par la course.");
-		discretion.setNom("Discrétion");
-		discretion.setDomaineLie(survie);
-//		discretion.setMetier(espion);
-		discretion=specialisationRepository.save(discretion);
-		
-		educationPhysique.setDescription("Courir, sauter, escalader, ramper, rouler, nager,... Avoir une bonne coordination motrice. Être endurant.");
-		educationPhysique.setNom("Education physique");
-		educationPhysique.setDomaineLie(survie);
-//		educationPhysique.setMetier(athlete);
-		educationPhysique=specialisationRepository.save(educationPhysique);
-		
-		monture.setDescription("Chevaucher tout type de monture. Diriger des créatures volantes, terrestres ou marines.");
-		monture.setNom("Monture");
-		monture.setDomaineLie(survie);
-//		monture.setMetier(messager);
-		monture=specialisationRepository.save(monture);
-		
-		monture.setDescription("Chevaucher tout type de monture. Diriger des créatures volantes, terrestres ou marines.");
-		monture.setNom("Monture");
-		monture.setDomaineLie(survie);
-//		monture.setMetier(messager);
-		monture=specialisationRepository.save(monture);
-		
-		navigation.setDescription("Naviguer en milieu aquatique ou en milieu aérien. Reconnaître les courants et les interpréter, maîtriser les principes aérodynamiques et hydrauliques permettant de voyager dans les airs et dans l’eau. S'orienter en mer ou dans les airs. Piloter tous types d'engins volants ou marins qui ne comportent pas de technologie humaine. Prédire la météo.");
-		navigation.setNom("Navigation");
-		navigation.setDomaineLie(survie);
-//		navigation.setMetier(navigateur);
-		navigation=specialisationRepository.save(navigation);
-		
-		vieSauvage.setDescription("Connaître tout ce qui a trait au milieu terrestre et à son adaptation. Pister, chasser, poser des pièges, allumer un feu par grand vent, établir un campement réconfortant, se laver à l'eau froide,…");
-		vieSauvage.setNom("Vie sauvage");
-		vieSauvage.setDomaineLie(survie);
-//		vieSauvage.setMetier(chasseur);
-		vieSauvage=specialisationRepository.save(vieSauvage);
-		
-		vieSauvage.setDescription("Connaître tout ce qui a trait au milieu terrestre et à son adaptation. Pister, chasser, poser des pièges, allumer un feu par grand vent, établir un campement réconfortant, se laver à l'eau froide,…");
-		vieSauvage.setNom("Vie sauvage");
-		vieSauvage.setDomaineLie(survie);
-//		vieSauvage.setMetier(chasseur);
-		vieSauvage=specialisationRepository.save(vieSauvage);
-		
-		vigilance.setDescription("Mettre ses sens en éveil, percevoir activement son environnement, contrairement à l'Intuition du Shaan qui traduit la perception passive. Scruter l’horizon pour y découvrir une silhouette inhabituelle. Guetter une proie. Identifier un élément lointain. Avoir le sens de l’orientation.");
-		vigilance.setNom("Vigilance");
-		vigilance.setDomaineLie(survie);
-//		vigilance.setMetier(eclaireur);
-		vigilance=specialisationRepository.save(vigilance);
+		riteDeTechnique.setMetier(discipleDeLObjet);
+		riteDeTechnique = specialisationRepository.save(riteDeTechnique);
+
 //-------------------------------------------------------------------------------------------------------------------------
 //		REMPLISSAGE OBJET RACE
 //-------------------------------------------------------------------------------------------------------------------------	
@@ -1703,7 +1642,7 @@ public class DonneesPersonnage {
 
 		discipleDeLAir.setNomMetier("disciple de l'air");
 		discipleDeLAir.setVoie("Voie de l'Air");
-//		discipleDeLAir.setSpecialisation(riteDeSocial);
+		discipleDeLAir.setSpecialisation(riteDeSocial);
 		discipleDeLAir.setCasteLie(elementalistes);
 		discipleDeLAir.setDescription(
 				"Le culte de l’Air pourrait se résumer en un mot : liberté. Liberté de penser, d’agir, de se déplacer, de créer. Les disciples de l’Air sont des nomades dans l’âme qui trouvent leur salut dans le voyage. Philosophes, certains disciples aiment à se perdre dans les méandres de la pensée et peuvent ainsi discuter pendant des jours sans s’arrêter. Le disciple d’Ëlhi n’est pas à la recherche de la connaissance absolue, mais de ses propres limites intellectuelles, le but étant de les repousser le plus loin possible. Adepte de l’autogestion, il a tendance à rejeter les rapports hiérarchiques. Très spontané, le disciple de l’Air dit toujours ce qu’il pense.");
@@ -1711,7 +1650,7 @@ public class DonneesPersonnage {
 
 		discipleDeLAnimal.setNomMetier("disciple de l'animal");
 		discipleDeLAnimal.setVoie("Voie de l'animal");
-//		discipleDeLAnimal.setSpecialisation(riteDeLAnimal);
+		discipleDeLAnimal.setSpecialisation(riteDeLAnimal);
 		discipleDeLAnimal.setCasteLie(elementalistes);
 		discipleDeLAnimal.setDescription(
 				"Le culte de l’Animal est l’un des plus répandus en Héossie. Prônant des valeurs d’énergie, de courage et d’autorité, il trouve largement sa place au sein des peuples de nature guerrière ou en prise directe avec la nature. Les disciples de l’Animal ont tendance à être assez primitifs et à réagir au quart de tour. Mais en amitié, ils savent aussi être fidèles et se comportent en chef de meute.");
@@ -1719,7 +1658,7 @@ public class DonneesPersonnage {
 
 		discipleDeLautre.setNomMetier("disciple de l'Autre");
 		discipleDeLautre.setVoie("Voie de l'Autre");
-//		discipleDeLautre.setSpecialisation(riteDArts);
+		discipleDeLautre.setSpecialisation(riteDArts);
 		discipleDeLautre.setCasteLie(elementalistes);
 		discipleDeLautre.setDescription(
 				"Le culte de l’Autre est l’un des plus appréciés en Héossie. Fondamentalement pacifiste dans l’âme, le disciple de l’Autre place le respect de la vie au cœur de toute chose. Mais le disciple de l’Autre n’est pas pour autant un imbécile, il est bien conscient que la violence peut s’avérer nécessaire pour sauver les faibles et surtout pour combattre la Nécrose. Car il n’est pas de culte plus hostile à la Nécrose que la voie de Löd. Pour ces disciples, l’âme est source de vie, la perdre, c’est ne plus être vivant.");
@@ -1727,7 +1666,7 @@ public class DonneesPersonnage {
 
 		discipleDeLEau.setNomMetier("disciple de l'Eau");
 		discipleDeLEau.setVoie("Voie de l'Eau");
-//		discipleDeLEau.setSpecialisation(riteDeSurvie);
+		discipleDeLEau.setSpecialisation(riteDeSurvie);
 		discipleDeLEau.setCasteLie(elementalistes);
 		discipleDeLEau.setDescription(
 				"Le culte de l’Eau puise ses racines dans l’enfance, dans le fluide amniotique. Les rêves, les secrets et ce qui échappe au sens commun des mortels reste familier aux yeux du disciple de l’Eau. Très joueur, il ne peut s’empêcher de relever les défis qu’on lui propose, quitte à mettre sa vie et celle de ses proches en danger. Le disciple de l’Eau vit dans son monde et peut donner l’impression d’être parfois absent. Mais ce n’est qu’une impression car le disciple de Rhéa est en contact direct avec le fluide vital des êtres...");
@@ -1735,7 +1674,7 @@ public class DonneesPersonnage {
 
 		discipleDeLObjet.setNomMetier("disciple de l'Objet");
 		discipleDeLObjet.setVoie("Voie de l'Objet");
-//		discipleDeLObjet.setSpecialisation(riteDeTechnique);
+		discipleDeLObjet.setSpecialisation(riteDeTechnique);
 		discipleDeLObjet.setCasteLie(elementalistes);
 		discipleDeLObjet.setDescription(
 				"Le culte de l’Objet fait partie des plus appréciés en Héossie, car il est l’apanage des artisans et des techniciens. Un disciple de l’Objet ayant toujours à cœur que les choses fonctionnent bien autour de lui et ne pourra s’empêcher de réparer ce qui est cassé. Très imaginatif, un disciple de l’Objet préfèrera toujours un moyen compliqué pour résoudre un problème donné ou une solution trop évidente et donc suspecte. Méthodique, le disciple de l’Objet peut paraître froid par moment lorsqu’il est plongé dans l’analyse de ce qui l’entoure. Il peut également faire preuve d’un détachement déconcertant vis à vis de la mort qui n’est pour lui qu’une panne définitive...");
@@ -1743,7 +1682,7 @@ public class DonneesPersonnage {
 
 		discipleDaLaTerre.setNomMetier("disciple de la Terre");
 		discipleDaLaTerre.setVoie("Voie de la Terre");
-//		discipleDaLaTerre.setSpecialisation(riteDeShaan);
+		discipleDaLaTerre.setSpecialisation(riteDeShaan);
 		discipleDaLaTerre.setCasteLie(elementalistes);
 		discipleDaLaTerre.setDescription(
 				"Le culte de la Terre est l’un des plus déroutants. Intégrant dans son dogme le cycle des Trihns, il offre à ses adeptes une vision du monde globale peu accessible aux autres. Le relativisme et le fatalisme dont font preuve les disciples de Ling les place toujours en décalage de ce qui est communément admis. En prise directe avec l’insondable et les forces telluriques, les adeptes de la Terre font souvent preuve d’une grande détermination. Ils voient ce que les autres ne peuvent voir, comme si la terre et tout ce qu’elle avait accumulé depuis toujours était en prise directe avec leur âme...");
@@ -1751,7 +1690,7 @@ public class DonneesPersonnage {
 
 		discipleDesLimbes.setNomMetier("disciple des Limbes");
 		discipleDesLimbes.setVoie("Voie des Limbes");
-//		discipleDesLimbes.setSpecialisation(riteD);
+		discipleDesLimbes.setSpecialisation(riteDeNecrose);
 		discipleDesLimbes.setCasteLie(elementalistes);
 		discipleDesLimbes.setDescription(
 				"Le culte des Limbes est le plus décrié car le plus ambigüe. Car si certains disciples prétendent pratiquer ce culte pour mieux comprendre les Limbes de l’intérieur et pouvoir ainsi mieux les combattre, il n’empêche que cette voie est surtout pratiquée en majorité par les Nécrosiens. Le contact direct avec les névroses les plus abyssales laissent souvent des séquelles aux adeptes de Gargan. Et si tous ne finissent pas nécrosés, c’est que ceux qui restent du «bon côté» sont devenus fous... S’engager sur la voie des Limbes, c’est être sur le fil du rasoir, on peut basculer à tout moment...");
@@ -1759,7 +1698,7 @@ public class DonneesPersonnage {
 
 		discipleDuFeu.setNomMetier("disciple du Feu");
 		discipleDuFeu.setVoie("Voie du Feu");
-//		discipleDuFeu.setSpecialisation(riteDeCombat);
+		discipleDuFeu.setSpecialisation(riteDeCombat);
 		discipleDuFeu.setCasteLie(elementalistes);
 		discipleDuFeu.setDescription(
 				"Le culte du Feu exalte les passions et les conflits. Brûlant tout sur son passage, le disciple du Feu plie ses adversaires à sa volonté. Il s'enflamme pour un rien et ne recule devant rien pour atteindre ses objectifs. Ayant soif de conquêtes et de renommée, le disciple du Feu n’hésite jamais à provoquer les événements plutôt que de les subir. Assez à l’aise dans le chaos, il n’apprécie guère le consensus et peut parfois faire preuve d’esprit de contradiction, par simple plaisir d’en découdre... Les Guerriers, les Sorciers et les Ensorceleurs sont bien en phase avec cette voie.");
@@ -1767,7 +1706,7 @@ public class DonneesPersonnage {
 
 		discipleDuMoi.setNomMetier("disciple du Moi");
 		discipleDuMoi.setVoie("Voie du Moi");
-//		discipleDuMoi.setSpecialisation(riteDeMagie);
+		discipleDuMoi.setSpecialisation(riteDeMagie);
 		discipleDuMoi.setCasteLie(elementalistes);
 		discipleDuMoi.setDescription(
 				"Le culte du Moi est assez singulier. En effet, les disciples ne peuvent compter que sur eux-mêmes pour progresser dans leur voie. Cette dernière, faite de frustration et de solitude a tendance à couper ses adeptes du reste du monde. Égotique et orgueilleux, les adeptes du Moi nourrissent un véritable complexe de supériorité. Ils se plaisent à répéter à qui veut l’entendre qu’ils se sont faits tout seuls... Les Magiciens apprécient particulièrement ce culte qu’ils trouvent en phase avec leurs préoccupations.");
@@ -1775,11 +1714,88 @@ public class DonneesPersonnage {
 
 		discipleDuVegetal.setNomMetier("disciple du Végétal");
 		discipleDuVegetal.setVoie("Voie du Végétal");
-//		discipleDuVegetal.setSpecialisation(riteDeSavoir);
+		discipleDuVegetal.setSpecialisation(riteDeSavoir);
 		discipleDuVegetal.setCasteLie(elementalistes);
 		discipleDuVegetal.setDescription(
 				"Le culte du Végétal est l’un des plus pacifistes. Entièrement dédié à la connaissance et au culte de la transmission du savoir, il est la sève de la culture héossienne. Les disciples de Wän sont de ceux qui bâtissent des bibliothèques, impriment des livres et construisent des écoles afin de communiquer aux générations futures le fruit de leur pensée. Car les disciples du Végétal voient toujours les choses à long terme, à très long terme même, c’est ce qui les rend si sages et si respectables. Mais le végétal peut aussi se révéler empoisonné et produire des parasites. Cette voie obscure qui conduit au machiavélisme et à la folie reste heureusement assez marginale...");
 		discipleDuVegetal = metierRepository.save(discipleDuVegetal);
+
+		athlete.setNomMetier("Athlète");
+		athlete.setVoie("Voie du Feu");
+//		athlete.setSpecialisation(educationPhysique);
+		athlete.setCasteLie(voyageurs);
+		athlete.setDescription(
+				"Les Athlètes parcourent l’Héossie à la recherche de défis à relever et pour participer aux nombreux tournois qui sont organisés tout au long de l’année dans les différentes régions. Course, nage, saut d’obstacle, lancer de disque, de pierre, usage de force ou d’adresse, toutes les disciplines sont représentées et ont leurs champions. Les Athlètes sont la plupart du temps sponsorisés par des Castes ou des Guildes locales. Selon leur niveau ils peuvent prétendre à des salaires plus ou moins importants. Certains Athlètes, dont les mécènes sont de puissants Notables ou des Grandes Familles, ont des salaires mirobolants et une notoriété écrasante. L’Athlète ne lâche jamais prise, contre vents et marées, il sait faire face à tous les obstacles. Grâce à leur mental en acier trempé, les Athlètes à la retraite sont souvent amenés à exercer de hautes responsabilités au sein de diverses Guildes.");
+		athlete = metierRepository.save(athlete);
+
+		caravanier.setNomMetier("Caravanier");
+		caravanier.setVoie("Voie de l'Objet");
+//		caravanier.setSpecialisation(caravane);
+		caravanier.setCasteLie(voyageurs);
+		caravanier.setDescription(
+				"Le Caravanier sillonne les terres héossiennes pour y transporter toutes sortes de marchandises. Les caravanes intègrent souvent des troupeaux de bêtes de somme qui servent de garde-manger, ou d’animaux de rechange pour tracter les gigantesques roulottes à plusieurs étages, véritables bâtisses ambulantes disposant de tout le confort urbain, y compris eau courante, chauffage, système de cuisson et système réfrigérant grâce au réseau de Trihnite domestique. Les caravanes peuvent être constituées de quelques roulottes à plusieurs centaines, donnant à de tels convois des allures de villes nomades. Les caravanes peuvent prendre de nombreuses formes, des frégates de gigantesques navires à ski sillonnant les glaces, aux cohortes de carrioles à plusieurs étages, tirées par des insectes géants traversant les hautes herbes.");
+		caravanier = metierRepository.save(caravanier);
+
+		chasseur.setNomMetier("Chasseur");
+		chasseur.setVoie("Voie du Moi");
+//		chasseur.setSpecialisation(vieSauvage);
+		chasseur.setCasteLie(voyageurs);
+		chasseur.setDescription(
+				"Ne faire qu'un avec sa proie, sentir la respiration de l'arbre, telles sont les pensées du Chasseur qui sait faire Corps avec la nature et lire tous les signes qui peuvent lui permettre de se fondre en elle. Très respectueux de ce qui l'entoure, il connait sa place au sein des règnes animal et végétal. C'est ce qui lui donne un avantage décisif sur sa proie. Capable de rester immobile pendant des heures, puis de fondre sur sa cible à la vitesse de l'éclair, le Chasseur reste un instinctif qui parle peu mais agit efficacement. Peu à l'aise dans les villes, le Chasseur se satisfait de peu, un feu de camp, une tente, une brochette et c'est le nirvana....");
+		chasseur = metierRepository.save(chasseur);
+
+		eclaireur.setNomMetier("Eclaireur");
+		eclaireur.setVoie("Voie de la Terre");
+//		eclaireur.setSpecialisation(vigilance);
+		eclaireur.setCasteLie(voyageurs);
+		eclaireur.setDescription(
+				"Les Éclaireurs sont ceux qui ouvrent de nouvelles routes commerciales, tracent de nouveaux itinéraires et découvrent des territoires inconnus. Toujours sur le qui-vive, à l'écoute du moindre danger, ils savent identifier les signes qu'ils ne connaissent pas pour garder toujours un temps d’avance sur d'éventuels agresseurs. Le voyageur dispose d'une excellente mémoire visuelle, qui lui permet de repérer très vite un détail incongru ou une variation subtile de l'environnement.");
+		eclaireur = metierRepository.save(eclaireur);
+
+		espion.setNomMetier("Espion");
+		espion.setVoie("Voie de l'Air");
+//		espion.setSpecialisation(discretion);
+		espion.setCasteLie(voyageurs);
+		espion.setDescription(
+				"De tous temps, les Espions ont toujours été nécessaires pour obtenir des informations qu’il aurait été impossible d’obtenir autrement… Être invisible, se fondre dans les ombres, se déplacer en silence, telles sont les aptitudes de l’Espion qui lui permettent d’aller où il veut sans attirer l’attention. Même au sein d’un groupe, l’Espion cultive l’art de la discrétion, il reste toujours celui que l’on ne voit pas ou que l’on oublie sitôt avoir été vu… Avec l'arrivée des humains et de leur technologie de repérage très sophistiquée, la tache de l'Espion s'est relativement complexifiée, car l'on ne pénètre pas de la même façon dans une forteresse héossienne que dans un complexe industriel d'une Grande Famille. Certains Espions ont ainsi dû apprendre la magie ou s'équiper de brouilleurs sensitifs afin de pouvoir s'acquitter de leur mission dans de meilleures conditions.");
+		espion = metierRepository.save(espion);
+
+		guide.setNomMetier("Guide");
+		guide.setVoie("Voie du Végétal");
+//		guide.setSpecialisation(cultureHeossienne);
+		guide.setCasteLie(voyageurs);
+		guide.setDescription(
+				"Les Guides disposent d’une culture héossienne hors du commun et leur sens inné de la géopolitique leur permet de voyager en évitant les zones sensibles. Connaître l’histoire des peuples et les us et coutumes de chaque race reste le meilleur moyen de ne pas faire d’impairs lorsqu’une situation conflictuelle se présente. Les Guides sont intarissables sur ce qu’ils connaissent mais ont parfois tendance à submerger d’informations leurs interlocuteurs.");
+		guide = metierRepository.save(guide);
+
+		messager.setNomMetier("Messager");
+		messager.setVoie("Voie de l'Animal");
+//		messager.setSpecialisation(monture);
+		messager.setCasteLie(voyageurs);
+		messager.setDescription(
+				"Cavalier émérite, le Messager change de monture comme d'autres de chemise, afin d'avoir toujours une bête qui soit au maximum de ses capacités pour être la plus rapide possible. La mise en place des réseaux de portes de transferts n'a jamais amoindri la tâche des Messagers, car si les distances ont été raccourcies et que la communication entre les grandes villes se fait relativement facilement, il en va tout autrement dès qu'il faut s'aventurer dans les provinces héossiennes, où des cités perdues dans des coins reculés sont menacées par l'isolement.");
+		messager = metierRepository.save(messager);
+
+//		athlete.setNomMetier("athlete");
+//		athlete.setVoie("Voie du Feu");
+////		athlete.setSpecialisation(educationPhysique);
+//		athlete.setCasteLie(voyageurs);
+//		athlete.setDescription("");
+//		athlete = metierRepository.save(athlete);
+
+//		athlete.setNomMetier("athlete");
+//		athlete.setVoie("Voie du Feu");
+////		athlete.setSpecialisation(educationPhysique);
+//		athlete.setCasteLie(voyageurs);
+//		athlete.setDescription("");
+//		athlete = metierRepository.save(athlete);
+
+//		athlete.setNomMetier("athlete");
+//		athlete.setVoie("Voie du Feu");
+////		athlete.setSpecialisation(educationPhysique);
+//		athlete.setCasteLie(voyageurs);
+//		athlete.setDescription("");
+//		athlete = metierRepository.save(athlete);
 
 //-------------------------------------------------------------------------------------------------------------------------
 //		REMPLISSAGE OBJET MOTIVATION
