@@ -937,19 +937,20 @@ public class DonneesPersonnage {
 		aider.setDomaineLie(shaan);
 		aider = motivationRepository.save(aider);
 
-		charmer.setNomMotivation("");
-		charmer.setDescription(".");
-		charmer.setDomaineLie(arts);
-		charmer = motivationRepository.save(charmer);
-		charmer.setNomMotivation("");
-		charmer.setDescription(".");
-		charmer.setDomaineLie(arts);
-		charmer = motivationRepository.save(charmer);
+		combattreFailles.setNomMotivation("Combattres ses failles");
+		combattreFailles.setDescription("L'ennemi le plus redoutable reste soi-même. Vous appropriant cet adage, vous faites tout pour travailler sur vous-même afin de devenir meilleur. Vous avez besoin que les Autres vous fassent des compliments sur vos progrès afin de vous épanouir et vous rendre meilleur.");
+		combattreFailles.setDomaineLie(magie);
+		combattreFailles = motivationRepository.save(combattreFailles);
+		
+		enseignerMagie.setNomMotivation("Enseigner la Magie");
+		enseignerMagie.setDescription("Vous vous inscrivez dans la transmision et vous connaissez l'importance que revêt le partage du savoir. Vous savez que vous ne seriez rien sans les autres Magiciens qui vous ont permis de devenir ce que vous êtes aujourd'hui.");
+		enseignerMagie.setDomaineLie(magie);
+		enseignerMagie = motivationRepository.save(enseignerMagie);
 
-		charmer.setNomMotivation("");
-		charmer.setDescription(".");
-		charmer.setDomaineLie(arts);
-		charmer = motivationRepository.save(charmer);
+		percerMysteres.setNomMotivation("Percer les mystères des arcane");
+		percerMysteres.setDescription("La Magie ets lié au cerecles des Trihns, mais si la théorie est perceptible de tous, la pratique relève de nombreuses zones d'ombres, des phénomènes inexpliqués, des situations paradoxales. Vous voulez rester maîtres de votre art et voulez tout comprendre pour pouvoir bien contrôler ce que vous faites au moment où vous le faites.");
+		percerMysteres.setDomaineLie(magie);
+		percerMysteres = motivationRepository.save(percerMysteres);
 
 		charmer.setNomMotivation("");
 		charmer.setDescription(".");
