@@ -186,6 +186,35 @@ public class DonneesPersonnage {
 //		CREATION OBJET METIER
 //-------------------------------------------------------------------------------------------------------------------------	
 		Metier batisseur = new Metier();
+		Metier charpentier = new Metier();
+		Metier couturier = new Metier();
+		Metier forgeron = new Metier();
+		Metier infotek = new Metier();
+		Metier joaillier = new Metier();
+		Metier mecaniste = new Metier();
+		Metier pilote = new Metier();
+		Metier recuperateur = new Metier();
+		Metier tanneur = new Metier();
+		Metier alchimiste = new Metier();
+		Metier archiviste = new Metier();
+		Metier botaniste = new Metier();
+		Metier esoteriste = new Metier();
+		Metier geologue = new Metier();
+		Metier historien = new Metier();
+		Metier juriste = new Metier();
+		Metier medecin = new Metier();
+		Metier percepteur = new Metier();
+		Metier zoologue = new Metier();
+		Metier courtisant = new Metier();
+		Metier cyberien = new Metier();
+		Metier diplomate = new Metier();
+		Metier enseignant = new Metier();
+		Metier informateur = new Metier();
+		Metier marchant = new Metier();
+		Metier politicien = new Metier();
+		Metier prospecteur = new Metier();
+		Metier tenancier = new Metier();
+		Metier traducteur = new Metier();
 
 //-------------------------------------------------------------------------------------------------------------------------
 //		CREATION OBJET MOTIVATION
@@ -433,118 +462,136 @@ public class DonneesPersonnage {
 		zoologie.setNom("Zoologie");
 		zoologie.setDomaineLie(savoir);
 //		zoologie.setMetier(zoologue);
-		zoologie=specialisationRepository.save(zoologie);
-		
-		arpege.setDescription("Naviguer sur le rézo Arpège en utilisant une console dotée d'une interface graphique. Connaître ce monde virtuel tentaculaire de l'information et de la communication. Maîtriser les logiciels de capture et de restitution d'images 2D ou 3D pour réaliser des trucages et effets spéciaux. Forcer certains barrages informatiques pour obtenir des données confidentielles. Utiliser des logiciels pour composer des programmes compilés en lignes de notes.");
+		zoologie = specialisationRepository.save(zoologie);
+
+		arpege.setDescription(
+				"Naviguer sur le rézo Arpège en utilisant une console dotée d'une interface graphique. Connaître ce monde virtuel tentaculaire de l'information et de la communication. Maîtriser les logiciels de capture et de restitution d'images 2D ou 3D pour réaliser des trucages et effets spéciaux. Forcer certains barrages informatiques pour obtenir des données confidentielles. Utiliser des logiciels pour composer des programmes compilés en lignes de notes.");
 		arpege.setNom("Arpege");
 		arpege.setDomaineLie(social);
 //		arpege.setMetier(cyberien);
-		arpege=specialisationRepository.save(arpege);
-		
-		bluff.setDescription("Mentir ou baratiner quelqu'un. L’effet d’un bluff est en général temporaire, la victime mettra quelques minutes à se rendre compte qu'elle s’est fait berner.");
+		arpege = specialisationRepository.save(arpege);
+
+		bluff.setDescription(
+				"Mentir ou baratiner quelqu'un. L’effet d’un bluff est en général temporaire, la victime mettra quelques minutes à se rendre compte qu'elle s’est fait berner.");
 		bluff.setNom("Bluff");
 		bluff.setDomaineLie(social);
 //		bluff.setMetier(politicien);
-		bluff=specialisationRepository.save(bluff);
-		
-		commerce.setDescription("Marchander. Estimer des objets de valeur. Acheter les services de quelqu’un. Connaître le niveau de rareté d'un Acquis à un endroit donné et donc les fluctuations des prix du marché en fonction de la localité.");
+		bluff = specialisationRepository.save(bluff);
+
+		commerce.setDescription(
+				"Marchander. Estimer des objets de valeur. Acheter les services de quelqu’un. Connaître le niveau de rareté d'un Acquis à un endroit donné et donc les fluctuations des prix du marché en fonction de la localité.");
 		commerce.setNom("Commerce");
 		commerce.setDomaineLie(social);
 //		commerce.setMetier(marchand);
-		commerce=specialisationRepository.save(commerce);
-		
-		diplomatie.setDescription("Savoir faire passer ses idées en douceur. Réussir à détendre un climat tendu. Négocier des traités entre deux belligérants. Parler à un auditoire en faisant preuve d'éloquence. Chercher à convaincre un interlocuteur grâce à des arguments cohérents. Calmer des personnes hostiles. Avoir une idée des divers conflits qui peuvent tourmenter une région. Connaître le rang de quelqu'un dans n'importe quel milieu social, du plus élevé au plus primitif. Savoir comment se comporter pour ne pas commettre d'impairs, même si on ne parle pas la langue.");
+		commerce = specialisationRepository.save(commerce);
+
+		diplomatie.setDescription(
+				"Savoir faire passer ses idées en douceur. Réussir à détendre un climat tendu. Négocier des traités entre deux belligérants. Parler à un auditoire en faisant preuve d'éloquence. Chercher à convaincre un interlocuteur grâce à des arguments cohérents. Calmer des personnes hostiles. Avoir une idée des divers conflits qui peuvent tourmenter une région. Connaître le rang de quelqu'un dans n'importe quel milieu social, du plus élevé au plus primitif. Savoir comment se comporter pour ne pas commettre d'impairs, même si on ne parle pas la langue.");
 		diplomatie.setNom("Diplomatie");
 		diplomatie.setDomaineLie(social);
 //		diplomatie.setMetier(diplomate);
-		diplomatie=specialisationRepository.save(diplomatie);
-		
-		enseignement.setDescription("Enseigner une Spécialisation à une autre personne. Faire preuve de pédagogie. Mettre en place un programme d’apprentissage. Apprendre plus vite d’un autre enseignant.");
+		diplomatie = specialisationRepository.save(diplomatie);
+
+		enseignement.setDescription(
+				"Enseigner une Spécialisation à une autre personne. Faire preuve de pédagogie. Mettre en place un programme d’apprentissage. Apprendre plus vite d’un autre enseignant.");
 		enseignement.setNom("Enseignement");
 		enseignement.setDomaineLie(social);
 //		enseignement.setMetier(enseignant);
-		enseignement=specialisationRepository.save(enseignement);
-		
-		langagePrimal.setDescription("Communiquer de façon très basique, par des gestes, des attitudes et des expressions faciales avec des êtres primitifs ou dotés d'un langage complètement inconnu. Communiquer sommairement avec les animaux.");
+		enseignement = specialisationRepository.save(enseignement);
+
+		langagePrimal.setDescription(
+				"Communiquer de façon très basique, par des gestes, des attitudes et des expressions faciales avec des êtres primitifs ou dotés d'un langage complètement inconnu. Communiquer sommairement avec les animaux.");
 		langagePrimal.setNom("Langage primal");
 		langagePrimal.setDomaineLie(social);
 //		langagePrimal.setMetier(prospecteur);
-		langagePrimal=specialisationRepository.save(langagePrimal);
-		
-		languesExotiques.setDescription("Se baser sur diverses langues existantes pour aborder un dialecte inconnu et le maîtriser par la pratique. Un anthéen parle l'héossien (langue commune) et le langdiv (langue humaine), ainsi que sa langue raciale, mais cette Spécialisation devient fort utile pour comprendre et parler les autres langages raciaux et dialectes dérivés.");
+		langagePrimal = specialisationRepository.save(langagePrimal);
+
+		languesExotiques.setDescription(
+				"Se baser sur diverses langues existantes pour aborder un dialecte inconnu et le maîtriser par la pratique. Un anthéen parle l'héossien (langue commune) et le langdiv (langue humaine), ainsi que sa langue raciale, mais cette Spécialisation devient fort utile pour comprendre et parler les autres langages raciaux et dialectes dérivés.");
 		languesExotiques.setNom("Langues exotiques");
 		languesExotiques.setDomaineLie(social);
 //		languesExotiques.setMetier(traducteur);
-		languesExotiques=specialisationRepository.save(languesExotiques);
-		
-		psychologie.setDescription("Soigner l'Esprit d'une personne qui a subi des blessures mentales en la rassurant, et en lui redonnant confiance en elle. Déterminer les pensées d'autrui par ses attitudes et son comportement. Anticiper les intentions. Comprendre la folie. Contrairement au Bluff, la Psychologie a des effets durables.");
+		languesExotiques = specialisationRepository.save(languesExotiques);
+
+		psychologie.setDescription(
+				"Soigner l'Esprit d'une personne qui a subi des blessures mentales en la rassurant, et en lui redonnant confiance en elle. Déterminer les pensées d'autrui par ses attitudes et son comportement. Anticiper les intentions. Comprendre la folie. Contrairement au Bluff, la Psychologie a des effets durables.");
 		psychologie.setNom("Psychologie");
 		psychologie.setDomaineLie(social);
 //		psychologie.setMetier(tenancier);
-		psychologie=specialisationRepository.save(psychologie);
-		
-		seduction.setDescription("S'attirer les faveurs et l'admiration du sexe opposé. La séduction peut se tenter sur un individu du même sexe, mais la réaction de l'individu en question dépendra largement des dispositions de la cible.");
+		psychologie = specialisationRepository.save(psychologie);
+
+		seduction.setDescription(
+				"S'attirer les faveurs et l'admiration du sexe opposé. La séduction peut se tenter sur un individu du même sexe, mais la réaction de l'individu en question dépendra largement des dispositions de la cible.");
 		seduction.setNom("Seduction");
 		seduction.setDomaineLie(social);
 //		seduction.setMetier(courtisan);
-		seduction=specialisationRepository.save(seduction);
-		
-		vieUrbaine.setDescription("Connaître les villes et les différentes structures sociales. Se repérer en agglomération. Semer quelqu'un. Se procurer des renseignements anodins ou secrets. Être à l'aise dans tout milieu urbain.");
+		seduction = specialisationRepository.save(seduction);
+
+		vieUrbaine.setDescription(
+				"Connaître les villes et les différentes structures sociales. Se repérer en agglomération. Semer quelqu'un. Se procurer des renseignements anodins ou secrets. Être à l'aise dans tout milieu urbain.");
 		vieUrbaine.setNom("Vie Urbaine");
 		vieUrbaine.setDomaineLie(social);
 //		vieUrbaine.setMetier(informateur);
-		vieUrbaine=specialisationRepository.save(vieUrbaine);
-		
-		artsAppliques.setDescription("Pratiquer le dessin, la peinture, la sculpture sur bois ou sur pierre. Connaître l'histoire de l'art.");
+		vieUrbaine = specialisationRepository.save(vieUrbaine);
+
+		artsAppliques.setDescription(
+				"Pratiquer le dessin, la peinture, la sculpture sur bois ou sur pierre. Connaître l'histoire de l'art.");
 		artsAppliques.setNom("Arts appliqués");
 		artsAppliques.setDomaineLie(arts);
 //		artsAppliques.setMetier(evocateur);
-		artsAppliques=specialisationRepository.save(artsAppliques);
-		
-		artsDuFeu.setDescription("Cracher du feu. Créer des feux d'artifices, et toutes sortes d'effets pyrotechniques ou de jeux de lumières.");
+		artsAppliques = specialisationRepository.save(artsAppliques);
+
+		artsDuFeu.setDescription(
+				"Cracher du feu. Créer des feux d'artifices, et toutes sortes d'effets pyrotechniques ou de jeux de lumières.");
 		artsDuFeu.setNom("Arts du feu");
 		artsDuFeu.setDomaineLie(arts);
 //		artsDuFeu.setMetier(bateleur);
-		artsDuFeu=specialisationRepository.save(artsDuFeu);
-		
-		chant.setDescription("Chanter juste. Savoir poser sa voix. Lire une partition, accompagner en mesure un musicien. Savoir improviser. Connaître un vaste répertoire allant des chansons grivoises aux sérénades, en passant par les chants traditionnels. Séduire quelqu'un.");
+		artsDuFeu = specialisationRepository.save(artsDuFeu);
+
+		chant.setDescription(
+				"Chanter juste. Savoir poser sa voix. Lire une partition, accompagner en mesure un musicien. Savoir improviser. Connaître un vaste répertoire allant des chansons grivoises aux sérénades, en passant par les chants traditionnels. Séduire quelqu'un.");
 		chant.setNom("Chant");
 		chant.setDomaineLie(arts);
 //		chant.setMetier(chanteur);
-		chant=specialisationRepository.save(chant);
-		
-		comedie.setDescription("Faire du théâtre. Interpréter un rôle par cœur. Simuler les émotions. Imiter les voix. Créer des pièces et connaître sur le bout des doigts les répliques de tous les personnages des grands classiques héossiens. Se faire passer pour quelqu'un d'autre ou avoir l'air crédible en racontant des sornettes.");
+		chant = specialisationRepository.save(chant);
+
+		comedie.setDescription(
+				"Faire du théâtre. Interpréter un rôle par cœur. Simuler les émotions. Imiter les voix. Créer des pièces et connaître sur le bout des doigts les répliques de tous les personnages des grands classiques héossiens. Se faire passer pour quelqu'un d'autre ou avoir l'air crédible en racontant des sornettes.");
 		comedie.setNom("Comédie");
 		comedie.setDomaineLie(arts);
 //		comedie.setMetier(comedien);
-		comedie=specialisationRepository.save(comedie);
-		
-		deguisement.setDescription("Modifier son apparence de manière tangible, avec trois fois rien. Fabriquer des masques, des costumes et autres parures afin d'être en mesure de métamorphoser un Mélodien en Ygwan et inversement (ce qui est déjà beaucoup plus difficile).");
+		comedie = specialisationRepository.save(comedie);
+
+		deguisement.setDescription(
+				"Modifier son apparence de manière tangible, avec trois fois rien. Fabriquer des masques, des costumes et autres parures afin d'être en mesure de métamorphoser un Mélodien en Ygwan et inversement (ce qui est déjà beaucoup plus difficile).");
 		deguisement.setNom("Déguisement");
 		deguisement.setDomaineLie(arts);
 //		deguisement.setMetier(costumier);
-		deguisement=specialisationRepository.save(deguisement);
-		
-		gastronomie.setDescription("Préparer des repas très élaborés, suivre des recettes et savoir en inventer. Reconnaître les bons produits et les préparer pour ensuite les cuisiner. Repérer si un plat est empoisonné. Un très bon repas a des vertus régénérantes.");
+		deguisement = specialisationRepository.save(deguisement);
+
+		gastronomie.setDescription(
+				"Préparer des repas très élaborés, suivre des recettes et savoir en inventer. Reconnaître les bons produits et les préparer pour ensuite les cuisiner. Repérer si un plat est empoisonné. Un très bon repas a des vertus régénérantes.");
 		gastronomie.setNom("Gastronomie");
 		gastronomie.setDomaineLie(arts);
 //		gastronomie.setMetier(cuisinier);
-		gastronomie=specialisationRepository.save(gastronomie);
-		
-		
-		lettres.setDescription("Préparer des repas très élaborés, suivre des recettes et savoir en inventer. Reconnaître les bons produits et les préparer pour ensuite les cuisiner. Repérer si un plat est empoisonné. Un très bon repas a des vertus régénérantes.");
+		gastronomie = specialisationRepository.save(gastronomie);
+
+		lettres.setDescription(
+				"Préparer des repas très élaborés, suivre des recettes et savoir en inventer. Reconnaître les bons produits et les préparer pour ensuite les cuisiner. Repérer si un plat est empoisonné. Un très bon repas a des vertus régénérantes.");
 		lettres.setNom("Lettres");
 		lettres.setDomaineLie(arts);
 //		lettres.setMetier(ecrivain);
-		lettres=specialisationRepository.save(lettres);
-		
-		musique.setDescription("Jouer des divers instruments existants. Lire une partition musicale. Composer des mélodies ou des symphonies. Connaître l'histoire de la musique. Séduire quelqu'un. Dresser un animal.");
+		lettres = specialisationRepository.save(lettres);
+
+		musique.setDescription(
+				"Jouer des divers instruments existants. Lire une partition musicale. Composer des mélodies ou des symphonies. Connaître l'histoire de la musique. Séduire quelqu'un. Dresser un animal.");
 		musique.setNom("Musique");
 		musique.setDomaineLie(arts);
 //		musique.setMetier(musicien);
-		musique=specialisationRepository.save(musique);
-		
-		trucages.setDescription("Effectuer des tours de passe-passe. Faire de la prestidigitation. Jongler avec tous types d'objets. Dissimuler des objets aux yeux les plus avertis.");
+		musique = specialisationRepository.save(musique);
+
+		trucages.setDescription(
+				"Effectuer des tours de passe-passe. Faire de la prestidigitation. Jongler avec tous types d'objets. Dissimuler des objets aux yeux les plus avertis.");
 		trucages.setNom("Trucages");
 		trucages.setDomaineLie(arts);
 //		trucages.setMetier(prestidigitateur);
@@ -915,10 +962,214 @@ public class DonneesPersonnage {
 //-------------------------------------------------------------------------------------------------------------------------	
 
 		batisseur.setNomMetier("Batisseur");
-//		batisseur.setVoie(voie);
-//		batisseur.setSpecialisation(specialisation);
+		batisseur.setVoie("Voie de la Terre");
+		batisseur.setSpecialisation(sensDeLaPierre);
 		batisseur.setDescription(
 				"Les Bâtisseurs savent construire des ponts, des maisons, des routes, tailler la pierre et préparer la Trihnite afin qu'elle soit enchantée. Irascibles aux mains cagneuses, ils passent leur temps à râler car rien ne se passe jamais comme ils avaient prévu. Il faut dire que l'exigence des Bâtisseurs est légendaire, car ils restent conscients que la plus petite erreur de calcul, ou le moindre défaut de construction peut être à l'origine de terribles accidents et causer la mort... Ce sens des responsabilités leur met une pression permanente qu'ils entretiennent, même s'ils n'ont pas de chantier à gérer. Mais c'est ainsi, les Bâtisseurs se sentent responsables des autres...");
+		batisseur = metierRepository.save(batisseur);
+
+		charpentier.setNomMetier("Charpentier");
+		charpentier.setVoie("Voie du Végétal");
+		charpentier.setSpecialisation(sensDuBois);
+		charpentier.setDescription(
+				"Le bois est l'une des matières premières les plus travaillées au sein de la société héossienne, que ce soit pour faire des meubles, des bateaux, du papier, des cordages, ou des habitations, on en voit partout. Le savoir-faire du Charpentier est immense et lui permet de sculpter finement une pièce d'échec ou bien de découper et de tailler des arbres géants qui feront des mâts de bateau-monde. Peu loquace, le Charpentier aime travailler en silence. Et lorsqu'on le questionne sur son mutisme il explique qu'il écoute le bois lui parler, et qu'il ne veut pas lui couper la parole...");
+		charpentier = metierRepository.save(charpentier);
+
+		couturier.setNomMetier("Couturier");
+		couturier.setVoie("Voie de l'Eau");
+		couturier.setSpecialisation(sensDuTissu);
+		couturier.setDescription(
+				"Le Couturier est amené à travailler avec de nombreux corps de métiers, qui vont lui fournir la matière première dont il aura besoin pour fabriquer des bottes, des capes, des chemises, des chapeaux, des pantalons, mais aussi des voiles de bateau, des drap ou des tapis. Certains Notables s'entichent de créateurs de haute couture et leur financent des défilés prestigieux chorégraphiés comme de grands spectacles avec son et lumière. Les vêtements ainsi mis en scène valent de véritables fortunes. Tous les Notables de la région se rendent à ces défilés qu'il convient de fréquenter pour bien se faire voir des autres Notables. Ces derniers se livrent une véritable compétition par défilé interposé, car celui qui saura proposer la meilleure prestation se verra glorifié pendant un mois. Dans ce jeu de pouvoir, les Couturiers peuvent amasser des fortunes mais également subir le courroux de Notables mécontents et tomber en disgrâce.");
+		couturier = metierRepository.save(couturier);
+
+		forgeron.setNomMetier("Forgeron");
+		forgeron.setVoie("Voie du Feu");
+		forgeron.setSpecialisation(sensDuMetal);
+		forgeron.setDescription(
+				"Le Forgeron reste l'artisan le plus sollicité en Héossie, car ses capacités à fondre le métal pour en faire des armes, des armures, des outils, des renforts, et toutes sortes de pièces mécaniques sont fort utiles aux membres de toutes les castes. Bien bâti et musculeux, le Forgeron ne se ménage jamais, car pour plier le métal à sa volonté, il faut faire preuve de force et de patience. Constamment confronté à des températures très élevées, le Forgeron se révèle très frileux lorsqu'il s'agit de sortir de son atelier. Il déteste le froid et d'un tempérament casanier, il n'aime pas partir à l'aventure, préférant marteler le métal à longueur de journée. Certains Forgerons arrivent à ciseler de longues épées affûtées comme un rasoir et légères comme une plume... Ces épées, très prisées des maîtres d'armes émérites, peuvent se vendre à prix d'or.");
+		forgeron = metierRepository.save(forgeron);
+
+		infotek.setNomMetier("Infotek");
+		infotek.setVoie("Voie des Limbes");
+		infotek.setSpecialisation(technologie);
+		infotek.setDescription(
+				"L'Infotek est l'archétype de l'ingénieur technique, plus à l'aise avec les machines et les codes de programmation qu'avec les êtres vivants. Totalement investi dans son métier, l'Infotek passe beaucoup de temps sur Arpège pour son travail ou ses loisirs, ce qui fait que la plupart se font greffer des modules de neurocodage avec des prothèses rétiniennes afin d'être connectés en permanence sur le réseau et de pouvoir s'y déplacer en clignant les yeux. Peu loquace, l'Infotek est renfermé sur lui-même et n'est à l'aise qu'en compagnie d'autres Infoteks. Maîtrisant la technologie humaine sur le bout des doigts, ils savent démonter et remonter une arme à feu, un moteur de véhicule, ont des notions de biomorphie et peuvent créer des programmes en code Note qui pourront être exploités sur le rézo Arpège.");
+		infotek = metierRepository.save(infotek);
+
+		joaillier.setNomMetier("Joaillier");
+		joaillier.setVoie("Voie de l'Autre");
+		joaillier.setSpecialisation(sensDuVerre);
+		joaillier.setDescription(
+				"Le Joaillier est un sculpteur de lumière. Qu'importe le matériau, verre, diamant, perle, cristal, il sait le tailler pour en faire un bijou unique, une pièce de collection que les Notables s'arracheront à prix d'or. Le Joailler travaille souvent avec le Couturier pour la confection de tous les accessoires d'un vêtement de collection. Mais le Joaillier intervient également pour la fabrication d'objets moins prestigieux où ses compétences de souffleur de verre lui permettent de réaliser loupes, fenêtres, lunettes mais aussi verres et carafes. D'ailleurs, il règne un certain mépris au sein des Joailliers. Ceux liés à la mode considèrent les artisans du verre comme des tâcherons et les artisans du verre considèrent les orfèvres comme des imposteurs... Rares sont ceux qui peuvent se permettre de travailler dans ces deux spécialisations en même temps...");
+		joaillier = metierRepository.save(joaillier);
+
+		mecaniste.setNomMetier("Mécaniste");
+		mecaniste.setVoie("Voie de l'Objet");
+		mecaniste.setSpecialisation(engrenages);
+		mecaniste.setDescription(
+				"Le Mécaniste dispose d'une horloge interne extrêmement bien développée, qui lui permet d'analyser le fonctionnement des machines et d'en appréhender intuitivement le fonctionnement. Réparateur hors-pair, il trouve toujours la panne au bon endroit et dispose à chaque fois des outils adéquats pour travailler dans de bonnes conditions. Très méticuleux, le Mécaniste a tendance à être un maniaque de l'ordre et du rangement. Pour lui, chaque chose a une place et ne saurait en changer.");
+		mecaniste = metierRepository.save(mecaniste);
+
+		pilote.setNomMetier("Pilote");
+		pilote.setVoie("Voie de l'Air");
+		pilote.setSpecialisation(pilotage);
+		pilote.setDescription(
+				"Les Pilotes ont su domestiquer la technologie humaine liée aux véhicules, terrestres, aériens ou aquatiques. Ils peuvent passer d'un autojet à un croiseur lourd à chenilles, d'une simple moto, à un hydroscape en un claquement de doigt. Le Pilote ne fait qu'un avec son engin qui devient avec l'expérience une extension de son propre corps. C'est cette sorte d'osmose technique qui permet aux Pilotes chevronnés de manœuvrer avec talent dans des situations critiques.");
+		pilote = metierRepository.save(pilote);
+
+		recuperateur.setNomMetier("Récupérateur");
+		recuperateur.setVoie("Voie du Moi");
+		recuperateur.setSpecialisation(recuperation);
+		recuperateur.setDescription(
+				"Le Récupérateur ne jette jamais rien. Pour lui tout peut toujours servir à un moment ou à un autre. Son habitation prend alors des allures de décharge publique, au grand désespoir de ceux qui vivent à ses côtés. Même lorsqu'il est en voyage, le Récupérateur ne peut s'empêcher de ramasser tout ce qu'il trouve. Et même si parfois, un Récupérateur trop encombré peut ralentir un groupe, celui-ci sait que le moment venu, le Récupérateur aura ce qu’il lui faut pour fabriquer l'outil, l'arme ou l'objet qui permettra à tous de sortir d'une situation périlleuse...");
+		recuperateur = metierRepository.save(recuperateur);
+
+		tanneur.setNomMetier("Tanneur");
+		tanneur.setVoie("Voie de l'Animal");
+		tanneur.setSpecialisation(sensDuCuir);
+		tanneur.setDescription(
+				"Pour le Tanneur, l'animal est le bien le plus précieux qui soit. Et il sait qu'un animal en bonne santé donnera toujours un cuir de meilleure qualité. C'est pour cela que le Tanneur est naturellement bienveillant envers les animaux, même ceux dont il ne travaille pas la peau, la laine ou la fourrure. Il respecte le règne animal et avant de tuer une bête, il s'arrange toujours pour lui rendre hommage en lui adressant quelques prières bienveillantes. Le Tanneur connaît toutes les techniques pour dépecer un animal en optimisant les découpes pour obtenir les pièces de cuir les plus grandes possibles.");
+		tanneur = metierRepository.save(tanneur);
+
+		alchimiste.setNomMetier("Alchimiste");
+		alchimiste.setVoie("Voie du feu");
+		alchimiste.setSpecialisation(alchimie);
+		alchimiste.setDescription(
+				"L'Alchimiste aime défier la nature. Il passe son temps à transformer la matière, à la modeler pour qu’elle s'adapte à sa volonté. Il est convaincu de la supériorité de son esprit sur les éléments. Créateur de formules alchimiques qui permettent, telles des recettes de cuisine, de confectionner un plat original à partir d'ingrédients divers, l'Alchimiste a la faculté d'accéder à l'irrationnel et au surnaturel par la voie de la science. Les Alchimistes peuvent ainsi créer des potions, des onguents, des poudres qui permettent d'accroître ses capacités ou même de disposer de pouvoirs spéciaux.");
+		alchimiste = metierRepository.save(alchimiste);
+
+		archiviste.setNomMetier("Archiviste");
+		archiviste.setVoie("Voie de l'Objet");
+		archiviste.setSpecialisation(bibliotheque);
+		archiviste.setDescription(
+				"L'Archiviste est un vrai rat de bibliothèque et dispose d'une mémoire phénoménale. Il connait tous les ouvrages qui sont répertoriés dans ses rayonnages, même s'il y en a plusieurs milliers. Mais surtout, il sait où chacun de ces livres se trouve. L'Archiviste reste la personne indispensable pour tous les chercheurs et les enseignants, car non seulement il peut fournir ce qu'on lui demande, mais en plus il n'est jamais avare de conseils et propose toujours des livres en plus, en rapport avec une problématique mais qui apportent un éclairage complémentaire.");
+		archiviste = metierRepository.save(archiviste);
+
+		botaniste.setNomMetier("Botaniste");
+		botaniste.setVoie("Voie du Végétal");
+		botaniste.setSpecialisation(botanique);
+		botaniste.setDescription(
+				"Le Botaniste partage son temps entre ses expéditions en pleine nature à la recherche de nouveaux spécimens afin d'enrichir sa collection personnelle et ses herbiers, et son atelier où il répertorie, analyse, compare et étudie toutes les nouvelles espèces qu'il a pu collecter. Connaissant parfaitement le règne végétal, il peut communiquer avec des êtres-plante doués d'intelligence lorsqu'il est amené à en croiser dans ses nombreux voyages... Le Botaniste en sait tout autant sur les plantes médicinales, les poisons ou les fruits et légumes. Les champignons et leurs nombreuses familles font également partie du domaine d'expertise du botaniste.");
+		botaniste = metierRepository.save(botaniste);
+
+		esoteriste.setNomMetier("Esotériste");
+		esoteriste.setVoie("Voie de l'Air");
+		esoteriste.setSpecialisation(esoterisme);
+		esoteriste.setDescription(
+				"L'Ésotériste est passionné par tout ce qui est occulte et en relation avec les forces surnaturelles d'Héos. Il maîtrise parfaitement la divination à l'aide du tarot héossien, et est capable de prévoir les chemins de vie des êtres et des choses dans le Cercle des Réalités. L'ésotérisme héossien puise ses racines bien avant l'antiquité, où les peuplades primitives entraient déjà en communion avec les Trihns, les éléments et les dieux... La force mentale de l'Ésotériste lui permet de résister aux attaques mentales qui lui sont destinées.");
+		esoteriste = metierRepository.save(esoteriste);
+
+		geologue.setNomMetier("Géologue");
+		geologue.setVoie("Voie de la Terre");
+		geologue.setSpecialisation(geologie);
+		geologue.setDescription(
+				"Le Géologue sait lire dans la pierre et dans les sols l'histoire de la formation des continents et des âges. Les croyants se plaisent à étudier le martèlement des géants, à l'origine de la formation des reliefs et des montagnes, les pragmatiques ne prennent en compte que les phénomènes d'érosion naturelle et de la tectonique des plaques. Les Géologues sont aussi experts en ce qui concerne les sources d'énergie naturelle et la manière dont on peut l'extraire et la transformer. Ils disposent également de grandes connaissances sur la Trihnite, sa composition et les origines de sa formation...");
+		geologue = metierRepository.save(geologue);
+
+		historien.setNomMetier("Historien");
+		historien.setVoie("Voie du Moi");
+		historien.setSpecialisation(histoireDHeos);
+		historien.setDescription(
+				"L'Historien est un phare dans la reconstruction de la civilisation héossienne. Membre actif de la Résistance il fut un temps, il sait relier les éléments du présent au passé afin de se projeter dans l'avenir. Car l'Historien n’a de cesse d'expliquer à qui veut l'entendre que l'Histoire se répète toujours... L'Historien maîtrise l'Histoire héossienne, mais également tous les mythes fondateurs et les légendes qui lui sont associées. Il est souvent bavard et intarissable dès qu'on le lance sur un fait historique ou un personnage célèbre, car comme tout est lié, il peut remonter à l'antiquité pour expliquer pourquoi tel empereur darken contemporain a été banni, ou encore comment le conflit nécrosien qui se prépare est un écho de ce qui a pu se produire au niveau local quelques centaines d'années auparavant.");
+		historien = metierRepository.save(historien);
+
+		juriste.setNomMetier("Juriste");
+		juriste.setVoie("Voie de l'Eau");
+		juriste.setSpecialisation(protocoles);
+		juriste.setDescription(
+				"« Que vous soyez puissant ou misérable, vous serez jugés innocent ou coupable » relatait un conteur de l'antéhistoire humaine mettant en scène des animaux. Le Juriste fera toujours tout son possible pour contredire cet adage, même si dans bon nombre d'affaires impliquant des Notables, ces derniers bénéficient toujours de circonstances favorables ou minimisant leurs actes, là où le commun des mortels irait tout droit en prison. Car faire appel à un Juriste pour se défendre alors que l'on subit une attaque judiciaire coûte cher. Et plus l'affaire est complexe, plus le Juriste approprié sera onéreux.");
+		juriste = metierRepository.save(juriste);
+
+		medecin.setNomMetier("Médecin");
+		medecin.setVoie("Voie de l'Autre");
+		medecin.setSpecialisation(medecine);
+		medecin.setDescription(
+				"Le Médecin sait diagnostiquer et soigner les maladies et les blessures du Corps. À la fois chirurgien et pharmacien, il sait quel médicament prescrire pour lutter contre une maladie ou quel antidote est nécessaire pour contrer la virulence d'un poison. D'un sang-froid à toute épreuve, le Médecin sait faire face à n'importe quelle situation, même périlleuse. En plein combat, il sait garder son flegme et peut effectuer une opération chirurgicale de grande ampleur, en conservant des gestes précis. Certains humoristes caricaturent souvent les Médecins en les mettant dans des situations improbables, très dangereuses et en leur faisant réaliser toutes sortes d'actions très compliquées, comme si de rien n'était.");
+		medecin = metierRepository.save(medecin);
+
+		percepteur.setNomMetier("Percepteur");
+		percepteur.setVoie("Voie des Limbes");
+		percepteur.setSpecialisation(cultureHumaine);
+		percepteur.setDescription(
+				"Le Percepteur est chargé de collecter les impôts auprès des Héossiens pour le compte des Humains, des Grandes Familles et de certains Notables. Entre deux mondes, le Percepteur sait se fondre au sein des Humains et connaît tout de leur mode de vie, de leurs codes, de leur langue et de leur folie... Peu apprécié des Héossiens, le Percepteur a eu son heure de gloire du temps où la théocratie du Nouvel Ordre était plus draconienne. Avec l'assouplissement des lois, il se fait parfois rejeter voire même agresser en signe de représailles, pour les services qu'il a rendus par le passé.");
+		percepteur = metierRepository.save(percepteur);
+
+		zoologue.setNomMetier("Zoologue");
+		zoologue.setVoie("Voie de l'Animal");
+		zoologue.setSpecialisation(zoologie);
+		zoologue.setDescription(
+				"Le Zoologue est un collectionneur, il passe son temps à collecter et mettre à jour toutes les informations liées à une espèce animale ou à un écosystème. Bon nombre de Zoologues disposent de petits talents artistiques qui leur permettent de dessiner ce qu'ils sont amenés à observer sur le terrain. Certains Zoologues se spécialisent dans la connaissance de certains types d'animaux, les prédateurs, les herbivores, les nomades, les poissons, les oiseaux, les amphibiens, les reptiles... Un Zoologue est aussi un peu vétérinaire et connait les premiers soins à apporter à un animal blessé, et les gestes à effectuer pour sauver des vies. Assez impulsif dans son comportement, le Zoologue accorde beaucoup d'importance à son odorat : il peut ainsi récupérer des informations que les autres sens ne lui permettent pas de saisir. C'est pour cette raison que les meilleurs Zoologues sont Woons.");
+		zoologue = metierRepository.save(zoologue);
+
+		courtisant.setNomMetier("Courtisant");
+		courtisant.setVoie("Voie du feu");
+		courtisant.setSpecialisation(seduction);
+		courtisant.setDescription(
+				"Les Courtisans savent obtenir tout ce qu'ils désirent en jouant avec les instincts primaires des individus. Se créer un personnage qui fera rêver son ou sa partenaire est pour le courtisan une habitude qu'il n'est pas toujours facile à tenir, surtout lorsque les conquêtes sont nombreuses. Les Courtisans œuvrent principalement auprès des Notables et des personnes de pouvoir, afin d'obtenir des informations ou de l'argent, selon qu'ils agissent pour des commanditaires ou pour leur propre compte. Certain Courtisans aiment juste séduire pour le plaisir, car ils se sentent ainsi désirés et donc exister. Les Courtisans savent enivrer les Corps, bousculer les Esprits et cueillir les Âmes. Le vrai talent du Courtisan est de ne jamais rompre, de s'arranger pour que les personnes qu'il a séduites reste toujours dans l'attente d'une éventuelle poursuite de la relation. C'est ce qui prend le plus de temps aux Courtisans : entretenir la flamme de ceux qu'ils ont envoûtés afin que l'amour ne se transforme jamais en haine... Mais rares sont ceux qui y arrivent et pour la plupart des Courtisans et Courtisanes, il y a des villes au sein desquelles ils ne peuvent plus mettre les pieds, sous peine d'être arrêtés sur-le-champ par un potentat local qui se sera senti trahi...");
+		courtisant = metierRepository.save(courtisant);
+
+		cyberien.setNomMetier("Cybérien");
+		cyberien.setVoie("Voie de l'Objet");
+		cyberien.setSpecialisation(arpege);
+		cyberien.setDescription(
+				"Le domaine de prédilection du Cybérien, c'est le réseau Arpège. Cette fameuse toile où circulent des milliards d'informations à chaque seconde et qui sert de liant à toute la société humaine. Média, logiciels, informations, livres, apprentissage, juridiction, livres sacrés, tout est sur Arpège. Le Cybérien est un expert pour rechercher des données, tromper la vigilance des systèmes de surveillance ou négocier toutes sortes de produits sur des sites marchands. Car les interfaces informatiques ont tellement évolué, qu'elles ont en fait disparu au profit du simple langage vocal. Donc n'importe qui sachant parler peut en théorie faire ce qu'il veut sur Arpège, encore faut-il savoir comment dire les choses et où aller... Le Cybérien maîtrise toute la dialectique du rézo et peut, dès l'instant où il dispose d'une borne d'accès, se jouer de toutes les entraves humaines.");
+		cyberien = metierRepository.save(cyberien);
+
+		diplomate.setNomMetier("Diplomate");
+		diplomate.setVoie("Voie de l'Eau");
+		diplomate.setSpecialisation(diplomatie);
+		diplomate.setDescription(
+				"Entre \"le marteau et l'enclume\", le Diplomate est là pour gérer les conflits entre les royaumes. Une déclaration de guerre est pour le Diplomate un constat d'échec. Il doit connaître les généalogies de chaque dynastie, connaître les us et coutumes de chaque culture afin qu'au moment crucial de la négociation politique, il ne fasse aucun impair. Combien de déclarations de guerre ont été faites à cause d'une odeur mal interprétée par un roi woon, ou encore par un mauvais agencement de couleur de tenue pour un prince mélodien un peu caractériel. Le Diplomate peut agir pour le compte des Conseils des castes, mais également pour celui d'Humains affiliés au Nouvel Ordre ou aux Grandes Familles. Les Diplomates les plus chevronnés sont envoyés en territoire nécrosé afin de traiter avec les princes et autres spectres pour tenter de minimiser leurs désirs d'expansion...");
+		diplomate = metierRepository.save(diplomate);
+
+		enseignant.setNomMetier("Enseignant");
+		enseignant.setVoie("Voie du Végétal");
+		enseignant.setSpecialisation(enseignement);
+		enseignant.setDescription(
+				"L'Enseignant est là pour donner les bases d'une culture générale dans tous les domaines aux enfants de 6 à 15 ans. Au-delà, les disciplines plus spécialisées sont enseignées par des membres éminents de chaque caste. L'Enseignant doit avoir une culture transversale et ne pas se contenter d'une vision parcellaire du monde, tout ce qu'il enseigne est lié et touche à de nombreuses matières en même temps. Disponible et à l'écoute des autres, l'Enseignant a toujours à cœur de transmettre quelque chose à son prochain, mais cela peut parfois être perçu comme de la prétention par son entourage, alors qu'il n'en est rien...");
+		enseignant = metierRepository.save(enseignant);
+
+		informateur.setNomMetier("Informateur");
+		informateur.setVoie("Voie des Limbes");
+		informateur.setSpecialisation(vieUrbaine);
+		informateur.setDescription(
+				"L'Informateur est un élément indispensable, dès qu'il s'agit de faire une enquête ou d'obtenir des informations au sein d'un milieu urbain. Il entend tout, voit tout et sait tout, grâce à ses nombreux réseaux de renseignement qui lui rendent compte en temps réel de la situation sociale, politique, économique d'un quartier et même de toute une ville pour les plus influents. Curieux et à l'affût des moindres faits et gestes des puissants et des Notables, les Informateurs connaissent et maîtrisent tous les us et coutumes citadins afin de se fondre dans la masse.");
+		informateur = metierRepository.save(informateur);
+
+		marchant.setNomMetier("Marchant");
+		marchant.setVoie("Voie de l'Air");
+		marchant.setSpecialisation(commerce);
+		marchant.setDescription(
+				"Le commerce a toujours été moteur au sein de la civilisation héossienne, comme partout ailleurs. Les Marchands jouissent de reconnaissance et de prestige auprès des Notables car ils constituent l'un des rouages fondamentaux de l'économie. Du simple vendeur au négociateur de contrats avec de grandes puissances, les Marchands sillonnent l'Héossie à la recherche de la bonne affaire qui fera d'eux des hommes riches. Car devenir Notable est pour un Marchand le but absolu. Pour un Marchand tout se vend ou s'achète, même l'amitié... Cela peut parfois créer des tensions au sein du groupe dont il peut faire partie, car malheureusement la plupart des marchands mettra toujours le profit avant l'éthique...");
+		marchant = metierRepository.save(marchant);
+
+		politicien.setNomMetier("Politicien");
+		politicien.setVoie("Voie du Moi");
+		politicien.setSpecialisation(bluff);
+		politicien.setDescription(
+				"La géopolitique héossienne est devenue extrêmement complexe et délicate, entre les alliances que tissent Grandes Familles, Nouvel Ordre, Notables Héossiens, Conseils des castes et royaumes nécrosiens, difficile de savoir pour quel camp on œuvre réellement. Le politicien sait nager en eaux troubles et toujours retomber sur ses pattes, quel que soit son interlocuteur. Ami, ennemi, allié, partisan, contradicteur, le politicien a toujours quelque chose à dire et à répondre. Sa capacité à rebondir sur les arguments de ses détracteurs lui permet de faire croire ce qu'il veut à n'importe qui.");
+		politicien = metierRepository.save(politicien);
+
+		prospecteur.setNomMetier("Prospecteur");
+		prospecteur.setVoie("Voie de l'Animal");
+		prospecteur.setSpecialisation(langagePrimal);
+		prospecteur.setDescription(
+				"Le Prospecteur est un aventurier, envoyé dans les coins les plus reculés et isolés du monde afin de défricher de nouveaux marchés potentiels. Il est habitué à se débrouiller seul et sait s'adapter à n'importe quelle situation. Son expérience lui a permis de décrypter les signaux émis par les peuples primitifs qui ne parlent pas sa langue et il sait aussi se faire comprendre d'eux grâce à un mélange de sons, de langage des signes et de dessins. Certains Prospecteurs réussissent même à se faire comprendre des animaux, évitant ainsi de se faire attaquer par un prédateur mal intentionné.");
+		prospecteur = metierRepository.save(prospecteur);
+
+		tenancier.setNomMetier("Tenancier");
+		tenancier.setVoie("Voie de la Terre");
+		tenancier.setSpecialisation(psychologie);
+		tenancier.setDescription(
+				"Le Tenancier est un pragmatique. Habitué à tenir une auberge, une échoppe, une boutique, un restaurant, il doit toujours savoir à qui il a affaire pour ne prendre aucun risque et surtout se donner les meilleures chances de vendre les services qu'il a à proposer. Connaissant parfaitement tous les archétypes psychologiques et les ficelles qu'il faut tirer pour obtenir ce que l'on veut, il sait jauger quelqu'un d'un regard, et le moindre détail saura lui révéler un fragment de personnalité. Le Tenancier sait désamorcer les conflits et trouver les mots pour éviter que les situations ne s'enveniment.");
+		tenancier = metierRepository.save(tenancier);
+
+		traducteur.setNomMetier("Traducteur");
+		traducteur.setVoie("Voie de l'Autre");
+		traducteur.setSpecialisation(languesExotiques);
+		traducteur.setDescription(
+				"Le Traducteur connaît les diverses langues raciales héossiennes et peut comprendre la plupart des dialectes locaux en en comprenant les origines linguistiques. Indispensable pour toute transaction personnalisée, le Traducteur dispose d'un grand pouvoir car il peut selon ses intérêts favoriser l'une ou l'autre partie. C'est pour cela que chaque partie dispose de son Traducteur afin d'être sûr de ce qui est traduit. Mais il n'est pas rare que les Traducteurs de parties adverses se mettent d'accord au départ de l'issue d'une transaction et se répartissent ensuite les bénéfices de leurs petites arnaques. Pour éviter cela, le Traducteur doit prêter serment devant le Cercle des Réalités afin de pouvoir exercer son métier sans susciter la méfiance de ses interlocuteurs.");
+		traducteur = metierRepository.save(traducteur);
 
 //-------------------------------------------------------------------------------------------------------------------------
 //		REMPLISSAGE OBJET MOTIVATION
@@ -1009,23 +1260,28 @@ public class DonneesPersonnage {
 		trouverAmeSoeur = motivationRepository.save(trouverAmeSoeur);
 
 		aider.setNomMotivation("Aider les autres");
-		aider.setDescription("Pour vous l'Autre est une partie du Moi. En aidant l'Autre, vous vous aidez vous-même. Le coeur sur la main, vous offrez vos service à tous ceux que vous croiser et qui en ont besoin. Avec le temps, vous avez su repérer ceux qui veulent profiter de vous et ceux qui ont véritablement besoin de vous.");
+		aider.setDescription(
+				"Pour vous l'Autre est une partie du Moi. En aidant l'Autre, vous vous aidez vous-même. Le coeur sur la main, vous offrez vos service à tous ceux que vous croiser et qui en ont besoin. Avec le temps, vous avez su repérer ceux qui veulent profiter de vous et ceux qui ont véritablement besoin de vous.");
 		aider.setDomaineLie(shaan);
 		aider = motivationRepository.save(aider);
 
-		charmer.setNomMotivation("");
-		charmer.setDescription(".");
-		charmer.setDomaineLie(arts);
-		charmer = motivationRepository.save(charmer);
-		charmer.setNomMotivation("");
-		charmer.setDescription(".");
-		charmer.setDomaineLie(arts);
-		charmer = motivationRepository.save(charmer);
+		combattreFailles.setNomMotivation("Combattres ses failles");
+		combattreFailles.setDescription(
+				"L'ennemi le plus redoutable reste soi-même. Vous appropriant cet adage, vous faites tout pour travailler sur vous-même afin de devenir meilleur. Vous avez besoin que les Autres vous fassent des compliments sur vos progrès afin de vous épanouir et vous rendre meilleur.");
+		combattreFailles.setDomaineLie(magie);
+		combattreFailles = motivationRepository.save(combattreFailles);
 
-		charmer.setNomMotivation("");
-		charmer.setDescription(".");
-		charmer.setDomaineLie(arts);
-		charmer = motivationRepository.save(charmer);
+		enseignerMagie.setNomMotivation("Enseigner la Magie");
+		enseignerMagie.setDescription(
+				"Vous vous inscrivez dans la transmision et vous connaissez l'importance que revêt le partage du savoir. Vous savez que vous ne seriez rien sans les autres Magiciens qui vous ont permis de devenir ce que vous êtes aujourd'hui.");
+		enseignerMagie.setDomaineLie(magie);
+		enseignerMagie = motivationRepository.save(enseignerMagie);
+
+		percerMysteres.setNomMotivation("Percer les mystères des arcane");
+		percerMysteres.setDescription(
+				"La Magie ets lié au cerecles des Trihns, mais si la théorie est perceptible de tous, la pratique relève de nombreuses zones d'ombres, des phénomènes inexpliqués, des situations paradoxales. Vous voulez rester maîtres de votre art et voulez tout comprendre pour pouvoir bien contrôler ce que vous faites au moment où vous le faites.");
+		percerMysteres.setDomaineLie(magie);
+		percerMysteres = motivationRepository.save(percerMysteres);
 
 		charmer.setNomMotivation("");
 		charmer.setDescription(".");
