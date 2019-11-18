@@ -1,6 +1,8 @@
 package createurShaan.repository;
 
+import org.springframework.data.jpa.repository.JpaRepository;
+
 import createurShaan.model.DomainePersonnage;
-public interface IDomainePersonnageRepository extends IRepository<DomainePersonnage, Long>{
+public interface IDomainePersonnageRepository extends JpaRepository<DomainePersonnage, Long>{
 
 }

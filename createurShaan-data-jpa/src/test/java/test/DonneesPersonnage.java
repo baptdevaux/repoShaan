@@ -4,7 +4,8 @@ import java.text.ParseException;
 
 import javax.persistence.EntityManagerFactory;
 
-import createurShaan.Application;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 import createurShaan.model.Acquis;
 import createurShaan.model.AlterationEtat;
 import createurShaan.model.AlterationPersonnage;
@@ -46,35 +47,32 @@ import createurShaan.repository.IRaceRepository;
 import createurShaan.repository.ISpecialisationAcquisRepository;
 import createurShaan.repository.ISpecialisationRepository;
 import createurShaan.repository.ITableDeJeuRepository;
-import createurShaan.repository.jpa.MotivationRepositoryJpa;
 
 public class DonneesPersonnage {
 	public static void main(String[] args) throws ParseException {
 
-		EntityManagerFactory emf = Application.getInstance().getEmf();
-		IAlterationPersonnageRepository alterationPersonnageRepository = Application.getInstance()
-				.getAlterationPersonnageRepo();
-		IJoueurRepository joueurRepository = Application.getInstance().getJoueurRepo();
-		IPeupleRepository peupleRepository = Application.getInstance().getPeupleRepo();
-		IPersonnageRepository personnageRepository = Application.getInstance().getPersonnageRepo();
-		IRaceRepository raceRepository = Application.getInstance().getRaceRepo();
-		IMetierRepository metierRepository = Application.getInstance().getMetierRepo();
-		ICasteRepository casteRepository = Application.getInstance().getCasteRepo();
-		IAlterationEtatRepository alterationEtatRepository = Application.getInstance().getAlterationEtatRepo();
-		ITableDeJeuRepository tableDeJeuRepository = Application.getInstance().getTableDeJeuRepo();
-		IDomainePersonnageRepository domainePersonnageRepository = Application.getInstance().getDomainePersonnageRepo();
-		IDomaineRepository domaineRepository = Application.getInstance().getDomaineRepo();
-		IBonusPersonnageRepository bonusPersonnageRepository = Application.getInstance().getBonusPersonageRepo();
-		IAcquisRepository acquisRepository = Application.getInstance().getAcquisRepo();
-		ISpecialisationRepository specialisationRepository = Application.getInstance().getSpecialisationRepo();
-		IMotivationRepository motivationRepository = Application.getInstance().getMotivationRepo();
-		IMotivationPersonnageRepository motivationPersonnageRepository = Application.getInstance()
-				.getMotivationPersonnageRepo();
-		IMotivationRepository motivRepository = Application.getInstance().getMotivationRepo();
-		IPouvoirPersonnageRepository pouvoirPersonnageRepository = Application.getInstance().getPouvoirPersonnageRepo();
-		IPouvoirRepository pouvoirRepository = Application.getInstance().getPouvoirRepo();
-		ISpecialisationAcquisRepository speAcquisRepository = Application.getInstance().getSpecialisationAcquisRepo();
-		IMaitreDuJeuRepository maitreDuJeuRepository = Application.getInstance().getMaitreDuJeuRepo();
+		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("application-context.xml");
+		IAlterationPersonnageRepository alterationPersonnageRepository = context.getBean(IAlterationPersonnageRepository.class);
+		IJoueurRepository joueurRepository = context.getBean(IJoueurRepository.class);
+		IPeupleRepository peupleRepository = context.getBean(IPeupleRepository.class);
+		IPersonnageRepository personnageRepository = context.getBean(IPersonnageRepository.class);
+		IRaceRepository raceRepository = context.getBean(IRaceRepository.class);
+		IMetierRepository metierRepository = context.getBean(IMetierRepository.class);
+		ICasteRepository casteRepository = context.getBean(ICasteRepository.class);
+		IAlterationEtatRepository alterationEtatRepository = context.getBean(IAlterationEtatRepository.class);
+		ITableDeJeuRepository tableDeJeuRepository = context.getBean(ITableDeJeuRepository.class);
+		IDomainePersonnageRepository domainePersonnageRepository = context.getBean(IDomainePersonnageRepository.class);
+		IDomaineRepository domaineRepository = context.getBean(IDomaineRepository.class);
+		IBonusPersonnageRepository bonusPersonnageRepository = context.getBean(IBonusPersonnageRepository.class);
+		IAcquisRepository acquisRepository = context.getBean(IAcquisRepository.class);
+		ISpecialisationRepository specialisationRepository = context.getBean(ISpecialisationRepository.class);
+		IMotivationRepository motivationRepository = context.getBean(IMotivationRepository.class);
+		IMotivationPersonnageRepository motivationPersonnageRepository = context.getBean(IMotivationPersonnageRepository.class);
+		IMotivationRepository motivRepository = context.getBean(IMotivationRepository.class);
+		IPouvoirPersonnageRepository pouvoirPersonnageRepository = context.getBean(IPouvoirPersonnageRepository.class);
+		IPouvoirRepository pouvoirRepository = context.getBean(IPouvoirRepository.class);
+		ISpecialisationAcquisRepository speAcquisRepository = context.getBean(ISpecialisationAcquisRepository.class);
+		IMaitreDuJeuRepository maitreDuJeuRepository = context.getBean(IMaitreDuJeuRepository.class);
 
 //-------------------------------------------------------------------------------------------------------------------------
 //		CREATION OBJET DOMAINE

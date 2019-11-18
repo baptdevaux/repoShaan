@@ -1,6 +1,8 @@
 package createurShaan.repository;
 
+import org.springframework.data.jpa.repository.JpaRepository;
+
 import createurShaan.model.BonusPersonnage;
-public interface IBonusPersonnageRepository extends IRepository<BonusPersonnage, Long>{
+public interface IBonusPersonnageRepository extends JpaRepository<BonusPersonnage, Long>{
 
 }
