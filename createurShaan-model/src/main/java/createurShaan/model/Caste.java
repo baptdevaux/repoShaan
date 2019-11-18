@@ -24,7 +24,7 @@ public class Caste {
 	private int version;
 	@Column(nullable = false)
 	private String nomCaste;
-	@Column(length = 500)
+	@Column(length = 50000)
 	private String description;
 	
 	@OneToOne

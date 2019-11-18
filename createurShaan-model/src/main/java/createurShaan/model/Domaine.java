@@ -26,7 +26,7 @@ public class Domaine {
 	private String nom;
 	@Column
 	private String elementLie;
-	@Column(length = 500)
+	@Column(length = 5000)
 	private String description;
 
 	@OneToMany(mappedBy = "domaineLie")

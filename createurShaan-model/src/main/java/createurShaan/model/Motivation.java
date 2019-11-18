@@ -18,9 +18,9 @@ public class Motivation {
 	private Long id;
 	@Version
 	private Integer version;
-	@Column (length = 500)
+	@Column (length = 5000)
 	private String nomMotivation;
-	@Column (length = 2000)
+	@Column (length = 5000)
 	private String description;
 	
 	@ManyToOne

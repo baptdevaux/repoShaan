@@ -2,6 +2,7 @@ package test;
 
 import java.util.Optional;
 
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +11,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import createurShaan.model.Domaine;
 import createurShaan.repository.IDomaineRepository;
-import junit.framework.Assert;
+
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = "/application-context.xml")
@@ -19,7 +20,6 @@ public class IDomaineRepositoryTestSpring {
 	@Autowired
 	private static IDomaineRepository domaineRepo;
 	
-	@SuppressWarnings("deprecation")
 	@Test
 	public void testDomaine() {
 		int startNumber = domaineRepo.findAll().size();

@@ -1975,6 +1975,91 @@ public class DonneesPersonnage {
 		pacteNecrotique.setDomaineLie(necrose);
 		pacteNecrotique.setMetier(voleur);
 		pacteNecrotique = specialisationRepository.save(pacteNecrotique);
+		
+
+// -------------------------------------------------------------------------------------------------------------------------
+//		REMPLISSAGE OBJET PEUPLE
+//-------------------------------------------------------------------------------------------------------------------------
+
+		foretsBlanches.setNomPeuple("Forêts Blanches");
+		foretsBlanches.setDomaine(rituels);
+		foretsBlanches.setSpecialisation1(langageDuCorps);
+		foretsBlanches.setSpecialisation2(educationPhysique);
+		foretsBlanches.setDescription(
+				"De vastes forêts de conifères se recouvrent de neige l'hiver venu. La taïga, ou forêt boréale, étonne par sa densité et sa persistance à des altitudes défiant l'imagination. Les arbres sont moins grands que dans les régions chaudes mais les variétés de plantes sont tout aussi foisonnantes. De nombreux Temples rythment les haltes des Voyageurs.");
+		foretsBlanches = peupleRepository.save(foretsBlanches);
+
+		glaces.setNomPeuple("Glaces");
+		glaces.setDomaine(magie);
+		glaces.setSpecialisation1(arcanes);
+		glaces.setSpecialisation2(langagePrimal);
+		glaces.setDescription(
+				"Les côtes sont bordées par une zone de glace aux contours instables. De nombreux plateaux recouverts de glaciers s'élèvent à plus de deux mille mètres. La vie au milieu des terres est impossible. Seul le littoral offre une réserve de gibier susceptible de nourrir les populations locales.");
+		glaces = peupleRepository.save(glaces);
+
+		grandsArbres.setNomPeuple("Grands Arbres");
+		grandsArbres.setDomaine(shaan);
+		grandsArbres.setSpecialisation1(empathieVegetale);
+		grandsArbres.setSpecialisation2(empathieAnimale);
+		grandsArbres.setDescription(
+				"Cette épaisse forêt de gigantesques arbres verts peut atteindre une centaine de mètres de hauteur et son feuillage est persistant.");
+		grandsArbres = peupleRepository.save(grandsArbres);
+
+		hautesHerbes.setNomPeuple("Hautes Herbes");
+		hautesHerbes.setDomaine(arts);
+		hautesHerbes.setSpecialisation1(musique);
+		hautesHerbes.setSpecialisation2(commerce);
+		hautesHerbes.setDescription(
+				"De vastes plaines d'herbe grasse s'étendent à l'infini. Parsemées d'arbres et de petits bosquets, ces régions sont principalement exploitées pour l'agriculture et l'élevage.");
+		hautesHerbes = peupleRepository.save(hautesHerbes);
+
+		marais.setNomPeuple("Hautes Herbes");
+		marais.setDomaine(savoir);
+		marais.setSpecialisation1(zoologie);
+		marais.setSpecialisation2(botanique);
+		marais.setDescription(
+				"De hauts arbres plongent leurs puissantes racines dans les vastes étendues d'eau peu profondes des marais verts, jaunes et rouges. On ne trouve quasiment que des Ygwans dans les Marais, car eux seuls semblent apprécier la constante humidité et la chaleur de l'endroit.");
+		marais = peupleRepository.save(marais);
+
+		montagnes.setNomPeuple("Montagnes");
+		montagnes.setDomaine(social);
+		montagnes.setSpecialisation1(educationPhysique);
+		montagnes.setSpecialisation2(languesExotiques);
+		montagnes.setDescription(
+				"De roches et de pics, cette région froide a été prise d'assaut par les Delhions. Des conifères parsèment le pied des Montagnes, pour rapidement laisser place à la roche puis à la neige. Les conditions de vie y sont rigoureuses, car l'oxygène se raréfie en haute altitude. La montagne est un environnement très dangereux pour celui qui ne la connait pas. L'.entre-aide reste donc une priorité pour ceux qui doivent survivre dans ce milieu. Habitués à cotoyer des natifs de tous horizons, les montagnards ont développé une facilité à communiquer dans d'autres langages que les leurs.");
+		montagnes = peupleRepository.save(montagnes);
+
+		rivages.setNomPeuple("Rivages");
+		rivages.setDomaine(survie);
+		rivages.setSpecialisation1(navigation);
+		rivages.setSpecialisation2(educationPhysique);
+		rivages.setDescription(
+				"Le milieu varie selon le climat de la région, allant de la plage de sable fin bordée d'arbres enchanteurs dans les régions chaudes aux gigantesques falaises abruptes des contrées plus froides. Sur Héos, les marées ont une amplitude colossale. Cela oblige les Peuples de la mer à consolider constamment les digues et barrages nécessaires à leur survie. Les Ygwans et les Kelwi ns de ces milieux maîtrisent la construction de ces édifices protecteurs et un maçon a droit au même respect qu'un grand navigateur. Le littoral et les fonds marins offrent une profusion de plantes et d' animaux divers. Les cités lacustres peuvent s'étendre sur des kilomètres le long des côtes et se prolongent dans la mer grâce aux ports.");
+		rivages = peupleRepository.save(rivages);
+
+		sables.setNomPeuple("Sables");
+		sables.setDomaine(combat);
+		sables.setSpecialisation1(monture);
+		sables.setSpecialisation2(histoireDHeos);
+		sables.setDescription(
+				"Les Sables sont de vastes étendues arides de sable tassé ou en formation dunaire et de rochers plus ou moins saillants. Perpétuellement balayé par de terribles vents, le désert est une transition entre les Terres Brûlées et les Hautes Herbes chaudes. Selon la présence ou l'absence des pluies, il oscillera entre ces deux régions.");
+		sables = peupleRepository.save(sables);
+
+		terresBrulees.setNomPeuple("Terres Brûlées");
+		terresBrulees.setDomaine(technique);
+		terresBrulees.setSpecialisation1(navigation);
+		terresBrulees.setSpecialisation2(recuperation);
+		terresBrulees.setDescription(
+				"De gigantesques canyons, des plateaux qui s'élèvent à l'infini, des gouffres et des ravins qui transforment la lumière en ténèbres, tel est le décor des Terres Brûlées. Les Peuples des Terres Brûlées sont obligés de compenser la dureté de leur environnement par de rastuce et des trouvailles techniques. Si personne ne veut habiter les Terres Brûlées, nombreux sont ceux qui rêvent d'en récupérer toutes les richesses ...");
+		terresBrulees = peupleRepository.save(terresBrulees);
+
+		cites.setNomPeuple("Cités");
+		cites.setDomaine(necrose);
+		cites.setSpecialisation1(cultureHumaine);
+		cites.setSpecialisation2(vieUrbaine);
+		cites.setDescription(
+				"Cités tentaculaires de bâtiments aux formes improbables, dressant leurs tours de pierre et de verre en offrande au ciel, ou au contraire plongeant leurs souterrains (égouts et habitations troglodytes) dans les entrailles de la terre, les mégalopoles héossiennes regorgent de vie . . . et de mort. Car si la vie y est agréable et animée dans les beaux quartiers et dans les secteurs résidentiels, les bas-fonds restent de vrais coupe-gorges et constituent des enclaves où l'Ombre impose ses lois.");
+		cites = peupleRepository.save(cites);
 
 //-------------------------------------------------------------------------------------------------------------------------
 //		REMPLISSAGE OBJET RACE
@@ -2118,90 +2203,6 @@ public class DonneesPersonnage {
 		humains.setElementTotem("Limbes");
 		humains.setCouleurSymbolique("Noir");
 		humains = raceRepository.save(humains);
-
-//-------------------------------------------------------------------------------------------------------------------------
-//		REMPLISSAGE OBJET PEUPLE
-//-------------------------------------------------------------------------------------------------------------------------
-
-		foretsBlanches.setNomPeuple("Forêts Blanches");
-		foretsBlanches.setDomaine(rituels);
-		foretsBlanches.setSpecialisation1(langageDuCorps);
-		foretsBlanches.setSpecialisation2(educationPhysique);
-		foretsBlanches.setDescription(
-				"De vastes forêts de conifères se recouvrent de neige l'hiver venu. La taïga, ou forêt boréale, étonne par sa densité et sa persistance à des altitudes défiant l'imagination. Les arbres sont moins grands que dans les régions chaudes mais les variétés de plantes sont tout aussi foisonnantes. De nombreux Temples rythment les haltes des Voyageurs.");
-		foretsBlanches = peupleRepository.save(foretsBlanches);
-
-		glaces.setNomPeuple("Glaces");
-		glaces.setDomaine(magie);
-		glaces.setSpecialisation1(arcanes);
-		glaces.setSpecialisation2(langagePrimal);
-		glaces.setDescription(
-				"Les côtes sont bordées par une zone de glace aux contours instables. De nombreux plateaux recouverts de glaciers s'élèvent à plus de deux mille mètres. La vie au milieu des terres est impossible. Seul le littoral offre une réserve de gibier susceptible de nourrir les populations locales.");
-		glaces = peupleRepository.save(glaces);
-
-		grandsArbres.setNomPeuple("Grands Arbres");
-		grandsArbres.setDomaine(shaan);
-		grandsArbres.setSpecialisation1(empathieVegetale);
-		grandsArbres.setSpecialisation2(empathieAnimale);
-		grandsArbres.setDescription(
-				"Cette épaisse forêt de gigantesques arbres verts peut atteindre une centaine de mètres de hauteur et son feuillage est persistant.");
-		grandsArbres = peupleRepository.save(grandsArbres);
-
-		hautesHerbes.setNomPeuple("Hautes Herbes");
-		hautesHerbes.setDomaine(arts);
-		hautesHerbes.setSpecialisation1(musique);
-		hautesHerbes.setSpecialisation2(commerce);
-		hautesHerbes.setDescription(
-				"De vastes plaines d'herbe grasse s'étendent à l'infini. Parsemées d'arbres et de petits bosquets, ces régions sont principalement exploitées pour l'agriculture et l'élevage.");
-		hautesHerbes = peupleRepository.save(hautesHerbes);
-
-		marais.setNomPeuple("Hautes Herbes");
-		marais.setDomaine(savoir);
-		marais.setSpecialisation1(zoologie);
-		marais.setSpecialisation2(botanique);
-		marais.setDescription(
-				"De hauts arbres plongent leurs puissantes racines dans les vastes étendues d'eau peu profondes des marais verts, jaunes et rouges. On ne trouve quasiment que des Ygwans dans les Marais, car eux seuls semblent apprécier la constante humidité et la chaleur de l'endroit.");
-		marais = peupleRepository.save(marais);
-
-		montagnes.setNomPeuple("Montagnes");
-		montagnes.setDomaine(social);
-		montagnes.setSpecialisation1(educationPhysique);
-		montagnes.setSpecialisation2(languesExotiques);
-		montagnes.setDescription(
-				"De roches et de pics, cette région froide a été prise d'assaut par les Delhions. Des conifères parsèment le pied des Montagnes, pour rapidement laisser place à la roche puis à la neige. Les conditions de vie y sont rigoureuses, car l'oxygène se raréfie en haute altitude. La montagne est un environnement très dangereux pour celui qui ne la connait pas. L'.entre-aide reste donc une priorité pour ceux qui doivent survivre dans ce milieu. Habitués à cotoyer des natifs de tous horizons, les montagnards ont développé une facilité à communiquer dans d'autres langages que les leurs.");
-		montagnes = peupleRepository.save(montagnes);
-
-		rivages.setNomPeuple("Rivages");
-		rivages.setDomaine(survie);
-		rivages.setSpecialisation1(navigation);
-		rivages.setSpecialisation2(educationPhysique);
-		rivages.setDescription(
-				"Le milieu varie selon le climat de la région, allant de la plage de sable fin bordée d'arbres enchanteurs dans les régions chaudes aux gigantesques falaises abruptes des contrées plus froides. Sur Héos, les marées ont une amplitude colossale. Cela oblige les Peuples de la mer à consolider constamment les digues et barrages nécessaires à leur survie. Les Ygwans et les Kelwi ns de ces milieux maîtrisent la construction de ces édifices protecteurs et un maçon a droit au même respect qu'un grand navigateur. Le littoral et les fonds marins offrent une profusion de plantes et d' animaux divers. Les cités lacustres peuvent s'étendre sur des kilomètres le long des côtes et se prolongent dans la mer grâce aux ports.");
-		rivages = peupleRepository.save(rivages);
-
-		sables.setNomPeuple("Sables");
-		sables.setDomaine(combat);
-		sables.setSpecialisation1(monture);
-		sables.setSpecialisation2(histoireDHeos);
-		sables.setDescription(
-				"Les Sables sont de vastes étendues arides de sable tassé ou en formation dunaire et de rochers plus ou moins saillants. Perpétuellement balayé par de terribles vents, le désert est une transition entre les Terres Brûlées et les Hautes Herbes chaudes. Selon la présence ou l'absence des pluies, il oscillera entre ces deux régions.");
-		sables = peupleRepository.save(sables);
-
-		terresBrulees.setNomPeuple("Terres Brûlées");
-		terresBrulees.setDomaine(technique);
-		terresBrulees.setSpecialisation1(navigation);
-		terresBrulees.setSpecialisation2(recuperation);
-		terresBrulees.setDescription(
-				"De gigantesques canyons, des plateaux qui s'élèvent à l'infini, des gouffres et des ravins qui transforment la lumière en ténèbres, tel est le décor des Terres Brûlées. Les Peuples des Terres Brûlées sont obligés de compenser la dureté de leur environnement par de rastuce et des trouvailles techniques. Si personne ne veut habiter les Terres Brûlées, nombreux sont ceux qui rêvent d'en récupérer toutes les richesses ...");
-		terresBrulees = peupleRepository.save(terresBrulees);
-
-		cites.setNomPeuple("Cités");
-		cites.setDomaine(necrose);
-		cites.setSpecialisation1(cultureHumaine);
-		cites.setSpecialisation2(vieUrbaine);
-		cites.setDescription(
-				"Cités tentaculaires de bâtiments aux formes improbables, dressant leurs tours de pierre et de verre en offrande au ciel, ou au contraire plongeant leurs souterrains (égouts et habitations troglodytes) dans les entrailles de la terre, les mégalopoles héossiennes regorgent de vie . . . et de mort. Car si la vie y est agréable et animée dans les beaux quartiers et dans les secteurs résidentiels, les bas-fonds restent de vrais coupe-gorges et constituent des enclaves où l'Ombre impose ses lois.");
-		cites = peupleRepository.save(cites);
 
 //-------------------------------------------------------------------------------------------------------------------------
 //		REMPLISSAGE OBJET MOTIVATION
@@ -2706,11 +2707,6 @@ public class DonneesPersonnage {
 		chargeHeroique.setDescription(
 				"Le Combattant peut effectuer un déplacement de Corps mètres en plus d'une Action de COMBAT. Le Combattant bénéficie en plus, pour cette attaque, d’un Bonus égal à son niveau de COMBAT/2, grâce à l’effet de surprise.");
 		chargeHeroique = pouvoirRepository.save(chargeHeroique);
-
-//		Pouvoir affaiblissement = new Pouvoir();
-//		Pouvoir animerLesMorts = new Pouvoir();
-//		Pouvoir alterationDeSouvenirs = new Pouvoir();
-//		Pouvoir contagionNovice = new Pouvoir();
 
 		affaiblissement.setType("Attaque");
 		affaiblissement.setTest("NÉCROSE + Anti-Âme");

@@ -31,7 +31,7 @@ public class Acquis {
 	private Integer classe;
 	@Column
 	private String protection;
-	@Column(length = 500)
+	@Column(length = 5000)
 	private String description;
 	@Column
 	private String capacité;

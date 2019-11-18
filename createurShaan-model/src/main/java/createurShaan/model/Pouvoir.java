@@ -18,11 +18,11 @@ public class Pouvoir {
 	private Long id;
 	@Version
 	private Integer version;
-	@Column (nullable = false)
+	@Column
 	private String nomPouvoir;
-	@Column (nullable = false)
+	@Column
 	private String rang;
-	@Column (nullable = false)
+	@Column
 	private String type;
 	@Column
 	private String test;
