@@ -882,79 +882,91 @@ public class DonneesPersonnage {
 		riteDeTechnique.setNom("Rite de technique");
 		riteDeTechnique.setDomaineLie(rituels);
 //		riteDeTechnique.setMetier(win);
-		riteDeTechnique=specialisationRepository.save(riteDeTechnique);
-		
-		acrobatie.setDescription("Être dynamique, souple, et rapide. Avoir le sens de l'équilibre. Faire des prouesses acrobatiques, faire l’équilibriste, amortir une chute, se contorsionner… Esquiver une attaque physique.");
+		riteDeTechnique = specialisationRepository.save(riteDeTechnique);
+
+		acrobatie.setDescription(
+				"Être dynamique, souple, et rapide. Avoir le sens de l'équilibre. Faire des prouesses acrobatiques, faire l’équilibriste, amortir une chute, se contorsionner… Esquiver une attaque physique.");
 		acrobatie.setNom("Acrobatie");
 		acrobatie.setDomaineLie(survie);
 //		acrobatie.setMetier(voltigeur);
-		acrobatie=specialisationRepository.save(acrobatie);
-		
-		caravane.setDescription("Manœuvrer un attelage, une charrette, un carrosse, un char. Gérer une caravane et la logistique de ravitaillement qu'elle nécessite. Connaître les dispositifs de sécurité à mettre en place lorsqu'une menace survient.");
+		acrobatie = specialisationRepository.save(acrobatie);
+
+		caravane.setDescription(
+				"Manœuvrer un attelage, une charrette, un carrosse, un char. Gérer une caravane et la logistique de ravitaillement qu'elle nécessite. Connaître les dispositifs de sécurité à mettre en place lorsqu'une menace survient.");
 		caravane.setNom("Caravane");
 		caravane.setDomaineLie(survie);
 //		caravane.setMetier(caravanier);
-		caravane=specialisationRepository.save(caravane);
-		
-		cultureHeossienne.setDescription("Connaître les us et coutumes des peuples héossiens, ainsi que la géographie de l'Héossie. Cette Spécialisation est principalement ancrée dans le présent. Le passé des peuples héossiens sont plus du ressort de la Spécialisation Histoire d'Héos (SAVOIR).");
+		caravane = specialisationRepository.save(caravane);
+
+		cultureHeossienne.setDescription(
+				"Connaître les us et coutumes des peuples héossiens, ainsi que la géographie de l'Héossie. Cette Spécialisation est principalement ancrée dans le présent. Le passé des peuples héossiens sont plus du ressort de la Spécialisation Histoire d'Héos (SAVOIR).");
 		cultureHeossienne.setNom("Culture héossienne");
 		cultureHeossienne.setDomaineLie(survie);
 //		cultureHeossienne.setMetier(guide);
-		cultureHeossienne=specialisationRepository.save(cultureHeossienne);
-		
-		cultureNecrosienne.setDescription("Connaître les différents stades de la nécrose, du maudit à l'incarnation, ainsi que des différentes voies qui mènent aux Limbes. Situer les divers empires nécrosiens, leurs modes de non-vie, leurs lois et leurs rituels. Rechercher l'emplacement de stèles d'Embiose.");
+		cultureHeossienne = specialisationRepository.save(cultureHeossienne);
+
+		cultureNecrosienne.setDescription(
+				"Connaître les différents stades de la nécrose, du maudit à l'incarnation, ainsi que des différentes voies qui mènent aux Limbes. Situer les divers empires nécrosiens, leurs modes de non-vie, leurs lois et leurs rituels. Rechercher l'emplacement de stèles d'Embiose.");
 		cultureNecrosienne.setNom("Culture nécrosienne");
 		cultureNecrosienne.setDomaineLie(survie);
 //		cultureNecrosienne.setMetier(traqueurdestele);
-		cultureNecrosienne=specialisationRepository.save(cultureNecrosienne);
-		
-		discretion.setDescription("Se déplacer en silence, se cacher dans les ombres, se camoufler dans la nature. Tendre une embuscade. Semer quelqu'un autrement que par la course.");
+		cultureNecrosienne = specialisationRepository.save(cultureNecrosienne);
+
+		discretion.setDescription(
+				"Se déplacer en silence, se cacher dans les ombres, se camoufler dans la nature. Tendre une embuscade. Semer quelqu'un autrement que par la course.");
 		discretion.setNom("Discrétion");
 		discretion.setDomaineLie(survie);
 //		discretion.setMetier(espion);
-		discretion=specialisationRepository.save(discretion);
-		
-		educationPhysique.setDescription("Courir, sauter, escalader, ramper, rouler, nager,... Avoir une bonne coordination motrice. Être endurant.");
+		discretion = specialisationRepository.save(discretion);
+
+		educationPhysique.setDescription(
+				"Courir, sauter, escalader, ramper, rouler, nager,... Avoir une bonne coordination motrice. Être endurant.");
 		educationPhysique.setNom("Education physique");
 		educationPhysique.setDomaineLie(survie);
 //		educationPhysique.setMetier(athlete);
-		educationPhysique=specialisationRepository.save(educationPhysique);
-		
-		monture.setDescription("Chevaucher tout type de monture. Diriger des créatures volantes, terrestres ou marines.");
+		educationPhysique = specialisationRepository.save(educationPhysique);
+
+		monture.setDescription(
+				"Chevaucher tout type de monture. Diriger des créatures volantes, terrestres ou marines.");
 		monture.setNom("Monture");
 		monture.setDomaineLie(survie);
 //		monture.setMetier(messager);
-		monture=specialisationRepository.save(monture);
-		
-		monture.setDescription("Chevaucher tout type de monture. Diriger des créatures volantes, terrestres ou marines.");
+		monture = specialisationRepository.save(monture);
+
+		monture.setDescription(
+				"Chevaucher tout type de monture. Diriger des créatures volantes, terrestres ou marines.");
 		monture.setNom("Monture");
 		monture.setDomaineLie(survie);
 //		monture.setMetier(messager);
-		monture=specialisationRepository.save(monture);
-		
-		navigation.setDescription("Naviguer en milieu aquatique ou en milieu aérien. Reconnaître les courants et les interpréter, maîtriser les principes aérodynamiques et hydrauliques permettant de voyager dans les airs et dans l’eau. S'orienter en mer ou dans les airs. Piloter tous types d'engins volants ou marins qui ne comportent pas de technologie humaine. Prédire la météo.");
+		monture = specialisationRepository.save(monture);
+
+		navigation.setDescription(
+				"Naviguer en milieu aquatique ou en milieu aérien. Reconnaître les courants et les interpréter, maîtriser les principes aérodynamiques et hydrauliques permettant de voyager dans les airs et dans l’eau. S'orienter en mer ou dans les airs. Piloter tous types d'engins volants ou marins qui ne comportent pas de technologie humaine. Prédire la météo.");
 		navigation.setNom("Navigation");
 		navigation.setDomaineLie(survie);
 //		navigation.setMetier(navigateur);
-		navigation=specialisationRepository.save(navigation);
-		
-		vieSauvage.setDescription("Connaître tout ce qui a trait au milieu terrestre et à son adaptation. Pister, chasser, poser des pièges, allumer un feu par grand vent, établir un campement réconfortant, se laver à l'eau froide,…");
+		navigation = specialisationRepository.save(navigation);
+
+		vieSauvage.setDescription(
+				"Connaître tout ce qui a trait au milieu terrestre et à son adaptation. Pister, chasser, poser des pièges, allumer un feu par grand vent, établir un campement réconfortant, se laver à l'eau froide,…");
 		vieSauvage.setNom("Vie sauvage");
 		vieSauvage.setDomaineLie(survie);
 //		vieSauvage.setMetier(chasseur);
-		vieSauvage=specialisationRepository.save(vieSauvage);
-		
-		vieSauvage.setDescription("Connaître tout ce qui a trait au milieu terrestre et à son adaptation. Pister, chasser, poser des pièges, allumer un feu par grand vent, établir un campement réconfortant, se laver à l'eau froide,…");
+		vieSauvage = specialisationRepository.save(vieSauvage);
+
+		vieSauvage.setDescription(
+				"Connaître tout ce qui a trait au milieu terrestre et à son adaptation. Pister, chasser, poser des pièges, allumer un feu par grand vent, établir un campement réconfortant, se laver à l'eau froide,…");
 		vieSauvage.setNom("Vie sauvage");
 		vieSauvage.setDomaineLie(survie);
 //		vieSauvage.setMetier(chasseur);
-		vieSauvage=specialisationRepository.save(vieSauvage);
-		
-		vigilance.setDescription("Mettre ses sens en éveil, percevoir activement son environnement, contrairement à l'Intuition du Shaan qui traduit la perception passive. Scruter l’horizon pour y découvrir une silhouette inhabituelle. Guetter une proie. Identifier un élément lointain. Avoir le sens de l’orientation.");
+		vieSauvage = specialisationRepository.save(vieSauvage);
+
+		vigilance.setDescription(
+				"Mettre ses sens en éveil, percevoir activement son environnement, contrairement à l'Intuition du Shaan qui traduit la perception passive. Scruter l’horizon pour y découvrir une silhouette inhabituelle. Guetter une proie. Identifier un élément lointain. Avoir le sens de l’orientation.");
 		vigilance.setNom("Vigilance");
 		vigilance.setDomaineLie(survie);
 //		vigilance.setMetier(eclaireur);
-		vigilance=specialisationRepository.save(vigilance);
+		vigilance = specialisationRepository.save(vigilance);
 //-------------------------------------------------------------------------------------------------------------------------
 //		REMPLISSAGE OBJET RACE
 //-------------------------------------------------------------------------------------------------------------------------	
