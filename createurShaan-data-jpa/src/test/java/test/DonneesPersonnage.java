@@ -195,6 +195,16 @@ public class DonneesPersonnage {
 		Metier medecin = new Metier();
 		Metier percepteur = new Metier();
 		Metier zoologue = new Metier();
+		Metier courtisant = new Metier();
+		Metier cyberien = new Metier();
+		Metier diplomate = new Metier();
+		Metier enseignant = new Metier();
+		Metier informateur = new Metier();
+		Metier marchant = new Metier();
+		Metier politicien = new Metier();
+		Metier prospecteur = new Metier();
+		Metier tenancier = new Metier();
+		Metier traducteur = new Metier();
 
 //-------------------------------------------------------------------------------------------------------------------------
 //		CREATION OBJET MOTIVATION
@@ -1011,6 +1021,76 @@ public class DonneesPersonnage {
 		zoologue.setDescription(
 				"Le Zoologue est un collectionneur, il passe son temps à collecter et mettre à jour toutes les informations liées à une espèce animale ou à un écosystème. Bon nombre de Zoologues disposent de petits talents artistiques qui leur permettent de dessiner ce qu'ils sont amenés à observer sur le terrain. Certains Zoologues se spécialisent dans la connaissance de certains types d'animaux, les prédateurs, les herbivores, les nomades, les poissons, les oiseaux, les amphibiens, les reptiles... Un Zoologue est aussi un peu vétérinaire et connait les premiers soins à apporter à un animal blessé, et les gestes à effectuer pour sauver des vies. Assez impulsif dans son comportement, le Zoologue accorde beaucoup d'importance à son odorat : il peut ainsi récupérer des informations que les autres sens ne lui permettent pas de saisir. C'est pour cette raison que les meilleurs Zoologues sont Woons.");
 		zoologue = metierRepository.save(zoologue);
+
+		courtisant.setNomMetier("Courtisant");
+		courtisant.setVoie("Voie du feu");
+		courtisant.setSpecialisation(seduction);
+		courtisant.setDescription(
+				"Les Courtisans savent obtenir tout ce qu'ils désirent en jouant avec les instincts primaires des individus. Se créer un personnage qui fera rêver son ou sa partenaire est pour le courtisan une habitude qu'il n'est pas toujours facile à tenir, surtout lorsque les conquêtes sont nombreuses. Les Courtisans œuvrent principalement auprès des Notables et des personnes de pouvoir, afin d'obtenir des informations ou de l'argent, selon qu'ils agissent pour des commanditaires ou pour leur propre compte. Certain Courtisans aiment juste séduire pour le plaisir, car ils se sentent ainsi désirés et donc exister. Les Courtisans savent enivrer les Corps, bousculer les Esprits et cueillir les Âmes. Le vrai talent du Courtisan est de ne jamais rompre, de s'arranger pour que les personnes qu'il a séduites reste toujours dans l'attente d'une éventuelle poursuite de la relation. C'est ce qui prend le plus de temps aux Courtisans : entretenir la flamme de ceux qu'ils ont envoûtés afin que l'amour ne se transforme jamais en haine... Mais rares sont ceux qui y arrivent et pour la plupart des Courtisans et Courtisanes, il y a des villes au sein desquelles ils ne peuvent plus mettre les pieds, sous peine d'être arrêtés sur-le-champ par un potentat local qui se sera senti trahi...");
+		courtisant = metierRepository.save(courtisant);
+
+		cyberien.setNomMetier("Cybérien");
+		cyberien.setVoie("Voie de l'Objet");
+		cyberien.setSpecialisation(arpege);
+		cyberien.setDescription(
+				"Le domaine de prédilection du Cybérien, c'est le réseau Arpège. Cette fameuse toile où circulent des milliards d'informations à chaque seconde et qui sert de liant à toute la société humaine. Média, logiciels, informations, livres, apprentissage, juridiction, livres sacrés, tout est sur Arpège. Le Cybérien est un expert pour rechercher des données, tromper la vigilance des systèmes de surveillance ou négocier toutes sortes de produits sur des sites marchands. Car les interfaces informatiques ont tellement évolué, qu'elles ont en fait disparu au profit du simple langage vocal. Donc n'importe qui sachant parler peut en théorie faire ce qu'il veut sur Arpège, encore faut-il savoir comment dire les choses et où aller... Le Cybérien maîtrise toute la dialectique du rézo et peut, dès l'instant où il dispose d'une borne d'accès, se jouer de toutes les entraves humaines.");
+		cyberien = metierRepository.save(cyberien);
+
+		diplomate.setNomMetier("Diplomate");
+		diplomate.setVoie("Voie de l'Eau");
+		diplomate.setSpecialisation(diplomatie);
+		diplomate.setDescription(
+				"Entre \"le marteau et l'enclume\", le Diplomate est là pour gérer les conflits entre les royaumes. Une déclaration de guerre est pour le Diplomate un constat d'échec. Il doit connaître les généalogies de chaque dynastie, connaître les us et coutumes de chaque culture afin qu'au moment crucial de la négociation politique, il ne fasse aucun impair. Combien de déclarations de guerre ont été faites à cause d'une odeur mal interprétée par un roi woon, ou encore par un mauvais agencement de couleur de tenue pour un prince mélodien un peu caractériel. Le Diplomate peut agir pour le compte des Conseils des castes, mais également pour celui d'Humains affiliés au Nouvel Ordre ou aux Grandes Familles. Les Diplomates les plus chevronnés sont envoyés en territoire nécrosé afin de traiter avec les princes et autres spectres pour tenter de minimiser leurs désirs d'expansion...");
+		diplomate = metierRepository.save(diplomate);
+
+		enseignant.setNomMetier("Enseignant");
+		enseignant.setVoie("Voie du Végétal");
+		enseignant.setSpecialisation(enseignement);
+		enseignant.setDescription(
+				"L'Enseignant est là pour donner les bases d'une culture générale dans tous les domaines aux enfants de 6 à 15 ans. Au-delà, les disciplines plus spécialisées sont enseignées par des membres éminents de chaque caste. L'Enseignant doit avoir une culture transversale et ne pas se contenter d'une vision parcellaire du monde, tout ce qu'il enseigne est lié et touche à de nombreuses matières en même temps. Disponible et à l'écoute des autres, l'Enseignant a toujours à cœur de transmettre quelque chose à son prochain, mais cela peut parfois être perçu comme de la prétention par son entourage, alors qu'il n'en est rien...");
+		enseignant = metierRepository.save(enseignant);
+
+		informateur.setNomMetier("Informateur");
+		informateur.setVoie("Voie des Limbes");
+		informateur.setSpecialisation(vieUrbaine);
+		informateur.setDescription(
+				"L'Informateur est un élément indispensable, dès qu'il s'agit de faire une enquête ou d'obtenir des informations au sein d'un milieu urbain. Il entend tout, voit tout et sait tout, grâce à ses nombreux réseaux de renseignement qui lui rendent compte en temps réel de la situation sociale, politique, économique d'un quartier et même de toute une ville pour les plus influents. Curieux et à l'affût des moindres faits et gestes des puissants et des Notables, les Informateurs connaissent et maîtrisent tous les us et coutumes citadins afin de se fondre dans la masse.");
+		informateur = metierRepository.save(informateur);
+
+		marchant.setNomMetier("Marchant");
+		marchant.setVoie("Voie de l'Air");
+		marchant.setSpecialisation(commerce);
+		marchant.setDescription(
+				"Le commerce a toujours été moteur au sein de la civilisation héossienne, comme partout ailleurs. Les Marchands jouissent de reconnaissance et de prestige auprès des Notables car ils constituent l'un des rouages fondamentaux de l'économie. Du simple vendeur au négociateur de contrats avec de grandes puissances, les Marchands sillonnent l'Héossie à la recherche de la bonne affaire qui fera d'eux des hommes riches. Car devenir Notable est pour un Marchand le but absolu. Pour un Marchand tout se vend ou s'achète, même l'amitié... Cela peut parfois créer des tensions au sein du groupe dont il peut faire partie, car malheureusement la plupart des marchands mettra toujours le profit avant l'éthique...");
+		marchant = metierRepository.save(marchant);
+
+		politicien.setNomMetier("Politicien");
+		politicien.setVoie("Voie du Moi");
+		politicien.setSpecialisation(bluff);
+		politicien.setDescription(
+				"La géopolitique héossienne est devenue extrêmement complexe et délicate, entre les alliances que tissent Grandes Familles, Nouvel Ordre, Notables Héossiens, Conseils des castes et royaumes nécrosiens, difficile de savoir pour quel camp on œuvre réellement. Le politicien sait nager en eaux troubles et toujours retomber sur ses pattes, quel que soit son interlocuteur. Ami, ennemi, allié, partisan, contradicteur, le politicien a toujours quelque chose à dire et à répondre. Sa capacité à rebondir sur les arguments de ses détracteurs lui permet de faire croire ce qu'il veut à n'importe qui.");
+		politicien = metierRepository.save(politicien);
+
+		prospecteur.setNomMetier("Prospecteur");
+		prospecteur.setVoie("Voie de l'Animal");
+		prospecteur.setSpecialisation(langagePrimal);
+		prospecteur.setDescription(
+				"Le Prospecteur est un aventurier, envoyé dans les coins les plus reculés et isolés du monde afin de défricher de nouveaux marchés potentiels. Il est habitué à se débrouiller seul et sait s'adapter à n'importe quelle situation. Son expérience lui a permis de décrypter les signaux émis par les peuples primitifs qui ne parlent pas sa langue et il sait aussi se faire comprendre d'eux grâce à un mélange de sons, de langage des signes et de dessins. Certains Prospecteurs réussissent même à se faire comprendre des animaux, évitant ainsi de se faire attaquer par un prédateur mal intentionné.");
+		prospecteur = metierRepository.save(prospecteur);
+
+		tenancier.setNomMetier("Tenancier");
+		tenancier.setVoie("Voie de la Terre");
+		tenancier.setSpecialisation(psychologie);
+		tenancier.setDescription(
+				"Le Tenancier est un pragmatique. Habitué à tenir une auberge, une échoppe, une boutique, un restaurant, il doit toujours savoir à qui il a affaire pour ne prendre aucun risque et surtout se donner les meilleures chances de vendre les services qu'il a à proposer. Connaissant parfaitement tous les archétypes psychologiques et les ficelles qu'il faut tirer pour obtenir ce que l'on veut, il sait jauger quelqu'un d'un regard, et le moindre détail saura lui révéler un fragment de personnalité. Le Tenancier sait désamorcer les conflits et trouver les mots pour éviter que les situations ne s'enveniment.");
+		tenancier = metierRepository.save(tenancier);
+
+		traducteur.setNomMetier("Traducteur");
+		traducteur.setVoie("Voie de l'Autre");
+		traducteur.setSpecialisation(languesExotiques);
+		traducteur.setDescription(
+				"Le Traducteur connaît les diverses langues raciales héossiennes et peut comprendre la plupart des dialectes locaux en en comprenant les origines linguistiques. Indispensable pour toute transaction personnalisée, le Traducteur dispose d'un grand pouvoir car il peut selon ses intérêts favoriser l'une ou l'autre partie. C'est pour cela que chaque partie dispose de son Traducteur afin d'être sûr de ce qui est traduit. Mais il n'est pas rare que les Traducteurs de parties adverses se mettent d'accord au départ de l'issue d'une transaction et se répartissent ensuite les bénéfices de leurs petites arnaques. Pour éviter cela, le Traducteur doit prêter serment devant le Cercle des Réalités afin de pouvoir exercer son métier sans susciter la méfiance de ses interlocuteurs.");
+		traducteur = metierRepository.save(traducteur);
 
 //-------------------------------------------------------------------------------------------------------------------------
 //		REMPLISSAGE OBJET MOTIVATION
