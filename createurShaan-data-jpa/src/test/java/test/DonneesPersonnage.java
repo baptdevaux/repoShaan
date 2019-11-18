@@ -142,6 +142,16 @@ public class DonneesPersonnage {
 		Specialisation soinsDeLAme = new Specialisation();
 		Specialisation soinsDeLEsprit = new Specialisation();
 		Specialisation soinsDuCorps = new Specialisation();
+		Specialisation arcanes = new Specialisation();
+		Specialisation conjuration = new Specialisation();
+		Specialisation defenseMagique = new Specialisation();
+		Specialisation enchantement = new Specialisation();
+		Specialisation incandescence = new Specialisation();
+		Specialisation invocation = new Specialisation();
+		Specialisation maitriseDesSchemes = new Specialisation();
+		Specialisation regeneration = new Specialisation();
+		Specialisation transfert = new Specialisation();
+		Specialisation voile = new Specialisation();
 //-------------------------------------------------------------------------------------------------------------------------
 //		CREATION OBJET RACE
 //-------------------------------------------------------------------------------------------------------------------------	
@@ -663,7 +673,23 @@ public class DonneesPersonnage {
 //		soinsDuCorps.setMetier(radiant);
 		soinsDuCorps=specialisationRepository.save(soinsDuCorps);
 		
+		arcanes.setDescription("Connaître la théorie qui régit la Magie des schèmes. Reconnaître les traces laissées par un Sort de Magie. Identifier les pouvoirs enchantés dans un artéfact. Connaître les différentes loges et écoles, leurs responsables, leurs organisations et leurs implications.");
+		arcanes.setNom("Arcanes");
+		arcanes.setDomaineLie(magie);
+//		arcanes.setMetier(arcanien);
+		arcanes=specialisationRepository.save(arcanes);
 		
+		conjuration.setDescription("Renvoyer un Trihn ou une Anti-Âme dans son plan d'origine. Priver ses adversaires magiciens de leurs ressources trihniques et les empêcher de lancer des Sorts ou des Tourments.");
+		conjuration.setNom("Conjuration");
+		conjuration.setDomaineLie(magie);
+//		conjuration.setMetier(conjurateur);
+		conjuration=specialisationRepository.save(conjuration);
+		
+		defenseMagique.setDescription("Manipuler les flux trihniques pour former un bouclier magique qui protège des attaques nécrotiques, des Sorts et des Tourments.");
+		defenseMagique.setNom("Defense magique");
+		defenseMagique.setDomaineLie(magie);
+//		defenseMagique.setMetier(revocateur);
+		defenseMagique=specialisationRepository.save(defenseMagique);
 		
 		
 //-------------------------------------------------------------------------------------------------------------------------
