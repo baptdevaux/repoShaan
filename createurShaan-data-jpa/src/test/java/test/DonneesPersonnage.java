@@ -122,6 +122,16 @@ public class DonneesPersonnage {
 		Specialisation psychologie = new Specialisation();
 		Specialisation seduction = new Specialisation();
 		Specialisation vieUrbaine = new Specialisation();
+		Specialisation artsAppliques = new Specialisation();
+		Specialisation artsDuFeu = new Specialisation();
+		Specialisation chant = new Specialisation();
+		Specialisation comedie = new Specialisation();
+		Specialisation deguisement = new Specialisation();
+		Specialisation gastronomie = new Specialisation();
+		Specialisation langageDuCorps = new Specialisation();
+		Specialisation lettres = new Specialisation();
+		Specialisation musique = new Specialisation();
+		Specialisation trucages = new Specialisation();
 //-------------------------------------------------------------------------------------------------------------------------
 //		CREATION OBJET RACE
 //-------------------------------------------------------------------------------------------------------------------------	
@@ -456,6 +466,64 @@ public class DonneesPersonnage {
 		vieUrbaine.setDomaineLie(social);
 //		vieUrbaine.setMetier(informateur);
 		vieUrbaine=specialisationRepository.save(vieUrbaine);
+		
+		artsAppliques.setDescription("Pratiquer le dessin, la peinture, la sculpture sur bois ou sur pierre. Connaître l'histoire de l'art.");
+		artsAppliques.setNom("Arts appliqués");
+		artsAppliques.setDomaineLie(arts);
+//		artsAppliques.setMetier(evocateur);
+		artsAppliques=specialisationRepository.save(artsAppliques);
+		
+		artsDuFeu.setDescription("Cracher du feu. Créer des feux d'artifices, et toutes sortes d'effets pyrotechniques ou de jeux de lumières.");
+		artsDuFeu.setNom("Arts du feu");
+		artsDuFeu.setDomaineLie(arts);
+//		artsDuFeu.setMetier(bateleur);
+		artsDuFeu=specialisationRepository.save(artsDuFeu);
+		
+		chant.setDescription("Chanter juste. Savoir poser sa voix. Lire une partition, accompagner en mesure un musicien. Savoir improviser. Connaître un vaste répertoire allant des chansons grivoises aux sérénades, en passant par les chants traditionnels. Séduire quelqu'un.");
+		chant.setNom("Chant");
+		chant.setDomaineLie(arts);
+//		chant.setMetier(chanteur);
+		chant=specialisationRepository.save(chant);
+		
+		comedie.setDescription("Faire du théâtre. Interpréter un rôle par cœur. Simuler les émotions. Imiter les voix. Créer des pièces et connaître sur le bout des doigts les répliques de tous les personnages des grands classiques héossiens. Se faire passer pour quelqu'un d'autre ou avoir l'air crédible en racontant des sornettes.");
+		comedie.setNom("Comédie");
+		comedie.setDomaineLie(arts);
+//		comedie.setMetier(comedien);
+		comedie=specialisationRepository.save(comedie);
+		
+		deguisement.setDescription("Modifier son apparence de manière tangible, avec trois fois rien. Fabriquer des masques, des costumes et autres parures afin d'être en mesure de métamorphoser un Mélodien en Ygwan et inversement (ce qui est déjà beaucoup plus difficile).");
+		deguisement.setNom("Déguisement");
+		deguisement.setDomaineLie(arts);
+//		deguisement.setMetier(costumier);
+		deguisement=specialisationRepository.save(deguisement);
+		
+		gastronomie.setDescription("Préparer des repas très élaborés, suivre des recettes et savoir en inventer. Reconnaître les bons produits et les préparer pour ensuite les cuisiner. Repérer si un plat est empoisonné. Un très bon repas a des vertus régénérantes.");
+		gastronomie.setNom("Gastronomie");
+		gastronomie.setDomaineLie(arts);
+//		gastronomie.setMetier(cuisinier);
+		gastronomie=specialisationRepository.save(gastronomie);
+		
+		lettres.setDescription("Préparer des repas très élaborés, suivre des recettes et savoir en inventer. Reconnaître les bons produits et les préparer pour ensuite les cuisiner. Repérer si un plat est empoisonné. Un très bon repas a des vertus régénérantes.");
+		lettres.setNom("Lettres");
+		lettres.setDomaineLie(arts);
+//		lettres.setMetier(ecrivain);
+		lettres=specialisationRepository.save(lettres);
+		
+		musique.setDescription("Jouer des divers instruments existants. Lire une partition musicale. Composer des mélodies ou des symphonies. Connaître l'histoire de la musique. Séduire quelqu'un. Dresser un animal.");
+		musique.setNom("Musique");
+		musique.setDomaineLie(arts);
+//		musique.setMetier(musicien);
+		musique=specialisationRepository.save(musique);
+		
+		trucages.setDescription("Effectuer des tours de passe-passe. Faire de la prestidigitation. Jongler avec tous types d'objets. Dissimuler des objets aux yeux les plus avertis.");
+		trucages.setNom("Trucages");
+		trucages.setDomaineLie(arts);
+//		trucages.setMetier(prestidigitateur);
+		trucages=specialisationRepository.save(trucages);
+		
+		
+		
+		
 		
 //-------------------------------------------------------------------------------------------------------------------------
 //		REMPLISSAGE OBJET RACE
