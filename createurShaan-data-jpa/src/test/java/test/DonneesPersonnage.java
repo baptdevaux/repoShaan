@@ -215,7 +215,7 @@ public class DonneesPersonnage {
 		Metier medecin = new Metier();
 		Metier percepteur = new Metier();
 		Metier zoologue = new Metier();
-		Metier courtisant = new Metier();
+		Metier courtisan = new Metier();
 		Metier cyberien = new Metier();
 		Metier diplomate = new Metier();
 		Metier enseignant = new Metier();
@@ -245,6 +245,16 @@ public class DonneesPersonnage {
 		Metier prescient = new Metier();
 		Metier radiant = new Metier();
 		Metier telluriste = new Metier();
+		Metier arcanien = new Metier();
+		Metier conjurateur = new Metier();
+		Metier enchanteur = new Metier();
+		Metier illusionniste = new Metier();
+		Metier mageItinerant = new Metier();
+		Metier regenerateur = new Metier();
+		Metier revocateur = new Metier();
+		Metier shaman = new Metier();
+		Metier sorcier = new Metier();
+		Metier voleurDeTrihn = new Metier();
 
 //-------------------------------------------------------------------------------------------------------------------------
 //		CREATION OBJET MOTIVATION
@@ -1199,7 +1209,7 @@ public class DonneesPersonnage {
 		courtisan.setCasteLie(negociants);
 		courtisan.setDescription(
 				"Les Courtisans savent obtenir tout ce qu'ils désirent en jouant avec les instincts primaires des individus. Se créer un personnage qui fera rêver son ou sa partenaire est pour le courtisan une habitude qu'il n'est pas toujours facile à tenir, surtout lorsque les conquêtes sont nombreuses. Les Courtisans œuvrent principalement auprès des Notables et des personnes de pouvoir, afin d'obtenir des informations ou de l'argent, selon qu'ils agissent pour des commanditaires ou pour leur propre compte. Certain Courtisans aiment juste séduire pour le plaisir, car ils se sentent ainsi désirés et donc exister. Les Courtisans savent enivrer les Corps, bousculer les Esprits et cueillir les Âmes. Le vrai talent du Courtisan est de ne jamais rompre, de s'arranger pour que les personnes qu'il a séduites reste toujours dans l'attente d'une éventuelle poursuite de la relation. C'est ce qui prend le plus de temps aux Courtisans : entretenir la flamme de ceux qu'ils ont envoûtés afin que l'amour ne se transforme jamais en haine... Mais rares sont ceux qui y arrivent et pour la plupart des Courtisans et Courtisanes, il y a des villes au sein desquelles ils ne peuvent plus mettre les pieds, sous peine d'être arrêtés sur-le-champ par un potentat local qui se sera senti trahi...");
-		courtisant = metierRepository.save(courtisant);
+		courtisan = metierRepository.save(courtisan);
 
 		cyberien.setNomMetier("Cybérien");
 		cyberien.setVoie("Voie de l'Objet");
