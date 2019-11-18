@@ -502,7 +502,6 @@ public class DonneesPersonnage {
 		vieUrbaine.setNom("Vie Urbaine");
 		vieUrbaine.setDomaineLie(social);
 //		vieUrbaine.setMetier(informateur);
-<<<<<<< Updated upstream
 		vieUrbaine=specialisationRepository.save(vieUrbaine);
 		
 		artsAppliques.setDescription("Pratiquer le dessin, la peinture, la sculpture sur bois ou sur pierre. Connaître l'histoire de l'art.");
@@ -559,14 +558,6 @@ public class DonneesPersonnage {
 //		trucages.setMetier(prestidigitateur);
 		trucages=specialisationRepository.save(trucages);
 		
-		
-		
-		
-		
-=======
-		vieUrbaine = specialisationRepository.save(vieUrbaine);
-
->>>>>>> Stashed changes
 //-------------------------------------------------------------------------------------------------------------------------
 //		REMPLISSAGE OBJET RACE
 //-------------------------------------------------------------------------------------------------------------------------	
