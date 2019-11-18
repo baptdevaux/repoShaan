@@ -52,7 +52,8 @@ public class DonneesPersonnage {
 	public static void main(String[] args) throws ParseException {
 
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("application-context.xml");
-		IAlterationPersonnageRepository alterationPersonnageRepository = context.getBean(IAlterationPersonnageRepository.class);
+		IAlterationPersonnageRepository alterationPersonnageRepository = context
+				.getBean(IAlterationPersonnageRepository.class);
 		IJoueurRepository joueurRepository = context.getBean(IJoueurRepository.class);
 		IPeupleRepository peupleRepository = context.getBean(IPeupleRepository.class);
 		IPersonnageRepository personnageRepository = context.getBean(IPersonnageRepository.class);
@@ -67,7 +68,8 @@ public class DonneesPersonnage {
 		IAcquisRepository acquisRepository = context.getBean(IAcquisRepository.class);
 		ISpecialisationRepository specialisationRepository = context.getBean(ISpecialisationRepository.class);
 		IMotivationRepository motivationRepository = context.getBean(IMotivationRepository.class);
-		IMotivationPersonnageRepository motivationPersonnageRepository = context.getBean(IMotivationPersonnageRepository.class);
+		IMotivationPersonnageRepository motivationPersonnageRepository = context
+				.getBean(IMotivationPersonnageRepository.class);
 		IMotivationRepository motivRepository = context.getBean(IMotivationRepository.class);
 		IPouvoirPersonnageRepository pouvoirPersonnageRepository = context.getBean(IPouvoirPersonnageRepository.class);
 		IPouvoirRepository pouvoirRepository = context.getBean(IPouvoirRepository.class);
@@ -238,7 +240,7 @@ public class DonneesPersonnage {
 		Metier diplomate = new Metier();
 		Metier enseignant = new Metier();
 		Metier informateur = new Metier();
-		Metier marchant = new Metier();
+		Metier marchand = new Metier();
 		Metier politicien = new Metier();
 		Metier prospecteur = new Metier();
 		Metier tenancier = new Metier();
@@ -258,7 +260,7 @@ public class DonneesPersonnage {
 		Metier cultivateur = new Metier();
 		Metier eleveur = new Metier();
 		Metier gardeFou = new Metier();
-		Metier marcheursDeReves = new Metier();
+		Metier marcheurDeReves = new Metier();
 		Metier mentaliste = new Metier();
 		Metier prescient = new Metier();
 		Metier radiant = new Metier();
@@ -273,6 +275,16 @@ public class DonneesPersonnage {
 		Metier shaman = new Metier();
 		Metier sorcier = new Metier();
 		Metier voleurDeTrihn = new Metier();
+		Metier discipleDeLAir = new Metier();
+		Metier discipleDeLAnimal = new Metier();
+		Metier discipleDeLautre = new Metier();
+		Metier discipleDeLEau = new Metier();
+		Metier discipleDeLObjet = new Metier();
+		Metier discipleDaLaTerre = new Metier();
+		Metier discipleDesLimbes = new Metier();
+		Metier discipleDuFeu = new Metier();
+		Metier discipleDuMoi = new Metier();
+		Metier discipleDuVegetal = new Metier();
 
 //-------------------------------------------------------------------------------------------------------------------------
 //		CREATION OBJET MOTIVATION
@@ -386,456 +398,487 @@ public class DonneesPersonnage {
 				"Manipuler des petits mécanismes tels que serrures ou horloges. Poser et désarmocer des pièges complexes. Comprendre les systèmes à engrenages et poulies, mais également les machines à vapeur.");
 		engrenages.setNom("Engrenages");
 		engrenages.setDomaineLie(technique);
-//		engrenages.setMetier(mecaniste);
+		engrenages.setMetier(mecaniste);
 		engrenages = specialisationRepository.save(engrenages);
 
 		pilotage.setDescription(
 				"Conduire tout type de véhicule motorisé, du tank à la moto à réaction, en passant par l'aérojet, ou l'hydroglisseur. Connaître des rudiments techniques nécessaires à l'entretien et au bon fonctionnement du véhicule.");
 		pilotage.setNom("Pilotage");
 		pilotage.setDomaineLie(technique);
-//		pilotage.setMetier(pilote);
+		pilotage.setMetier(pilote);
 		pilotage = specialisationRepository.save(pilotage);
 
 		recuperation.setDescription(
 				"Conduire tout type de véhicule motorisé, du tank à la moto à réaction, en passant par l'aérojet, ou l'hydroglisseur. Connaître des rudiments techniques nécessaires à l'entretien et au bon fonctionnement du véhicule.");
 		recuperation.setNom("Récupération");
 		recuperation.setDomaineLie(technique);
-//		recuperation.setMetier(recuperateur);
+		recuperation.setMetier(recuperateur);
 		recuperation = specialisationRepository.save(recuperation);
 
 		sensDeLaPierre.setDescription(
 				"Construire des murs, des ponts, des sols et des routes. Préparer de la trihnite pour en faire des portes de transfert. Connaître le modelage, la taille de pierre et l'architecture. Situer les sites riches en roche, en trihnite et savoir en extraire de la matière première. Apprécier la qualité, la valeur et la résistance d'un bâtiment ou d'une caverne.");
 		sensDeLaPierre.setNom("Sens de la pierre");
 		sensDeLaPierre.setDomaineLie(technique);
-//		sensDeLaPierre.setMetier(batisseur);
+		sensDeLaPierre.setMetier(batisseur);
 		sensDeLaPierre = specialisationRepository.save(sensDeLaPierre);
 
 		sensDuBois.setDescription(
 				"Fabriquer du mobilier, du papier, de la corde, des bateaux, des charpentes. Connaître la menuiserie, la charpenterie, la papeterie, la découpe et le traitement du bois pour en faire une bonne matière première. Apprécier la qualité, la valeur et la résistance d'un bateau, d'un meuble, d'un plancher.");
 		sensDuBois.setNom("Sens du bois");
 		sensDuBois.setDomaineLie(technique);
-//		sensDuBois.setMetier(charpentier);
+		sensDuBois.setMetier(charpentier);
 		sensDuBois = specialisationRepository.save(sensDuBois);
 
 		sensDuCuir.setDescription(
 				"Confectionner des sacs, des armures en cuir, des lanières, des chaussures, des sièges. Connaître la tannerie, la zoologie et le traitement de la peau d'un animal pour en faire une bonne matière première. Apprécier la qualité, la valeur et la résistance d'un objet ou d'une pièce de cuir.");
 		sensDuCuir.setNom("Sens du cuir");
 		sensDuCuir.setDomaineLie(technique);
-//		sensDuCuir.setMetier(tanneur);
+		sensDuCuir.setMetier(tanneur);
 		sensDuCuir = specialisationRepository.save(sensDuCuir);
 
 		sensDuMetal.setDescription(
 				"Fabriquer des engrenages, des armes, des armures et des pièces mécaniques. Connaître la métallurgie et l'armurerie. Situer les sites riches en métaux et savoir en extraire de la matière première. Apprécier la qualité, la valeur et la résistance d'un objet ou d'une pièce en métal.");
 		sensDuMetal.setNom("Sens du metal");
 		sensDuMetal.setDomaineLie(technique);
-//		sensDuMetal.setMetier(forgeron);
+		sensDuMetal.setMetier(forgeron);
 		sensDuMetal = specialisationRepository.save(sensDuMetal);
 
 		sensDuTissu.setDescription(
 				"Tisser des vêtements, des voiles pour les bateaux, des coussins, des draps, des tapis. Connaître le tissage, le stylisme et le traitement du coton ou de la soie pour en faire une bonne matière première. Apprécier la qualité, la valeur et la résistance d'une étoffe ou d'une voile.");
 		sensDuTissu.setNom("Sens du tissu");
 		sensDuTissu.setDomaineLie(technique);
-//		sensDuTissu.setMetier(couturier);
+		sensDuTissu.setMetier(couturier);
 		sensDuTissu = specialisationRepository.save(sensDuTissu);
 
 		sensDuVerre.setDescription(
 				"Façonner des bijoux, des outils, des fioles, mais aussi des armes, des artefacts, des loupes, des miroirs, des lunettes et des écrans. Connaître l’orfèvrerie. Apprécier la qualité, la valeur et la résistance d'un bijou, d'une fiole...");
 		sensDuVerre.setNom("Sens du verre");
 		sensDuVerre.setDomaineLie(technique);
-//		sensDuVerre.setMetier(joaillier);
+		sensDuVerre.setMetier(joaillier);
 		sensDuVerre = specialisationRepository.save(sensDuVerre);
 
 		technologie.setDescription(
 				"Connaître les sources d'énergie et leurs applications pour faire fonctionner un appareil régi par la technologie humaine. Construire ou réparer une arme à feu, un moteur de véhicule, un appareil électronique, etc. Composer des programmes informatiques en \"Code Note\" qui tournent sur le rézo Arpège (logiciels, interfaces, virus, démons, espions, lutins, judas, cryptographie...)");
 		technologie.setNom("Technologie");
 		technologie.setDomaineLie(technique);
-//		technologie.setMetier(infotek);
+		technologie.setMetier(infotek);
 		technologie = specialisationRepository.save(technologie);
 
 		alchimie.setDescription(
 				"Connaître les éléments de base qui constituent la matière et les forces qui agissent entre eux. Analyser la nature d'un matériau et en déduire ce qu'il faut pour le creuser, le percer, le briser, le faire fondre, le rendre friable, en un mot, changer son état...");
 		alchimie.setNom("Alchimie");
 		alchimie.setDomaineLie(savoir);
-//		alchimie.setMetier(alchimiste);
+		alchimie.setMetier(alchimiste);
 		alchimie = specialisationRepository.save(alchimie);
 
 		bibliotheque.setDescription(
 				"Savoir tirer le meilleur d’une source conséquente de documents pour obtenir des informations sur un sujet précis.");
 		bibliotheque.setNom("Bibliotheque");
 		bibliotheque.setDomaineLie(savoir);
-//		bibliotheque.setMetier(archiviste);
+		bibliotheque.setMetier(archiviste);
 		bibliotheque = specialisationRepository.save(bibliotheque);
 
 		botanique.setDescription(
 				"Connaître le règne végétal terrestre et marin, ainsi que toutes les variétés de champignons. Reconnaître les végétaux empoisonnés des comestibles. Confectionner des cataplasmes et autres mixtures aux facultés curatives dont les effets dépendent des végétaux et de leurs propriétés.");
 		botanique.setNom("Botanique");
 		botanique.setDomaineLie(savoir);
-//		botanique.setMetier(botaniste);
+		botanique.setMetier(botaniste);
 		botanique = specialisationRepository.save(botanique);
 
 		cultureHumaine.setDescription(
 				"Connaître la vie et les mœurs des Humains, mais aussi leur technologie. Avoir une idée de la puissance du Nouvel Ordre et du pouvoir qu’exercent les Grandes Familles. Savoir lire et écrire le Langdiv");
 		cultureHumaine.setNom("Culture Humaine");
 		cultureHumaine.setDomaineLie(savoir);
-//		cultureHumaine.setMetier(percepteur);
+		cultureHumaine.setMetier(percepteur);
 		cultureHumaine = specialisationRepository.save(cultureHumaine);
 
 		esoterisme.setDescription(
 				"Consulter les astres à l'aide de tarots, d'osselets, de dés, de plateaux de divination, ou même dans le cercle des réalités pour percer les secrets du temps, des lieux et des individus. L'ésotérisme peut constituer un refuge contre les agressions mentales.");
 		esoterisme.setNom("Esoterisme");
 		esoterisme.setDomaineLie(savoir);
-//		esoterisme.setMetier(esoteriste);
+		esoterisme.setMetier(esoteriste);
 		esoterisme = specialisationRepository.save(esoterisme);
 
 		geologie.setDescription(
 				"Connaître l'histoire de la formation des gouffres et des montagnes, des volcans et des séismes. Évaluer la constitution d'un sol et l'énergie que l'on peut en tirer. Cette Spécialisation est également utilisée pour l'archéologie");
 		geologie.setNom("Geologie");
 		geologie.setDomaineLie(savoir);
-//		geologie.setMetier(geologue);
+		geologie.setMetier(geologue);
 		geologie = specialisationRepository.save(geologie);
 
 		histoireDHeos.setDescription(
 				"Connaître l'histoire générale d’Héos, mais aussi les contes, légendes et mythes existants, qui relatent les épopées d'êtres imaginaires, des dieux de l'ancien panthéon ou de héros ayant réellement vécu en Héossie. Connaître les flux migratoires, les grandes guerres et l'évolution des civilisations.");
 		histoireDHeos.setNom("Histoire d'Héos");
 		histoireDHeos.setDomaineLie(savoir);
-//		histoireDHeos.setMetier(historien);
+		histoireDHeos.setMetier(historien);
 		histoireDHeos = specialisationRepository.save(histoireDHeos);
 
 		medecine.setDescription(
 				"Diagnostiquer une maladie. Procéder à des opérations chirurgicales. Connaître parfaitement l'anatomie anthéenne. Savoir quel antidote correspond à chaque poison, sa composition et son mode de fabrication. Soigner le Corps d'une personne atteinte de maladie, d'une intoxication ou qui a subi des blessures physiques.");
 		medecine.setNom("Médecine");
 		medecine.setDomaineLie(savoir);
-//		medecine.setMetier(medecin);
+		medecine.setMetier(medecin);
 		medecine = specialisationRepository.save(medecine);
 
 		protocoles.setDescription(
 				"Connaître les diverses formes de gouvernement, ainsi que les lois régissant administration et pouvoir. Mettre en place les procédures pour accéder à n’importe quel tribunal ou obtenir des laissez-passer. Être à l’aise avec la paperasse qui va avec. Fait également office de Diplomatie vis à vis de cultures inconnues.");
 		protocoles.setNom("Protocoles");
 		protocoles.setDomaineLie(savoir);
-//		protocoles.setMetier(juriste);
+		protocoles.setMetier(juriste);
 		protocoles = specialisationRepository.save(protocoles);
 
 		zoologie.setDescription(
 				"Connaître le règne animal, de la cellule aux mammifères, en passant par les poissons, les insectes et les oiseaux. Connaître les divers écosystèmes qui régissent un lieu, les modes de vie des diverses espèces qui le peuplent, ainsi que les propriétés des organes des animaux.");
 		zoologie.setNom("Zoologie");
 		zoologie.setDomaineLie(savoir);
-//		zoologie.setMetier(zoologue);
+		zoologie.setMetier(zoologue);
 		zoologie = specialisationRepository.save(zoologie);
 
 		arpege.setDescription(
 				"Naviguer sur le rézo Arpège en utilisant une console dotée d'une interface graphique. Connaître ce monde virtuel tentaculaire de l'information et de la communication. Maîtriser les logiciels de capture et de restitution d'images 2D ou 3D pour réaliser des trucages et effets spéciaux. Forcer certains barrages informatiques pour obtenir des données confidentielles. Utiliser des logiciels pour composer des programmes compilés en lignes de notes.");
 		arpege.setNom("Arpege");
 		arpege.setDomaineLie(social);
-//		arpege.setMetier(cyberien);
+		arpege.setMetier(cyberien);
 		arpege = specialisationRepository.save(arpege);
 
 		bluff.setDescription(
 				"Mentir ou baratiner quelqu'un. L’effet d’un bluff est en général temporaire, la victime mettra quelques minutes à se rendre compte qu'elle s’est fait berner.");
 		bluff.setNom("Bluff");
 		bluff.setDomaineLie(social);
-//		bluff.setMetier(politicien);
+		bluff.setMetier(politicien);
 		bluff = specialisationRepository.save(bluff);
 
 		commerce.setDescription(
 				"Marchander. Estimer des objets de valeur. Acheter les services de quelqu’un. Connaître le niveau de rareté d'un Acquis à un endroit donné et donc les fluctuations des prix du marché en fonction de la localité.");
 		commerce.setNom("Commerce");
 		commerce.setDomaineLie(social);
-//		commerce.setMetier(marchand);
+		commerce.setMetier(marchand);
 		commerce = specialisationRepository.save(commerce);
 
 		diplomatie.setDescription(
 				"Savoir faire passer ses idées en douceur. Réussir à détendre un climat tendu. Négocier des traités entre deux belligérants. Parler à un auditoire en faisant preuve d'éloquence. Chercher à convaincre un interlocuteur grâce à des arguments cohérents. Calmer des personnes hostiles. Avoir une idée des divers conflits qui peuvent tourmenter une région. Connaître le rang de quelqu'un dans n'importe quel milieu social, du plus élevé au plus primitif. Savoir comment se comporter pour ne pas commettre d'impairs, même si on ne parle pas la langue.");
 		diplomatie.setNom("Diplomatie");
 		diplomatie.setDomaineLie(social);
-//		diplomatie.setMetier(diplomate);
+		diplomatie.setMetier(diplomate);
 		diplomatie = specialisationRepository.save(diplomatie);
 
 		enseignement.setDescription(
 				"Enseigner une Spécialisation à une autre personne. Faire preuve de pédagogie. Mettre en place un programme d’apprentissage. Apprendre plus vite d’un autre enseignant.");
 		enseignement.setNom("Enseignement");
 		enseignement.setDomaineLie(social);
-//		enseignement.setMetier(enseignant);
+		enseignement.setMetier(enseignant);
 		enseignement = specialisationRepository.save(enseignement);
 
 		langagePrimal.setDescription(
 				"Communiquer de façon très basique, par des gestes, des attitudes et des expressions faciales avec des êtres primitifs ou dotés d'un langage complètement inconnu. Communiquer sommairement avec les animaux.");
 		langagePrimal.setNom("Langage primal");
 		langagePrimal.setDomaineLie(social);
-//		langagePrimal.setMetier(prospecteur);
+		langagePrimal.setMetier(prospecteur);
 		langagePrimal = specialisationRepository.save(langagePrimal);
 
 		languesExotiques.setDescription(
 				"Se baser sur diverses langues existantes pour aborder un dialecte inconnu et le maîtriser par la pratique. Un anthéen parle l'héossien (langue commune) et le langdiv (langue humaine), ainsi que sa langue raciale, mais cette Spécialisation devient fort utile pour comprendre et parler les autres langages raciaux et dialectes dérivés.");
 		languesExotiques.setNom("Langues exotiques");
 		languesExotiques.setDomaineLie(social);
-//		languesExotiques.setMetier(traducteur);
+		languesExotiques.setMetier(traducteur);
 		languesExotiques = specialisationRepository.save(languesExotiques);
 
 		psychologie.setDescription(
 				"Soigner l'Esprit d'une personne qui a subi des blessures mentales en la rassurant, et en lui redonnant confiance en elle. Déterminer les pensées d'autrui par ses attitudes et son comportement. Anticiper les intentions. Comprendre la folie. Contrairement au Bluff, la Psychologie a des effets durables.");
 		psychologie.setNom("Psychologie");
 		psychologie.setDomaineLie(social);
-//		psychologie.setMetier(tenancier);
+		psychologie.setMetier(tenancier);
 		psychologie = specialisationRepository.save(psychologie);
 
 		seduction.setDescription(
 				"S'attirer les faveurs et l'admiration du sexe opposé. La séduction peut se tenter sur un individu du même sexe, mais la réaction de l'individu en question dépendra largement des dispositions de la cible.");
 		seduction.setNom("Seduction");
 		seduction.setDomaineLie(social);
-//		seduction.setMetier(courtisan);
+		seduction.setMetier(courtisan);
 		seduction = specialisationRepository.save(seduction);
 
 		vieUrbaine.setDescription(
 				"Connaître les villes et les différentes structures sociales. Se repérer en agglomération. Semer quelqu'un. Se procurer des renseignements anodins ou secrets. Être à l'aise dans tout milieu urbain.");
 		vieUrbaine.setNom("Vie Urbaine");
 		vieUrbaine.setDomaineLie(social);
-//		vieUrbaine.setMetier(informateur);
+		vieUrbaine.setMetier(informateur);
 		vieUrbaine = specialisationRepository.save(vieUrbaine);
 
 		artsAppliques.setDescription(
 				"Pratiquer le dessin, la peinture, la sculpture sur bois ou sur pierre. Connaître l'histoire de l'art.");
 		artsAppliques.setNom("Arts appliqués");
 		artsAppliques.setDomaineLie(arts);
-//		artsAppliques.setMetier(evocateur);
+		artsAppliques.setMetier(evocateur);
 		artsAppliques = specialisationRepository.save(artsAppliques);
 
 		artsDuFeu.setDescription(
 				"Cracher du feu. Créer des feux d'artifices, et toutes sortes d'effets pyrotechniques ou de jeux de lumières.");
 		artsDuFeu.setNom("Arts du feu");
 		artsDuFeu.setDomaineLie(arts);
-//		artsDuFeu.setMetier(bateleur);
+		artsDuFeu.setMetier(bateleur);
 		artsDuFeu = specialisationRepository.save(artsDuFeu);
 
 		chant.setDescription(
 				"Chanter juste. Savoir poser sa voix. Lire une partition, accompagner en mesure un musicien. Savoir improviser. Connaître un vaste répertoire allant des chansons grivoises aux sérénades, en passant par les chants traditionnels. Séduire quelqu'un.");
 		chant.setNom("Chant");
 		chant.setDomaineLie(arts);
-//		chant.setMetier(chanteur);
+		chant.setMetier(chanteur);
 		chant = specialisationRepository.save(chant);
 
 		comedie.setDescription(
 				"Faire du théâtre. Interpréter un rôle par cœur. Simuler les émotions. Imiter les voix. Créer des pièces et connaître sur le bout des doigts les répliques de tous les personnages des grands classiques héossiens. Se faire passer pour quelqu'un d'autre ou avoir l'air crédible en racontant des sornettes.");
 		comedie.setNom("Comédie");
 		comedie.setDomaineLie(arts);
-//		comedie.setMetier(comedien);
+		comedie.setMetier(comedien);
 		comedie = specialisationRepository.save(comedie);
 
 		deguisement.setDescription(
 				"Modifier son apparence de manière tangible, avec trois fois rien. Fabriquer des masques, des costumes et autres parures afin d'être en mesure de métamorphoser un Mélodien en Ygwan et inversement (ce qui est déjà beaucoup plus difficile).");
 		deguisement.setNom("Déguisement");
 		deguisement.setDomaineLie(arts);
-//		deguisement.setMetier(costumier);
+		deguisement.setMetier(costumier);
 		deguisement = specialisationRepository.save(deguisement);
 
 		gastronomie.setDescription(
 				"Préparer des repas très élaborés, suivre des recettes et savoir en inventer. Reconnaître les bons produits et les préparer pour ensuite les cuisiner. Repérer si un plat est empoisonné. Un très bon repas a des vertus régénérantes.");
 		gastronomie.setNom("Gastronomie");
 		gastronomie.setDomaineLie(arts);
-//		gastronomie.setMetier(cuisinier);
+		gastronomie.setMetier(cuisinier);
 		gastronomie = specialisationRepository.save(gastronomie);
 
 		lettres.setDescription(
 				"Transmettre les émotions par des mots. Écrire des poèmes, faire de la philosophie, mais également posséder une culture littéraire importante. Savoir lire et écrire une langue héossienne que l’on parle. Séduire quelqu'un.");
 		lettres.setNom("Lettres");
 		lettres.setDomaineLie(arts);
-//		lettres.setMetier(ecrivain);
+		lettres.setMetier(ecrivain);
 		lettres = specialisationRepository.save(lettres);
 
 		musique.setDescription(
 				"Jouer des divers instruments existants. Lire une partition musicale. Composer des mélodies ou des symphonies. Connaître l'histoire de la musique. Séduire quelqu'un. Dresser un animal.");
 		musique.setNom("Musique");
 		musique.setDomaineLie(arts);
-//		musique.setMetier(musicien);
+		musique.setMetier(musicien);
 		musique = specialisationRepository.save(musique);
 
 		trucages.setDescription(
 				"Effectuer des tours de passe-passe. Faire de la prestidigitation. Jongler avec tous types d'objets. Dissimuler des objets aux yeux les plus avertis.");
 		trucages.setNom("Trucages");
 		trucages.setDomaineLie(arts);
-//		trucages.setMetier(prestidigitateur);
-		trucages=specialisationRepository.save(trucages);
-		
-		langageDuCorps.setDescription("Danser en mesure, pouvoir évoluer avec un ou une partenaire. Être capable de suivre une chorégraphie imposée ou d'en inventer une. Connaître les danses traditionnelles et celles en vogue. Pratiquer les massages du corps. Séduire quelqu'un. Un très bon massage a des vertus régénérantes.");
+		trucages.setMetier(prestidigitateur);
+		trucages = specialisationRepository.save(trucages);
+
+		langageDuCorps.setDescription(
+				"Danser en mesure, pouvoir évoluer avec un ou une partenaire. Être capable de suivre une chorégraphie imposée ou d'en inventer une. Connaître les danses traditionnelles et celles en vogue. Pratiquer les massages du corps. Séduire quelqu'un. Un très bon massage a des vertus régénérantes.");
 		langageDuCorps.setNom("Langage du corps");
 		langageDuCorps.setDomaineLie(arts);
-//		langageDuCorps.setMetier(danseur);
-		langageDuCorps=specialisationRepository.save(langageDuCorps);
-		
-		embiose.setDescription("Résister à la confrontation avec un Trihn lors d'un rituel d'Embiose. Maximiser le gain d'expérience lié au rituel. Connaissance des lieux qui cachent une stèle d'Embiose.");
+		langageDuCorps.setMetier(danseur);
+		langageDuCorps = specialisationRepository.save(langageDuCorps);
+
+		embiose.setDescription(
+				"Résister à la confrontation avec un Trihn lors d'un rituel d'Embiose. Maximiser le gain d'expérience lié au rituel. Connaissance des lieux qui cachent une stèle d'Embiose.");
 		embiose.setNom("Embiose");
 		embiose.setDomaineLie(shaan);
-//		embiose.setMetier(chasseurDeSteles);
-		embiose=specialisationRepository.save(embiose);
-		
-		empathieAnimale.setDescription("Être en synergie avec le règne animal. Développer un lien empathique avec les animaux pour connaître leurs besoins vitaux, ainsi que la façon de les traiter. Établir une symbiose avec les armimales pacifistes ou utilitaires (mais pas les armimales d'attaque) et utiliser leurs capacités. Avoir accès intuitivement à des connaissances assez pointues sur les animaux.");
+		embiose.setMetier(chasseurDeSteles);
+		embiose = specialisationRepository.save(embiose);
+
+		empathieAnimale.setDescription(
+				"Être en synergie avec le règne animal. Développer un lien empathique avec les animaux pour connaître leurs besoins vitaux, ainsi que la façon de les traiter. Établir une symbiose avec les armimales pacifistes ou utilitaires (mais pas les armimales d'attaque) et utiliser leurs capacités. Avoir accès intuitivement à des connaissances assez pointues sur les animaux.");
 		empathieAnimale.setNom("Empathie animale");
 		empathieAnimale.setDomaineLie(shaan);
-//		empathieAnimale.setMetier(eleveur);
-		empathieAnimale=specialisationRepository.save(empathieAnimale);
-		
-		empathieAntheenne.setDescription("Être en synergie avec les 10 races du Cercle des Réalités. Développer un lien empathique avec l'Âme des anthéens pour les calmer quand ils sont pris de folie, ou éviter de se faire bluffer. Avoir accès intuitivement à des connaissances assez pointues sur les comportements anthéens");
+		empathieAnimale.setMetier(eleveur);
+		empathieAnimale = specialisationRepository.save(empathieAnimale);
+
+		empathieAntheenne.setDescription(
+				"Être en synergie avec les 10 races du Cercle des Réalités. Développer un lien empathique avec l'Âme des anthéens pour les calmer quand ils sont pris de folie, ou éviter de se faire bluffer. Avoir accès intuitivement à des connaissances assez pointues sur les comportements anthéens");
 		empathieAntheenne.setNom("Empathie antheenne");
 		empathieAntheenne.setDomaineLie(shaan);
-//		empathieAntheenne.setMetier(eleveur);
-		empathieAntheenne=specialisationRepository.save(empathieAntheenne);
-		
-		empathieMinerale.setDescription("Être en synergie avec le règne minéral. Développer un lien empathique avec les minéraux pour reconstituer des évènements très anciens à partir de l’empreinte magnétique qu’ils laisseraient dans le décor. Avoir accès intuitivement à des connaissances assez pointues sur les minéraux.");
+		empathieAntheenne.setMetier(mentaliste);
+		empathieAntheenne = specialisationRepository.save(empathieAntheenne);
+
+		empathieMinerale.setDescription(
+				"Être en synergie avec le règne minéral. Développer un lien empathique avec les minéraux pour reconstituer des évènements très anciens à partir de l’empreinte magnétique qu’ils laisseraient dans le décor. Avoir accès intuitivement à des connaissances assez pointues sur les minéraux.");
 		empathieMinerale.setNom("Empathie minérale");
 		empathieMinerale.setDomaineLie(shaan);
-//		empathieMinerale.setMetier(telluriste);
-		empathieMinerale=specialisationRepository.save(empathieMinerale);
-		
-		empathieVegetale.setDescription("Être en synergie avec le règne végétal. Développer un lien empathique avec les végétaux afin de savoir faire pousser n'importe quoi sur n'importe quel terrain (fleurs, arbres, fruits et légumes, algues, champignons). Avoir accès intuitivement à des connaissances assez pointues sur les plantes.");
+		empathieMinerale.setMetier(telluriste);
+		empathieMinerale = specialisationRepository.save(empathieMinerale);
+
+		empathieVegetale.setDescription(
+				"Être en synergie avec le règne végétal. Développer un lien empathique avec les végétaux afin de savoir faire pousser n'importe quoi sur n'importe quel terrain (fleurs, arbres, fruits et légumes, algues, champignons). Avoir accès intuitivement à des connaissances assez pointues sur les plantes.");
 		empathieVegetale.setNom("Empathie végétale");
 		empathieVegetale.setDomaineLie(shaan);
-//		empathieVegetale.setMetier(cultivateur);
-		empathieVegetale=specialisationRepository.save(empathieVegetale);
-		
-		intuition.setDescription("Rester en éveil, ne pas se laisser surprendre, déceler un détail inhabituel dans une pièce. Percevoir passivement les événements. Être sensible aux particularités de son environnement. Voir l'Invisible, les manœuvres de Discrétion, les Trucages et les Larcins.");
+		empathieVegetale.setMetier(cultivateur);
+		empathieVegetale = specialisationRepository.save(empathieVegetale);
+
+		intuition.setDescription(
+				"Rester en éveil, ne pas se laisser surprendre, déceler un détail inhabituel dans une pièce. Percevoir passivement les événements. Être sensible aux particularités de son environnement. Voir l'Invisible, les manœuvres de Discrétion, les Trucages et les Larcins.");
 		intuition.setNom("Intuition");
 		intuition.setDomaineLie(shaan);
-//		intuition.setMetier(prescient);
-		intuition=specialisationRepository.save(intuition);
-		
-		reve.setDescription("Naviguer dans le monde des rêves. Résister aux cauchemars. Communiquer avec des personnes endormies via leurs rêves, sans contrainte de distance.");
+		intuition.setMetier(prescient);
+		intuition = specialisationRepository.save(intuition);
+
+		reve.setDescription(
+				"Naviguer dans le monde des rêves. Résister aux cauchemars. Communiquer avec des personnes endormies via leurs rêves, sans contrainte de distance.");
 		reve.setNom("Rêve");
 		reve.setDomaineLie(shaan);
-//		reve.setMetier(marcheurDeReves);
-		reve=specialisationRepository.save(reve);
-		
-		soinsDeLAme.setDescription("Soigner l'Âme d'une personne qui a subi des blessures nécrotiques par la pratique de méthodes de magnétisme et de transfert d'énergie.");
+		reve.setMetier(marcheurDeReves);
+		reve = specialisationRepository.save(reve);
+
+		soinsDeLAme.setDescription(
+				"Soigner l'Âme d'une personne qui a subi des blessures nécrotiques par la pratique de méthodes de magnétisme et de transfert d'énergie.");
 		soinsDeLAme.setNom("Soins de l'âme");
 		soinsDeLAme.setDomaineLie(shaan);
-//		soinsDeLAme.setMetier(ameVive);
-		soinsDeLAme=specialisationRepository.save(soinsDeLAme);
-		
-		soinsDeLEsprit.setDescription("Soigner l'Esprit d'une personne qui a subi des blessures mentales par la pratique de la rhétorique");
+		soinsDeLAme.setMetier(ameVive);
+		soinsDeLAme = specialisationRepository.save(soinsDeLAme);
+
+		soinsDeLEsprit.setDescription(
+				"Soigner l'Esprit d'une personne qui a subi des blessures mentales par la pratique de la rhétorique");
 		soinsDeLEsprit.setNom("Soins de l'esprit");
 		soinsDeLEsprit.setDomaineLie(shaan);
-//		soinsDeLEsprit.setMetier(gardeFou);
-		soinsDeLEsprit=specialisationRepository.save(soinsDeLEsprit);
-		
-		soinsDuCorps.setDescription("Soigner le Corps d'une personne qui a subi des blessures physiques par la pratique de massages, d'acuponcture...");
+		soinsDeLEsprit.setMetier(gardeFou);
+		soinsDeLEsprit = specialisationRepository.save(soinsDeLEsprit);
+
+		soinsDuCorps.setDescription(
+				"Soigner le Corps d'une personne qui a subi des blessures physiques par la pratique de massages, d'acuponcture...");
 		soinsDuCorps.setNom("Soins du corps");
 		soinsDuCorps.setDomaineLie(shaan);
-//		soinsDuCorps.setMetier(radiant);
-		soinsDuCorps=specialisationRepository.save(soinsDuCorps);
-		
-		arcanes.setDescription("Connaître la théorie qui régit la Magie des schèmes. Reconnaître les traces laissées par un Sort de Magie. Identifier les pouvoirs enchantés dans un artéfact. Connaître les différentes loges et écoles, leurs responsables, leurs organisations et leurs implications.");
+		soinsDuCorps.setMetier(radiant);
+		soinsDuCorps = specialisationRepository.save(soinsDuCorps);
+
+		arcanes.setDescription(
+				"Connaître la théorie qui régit la Magie des schèmes. Reconnaître les traces laissées par un Sort de Magie. Identifier les pouvoirs enchantés dans un artéfact. Connaître les différentes loges et écoles, leurs responsables, leurs organisations et leurs implications.");
 		arcanes.setNom("Arcanes");
 		arcanes.setDomaineLie(magie);
-//		arcanes.setMetier(arcanien);
-		arcanes=specialisationRepository.save(arcanes);
-		
-		conjuration.setDescription("Renvoyer un Trihn ou une Anti-Âme dans son plan d'origine. Priver ses adversaires magiciens de leurs ressources trihniques et les empêcher de lancer des Sorts ou des Tourments.");
+		arcanes.setMetier(arcanien);
+		arcanes = specialisationRepository.save(arcanes);
+
+		conjuration.setDescription(
+				"Renvoyer un Trihn ou une Anti-Âme dans son plan d'origine. Priver ses adversaires magiciens de leurs ressources trihniques et les empêcher de lancer des Sorts ou des Tourments.");
 		conjuration.setNom("Conjuration");
 		conjuration.setDomaineLie(magie);
-//		conjuration.setMetier(conjurateur);
-		conjuration=specialisationRepository.save(conjuration);
-		
-		defenseMagique.setDescription("Manipuler les flux trihniques pour former un bouclier magique qui protège des attaques nécrotiques, des Sorts et des Tourments.");
+		conjuration.setMetier(conjurateur);
+		conjuration = specialisationRepository.save(conjuration);
+
+		defenseMagique.setDescription(
+				"Manipuler les flux trihniques pour former un bouclier magique qui protège des attaques nécrotiques, des Sorts et des Tourments.");
 		defenseMagique.setNom("Defense magique");
 		defenseMagique.setDomaineLie(magie);
-//		defenseMagique.setMetier(revocateur);
-		defenseMagique=specialisationRepository.save(defenseMagique);
-		
-		enchantement.setDescription("Manipuler les flux trihniques pour former un bouclier magique qui protège des attaques nécrotiques, des Sorts et des Tourments.");
+		defenseMagique.setMetier(revocateur);
+		defenseMagique = specialisationRepository.save(defenseMagique);
+
+		enchantement.setDescription(
+				"Manipuler les flux trihniques pour former un bouclier magique qui protège des attaques nécrotiques, des Sorts et des Tourments.");
 		enchantement.setNom("Défense magique");
 		enchantement.setDomaineLie(magie);
-//		enchantement.setMetier(revocateur);
-		enchantement=specialisationRepository.save(defenseMagique);
-		
-		incandescence.setDescription("Allumer un feu sans combustible. Irradier de la chaleur. Émettre une lumière éclairante. Résister aux dégâts liés au froid.");
+		enchantement.setMetier(revocateur);
+		enchantement = specialisationRepository.save(defenseMagique);
+
+		incandescence.setDescription(
+				"Allumer un feu sans combustible. Irradier de la chaleur. Émettre une lumière éclairante. Résister aux dégâts liés au froid.");
 		incandescence.setNom("Incandescence");
 		incandescence.setDomaineLie(magie);
-//		incandescence.setMetier(mageItinerant);
-		incandescence=specialisationRepository.save(incandescence);
-		
-		invocation.setDescription("Invoquer un Trihn de Corps, d'Âme ou d'Esprit depuis son univers primordial. Un individu peut avoir un Trihn en transit autour de lui, mais peut en invoquer d'autres pour les transférer dans ses focaliseurs.");
+		incandescence.setMetier(mageItinerant);
+		incandescence = specialisationRepository.save(incandescence);
+
+		invocation.setDescription(
+				"Invoquer un Trihn de Corps, d'Âme ou d'Esprit depuis son univers primordial. Un individu peut avoir un Trihn en transit autour de lui, mais peut en invoquer d'autres pour les transférer dans ses focaliseurs.");
 		invocation.setNom("Invocation");
 		invocation.setDomaineLie(magie);
-//		invocation.setMetier(shaman);
-		invocation=specialisationRepository.save(invocation);
-		
-		maitriseDesSchemes.setDescription("Appréhender la langue magique afin de savoir lire et écrire les schèmes nomoïs. Intégrer ces mots magiques dans des runes sculptées, gravées, tatouées, peintes,... qui décuplent les facultés des Magiciens. Créer de nouveaux Sorts.");
+		invocation.setMetier(shaman);
+		invocation = specialisationRepository.save(invocation);
+
+		maitriseDesSchemes.setDescription(
+				"Appréhender la langue magique afin de savoir lire et écrire les schèmes nomoïs. Intégrer ces mots magiques dans des runes sculptées, gravées, tatouées, peintes,... qui décuplent les facultés des Magiciens. Créer de nouveaux Sorts.");
 		maitriseDesSchemes.setNom("Maîtrise des schèmes");
 		maitriseDesSchemes.setDomaineLie(magie);
-//		maitriseDesSchemes.setMetier(sorcier);
-		maitriseDesSchemes=specialisationRepository.save(maitriseDesSchemes);
-		
-		regeneration.setDescription("Régénérer l'essence de ses propres Trihns. Cette Spécialisation n'est applicable que pour soi-même et permet de soigner l'un de ses 3 Trihns au choix.");
+		maitriseDesSchemes.setMetier(sorcier);
+		maitriseDesSchemes = specialisationRepository.save(maitriseDesSchemes);
+
+		regeneration.setDescription(
+				"Régénérer l'essence de ses propres Trihns. Cette Spécialisation n'est applicable que pour soi-même et permet de soigner l'un de ses 3 Trihns au choix.");
 		regeneration.setNom("Régénération");
 		regeneration.setDomaineLie(magie);
-//		regeneration.setMetier(regenerateur);
-		regeneration=specialisationRepository.save(regeneration);
-		
-		transfert.setDescription("Charger un Focaliseur avec un Trihn en transit autour de soi. Transférer un Trihn que l’on a invoqué vers un autre Magicien allié, ou le récupérer un Trihn invoqué par un autre Magicien. Déplacer un Trihn d’un Focaliseur vers un autre Focaliseur.");
+		regeneration.setMetier(regenerateur);
+		regeneration = specialisationRepository.save(regeneration);
+
+		transfert.setDescription(
+				"Charger un Focaliseur avec un Trihn en transit autour de soi. Transférer un Trihn que l’on a invoqué vers un autre Magicien allié, ou le récupérer un Trihn invoqué par un autre Magicien. Déplacer un Trihn d’un Focaliseur vers un autre Focaliseur.");
 		transfert.setNom("Transfert");
 		transfert.setDomaineLie(magie);
-//		transfert.setMetier(voleurDeTrihn);
-		transfert=specialisationRepository.save(transfert);
-		
-		voile.setDescription("Camoufler l’acte magique pour le rendre insoupçonnable. Atténuer les perturbations provoquées par la pratique de la magie en réduisant au minimum les gestes et les paroles magiques indispensables. Être discret dans l'utilisation des Spécialisations et Pouvoirs magiques, mais également percevoir l'invisible.");
+		transfert.setMetier(voleurDeTrihn);
+		transfert = specialisationRepository.save(transfert);
+
+		voile.setDescription(
+				"Camoufler l’acte magique pour le rendre insoupçonnable. Atténuer les perturbations provoquées par la pratique de la magie en réduisant au minimum les gestes et les paroles magiques indispensables. Être discret dans l'utilisation des Spécialisations et Pouvoirs magiques, mais également percevoir l'invisible.");
 		voile.setNom("Voile");
 		voile.setDomaineLie(magie);
-//		voile.setMetier(illusionniste);
-		voile=specialisationRepository.save(voile);
-		
-		riteDArts.setDescription("S'investir de l'élément \"Autre\" afin de bénéficier de pouvoirs surnaturels. Effectuer un Rite consacré à l'Autre d'une Heure environ, pour augmenter de 1 le niveau d'ARTS des participants pendant une Situation.");
+		voile.setMetier(illusionniste);
+		voile = specialisationRepository.save(voile);
+
+		riteDArts.setDescription(
+				"S'investir de l'élément \"Autre\" afin de bénéficier de pouvoirs surnaturels. Effectuer un Rite consacré à l'Autre d'une Heure environ, pour augmenter de 1 le niveau d'ARTS des participants pendant une Situation.");
 		riteDArts.setNom("Rite d'arts");
 		riteDArts.setDomaineLie(rituels);
 //		riteDArts.setMetier(lod);
-		riteDArts=specialisationRepository.save(riteDArts);
-		
-		riteDeCombat.setDescription("S'investir de l'élément \"Feu\" afin de bénéficier de pouvoirs surnaturels. Effectuer un Rite consacré au Feu d'une Heure environ, pour augmenter de 1 le niveau de COMBAT des participants pendant une Situation.");
+		riteDArts = specialisationRepository.save(riteDArts);
+
+		riteDeCombat.setDescription(
+				"S'investir de l'élément \"Feu\" afin de bénéficier de pouvoirs surnaturels. Effectuer un Rite consacré au Feu d'une Heure environ, pour augmenter de 1 le niveau de COMBAT des participants pendant une Situation.");
 		riteDeCombat.setNom("Rite de combat");
 		riteDeCombat.setDomaineLie(rituels);
 //		riteDeCombat.setMetier(aken);
-		riteDeCombat=specialisationRepository.save(riteDeCombat);
-		
-		riteDeLAnimal.setDescription("S'investir de l'élément \"Animal\" afin de bénéficier de pouvoirs surnaturels. Effectuer un Rite consacré à l'Animal d'une Heure environ, pour accorder un Bonus de 1 aux participants pendant une Situation. Ce Bonus s'applique aux Spécialisations suivantes : Sens du cuir (TECHNIQUE), Zoologie (SAVOIR), Langage Primal (SOCIAL), Langage du corps (ARTS), Empathie Animale (SHAAN), Invocation (MAGIE), Monture (SURVIE), Armimales (COMBAT), Harcèlement (NÉCROSE)");
+		riteDeCombat = specialisationRepository.save(riteDeCombat);
+
+		riteDeLAnimal.setDescription(
+				"S'investir de l'élément \"Animal\" afin de bénéficier de pouvoirs surnaturels. Effectuer un Rite consacré à l'Animal d'une Heure environ, pour accorder un Bonus de 1 aux participants pendant une Situation. Ce Bonus s'applique aux Spécialisations suivantes : Sens du cuir (TECHNIQUE), Zoologie (SAVOIR), Langage Primal (SOCIAL), Langage du corps (ARTS), Empathie Animale (SHAAN), Invocation (MAGIE), Monture (SURVIE), Armimales (COMBAT), Harcèlement (NÉCROSE)");
 		riteDeLAnimal.setNom("Rite de l'animal");
 		riteDeLAnimal.setDomaineLie(rituels);
 //		riteDeLAnimal.setMetier(on);
-		riteDeLAnimal=specialisationRepository.save(riteDeLAnimal);
-		
-		riteDeMagie.setDescription("S'investir de l'élément \"Moi\" afin de bénéficier de pouvoirs surnaturels.Effectuer un Rite consacré au Moi d'une Heure environ, pour augmenter de 1 le niveau de MAGIE des participants pendant une Situation.");
+		riteDeLAnimal = specialisationRepository.save(riteDeLAnimal);
+
+		riteDeMagie.setDescription(
+				"S'investir de l'élément \"Moi\" afin de bénéficier de pouvoirs surnaturels.Effectuer un Rite consacré au Moi d'une Heure environ, pour augmenter de 1 le niveau de MAGIE des participants pendant une Situation.");
 		riteDeMagie.setNom("Rite de l'animal");
 		riteDeMagie.setDomaineLie(rituels);
 //		riteDeMagie.setMetier(moi);
-		riteDeMagie=specialisationRepository.save(riteDeMagie);
-		
-		riteDeNecrose.setDescription("S'investir de l'élément \"Limbes\" afin de bénéficier de pouvoirs surnaturels. Effectuer un Rite consacré aux Limbes d'une Heure environ, pour augmenter de 1 le niveau de NÉCROSE des participants pendant une Situation.");
+		riteDeMagie = specialisationRepository.save(riteDeMagie);
+
+		riteDeNecrose.setDescription(
+				"S'investir de l'élément \"Limbes\" afin de bénéficier de pouvoirs surnaturels. Effectuer un Rite consacré aux Limbes d'une Heure environ, pour augmenter de 1 le niveau de NÉCROSE des participants pendant une Situation.");
 		riteDeNecrose.setNom("Rite de nécrose");
 		riteDeNecrose.setDomaineLie(rituels);
 //		riteDeNecrose.setMetier(gargan);
-		riteDeNecrose=specialisationRepository.save(riteDeNecrose);
-		
-		riteDeSavoir.setDescription("S'investir de l'élément \"Végétal\" afin de bénéficier de pouvoirs surnaturels. Effectuer un Rite consacré au Végétal d'une Heure environ, pour augmenter de 1 le niveau de SAVOIR des participants pendant une Situation.");
+		riteDeNecrose = specialisationRepository.save(riteDeNecrose);
+
+		riteDeSavoir.setDescription(
+				"S'investir de l'élément \"Végétal\" afin de bénéficier de pouvoirs surnaturels. Effectuer un Rite consacré au Végétal d'une Heure environ, pour augmenter de 1 le niveau de SAVOIR des participants pendant une Situation.");
 		riteDeSavoir.setNom("Rite de savoir");
 		riteDeSavoir.setDomaineLie(rituels);
 //		riteDeSavoir.setMetier(wan);
-		riteDeSavoir=specialisationRepository.save(riteDeSavoir);
-		
-		riteDeShaan.setDescription("S'investir de l'élément \"Terre\" afin de bénéficier de pouvoirs surnaturels. Effectuer un Rite consacré à la Terre d'une Heure environ, pour augmenter de 1 le niveau de SHAAN des participants pendant une Situation.");
+		riteDeSavoir = specialisationRepository.save(riteDeSavoir);
+
+		riteDeShaan.setDescription(
+				"S'investir de l'élément \"Terre\" afin de bénéficier de pouvoirs surnaturels. Effectuer un Rite consacré à la Terre d'une Heure environ, pour augmenter de 1 le niveau de SHAAN des participants pendant une Situation.");
 		riteDeShaan.setNom("Rite de shaan");
 		riteDeShaan.setDomaineLie(rituels);
 //		riteDeShaan.setMetier(ling);
-		riteDeShaan=specialisationRepository.save(riteDeShaan);
-		
-		riteDeSocial.setDescription("S'investir de l'élément \"Air\" afin de bénéficier de pouvoirs surnaturels. Effectuer un Rite consacré à l'Air d'une Heure environ, pour augmenter de 1 le niveau de SOCIAL des participants pendant une Situation.");
+		riteDeShaan = specialisationRepository.save(riteDeShaan);
+
+		riteDeSocial.setDescription(
+				"S'investir de l'élément \"Air\" afin de bénéficier de pouvoirs surnaturels. Effectuer un Rite consacré à l'Air d'une Heure environ, pour augmenter de 1 le niveau de SOCIAL des participants pendant une Situation.");
 		riteDeSocial.setNom("Rite de social");
 		riteDeSocial.setDomaineLie(rituels);
 //		riteDeSocial.setMetier(elhi);
-		riteDeSocial=specialisationRepository.save(riteDeSocial);
-		
-		riteDeSurvie.setDescription("S'investir de l'élément \"Eau\" afin de bénéficier de pouvoirs surnaturels. Effectuer un Rite consacré à l'Eau d'une Heure environ, pour augmenter de 1 le niveau de SURVIE des participants pendant une Situation.");
+		riteDeSocial = specialisationRepository.save(riteDeSocial);
+
+		riteDeSurvie.setDescription(
+				"S'investir de l'élément \"Eau\" afin de bénéficier de pouvoirs surnaturels. Effectuer un Rite consacré à l'Eau d'une Heure environ, pour augmenter de 1 le niveau de SURVIE des participants pendant une Situation.");
 		riteDeSurvie.setNom("Rite de survie");
 		riteDeSurvie.setDomaineLie(rituels);
 //		riteDeSurvie.setMetier(rea);
-		riteDeSurvie=specialisationRepository.save(riteDeSurvie);
-		
-		riteDeTechnique.setDescription("S'investir de l'élément \"Objet\" afin de bénéficier de pouvoirs surnaturels. Effectuer un Rite consacré à l'Objet d'une Heure environ, pour augmenter de 1 le niveau de TECHNIQUE des participants pendant une Situation.");
+		riteDeSurvie = specialisationRepository.save(riteDeSurvie);
+
+		riteDeTechnique.setDescription(
+				"S'investir de l'élément \"Objet\" afin de bénéficier de pouvoirs surnaturels. Effectuer un Rite consacré à l'Objet d'une Heure environ, pour augmenter de 1 le niveau de TECHNIQUE des participants pendant une Situation.");
 		riteDeTechnique.setNom("Rite de technique");
 		riteDeTechnique.setDomaineLie(rituels);
 //		riteDeTechnique.setMetier(win);
@@ -1383,12 +1426,12 @@ public class DonneesPersonnage {
 				"L'Informateur est un élément indispensable, dès qu'il s'agit de faire une enquête ou d'obtenir des informations au sein d'un milieu urbain. Il entend tout, voit tout et sait tout, grâce à ses nombreux réseaux de renseignement qui lui rendent compte en temps réel de la situation sociale, politique, économique d'un quartier et même de toute une ville pour les plus influents. Curieux et à l'affût des moindres faits et gestes des puissants et des Notables, les Informateurs connaissent et maîtrisent tous les us et coutumes citadins afin de se fondre dans la masse.");
 		informateur = metierRepository.save(informateur);
 
-		marchant.setNomMetier("Marchant");
-		marchant.setVoie("Voie de l'Air");
-		marchant.setSpecialisation(commerce);
-		marchant.setDescription(
+		marchand.setNomMetier("Marchant");
+		marchand.setVoie("Voie de l'Air");
+		marchand.setSpecialisation(commerce);
+		marchand.setDescription(
 				"Le commerce a toujours été moteur au sein de la civilisation héossienne, comme partout ailleurs. Les Marchands jouissent de reconnaissance et de prestige auprès des Notables car ils constituent l'un des rouages fondamentaux de l'économie. Du simple vendeur au négociateur de contrats avec de grandes puissances, les Marchands sillonnent l'Héossie à la recherche de la bonne affaire qui fera d'eux des hommes riches. Car devenir Notable est pour un Marchand le but absolu. Pour un Marchand tout se vend ou s'achète, même l'amitié... Cela peut parfois créer des tensions au sein du groupe dont il peut faire partie, car malheureusement la plupart des marchands mettra toujours le profit avant l'éthique...");
-		marchant = metierRepository.save(marchant);
+		marchand = metierRepository.save(marchand);
 
 		politicien.setNomMetier("Politicien");
 		politicien.setVoie("Voie du Moi");
@@ -1500,7 +1543,7 @@ public class DonneesPersonnage {
 
 		ameVive.setNomMetier("Ame-vive");
 		ameVive.setVoie("Voie du Moi");
-//		ameVive.setSpecialisation(soinsDeLAme);
+		ameVive.setSpecialisation(soinsDeLAme);
 		ameVive.setCasteLie(shaanistes);
 		ameVive.setDescription(
 				"Les Âmes-vives sont les compagnons préférés de tous ceux qui doivent approcher la Nécrose de près ou de loin, ou qui peuvent être amenés à subir des effets nécrotiques... Cela fait beaucoup de monde en fait, si bien que les Âmes-vives sont très souvent sollicités, trop estiment-ils... Car les Âmes-vives ne sont pas des individus très sociables et il faut souvent déployer des trésors d'argumentation afin de les convaincre de bien vouloir exercer leurs compétences sur quelqu'un. Une Âme-vive, individualiste comme elle est, cherchera toujours un prétexte ou tentera de minimiser la situation pour ne pas avoir à rendre service... Mais la plupart des gens passent outre ce côté un peu antipathique car pour les Héossiens, l'Âme reste le Trihn le plus précieux pour éviter de passer du côté des Limbes...");
@@ -1508,7 +1551,7 @@ public class DonneesPersonnage {
 
 		chasseurDeSteles.setNomMetier("Chasseur de stèles");
 		chasseurDeSteles.setVoie("Voie de l'Objet");
-//		chasseurDeSteles.setSpecialisation(embiose);
+		chasseurDeSteles.setSpecialisation(embiose);
 		chasseurDeSteles.setCasteLie(shaanistes);
 		chasseurDeSteles.setDescription(
 				"Les Chasseurs de stèles parcourent le monde à la recherche de stèles d'Embiose, afin de pratiquer le fameux rituel qui leur permet d'augmenter rapidement leurs capacités. Ils sont souvent de cheville avec les Traqueurs de stèles qui connaissent de très nombreux emplacements de stèles et les réseaux auxquels elles sont liées. Mais certains Chasseurs de stèles se nécrosent rapidement et pour endiguer le phénomène, voyagent avec des Âmes-vives afin de limiter la casse... Les Chasseurs de stèles ont du mal à se satisfaire de ce qu'ils ont : toujours portés vers l'avenir, ils ont souvent du mal à concilier le Shaan avec leurs aspirations.");
@@ -1516,7 +1559,7 @@ public class DonneesPersonnage {
 
 		cultivateur.setNomMetier("Cultivateur");
 		cultivateur.setVoie("Voie du Végétal");
-//		cultivateur.setSpecialisation(empathieVegetale);
+		cultivateur.setSpecialisation(empathieVegetale);
 		cultivateur.setCasteLie(shaanistes);
 		cultivateur.setDescription(
 				"Propriétaire terrien ou simple vacataire, le Cultivateur passe sa vie dans les champs à semer et récolter des céréales, des fruits, des légumes ou des plantes aux vertus extraordinaires. Le Cultivateur peut parler au règne végétal et ainsi obtenir de précieuses informations sur un convoi qui aurait traversé une forêt ou bien sur les causes d'une projection de pollen empoisonné... Moins instruit qu'un Botaniste, le Cultivateur agit par instinct et suit le cycle des saisons de façon innée.");
@@ -1524,7 +1567,7 @@ public class DonneesPersonnage {
 
 		eleveur.setNomMetier("Eleveur");
 		eleveur.setVoie("Voie de l'Animal");
-//		eleveur.setSpecialisation(empathieAnimale);
+		eleveur.setSpecialisation(empathieAnimale);
 		eleveur.setCasteLie(shaanistes);
 		eleveur.setDescription(
 				"La plupart des Éleveurs choisissent une seule espèce animale à élever, que ce soit pour leur viande, leur laine, leur cuir, leur lait, leurs cornes, leur graisse, leur sang ou toute autre matière utile... Ce peuvent être des animaux d'agrément, des bêtes de somme, des armimales, des montures ou des animaux pour le spectacle... Les Éleveurs prennent un grand soin à choisir les mâles et les femelles afin de pouvoir garantir un bon pedigree à leurs acheteurs. Les Éleveurs sont souvent en relation avec des Novateurs spécialisés qui s'occupent de récupérer les matières premières de l'animal. Normalement, les Éleveurs ne s'attachent pas à leurs animaux, afin de ne pas souffrir lorsque ces derniers les quittent d’une façon ou d’une autre. Mais certains tissent des liens empathiques très forts avec un animal : ce dernier perd alors son statut de bête pour gagner celui de compagnon et suivra l'Éleveur durant toute sa vie.");
@@ -1532,23 +1575,23 @@ public class DonneesPersonnage {
 
 		gardeFou.setNomMetier("Garde-fou");
 		gardeFou.setVoie("Voie de l'Air");
-//		gardeFou.setSpecialisation(soinsDeLEsprit);
+		gardeFou.setSpecialisation(soinsDeLEsprit);
 		gardeFou.setCasteLie(shaanistes);
 		gardeFou.setDescription(
 				"Les Garde-fous aiment explorer les limites de ce qu'un cerveau peut accepter sans tomber dans la folie, tout en cherchant à repousser ces limites toujours plus loin... Pour cela, ils recherchent les situations les plus extrêmes et les environnements les plus déstabilisants... Adeptes des expéditions au sein de ruines oubliées, de forteresses hantées, et autres territoires terrifiants, les Garde-fous ont appris à dompter leur peur et celle de leurs proches. Peu appréciés des Négociants, les Garde-fous sont respectés par toutes les autres castes car ils permettent par leur simple présence de rassurer tous les membres d'un convoi qui doit se rendre dans des contrées hostiles.");
 		gardeFou = metierRepository.save(gardeFou);
 
-		marcheursDeReves.setNomMetier("Marcheurs de rêves");
-		marcheursDeReves.setVoie("Voie des Limbes");
-//		marcheursDeReves.setSpecialisation(reve);
-		marcheursDeReves.setCasteLie(shaanistes);
-		marcheursDeReves.setDescription(
+		marcheurDeReves.setNomMetier("Marcheurs de rêves");
+		marcheurDeReves.setVoie("Voie des Limbes");
+		marcheurDeReves.setSpecialisation(reve);
+		marcheurDeReves.setCasteLie(shaanistes);
+		marcheurDeReves.setDescription(
 				"Les Marcheurs de rêves sont des traqueurs de songes nécrotiques. Leur capacité leur permet de résister aux assauts des cauchemars et de leur porter des attaques décisives. Les Marcheurs de rêves peuvent aussi envoyer des messages à ceux qui dorment, quel que soit l'endroit où ils se trouvent... Ils constituent ainsi un véritable rempart contre les empires nécrosiens qui terrorisent les populations dans leur sommeil. Les Marcheurs de rêves sont souvent accueillis en héros où qu'ils aillent, car la peur du nécrosien reste vivace dans chaque Esprit...");
-		marcheursDeReves = metierRepository.save(marcheursDeReves);
+		marcheurDeReves = metierRepository.save(marcheurDeReves);
 
 		mentaliste.setNomMetier("Mentaliste");
 		mentaliste.setVoie("Voie de l'Autre");
-//		mentaliste.setSpecialisation(empathieAntheenne);
+		mentaliste.setSpecialisation(empathieAntheenne);
 		mentaliste.setCasteLie(shaanistes);
 		mentaliste.setDescription(
 				"Les Mentalistes font partie des Shaanistes les plus appréciés au sein de la population héossienne. Toujours de bon conseil, ils connaissent parfaitement la psychologie anthéenne avec laquelle ils jouent pour tirer le meilleur parti de chaque individu, afin de créer de bonnes synergies entre les Peuples. Le Mentaliste ne perd jamais son sang-froid et aime beaucoup parler par enigmes ou métaphores : quelle que soit la situation, qu’il se trouve dans une Guilde sévère avec ses employés, ou dans une taverne sordide,. Il sait user de la rhétorique pour calmer les Esprits échauffés ou au contraire galvaniser ceux qui doutent d’eux. Le Mentaliste sait déchiffrer le moindre regard, le moindre geste et reste à l’affut de tous les signes que l’on émet inconsciemment...");
@@ -1556,7 +1599,7 @@ public class DonneesPersonnage {
 
 		prescient.setNomMetier("Prescient");
 		prescient.setVoie("Voie de l'Eau");
-//		prescient.setSpecialisation(intuition);
+		prescient.setSpecialisation(intuition);
 		prescient.setCasteLie(shaanistes);
 		prescient.setDescription(
 				"Le Prescient vit dans un autre monde, fait de symboles et d'inspiration. Il a du flair et sait s'en servir. Il peut ainsi éviter de se faire surprendre et sentir lorsque l'on cherche à l'embobiner. L'intuition du Prescient est très utile dans toutes sortes de domaines, de la navigation, à la diplomatie en passant par la stratégie militaire ou encore la gastronomie... Le Prescient sait toujours ce qu'il doit faire et où il doit aller, cette aptitude en fait souvent un leader respecté.");
@@ -1564,7 +1607,7 @@ public class DonneesPersonnage {
 
 		radiant.setNomMetier("Radiant");
 		radiant.setVoie("Voie de du Feu");
-//		radiant.setSpecialisation(soinsDuCorps);
+		radiant.setSpecialisation(soinsDuCorps);
 		radiant.setCasteLie(shaanistes);
 		radiant.setDescription(
 				"Il est coutume de dire que les Radiants ont du feu qui coulent dans les veines... Ils ont toujours chaud, où qu'ils se trouvent, cette chaleur surnaturelle leur permet lorsqu'ils apposent les mains sur quelqu'un de soigner le Corps. Contrairement aux Âmes-vives qui ont tendance à se faire prier pour faire usage de leurs compétences, les Radiants, à l'inverse, passent leur temps à demander autour d'eux si quelqu'un a besoin d'un soin, même si cela n'est pas indispensable. Ainsi, souvent, devant l'insistance des Radiants, on accepte leur aide pour ensuite avoir la paix. C'est en combat que les Radiants sont les plus épanouis, car là, ils peuvent exercer leur talent de nombreuses fois sans avoir à insister. Souvent, même, on le leur demande, et cela les emplit de joie, même si la situation s'avère critique...");
@@ -1572,7 +1615,7 @@ public class DonneesPersonnage {
 
 		telluriste.setNomMetier("Telluriste");
 		telluriste.setVoie("Voie de la Terre");
-//		telluriste.setSpecialisation(empathieMinerale);
+		telluriste.setSpecialisation(empathieMinerale);
 		telluriste.setCasteLie(shaanistes);
 		telluriste.setDescription(
 				"Le Telluriste affectionne particulièrement les souterrains, les grottes et autres habitats troglodytes. En communion avec la pierre, la roche et la terre, il peut ressentir les micro-secousses sismiques qui agitent le continent en permanence mais auxquelles personne ne prête aucune attention. Pourtant, c'est grâce à ces secousses que le Telluriste peut s'orienter, connaître la nature d'un terrain ou d'un gaz. Mais ce qui rend le Telluriste particulièrement intéressant, c'est le lien privilégié qu'il entretient avec la Trihnite, grâce auquel il peut communiquer avec une porte de transfert pour obtenir des informations sur les personnes qui l'ont traversée...");
@@ -1580,7 +1623,7 @@ public class DonneesPersonnage {
 
 		arcanien.setNomMetier("Arcanien");
 		arcanien.setVoie("Voie du Végétal");
-//		arcanien.setSpecialisation(arcanes);
+		arcanien.setSpecialisation(arcanes);
 		arcanien.setCasteLie(magiciens);
 		arcanien.setDescription(
 				"Les Arcaniens sont de vrais rats de bibliothèque, scrutant, archivant, lisant et relisant cent fois les mêmes passages de grands grimoires séculaires afin d'en débusquer le sens caché. Les Arcaniens connaissent toutes les formes de magie et peuvent avoir des notions dans chacune d'elles.");
@@ -1588,7 +1631,7 @@ public class DonneesPersonnage {
 
 		conjurateur.setNomMetier("Conjurateur");
 		conjurateur.setVoie("Voie des Limbes");
-//		conjurateur.setSpecialisation(conjuration);
+		conjurateur.setSpecialisation(conjuration);
 		conjurateur.setCasteLie(magiciens);
 		conjurateur.setDescription(
 				"La peau tannée, craquelée, le regard noir, les Conjurateurs sont entre deux mondes, celui des Limbes et l'Héossie. Au bord du gouffre sans jamais tomber, ils arpentent les terres nécrotiques afin de les nettoyer de leurs Âmes corrompues. La vie et la mort sont pour eux sans importance, ils savent que l'un ne va pas sans l'autre et que les deux forment un cycle que l'on peut rompre ou accélérer à force de rigueur de de travail.");
@@ -1596,7 +1639,7 @@ public class DonneesPersonnage {
 
 		enchanteur.setNomMetier("Enchanteur");
 		enchanteur.setVoie("Voie de l'Objet");
-//		enchanteur.setSpecialisation(enchantement);
+		enchanteur.setSpecialisation(enchantement);
 		enchanteur.setCasteLie(magiciens);
 		enchanteur.setDescription(
 				"Sages et laborieux, les Enchanteurs déroutent les gens par leur lenteur apparente. Mais ne vous y trompez pas, c'est une véritable tornade qui souffle dans la tête de ces individus. Un peu à part, le métier des Enchanteurs compte le plus de vieillards parmi ses membres. Il faut dire que la voie de l'enchantement est longue et rigoureuse. Elle laisse peu de temps aux autres activités.");
@@ -1604,7 +1647,7 @@ public class DonneesPersonnage {
 
 		illusionniste.setNomMetier("Illusionniste");
 		illusionniste.setVoie("Voie de l'Eau");
-//		illusionniste.setSpecialisation(voile);
+		illusionniste.setSpecialisation(voile);
 		illusionniste.setCasteLie(magiciens);
 		illusionniste.setDescription(
 				"Ce sont les maîtres de la suggestion et de la discrétion. Les Illusionnistes savent camoufler les actes magiques afin qu'ils soient invisibles au commun des mortels. Privilégiant les sorts fondés sur la perception, ils peuvent avoir la capacité de faire entrer quelqu'un dans une monde virtuel et de l'y piéger... Du temps de l'Héossie flamboyante, les Illusionnistes avaient un statut très important au sein de la population. Ils permettaient aux gens de se divertir et de quitter le quotidien le temps d'un \"rêve éveillé\". Maintenant, de nombreux Illusionnistes gagnent leur vie en flattant les sens de gouverneurs humains et nécrosiens, trop heureux qu'il n'y ait pas d'accoutumance à ce moyen de quitter la réalité.");
@@ -1612,7 +1655,7 @@ public class DonneesPersonnage {
 
 		mageItinerant.setNomMetier("Mage itinerant");
 		mageItinerant.setVoie("Voie du feu");
-//		mageItinerant.setSpecialisation(incandescence);
+		mageItinerant.setSpecialisation(incandescence);
 		mageItinerant.setCasteLie(magiciens);
 		mageItinerant.setDescription(
 				"Les Mages itinérants passent leur vie sur les routes afin de proposer leurs services à ceux qui en ont besoin. Habitués à vivre en extérieur, ils aiment voyager de nuit afin d'optimiser leurs déplacements. Leur spécialisation leur permet de voir dans l'obscurité et de toujours avoir un feu de camp à disposition. D'un tempérament vif, ils ont souvent tendance à s'emporter pour pas grand-chose.");
@@ -1620,7 +1663,7 @@ public class DonneesPersonnage {
 
 		regenerateur.setNomMetier("Régénérateur");
 		regenerateur.setVoie("Voie de la Terre");
-//		regenerateur.setSpecialisation(regeneration);
+		regenerateur.setSpecialisation(regeneration);
 		regenerateur.setCasteLie(magiciens);
 		regenerateur.setDescription(
 				"Les Régénérateurs privilégient les Sorts de guérison afin de pouvoir subvenir rapidement aux besoins de leurs alliés blessés qui ont été victimes de traumatismes physiques, de violentes émotions ou de chocs psychologiques graves. Leur capacité à se régénérer les poussent à prendre soin des autres et à développer des Sorts de guérison ou d’autres Spécialisations de soins. Véritables médecins du Corps, de l’Âme et de l’Esprit, les Régénérateurs sont des compagnons indispensables pour les aventures dangereuses qui risquent de mettre en péril la santé de leurs alliés.");
@@ -1628,7 +1671,7 @@ public class DonneesPersonnage {
 
 		revocateur.setNomMetier("Révocateur");
 		revocateur.setVoie("Voie du Moi");
-//		revocateur.setSpecialisation(defenseMagique);
+		revocateur.setSpecialisation(defenseMagique);
 		revocateur.setCasteLie(magiciens);
 		revocateur.setDescription(
 				"Passé maître dans l'art de se protéger des attaques magiques, les Révocateurs sont très appréciés des membres des autres castes. On peut même dire que c'est le métier le plus prisé de tous, tant la magie peut représenter une force de frappe redoutable et sur de nombreuses cibles. Les Révocateurs, d'un tempérament calme et posé, n'agissent jamais à la légère et préfèrent toujours être certains du type d'attaque dont il faut se protéger afin d'être le plus efficace possible : malheureusement il peut arriver que cette inertie soit fatale...");
@@ -1636,7 +1679,7 @@ public class DonneesPersonnage {
 
 		shaman.setNomMetier("Shaman");
 		shaman.setVoie("Voie de l'Animal");
-//		shaman.setSpecialisation(empathieMinerale);
+		shaman.setSpecialisation(empathieMinerale);
 		shaman.setCasteLie(magiciens);
 		shaman.setDescription(
 				"En communion avec les Trihns, le Shaman sait les invoquer afin de les utiliser pour lancer des sortilèges. Lorsqu'un Trihn est utilisé, il donne juste de sa puissance au magicien, mais n'est pas détruit, il retourne ensuite dans son plan d'origine. Les Shamans connaissent bien les Trihns et restent particulièrement réceptifs aux besoins du Trihneï...");
@@ -1644,7 +1687,7 @@ public class DonneesPersonnage {
 
 		sorcier.setNomMetier("Sorcier");
 		sorcier.setVoie("Voie de l'Air");
-//		sorcier.setSpecialisation(maitriseDesSchemes);
+		sorcier.setSpecialisation(maitriseDesSchemes);
 		sorcier.setCasteLie(magiciens);
 		sorcier.setDescription(
 				"Le Sorcier vit en ermite, se consacrant à la lecture et à l'apprentissage du langage des schèmes. Ayant souvent à sa disposition toutes sortes de grimoires où sont consignés quantité de Sorts sous forme de schèmes, il a la possibilité de créer lui-même ses propres Sorts et de les consigner sur papier.");
@@ -1652,11 +1695,91 @@ public class DonneesPersonnage {
 
 		voleurDeTrihn.setNomMetier("Voleur de trihn");
 		voleurDeTrihn.setVoie("Voie de l'Autre");
-//		voleurDeTrihn.setSpecialisation(transfert);
+		voleurDeTrihn.setSpecialisation(transfert);
 		voleurDeTrihn.setCasteLie(magiciens);
 		voleurDeTrihn.setDescription(
 				"Le Voleur de Trihn a mauvaise réputation. Quand il est allié, on apprécie sa compagnie et ses talents galvanisent le groupe. Mais lorsqu'il se présente en ennemi, il devient souvent la principale cible des mages adverses qui ne peuvent se permettre de se laisser voler leurs Trihns. Pour cette raison, le Voleur de Trihn garde généralement la nature de son métier secrète et préfère mentir sur sa spécialisation.");
 		voleurDeTrihn = metierRepository.save(voleurDeTrihn);
+
+		discipleDeLAir.setNomMetier("disciple de l'air");
+		discipleDeLAir.setVoie("Voie de l'Air");
+//		discipleDeLAir.setSpecialisation(riteDeSocial);
+		discipleDeLAir.setCasteLie(elementalistes);
+		discipleDeLAir.setDescription(
+				"Le culte de l’Air pourrait se résumer en un mot : liberté. Liberté de penser, d’agir, de se déplacer, de créer. Les disciples de l’Air sont des nomades dans l’âme qui trouvent leur salut dans le voyage. Philosophes, certains disciples aiment à se perdre dans les méandres de la pensée et peuvent ainsi discuter pendant des jours sans s’arrêter. Le disciple d’Ëlhi n’est pas à la recherche de la connaissance absolue, mais de ses propres limites intellectuelles, le but étant de les repousser le plus loin possible. Adepte de l’autogestion, il a tendance à rejeter les rapports hiérarchiques. Très spontané, le disciple de l’Air dit toujours ce qu’il pense.");
+		discipleDeLAir = metierRepository.save(discipleDeLAir);
+
+		discipleDeLAnimal.setNomMetier("disciple de l'animal");
+		discipleDeLAnimal.setVoie("Voie de l'animal");
+//		discipleDeLAnimal.setSpecialisation(riteDeLAnimal);
+		discipleDeLAnimal.setCasteLie(elementalistes);
+		discipleDeLAnimal.setDescription(
+				"Le culte de l’Animal est l’un des plus répandus en Héossie. Prônant des valeurs d’énergie, de courage et d’autorité, il trouve largement sa place au sein des peuples de nature guerrière ou en prise directe avec la nature. Les disciples de l’Animal ont tendance à être assez primitifs et à réagir au quart de tour. Mais en amitié, ils savent aussi être fidèles et se comportent en chef de meute.");
+		discipleDeLAnimal = metierRepository.save(discipleDeLAnimal);
+
+		discipleDeLautre.setNomMetier("disciple de l'Autre");
+		discipleDeLautre.setVoie("Voie de l'Autre");
+//		discipleDeLautre.setSpecialisation(riteDArts);
+		discipleDeLautre.setCasteLie(elementalistes);
+		discipleDeLautre.setDescription(
+				"Le culte de l’Autre est l’un des plus appréciés en Héossie. Fondamentalement pacifiste dans l’âme, le disciple de l’Autre place le respect de la vie au cœur de toute chose. Mais le disciple de l’Autre n’est pas pour autant un imbécile, il est bien conscient que la violence peut s’avérer nécessaire pour sauver les faibles et surtout pour combattre la Nécrose. Car il n’est pas de culte plus hostile à la Nécrose que la voie de Löd. Pour ces disciples, l’âme est source de vie, la perdre, c’est ne plus être vivant.");
+		discipleDeLautre = metierRepository.save(discipleDeLautre);
+
+		discipleDeLEau.setNomMetier("disciple de l'Eau");
+		discipleDeLEau.setVoie("Voie de l'Eau");
+//		discipleDeLEau.setSpecialisation(riteDeSurvie);
+		discipleDeLEau.setCasteLie(elementalistes);
+		discipleDeLEau.setDescription(
+				"Le culte de l’Eau puise ses racines dans l’enfance, dans le fluide amniotique. Les rêves, les secrets et ce qui échappe au sens commun des mortels reste familier aux yeux du disciple de l’Eau. Très joueur, il ne peut s’empêcher de relever les défis qu’on lui propose, quitte à mettre sa vie et celle de ses proches en danger. Le disciple de l’Eau vit dans son monde et peut donner l’impression d’être parfois absent. Mais ce n’est qu’une impression car le disciple de Rhéa est en contact direct avec le fluide vital des êtres...");
+		discipleDeLEau = metierRepository.save(discipleDeLEau);
+
+		discipleDeLObjet.setNomMetier("disciple de l'Objet");
+		discipleDeLObjet.setVoie("Voie de l'Objet");
+//		discipleDeLObjet.setSpecialisation(riteDeTechnique);
+		discipleDeLObjet.setCasteLie(elementalistes);
+		discipleDeLObjet.setDescription(
+				"Le culte de l’Objet fait partie des plus appréciés en Héossie, car il est l’apanage des artisans et des techniciens. Un disciple de l’Objet ayant toujours à cœur que les choses fonctionnent bien autour de lui et ne pourra s’empêcher de réparer ce qui est cassé. Très imaginatif, un disciple de l’Objet préfèrera toujours un moyen compliqué pour résoudre un problème donné ou une solution trop évidente et donc suspecte. Méthodique, le disciple de l’Objet peut paraître froid par moment lorsqu’il est plongé dans l’analyse de ce qui l’entoure. Il peut également faire preuve d’un détachement déconcertant vis à vis de la mort qui n’est pour lui qu’une panne définitive...");
+		discipleDeLObjet = metierRepository.save(discipleDeLObjet);
+
+		discipleDaLaTerre.setNomMetier("disciple de la Terre");
+		discipleDaLaTerre.setVoie("Voie de la Terre");
+//		discipleDaLaTerre.setSpecialisation(riteDeShaan);
+		discipleDaLaTerre.setCasteLie(elementalistes);
+		discipleDaLaTerre.setDescription(
+				"Le culte de la Terre est l’un des plus déroutants. Intégrant dans son dogme le cycle des Trihns, il offre à ses adeptes une vision du monde globale peu accessible aux autres. Le relativisme et le fatalisme dont font preuve les disciples de Ling les place toujours en décalage de ce qui est communément admis. En prise directe avec l’insondable et les forces telluriques, les adeptes de la Terre font souvent preuve d’une grande détermination. Ils voient ce que les autres ne peuvent voir, comme si la terre et tout ce qu’elle avait accumulé depuis toujours était en prise directe avec leur âme...");
+		discipleDaLaTerre = metierRepository.save(discipleDaLaTerre);
+
+		discipleDesLimbes.setNomMetier("disciple des Limbes");
+		discipleDesLimbes.setVoie("Voie des Limbes");
+//		discipleDesLimbes.setSpecialisation(riteD);
+		discipleDesLimbes.setCasteLie(elementalistes);
+		discipleDesLimbes.setDescription(
+				"Le culte des Limbes est le plus décrié car le plus ambigüe. Car si certains disciples prétendent pratiquer ce culte pour mieux comprendre les Limbes de l’intérieur et pouvoir ainsi mieux les combattre, il n’empêche que cette voie est surtout pratiquée en majorité par les Nécrosiens. Le contact direct avec les névroses les plus abyssales laissent souvent des séquelles aux adeptes de Gargan. Et si tous ne finissent pas nécrosés, c’est que ceux qui restent du «bon côté» sont devenus fous... S’engager sur la voie des Limbes, c’est être sur le fil du rasoir, on peut basculer à tout moment...");
+		discipleDesLimbes = metierRepository.save(discipleDesLimbes);
+
+		discipleDuFeu.setNomMetier("disciple du Feu");
+		discipleDuFeu.setVoie("Voie du Feu");
+//		discipleDuFeu.setSpecialisation(riteDeCombat);
+		discipleDuFeu.setCasteLie(elementalistes);
+		discipleDuFeu.setDescription(
+				"Le culte du Feu exalte les passions et les conflits. Brûlant tout sur son passage, le disciple du Feu plie ses adversaires à sa volonté. Il s'enflamme pour un rien et ne recule devant rien pour atteindre ses objectifs. Ayant soif de conquêtes et de renommée, le disciple du Feu n’hésite jamais à provoquer les événements plutôt que de les subir. Assez à l’aise dans le chaos, il n’apprécie guère le consensus et peut parfois faire preuve d’esprit de contradiction, par simple plaisir d’en découdre... Les Guerriers, les Sorciers et les Ensorceleurs sont bien en phase avec cette voie.");
+		discipleDuFeu = metierRepository.save(discipleDuFeu);
+
+		discipleDuMoi.setNomMetier("disciple du Moi");
+		discipleDuMoi.setVoie("Voie du Moi");
+//		discipleDuMoi.setSpecialisation(riteDeMagie);
+		discipleDuMoi.setCasteLie(elementalistes);
+		discipleDuMoi.setDescription(
+				"Le culte du Moi est assez singulier. En effet, les disciples ne peuvent compter que sur eux-mêmes pour progresser dans leur voie. Cette dernière, faite de frustration et de solitude a tendance à couper ses adeptes du reste du monde. Égotique et orgueilleux, les adeptes du Moi nourrissent un véritable complexe de supériorité. Ils se plaisent à répéter à qui veut l’entendre qu’ils se sont faits tout seuls... Les Magiciens apprécient particulièrement ce culte qu’ils trouvent en phase avec leurs préoccupations.");
+		discipleDuMoi = metierRepository.save(discipleDuMoi);
+
+		discipleDuVegetal.setNomMetier("disciple du Végétal");
+		discipleDuVegetal.setVoie("Voie du Végétal");
+//		discipleDuVegetal.setSpecialisation(riteDeSavoir);
+		discipleDuVegetal.setCasteLie(elementalistes);
+		discipleDuVegetal.setDescription(
+				"Le culte du Végétal est l’un des plus pacifistes. Entièrement dédié à la connaissance et au culte de la transmission du savoir, il est la sève de la culture héossienne. Les disciples de Wän sont de ceux qui bâtissent des bibliothèques, impriment des livres et construisent des écoles afin de communiquer aux générations futures le fruit de leur pensée. Car les disciples du Végétal voient toujours les choses à long terme, à très long terme même, c’est ce qui les rend si sages et si respectables. Mais le végétal peut aussi se révéler empoisonné et produire des parasites. Cette voie obscure qui conduit au machiavélisme et à la folie reste heureusement assez marginale...");
+		discipleDuVegetal = metierRepository.save(discipleDuVegetal);
 
 //-------------------------------------------------------------------------------------------------------------------------
 //		REMPLISSAGE OBJET MOTIVATION
