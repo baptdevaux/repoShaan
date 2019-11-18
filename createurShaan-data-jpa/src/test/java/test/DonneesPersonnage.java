@@ -172,6 +172,16 @@ public class DonneesPersonnage {
 		Specialisation navigation = new Specialisation();
 		Specialisation vieSauvage = new Specialisation();
 		Specialisation vigilance = new Specialisation();
+		Specialisation armesAProjectiles = new Specialisation();
+		Specialisation armesDeMelee = new Specialisation();
+		Specialisation armesLancees = new Specialisation();
+		Specialisation armimales = new Specialisation();
+		Specialisation enginsDeGuerre = new Specialisation();
+		Specialisation esquive = new Specialisation();
+		Specialisation forcer = new Specialisation();
+		Specialisation intimidation = new Specialisation();
+		Specialisation pugilat = new Specialisation();
+		Specialisation strategie = new Specialisation();
 //-------------------------------------------------------------------------------------------------------------------------
 //		CREATION OBJET RACE
 //-------------------------------------------------------------------------------------------------------------------------	
@@ -955,6 +965,66 @@ public class DonneesPersonnage {
 		vigilance.setDomaineLie(survie);
 //		vigilance.setMetier(eclaireur);
 		vigilance=specialisationRepository.save(vigilance);
+		
+		armesAProjectiles.setDescription("Savoir manipuler toutes les armes à déclencheur mécanique comme les arbalètes, mais également les armes sans déclencheur tels que arc, fronde, sarbacane, arbalète, lance-pointe, lance-feu, servant à propulser après tension d’une corde ou utilisation de la force giratoire, divers projectiles.");
+		armesAProjectiles.setNom("Armes à projectiles");
+		armesAProjectiles.setDomaineLie(combat);
+//		armesAProjectiles.setMetier(archer);
+		armesAProjectiles=specialisationRepository.save(armesAProjectiles);
+		
+		armesDeMelee.setDescription("Savoir utiliser toutes les armes de corps à corps, des armes courtes comme la dague, le glaive et autres couteaux, shaar, serpine, seltar, aux armes moyennes comme l’épée mélodienne, feling, les petites masses, le yink, mais aussi les armes longues et lourdes comme l’épée darken, la lame lune, la masse woon, les armes d’hast,...");
+		armesDeMelee.setNom("Armes de mêlee");
+		armesDeMelee.setDomaineLie(combat);
+//		armesDeMelee.setMetier(gladiateur);
+		armesDeMelee=specialisationRepository.save(armesDeMelee);
+		
+		armesLancees.setDescription("Savoir utiliser les armes à propulsion directe, sans intervention de force autre que celle du bras, tels que filets, couteaux de lancer, nashen, lance mélodienne, boomerangs, bolas,…");
+		armesLancees.setNom("Armes lancées");
+		armesLancees.setDomaineLie(combat);
+//		armesLancees.setMetier(francTireur);
+		armesLancees=specialisationRepository.save(armesLancees);
+		
+		armimales.setDescription("Dresser les armimales d’attaque et de défense afin qu’elles offrent l’efficacité maximale en combat. Savoir comment s’en occuper et connaître leurs besoins.");
+		armimales.setNom("Armimales");
+		armimales.setDomaineLie(combat);
+//		armimales.setMetier(armimalier);
+		armimales=specialisationRepository.save(armimales);
+		
+		enginsDeGuerre.setDescription("Savoir utiliser des engins de guerre comme les armes de siège, les catapultes, balistes et autres trébuchets. Les Engins de Guerre regroupent toutes les armes qui sont conçues pour détruire les bâtiments et les véhicules.");
+		enginsDeGuerre.setNom("Engins de guerre");
+		enginsDeGuerre.setDomaineLie(combat);
+//		enginsDeGuerre.setMetier(artilleur);
+		enginsDeGuerre=specialisationRepository.save(enginsDeGuerre);
+		
+		esquive.setDescription("Manœuvrer avec une posture défensive dans un combat pour se retrouver en position avantageuse pour fuir ou contre-attaquer le tour suivant.");
+		esquive.setNom("Esquive");
+		esquive.setDomaineLie(combat);
+//		esquive.setMetier(fantassin);
+		esquive=specialisationRepository.save(esquive);
+		
+		forcer.setDescription("Manœuvrer avec une posture défensive dans un combat pour se retrouver en position avantageuse pour fuir ou contre-attaquer le tour suivant.");
+		forcer.setNom("Forcer");
+		forcer.setDomaineLie(combat);
+//		forcer.setMetier(soldat);
+		forcer=specialisationRepository.save(forcer);
+		
+		intimidation.setDescription("Faire changer d'avis quelqu'un qui aurait de mauvaises intentions à votre égard, d'un regard ou en arborant une attitude combattive. Obtenir des renseignements lors d'interrogatoires et par d’autres pratiques peu morales. Impressionner son adversaire au combat. Donner des ordres indiscutables dans le feu de l’action.");
+		intimidation.setNom("Intimidation");
+		intimidation.setDomaineLie(combat);
+//		intimidation.setMetier(protecteur);
+		intimidation=specialisationRepository.save(intimidation);
+		
+		pugilat.setDescription("N'utiliser que son corps pour vaincre l'adversaire. Appliquer les diverses techniques de combat visant à frapper avec toutes les parties du corps mais également à neutraliser un adversaire à l'aide de blocages et de strangulations. C’est la Spécialisation utilisée pour les armes directement fixées sur le corps telles que lameur, coudines, gants de métal, griffes etc.");
+		pugilat.setNom("Pugilat");
+		pugilat.setDomaineLie(combat);
+//		pugilat.setMetier(gardeMine);
+		pugilat=specialisationRepository.save(pugilat);
+		
+		strategie.setDescription("Définir une tactique à grande échelle visant à vaincre des armées entières. Commander à des troupes militaires. Manœuvrer dans un combat au contact pour exploiter les avantages du terrain et gêner ses adversaires. Obtenir des informations sur l'état des Trihns d'un adversaire.");
+		strategie.setNom("Strategie");
+		strategie.setDomaineLie(combat);
+//		strategie.setMetier(gardienDesForets);
+		strategie=specialisationRepository.save(strategie);
 //-------------------------------------------------------------------------------------------------------------------------
 //		REMPLISSAGE OBJET RACE
 //-------------------------------------------------------------------------------------------------------------------------	
