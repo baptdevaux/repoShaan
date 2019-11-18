@@ -225,6 +225,16 @@ public class DonneesPersonnage {
 		Metier prescient = new Metier();
 		Metier radiant = new Metier();
 		Metier telluriste = new Metier();
+		Metier arcanien = new Metier();
+		Metier conjurateur = new Metier();
+		Metier enchanteur = new Metier();
+		Metier illusionniste = new Metier();
+		Metier mageItinerant = new Metier();
+		Metier regenerateur = new Metier();
+		Metier revocateur = new Metier();
+		Metier shaman = new Metier();
+		Metier sorcier = new Metier();
+		Metier voleurDeTrihn = new Metier();
 
 //-------------------------------------------------------------------------------------------------------------------------
 //		CREATION OBJET MOTIVATION
@@ -1061,7 +1071,7 @@ public class DonneesPersonnage {
 				"Le Zoologue est un collectionneur, il passe son temps à collecter et mettre à jour toutes les informations liées à une espèce animale ou à un écosystème. Bon nombre de Zoologues disposent de petits talents artistiques qui leur permettent de dessiner ce qu'ils sont amenés à observer sur le terrain. Certains Zoologues se spécialisent dans la connaissance de certains types d'animaux, les prédateurs, les herbivores, les nomades, les poissons, les oiseaux, les amphibiens, les reptiles... Un Zoologue est aussi un peu vétérinaire et connait les premiers soins à apporter à un animal blessé, et les gestes à effectuer pour sauver des vies. Assez impulsif dans son comportement, le Zoologue accorde beaucoup d'importance à son odorat : il peut ainsi récupérer des informations que les autres sens ne lui permettent pas de saisir. C'est pour cette raison que les meilleurs Zoologues sont Woons.");
 		zoologue = metierRepository.save(zoologue);
 
-		courtisan.setNomMetier("Courtisant");
+		courtisan.setNomMetier("Courtisan");
 		courtisan.setVoie("Voie du feu");
 		courtisan.setSpecialisation(seduction);
 		courtisan.setCasteLie(negociants);
@@ -1204,7 +1214,7 @@ public class DonneesPersonnage {
 				"Souvent ermite et retranché dans son atelier, l'Évocateur oscille entre deux mondes : celui de sa pensée et celui de son inconscient. Peu importe le support, peinture, dessin, sculpture, il effectue un voyage intérieur pour tenter d'y trouver ce qui lui permettra de créer une œuvre universelle. Souvent dépressif, l'Évocateur ne cesse de dire que l'on ne peut créer en étant heureux.... Hyper sensible, il est sans cesse meurtri par la violence du quotidien. Il absorbe cette violence, la canalise et la transcende en une évocation picturale ou en volume chargé de trouver son public. Mais malheureusement, les Évocateurs restent souvent des artistes incompris.");
 		evocateur = metierRepository.save(evocateur);
 
-		musicien.setNomMetier("Muscien");
+		musicien.setNomMetier("Musicien");
 		musicien.setVoie("Voie du Moi");
 		musicien.setSpecialisation(musique);
 		musicien.setCasteLie(artistes);
@@ -1299,6 +1309,86 @@ public class DonneesPersonnage {
 		telluriste.setDescription(
 				"Le Telluriste affectionne particulièrement les souterrains, les grottes et autres habitats troglodytes. En communion avec la pierre, la roche et la terre, il peut ressentir les micro-secousses sismiques qui agitent le continent en permanence mais auxquelles personne ne prête aucune attention. Pourtant, c'est grâce à ces secousses que le Telluriste peut s'orienter, connaître la nature d'un terrain ou d'un gaz. Mais ce qui rend le Telluriste particulièrement intéressant, c'est le lien privilégié qu'il entretient avec la Trihnite, grâce auquel il peut communiquer avec une porte de transfert pour obtenir des informations sur les personnes qui l'ont traversée...");
 		telluriste = metierRepository.save(telluriste);
+
+		arcanien.setNomMetier("Arcanien");
+		arcanien.setVoie("Voie du Végétal");
+//		arcanien.setSpecialisation(arcanes);
+		arcanien.setCasteLie(magiciens);
+		arcanien.setDescription(
+				"Les Arcaniens sont de vrais rats de bibliothèque, scrutant, archivant, lisant et relisant cent fois les mêmes passages de grands grimoires séculaires afin d'en débusquer le sens caché. Les Arcaniens connaissent toutes les formes de magie et peuvent avoir des notions dans chacune d'elles.");
+		arcanien = metierRepository.save(arcanien);
+
+		conjurateur.setNomMetier("Conjurateur");
+		conjurateur.setVoie("Voie des Limbes");
+//		conjurateur.setSpecialisation(conjuration);
+		conjurateur.setCasteLie(magiciens);
+		conjurateur.setDescription(
+				"La peau tannée, craquelée, le regard noir, les Conjurateurs sont entre deux mondes, celui des Limbes et l'Héossie. Au bord du gouffre sans jamais tomber, ils arpentent les terres nécrotiques afin de les nettoyer de leurs Âmes corrompues. La vie et la mort sont pour eux sans importance, ils savent que l'un ne va pas sans l'autre et que les deux forment un cycle que l'on peut rompre ou accélérer à force de rigueur de de travail.");
+		conjurateur = metierRepository.save(conjurateur);
+
+		enchanteur.setNomMetier("Enchanteur");
+		enchanteur.setVoie("Voie de l'Objet");
+//		enchanteur.setSpecialisation(enchantement);
+		enchanteur.setCasteLie(magiciens);
+		enchanteur.setDescription(
+				"Sages et laborieux, les Enchanteurs déroutent les gens par leur lenteur apparente. Mais ne vous y trompez pas, c'est une véritable tornade qui souffle dans la tête de ces individus. Un peu à part, le métier des Enchanteurs compte le plus de vieillards parmi ses membres. Il faut dire que la voie de l'enchantement est longue et rigoureuse. Elle laisse peu de temps aux autres activités.");
+		enchanteur = metierRepository.save(enchanteur);
+
+		illusionniste.setNomMetier("Illusionniste");
+		illusionniste.setVoie("Voie de l'Eau");
+//		illusionniste.setSpecialisation(voile);
+		illusionniste.setCasteLie(magiciens);
+		illusionniste.setDescription(
+				"Ce sont les maîtres de la suggestion et de la discrétion. Les Illusionnistes savent camoufler les actes magiques afin qu'ils soient invisibles au commun des mortels. Privilégiant les sorts fondés sur la perception, ils peuvent avoir la capacité de faire entrer quelqu'un dans une monde virtuel et de l'y piéger... Du temps de l'Héossie flamboyante, les Illusionnistes avaient un statut très important au sein de la population. Ils permettaient aux gens de se divertir et de quitter le quotidien le temps d'un \"rêve éveillé\". Maintenant, de nombreux Illusionnistes gagnent leur vie en flattant les sens de gouverneurs humains et nécrosiens, trop heureux qu'il n'y ait pas d'accoutumance à ce moyen de quitter la réalité.");
+		illusionniste = metierRepository.save(illusionniste);
+
+		mageItinerant.setNomMetier("Mage itinerant");
+		mageItinerant.setVoie("Voie du feu");
+//		mageItinerant.setSpecialisation(incandescence);
+		mageItinerant.setCasteLie(magiciens);
+		mageItinerant.setDescription(
+				"Les Mages itinérants passent leur vie sur les routes afin de proposer leurs services à ceux qui en ont besoin. Habitués à vivre en extérieur, ils aiment voyager de nuit afin d'optimiser leurs déplacements. Leur spécialisation leur permet de voir dans l'obscurité et de toujours avoir un feu de camp à disposition. D'un tempérament vif, ils ont souvent tendance à s'emporter pour pas grand-chose.");
+		mageItinerant = metierRepository.save(mageItinerant);
+
+		regenerateur.setNomMetier("Régénérateur");
+		regenerateur.setVoie("Voie de la Terre");
+//		regenerateur.setSpecialisation(regeneration);
+		regenerateur.setCasteLie(magiciens);
+		regenerateur.setDescription(
+				"Les Régénérateurs privilégient les Sorts de guérison afin de pouvoir subvenir rapidement aux besoins de leurs alliés blessés qui ont été victimes de traumatismes physiques, de violentes émotions ou de chocs psychologiques graves. Leur capacité à se régénérer les poussent à prendre soin des autres et à développer des Sorts de guérison ou d’autres Spécialisations de soins. Véritables médecins du Corps, de l’Âme et de l’Esprit, les Régénérateurs sont des compagnons indispensables pour les aventures dangereuses qui risquent de mettre en péril la santé de leurs alliés.");
+		regenerateur = metierRepository.save(regenerateur);
+
+		revocateur.setNomMetier("Révocateur");
+		revocateur.setVoie("Voie du Moi");
+//		revocateur.setSpecialisation(defenseMagique);
+		revocateur.setCasteLie(magiciens);
+		revocateur.setDescription(
+				"Passé maître dans l'art de se protéger des attaques magiques, les Révocateurs sont très appréciés des membres des autres castes. On peut même dire que c'est le métier le plus prisé de tous, tant la magie peut représenter une force de frappe redoutable et sur de nombreuses cibles. Les Révocateurs, d'un tempérament calme et posé, n'agissent jamais à la légère et préfèrent toujours être certains du type d'attaque dont il faut se protéger afin d'être le plus efficace possible : malheureusement il peut arriver que cette inertie soit fatale...");
+		revocateur = metierRepository.save(revocateur);
+
+		shaman.setNomMetier("Shaman");
+		shaman.setVoie("Voie de l'Animal");
+//		shaman.setSpecialisation(empathieMinerale);
+		shaman.setCasteLie(magiciens);
+		shaman.setDescription(
+				"En communion avec les Trihns, le Shaman sait les invoquer afin de les utiliser pour lancer des sortilèges. Lorsqu'un Trihn est utilisé, il donne juste de sa puissance au magicien, mais n'est pas détruit, il retourne ensuite dans son plan d'origine. Les Shamans connaissent bien les Trihns et restent particulièrement réceptifs aux besoins du Trihneï...");
+		shaman = metierRepository.save(shaman);
+
+		sorcier.setNomMetier("Sorcier");
+		sorcier.setVoie("Voie de l'Air");
+//		sorcier.setSpecialisation(maitriseDesSchemes);
+		sorcier.setCasteLie(magiciens);
+		sorcier.setDescription(
+				"Le Sorcier vit en ermite, se consacrant à la lecture et à l'apprentissage du langage des schèmes. Ayant souvent à sa disposition toutes sortes de grimoires où sont consignés quantité de Sorts sous forme de schèmes, il a la possibilité de créer lui-même ses propres Sorts et de les consigner sur papier.");
+		sorcier = metierRepository.save(sorcier);
+
+		voleurDeTrihn.setNomMetier("Voleur de trihn");
+		voleurDeTrihn.setVoie("Voie de l'Autre");
+//		voleurDeTrihn.setSpecialisation(transfert);
+		voleurDeTrihn.setCasteLie(magiciens);
+		voleurDeTrihn.setDescription(
+				"Le Voleur de Trihn a mauvaise réputation. Quand il est allié, on apprécie sa compagnie et ses talents galvanisent le groupe. Mais lorsqu'il se présente en ennemi, il devient souvent la principale cible des mages adverses qui ne peuvent se permettre de se laisser voler leurs Trihns. Pour cette raison, le Voleur de Trihn garde généralement la nature de son métier secrète et préfère mentir sur sa spécialisation.");
+		voleurDeTrihn = metierRepository.save(voleurDeTrihn);
 
 //-------------------------------------------------------------------------------------------------------------------------
 //		REMPLISSAGE OBJET MOTIVATION
