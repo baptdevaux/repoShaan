@@ -4,7 +4,8 @@ import java.text.ParseException;
 
 import javax.persistence.EntityManagerFactory;
 
-import createurShaan.Application;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 import createurShaan.model.Acquis;
 import createurShaan.model.AlterationEtat;
 import createurShaan.model.AlterationPersonnage;
@@ -46,35 +47,32 @@ import createurShaan.repository.IRaceRepository;
 import createurShaan.repository.ISpecialisationAcquisRepository;
 import createurShaan.repository.ISpecialisationRepository;
 import createurShaan.repository.ITableDeJeuRepository;
-import createurShaan.repository.jpa.MotivationRepositoryJpa;
 
 public class DonneesPersonnage {
 	public static void main(String[] args) throws ParseException {
 
-		EntityManagerFactory emf = Application.getInstance().getEmf();
-		IAlterationPersonnageRepository alterationPersonnageRepository = Application.getInstance()
-				.getAlterationPersonnageRepo();
-		IJoueurRepository joueurRepository = Application.getInstance().getJoueurRepo();
-		IPeupleRepository peupleRepository = Application.getInstance().getPeupleRepo();
-		IPersonnageRepository personnageRepository = Application.getInstance().getPersonnageRepo();
-		IRaceRepository raceRepository = Application.getInstance().getRaceRepo();
-		IMetierRepository metierRepository = Application.getInstance().getMetierRepo();
-		ICasteRepository casteRepository = Application.getInstance().getCasteRepo();
-		IAlterationEtatRepository alterationEtatRepository = Application.getInstance().getAlterationEtatRepo();
-		ITableDeJeuRepository tableDeJeuRepository = Application.getInstance().getTableDeJeuRepo();
-		IDomainePersonnageRepository domainePersonnageRepository = Application.getInstance().getDomainePersonnageRepo();
-		IDomaineRepository domaineRepository = Application.getInstance().getDomaineRepo();
-		IBonusPersonnageRepository bonusPersonnageRepository = Application.getInstance().getBonusPersonageRepo();
-		IAcquisRepository acquisRepository = Application.getInstance().getAcquisRepo();
-		ISpecialisationRepository specialisationRepository = Application.getInstance().getSpecialisationRepo();
-		IMotivationRepository motivationRepository = Application.getInstance().getMotivationRepo();
-		IMotivationPersonnageRepository motivationPersonnageRepository = Application.getInstance()
-				.getMotivationPersonnageRepo();
-		IMotivationRepository motivRepository = Application.getInstance().getMotivationRepo();
-		IPouvoirPersonnageRepository pouvoirPersonnageRepository = Application.getInstance().getPouvoirPersonnageRepo();
-		IPouvoirRepository pouvoirRepository = Application.getInstance().getPouvoirRepo();
-		ISpecialisationAcquisRepository speAcquisRepository = Application.getInstance().getSpecialisationAcquisRepo();
-		IMaitreDuJeuRepository maitreDuJeuRepository = Application.getInstance().getMaitreDuJeuRepo();
+		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("application-context.xml");
+		IAlterationPersonnageRepository alterationPersonnageRepository = context.getBean(IAlterationPersonnageRepository.class);
+		IJoueurRepository joueurRepository = context.getBean(IJoueurRepository.class);
+		IPeupleRepository peupleRepository = context.getBean(IPeupleRepository.class);
+		IPersonnageRepository personnageRepository = context.getBean(IPersonnageRepository.class);
+		IRaceRepository raceRepository = context.getBean(IRaceRepository.class);
+		IMetierRepository metierRepository = context.getBean(IMetierRepository.class);
+		ICasteRepository casteRepository = context.getBean(ICasteRepository.class);
+		IAlterationEtatRepository alterationEtatRepository = context.getBean(IAlterationEtatRepository.class);
+		ITableDeJeuRepository tableDeJeuRepository = context.getBean(ITableDeJeuRepository.class);
+		IDomainePersonnageRepository domainePersonnageRepository = context.getBean(IDomainePersonnageRepository.class);
+		IDomaineRepository domaineRepository = context.getBean(IDomaineRepository.class);
+		IBonusPersonnageRepository bonusPersonnageRepository = context.getBean(IBonusPersonnageRepository.class);
+		IAcquisRepository acquisRepository = context.getBean(IAcquisRepository.class);
+		ISpecialisationRepository specialisationRepository = context.getBean(ISpecialisationRepository.class);
+		IMotivationRepository motivationRepository = context.getBean(IMotivationRepository.class);
+		IMotivationPersonnageRepository motivationPersonnageRepository = context.getBean(IMotivationPersonnageRepository.class);
+		IMotivationRepository motivRepository = context.getBean(IMotivationRepository.class);
+		IPouvoirPersonnageRepository pouvoirPersonnageRepository = context.getBean(IPouvoirPersonnageRepository.class);
+		IPouvoirRepository pouvoirRepository = context.getBean(IPouvoirRepository.class);
+		ISpecialisationAcquisRepository speAcquisRepository = context.getBean(ISpecialisationAcquisRepository.class);
+		IMaitreDuJeuRepository maitreDuJeuRepository = context.getBean(IMaitreDuJeuRepository.class);
 
 //-------------------------------------------------------------------------------------------------------------------------
 //		CREATION OBJET DOMAINE
@@ -225,7 +223,7 @@ public class DonneesPersonnage {
 		Metier medecin = new Metier();
 		Metier percepteur = new Metier();
 		Metier zoologue = new Metier();
-		Metier courtisant = new Metier();
+		Metier courtisan = new Metier();
 		Metier cyberien = new Metier();
 		Metier diplomate = new Metier();
 		Metier enseignant = new Metier();
@@ -235,6 +233,36 @@ public class DonneesPersonnage {
 		Metier prospecteur = new Metier();
 		Metier tenancier = new Metier();
 		Metier traducteur = new Metier();
+		Metier bateleur = new Metier();
+		Metier chanteur = new Metier();
+		Metier comedien = new Metier();
+		Metier costumier = new Metier();
+		Metier cuisinier = new Metier();
+		Metier danseur = new Metier();
+		Metier ecrivain = new Metier();
+		Metier evocateur = new Metier();
+		Metier musicien = new Metier();
+		Metier prestidigitateur = new Metier();
+		Metier ameVive = new Metier();
+		Metier chasseurDeSteles = new Metier();
+		Metier cultivateur = new Metier();
+		Metier eleveur = new Metier();
+		Metier gardeFou = new Metier();
+		Metier marcheursDeReves = new Metier();
+		Metier mentaliste = new Metier();
+		Metier prescient = new Metier();
+		Metier radiant = new Metier();
+		Metier telluriste = new Metier();
+		Metier arcanien = new Metier();
+		Metier conjurateur = new Metier();
+		Metier enchanteur = new Metier();
+		Metier illusionniste = new Metier();
+		Metier mageItinerant = new Metier();
+		Metier regenerateur = new Metier();
+		Metier revocateur = new Metier();
+		Metier shaman = new Metier();
+		Metier sorcier = new Metier();
+		Metier voleurDeTrihn = new Metier();
 
 //-------------------------------------------------------------------------------------------------------------------------
 //		CREATION OBJET MOTIVATION
@@ -1238,12 +1266,13 @@ public class DonneesPersonnage {
 				"Le Zoologue est un collectionneur, il passe son temps à collecter et mettre à jour toutes les informations liées à une espèce animale ou à un écosystème. Bon nombre de Zoologues disposent de petits talents artistiques qui leur permettent de dessiner ce qu'ils sont amenés à observer sur le terrain. Certains Zoologues se spécialisent dans la connaissance de certains types d'animaux, les prédateurs, les herbivores, les nomades, les poissons, les oiseaux, les amphibiens, les reptiles... Un Zoologue est aussi un peu vétérinaire et connait les premiers soins à apporter à un animal blessé, et les gestes à effectuer pour sauver des vies. Assez impulsif dans son comportement, le Zoologue accorde beaucoup d'importance à son odorat : il peut ainsi récupérer des informations que les autres sens ne lui permettent pas de saisir. C'est pour cette raison que les meilleurs Zoologues sont Woons.");
 		zoologue = metierRepository.save(zoologue);
 
-		courtisant.setNomMetier("Courtisant");
-		courtisant.setVoie("Voie du feu");
-		courtisant.setSpecialisation(seduction);
-		courtisant.setDescription(
+		courtisan.setNomMetier("Courtisan");
+		courtisan.setVoie("Voie du feu");
+		courtisan.setSpecialisation(seduction);
+		courtisan.setCasteLie(negociants);
+		courtisan.setDescription(
 				"Les Courtisans savent obtenir tout ce qu'ils désirent en jouant avec les instincts primaires des individus. Se créer un personnage qui fera rêver son ou sa partenaire est pour le courtisan une habitude qu'il n'est pas toujours facile à tenir, surtout lorsque les conquêtes sont nombreuses. Les Courtisans œuvrent principalement auprès des Notables et des personnes de pouvoir, afin d'obtenir des informations ou de l'argent, selon qu'ils agissent pour des commanditaires ou pour leur propre compte. Certain Courtisans aiment juste séduire pour le plaisir, car ils se sentent ainsi désirés et donc exister. Les Courtisans savent enivrer les Corps, bousculer les Esprits et cueillir les Âmes. Le vrai talent du Courtisan est de ne jamais rompre, de s'arranger pour que les personnes qu'il a séduites reste toujours dans l'attente d'une éventuelle poursuite de la relation. C'est ce qui prend le plus de temps aux Courtisans : entretenir la flamme de ceux qu'ils ont envoûtés afin que l'amour ne se transforme jamais en haine... Mais rares sont ceux qui y arrivent et pour la plupart des Courtisans et Courtisanes, il y a des villes au sein desquelles ils ne peuvent plus mettre les pieds, sous peine d'être arrêtés sur-le-champ par un potentat local qui se sera senti trahi...");
-		courtisant = metierRepository.save(courtisant);
+		courtisan = metierRepository.save(courtisan);
 
 		cyberien.setNomMetier("Cybérien");
 		cyberien.setVoie("Voie de l'Objet");
@@ -1307,6 +1336,246 @@ public class DonneesPersonnage {
 		traducteur.setDescription(
 				"Le Traducteur connaît les diverses langues raciales héossiennes et peut comprendre la plupart des dialectes locaux en en comprenant les origines linguistiques. Indispensable pour toute transaction personnalisée, le Traducteur dispose d'un grand pouvoir car il peut selon ses intérêts favoriser l'une ou l'autre partie. C'est pour cela que chaque partie dispose de son Traducteur afin d'être sûr de ce qui est traduit. Mais il n'est pas rare que les Traducteurs de parties adverses se mettent d'accord au départ de l'issue d'une transaction et se répartissent ensuite les bénéfices de leurs petites arnaques. Pour éviter cela, le Traducteur doit prêter serment devant le Cercle des Réalités afin de pouvoir exercer son métier sans susciter la méfiance de ses interlocuteurs.");
 		traducteur = metierRepository.save(traducteur);
+
+		bateleur.setNomMetier("Bateleur");
+		bateleur.setVoie("Voie du Feu");
+		bateleur.setSpecialisation(artsDuFeu);
+		bateleur.setCasteLie(artistes);
+		bateleur.setDescription(
+				"Le Bateleur est un fougueux. Artiste des rues, il livre un combat permanent contre lui-même afin de prouver à la face du monde qu'il existe. Le Feu est son élément et il le maîtrise à la perfection, que ce soit pour le cracher, l'utiliser pour des éclairages subtils ou pour concevoir des feux d'artifice grandiloquents et mémorables. Le Bateleur a de la gouaille et il harangue les passants afin qu'ils assistent au spectacle de sa troupe, quitte à hausser le ton...");
+		bateleur = metierRepository.save(bateleur);
+
+		chanteur.setNomMetier("Chanteur");
+		chanteur.setVoie("Voie de l'Air");
+		chanteur.setSpecialisation(chant);
+		chanteur.setCasteLie(artistes);
+		chanteur.setDescription(
+				"Le Chanteur est son propre instrument. Ses vocalises entretiennent sa voix, chose qu'il a de plus précieux au monde.... Avoir une extinction de voix constitue pour un Chanteur le supplice le plus traumatisant. Certains ne s'en sont même jamais remis et sont devenus fous. Mais lorsque le Chanteur est en pleine possession de ses moyens, il sait qu'il dispose d'une force mystique, qui s'affranchit du langage pour communier directement avec l'Âme. Il peut alors ne faire qu'un avec son public et l'emmener vers des destinations gorgées de béatitude et d'émotions.... Les Chanteurs sont les artistes les plus appréciés et nombreux sont ceux qui disposent d'un statut de Notable et d'une cour de sympathisants.");
+		chanteur = metierRepository.save(chanteur);
+
+		comedien.setNomMetier("Comédien");
+		comedien.setVoie("Voie de l'Autre");
+		comedien.setSpecialisation(comedie);
+		comedien.setCasteLie(artistes);
+		comedien.setDescription(
+				"Les Comédiens ont toujours été appréciés du public, mais il ne disposent pas de l'aura mystique des Chanteurs. Le Comédien oscille entre tragédie, comédie et a parfois du mal à dissocier le réel de son imaginaire. Le Comédien est habitué à vivre en troupe et à sillonner les routes pour ses diverses représentations. Mais la vie de Comédien est souvent faite de solitude, car une fois la tournée terminée, la troupe se défait et les Comédiens peuvent ne jamais se revoir. C'est pour cela que les Comédiens sont toujours extrêmement chaleureux car ils savent qu'ils ont peu de temps pour être efficaces et bien s'entendre, afin d’assurer la réussite du spectacle. La présence d'un Comédien au sein d'un Shaani est toujours le gage d'une bonne humeur communicative.");
+		comedien = metierRepository.save(comedien);
+
+		costumier.setNomMetier("Costumier");
+		costumier.setVoie("Voie des Limbes");
+		costumier.setSpecialisation(deguisement);
+		costumier.setCasteLie(artistes);
+		costumier.setDescription(
+				"Le Costumier mène une double vie, à la fois styliste de mode, il maîtrise toutes les techniques de confection du tissu, maîtrise la science des étoffes et l'histoire du costume. Ses talents sont indispensables à toute création théâtrale ou autre spectacle vivant. Mais en secret, le Costumier se fait aussi créateur de déguisements en vue de tromper la sagacité des individus. Il sait confectionner des masques plus vrais que nature et pourrait faire passer un Kelwin pour un Woon.... Tous les services secrets, de la Résistance aux agents du Nouvel Ordre, paient à prix d'or les services des Costumiers qui leur permettent de donner n'importe quelle apparence à n'importe qui...");
+		costumier = metierRepository.save(costumier);
+
+		cuisinier.setNomMetier("Cuisinier");
+		cuisinier.setVoie("Voie de la Terre");
+		cuisinier.setSpecialisation(gastronomie);
+		cuisinier.setCasteLie(artistes);
+		cuisinier.setDescription(
+				"La gastronomie héossienne constitue un art des plus illustres. Chaque année, nombreux sont les tournois qui mettent en concurrence les plus grands chefs gastronomiques afin que soit élu le meilleur Maître des saveurs. La compétition se déroule sur plusieurs semaines et des milliers de cuisiniers affluent de toute l’Héossie pour y participer. S’enchainent alors des plats mêlant toutes sortes de saveurs, des plus douces aux plus amères, compensées par des notes relevées et sucrées. Le travail sur les textures, les matières, les couleurs, la composition est également essentiel, et certains Cuisiniers ont recours aux services d’Évocateurs afin de sublimer leurs plats. Bon vivant par excellence, le Cuisinier est un compagnon de route très recherché car avec peu d’ingrédients, il est capable de faire de grands festins. La prise d’embonpoint est quasiment inévitable et ce dans la mesure où le Cuisinier, avant de servir ce qu’il a préparé, se fait un devoir de tout goûter (pour être certain des saveurs qu’il va proposer à ses convives). L’art de la cuisine héossienne suit la symbolique des Trihns, le salé correspond au Corps, le sucré à l’Âme et l’amer à l’Esprit. L’acidité, quant à elle, est plus liée à la Nécrose.");
+		cuisinier = metierRepository.save(cuisinier);
+
+		danseur.setNomMetier("Danseur");
+		danseur.setVoie("Voie de l'Animal");
+		danseur.setSpecialisation(langageDuCorps);
+		danseur.setCasteLie(artistes);
+		danseur.setDescription(
+				"La danse est ce qui relie l'Âme au Corps. Bouger son Corps, c'est élever son Âme... Le Danseur, en communion avec les forces telluriques ancestrales, communique ses émotions à son public. Son langage est universel et perceptible, depuis le fin fond des régions les plus primitives de l'Héossie, aux diverses cours des Grandes Familles et autres Notables. Plutôt de nature solitaire, le Danseur travaille aussi en troupe et pratique la vie en communauté, tout comme les Comédiens. Il a le rythme dans la peau, dans le sang et est souvent à la recherche du Musicien avec qui il pourra créer le spectacle ultime où musique et danse ne font plus qu'un.");
+		danseur = metierRepository.save(danseur);
+
+		ecrivain.setNomMetier("Ecrivain");
+		ecrivain.setVoie("Voie du Végétal");
+		ecrivain.setSpecialisation(lettres);
+		ecrivain.setCasteLie(artistes);
+		ecrivain.setDescription(
+				"L'Écrivain est un jongleur de mots. Passé maître dans l'art de les agencer, il sait créer l'émotion, faire passer du rire aux larmes, raconter des histoires extraordinaires ou faire des descriptions minutieuses... Son imaginaire fertile et sa sensibilité à fleur de peau lui permettent de capter ce que les gens habituellement ne voient pas. Se faire éditer et toucher le plus grand nombre constitue pour l'Écrivain une sorte de quête ultime car rares sont ceux à y être parvenus et à vivre correctement de leur art. L'Écrivain est un solitaire qui suit deux cycles de vie bien distincts. Le premier est un cycle d'imprégnation, où l'Écrivain va rechercher à vivre un maximum d'aventures et à accumuler de nombreuses expériences. Le second cycle est fait de recueillement et de production intensive où l'écrivain va coucher sur papier tout ce que son Âme lui dicte. Durant cette période, l'Écrivain est souvent de mauvaise humeur et asocial car il obtient rarement du premier coup le résultat qu'il espère. Certains Écrivains peuvent passer d'un cycle à l'autre dans une même journée...");
+		ecrivain = metierRepository.save(ecrivain);
+
+		evocateur.setNomMetier("Evocateur");
+		evocateur.setVoie("Voie de l'Eau");
+		evocateur.setSpecialisation(artsAppliques);
+		evocateur.setCasteLie(artistes);
+		evocateur.setDescription(
+				"Souvent ermite et retranché dans son atelier, l'Évocateur oscille entre deux mondes : celui de sa pensée et celui de son inconscient. Peu importe le support, peinture, dessin, sculpture, il effectue un voyage intérieur pour tenter d'y trouver ce qui lui permettra de créer une œuvre universelle. Souvent dépressif, l'Évocateur ne cesse de dire que l'on ne peut créer en étant heureux.... Hyper sensible, il est sans cesse meurtri par la violence du quotidien. Il absorbe cette violence, la canalise et la transcende en une évocation picturale ou en volume chargé de trouver son public. Mais malheureusement, les Évocateurs restent souvent des artistes incompris.");
+		evocateur = metierRepository.save(evocateur);
+
+		musicien.setNomMetier("Musicien");
+		musicien.setVoie("Voie du Moi");
+		musicien.setSpecialisation(musique);
+		musicien.setCasteLie(artistes);
+		musicien.setDescription(
+				"On dit que la musique adoucit les mœurs, c'est une réalité. Le Musicien est une sorte de médecin de l'Âme. Dès qu'il se met à jouer, les tensions se figent, les inimitiés cessent. Le temps d'un morceau, les pires ennemis peuvent faire une trêve pour l'écouter ensemble.... Il existe une hiérarchie au sein des Musiciens, du simple interprète au compositeur, en passant par le virtuose ou le chef d'orchestre, chacun a sa place, mais doit la tenir... Il n'est pas bien vu de changer d'étiquette. La plus grande injustice pour les Musiciens est liée au temps. Certains voient leurs compositions traverser les âges là où d'autres ne seront l'auteur que d'une musique de mode, oubliée et chassée par la suivante...");
+		musicien = metierRepository.save(musicien);
+
+		prestidigitateur.setNomMetier("Prestidigitateur");
+		prestidigitateur.setVoie("Voie de l'Objet");
+		prestidigitateur.setSpecialisation(trucages);
+		prestidigitateur.setCasteLie(artistes);
+		prestidigitateur.setDescription(
+				"Les Prestidigitateurs sont experts pour tromper l'attention de leur public et leur faire croire que ce qui n'est qu'un simple tour de passe-passe est le fruit d'une magie prodigieuse. Les Prestidigitateurs peuvent faire croire à la disparition ou à l'apparition d'objets divers de taille plus ou moins importante. Le Prestidigitateur n'est pas toujours honnête et se sert souvent de ses talents pour tricher aux jeux d'argent et ruiner ses adversaires. Beaucoup de Prestidigitateurs sont ainsi rapidement devenus des Notables. Mais ces Notables, lorsqu'ils tombent sur plus forts qu'eux, perdent très vite leur statut et peuvent finir dans la misère, brisés...");
+		prestidigitateur = metierRepository.save(prestidigitateur);
+
+		ameVive.setNomMetier("Ame-vive");
+		ameVive.setVoie("Voie du Moi");
+//		ameVive.setSpecialisation(soinsDeLAme);
+		ameVive.setCasteLie(shaanistes);
+		ameVive.setDescription(
+				"Les Âmes-vives sont les compagnons préférés de tous ceux qui doivent approcher la Nécrose de près ou de loin, ou qui peuvent être amenés à subir des effets nécrotiques... Cela fait beaucoup de monde en fait, si bien que les Âmes-vives sont très souvent sollicités, trop estiment-ils... Car les Âmes-vives ne sont pas des individus très sociables et il faut souvent déployer des trésors d'argumentation afin de les convaincre de bien vouloir exercer leurs compétences sur quelqu'un. Une Âme-vive, individualiste comme elle est, cherchera toujours un prétexte ou tentera de minimiser la situation pour ne pas avoir à rendre service... Mais la plupart des gens passent outre ce côté un peu antipathique car pour les Héossiens, l'Âme reste le Trihn le plus précieux pour éviter de passer du côté des Limbes...");
+		ameVive = metierRepository.save(ameVive);
+
+		chasseurDeSteles.setNomMetier("Chasseur de stèles");
+		chasseurDeSteles.setVoie("Voie de l'Objet");
+//		chasseurDeSteles.setSpecialisation(embiose);
+		chasseurDeSteles.setCasteLie(shaanistes);
+		chasseurDeSteles.setDescription(
+				"Les Chasseurs de stèles parcourent le monde à la recherche de stèles d'Embiose, afin de pratiquer le fameux rituel qui leur permet d'augmenter rapidement leurs capacités. Ils sont souvent de cheville avec les Traqueurs de stèles qui connaissent de très nombreux emplacements de stèles et les réseaux auxquels elles sont liées. Mais certains Chasseurs de stèles se nécrosent rapidement et pour endiguer le phénomène, voyagent avec des Âmes-vives afin de limiter la casse... Les Chasseurs de stèles ont du mal à se satisfaire de ce qu'ils ont : toujours portés vers l'avenir, ils ont souvent du mal à concilier le Shaan avec leurs aspirations.");
+		chasseurDeSteles = metierRepository.save(chasseurDeSteles);
+
+		cultivateur.setNomMetier("Cultivateur");
+		cultivateur.setVoie("Voie du Végétal");
+//		cultivateur.setSpecialisation(empathieVegetale);
+		cultivateur.setCasteLie(shaanistes);
+		cultivateur.setDescription(
+				"Propriétaire terrien ou simple vacataire, le Cultivateur passe sa vie dans les champs à semer et récolter des céréales, des fruits, des légumes ou des plantes aux vertus extraordinaires. Le Cultivateur peut parler au règne végétal et ainsi obtenir de précieuses informations sur un convoi qui aurait traversé une forêt ou bien sur les causes d'une projection de pollen empoisonné... Moins instruit qu'un Botaniste, le Cultivateur agit par instinct et suit le cycle des saisons de façon innée.");
+		cultivateur = metierRepository.save(cultivateur);
+
+		eleveur.setNomMetier("Eleveur");
+		eleveur.setVoie("Voie de l'Animal");
+//		eleveur.setSpecialisation(empathieAnimale);
+		eleveur.setCasteLie(shaanistes);
+		eleveur.setDescription(
+				"La plupart des Éleveurs choisissent une seule espèce animale à élever, que ce soit pour leur viande, leur laine, leur cuir, leur lait, leurs cornes, leur graisse, leur sang ou toute autre matière utile... Ce peuvent être des animaux d'agrément, des bêtes de somme, des armimales, des montures ou des animaux pour le spectacle... Les Éleveurs prennent un grand soin à choisir les mâles et les femelles afin de pouvoir garantir un bon pedigree à leurs acheteurs. Les Éleveurs sont souvent en relation avec des Novateurs spécialisés qui s'occupent de récupérer les matières premières de l'animal. Normalement, les Éleveurs ne s'attachent pas à leurs animaux, afin de ne pas souffrir lorsque ces derniers les quittent d’une façon ou d’une autre. Mais certains tissent des liens empathiques très forts avec un animal : ce dernier perd alors son statut de bête pour gagner celui de compagnon et suivra l'Éleveur durant toute sa vie.");
+		eleveur = metierRepository.save(eleveur);
+
+		gardeFou.setNomMetier("Garde-fou");
+		gardeFou.setVoie("Voie de l'Air");
+//		gardeFou.setSpecialisation(soinsDeLEsprit);
+		gardeFou.setCasteLie(shaanistes);
+		gardeFou.setDescription(
+				"Les Garde-fous aiment explorer les limites de ce qu'un cerveau peut accepter sans tomber dans la folie, tout en cherchant à repousser ces limites toujours plus loin... Pour cela, ils recherchent les situations les plus extrêmes et les environnements les plus déstabilisants... Adeptes des expéditions au sein de ruines oubliées, de forteresses hantées, et autres territoires terrifiants, les Garde-fous ont appris à dompter leur peur et celle de leurs proches. Peu appréciés des Négociants, les Garde-fous sont respectés par toutes les autres castes car ils permettent par leur simple présence de rassurer tous les membres d'un convoi qui doit se rendre dans des contrées hostiles.");
+		gardeFou = metierRepository.save(gardeFou);
+
+		marcheursDeReves.setNomMetier("Marcheurs de rêves");
+		marcheursDeReves.setVoie("Voie des Limbes");
+//		marcheursDeReves.setSpecialisation(reve);
+		marcheursDeReves.setCasteLie(shaanistes);
+		marcheursDeReves.setDescription(
+				"Les Marcheurs de rêves sont des traqueurs de songes nécrotiques. Leur capacité leur permet de résister aux assauts des cauchemars et de leur porter des attaques décisives. Les Marcheurs de rêves peuvent aussi envoyer des messages à ceux qui dorment, quel que soit l'endroit où ils se trouvent... Ils constituent ainsi un véritable rempart contre les empires nécrosiens qui terrorisent les populations dans leur sommeil. Les Marcheurs de rêves sont souvent accueillis en héros où qu'ils aillent, car la peur du nécrosien reste vivace dans chaque Esprit...");
+		marcheursDeReves = metierRepository.save(marcheursDeReves);
+
+		mentaliste.setNomMetier("Mentaliste");
+		mentaliste.setVoie("Voie de l'Autre");
+//		mentaliste.setSpecialisation(empathieAntheenne);
+		mentaliste.setCasteLie(shaanistes);
+		mentaliste.setDescription(
+				"Les Mentalistes font partie des Shaanistes les plus appréciés au sein de la population héossienne. Toujours de bon conseil, ils connaissent parfaitement la psychologie anthéenne avec laquelle ils jouent pour tirer le meilleur parti de chaque individu, afin de créer de bonnes synergies entre les Peuples. Le Mentaliste ne perd jamais son sang-froid et aime beaucoup parler par enigmes ou métaphores : quelle que soit la situation, qu’il se trouve dans une Guilde sévère avec ses employés, ou dans une taverne sordide,. Il sait user de la rhétorique pour calmer les Esprits échauffés ou au contraire galvaniser ceux qui doutent d’eux. Le Mentaliste sait déchiffrer le moindre regard, le moindre geste et reste à l’affut de tous les signes que l’on émet inconsciemment...");
+		mentaliste = metierRepository.save(mentaliste);
+
+		prescient.setNomMetier("Prescient");
+		prescient.setVoie("Voie de l'Eau");
+//		prescient.setSpecialisation(intuition);
+		prescient.setCasteLie(shaanistes);
+		prescient.setDescription(
+				"Le Prescient vit dans un autre monde, fait de symboles et d'inspiration. Il a du flair et sait s'en servir. Il peut ainsi éviter de se faire surprendre et sentir lorsque l'on cherche à l'embobiner. L'intuition du Prescient est très utile dans toutes sortes de domaines, de la navigation, à la diplomatie en passant par la stratégie militaire ou encore la gastronomie... Le Prescient sait toujours ce qu'il doit faire et où il doit aller, cette aptitude en fait souvent un leader respecté.");
+		prescient = metierRepository.save(prescient);
+
+		radiant.setNomMetier("Radiant");
+		radiant.setVoie("Voie de du Feu");
+//		radiant.setSpecialisation(soinsDuCorps);
+		radiant.setCasteLie(shaanistes);
+		radiant.setDescription(
+				"Il est coutume de dire que les Radiants ont du feu qui coulent dans les veines... Ils ont toujours chaud, où qu'ils se trouvent, cette chaleur surnaturelle leur permet lorsqu'ils apposent les mains sur quelqu'un de soigner le Corps. Contrairement aux Âmes-vives qui ont tendance à se faire prier pour faire usage de leurs compétences, les Radiants, à l'inverse, passent leur temps à demander autour d'eux si quelqu'un a besoin d'un soin, même si cela n'est pas indispensable. Ainsi, souvent, devant l'insistance des Radiants, on accepte leur aide pour ensuite avoir la paix. C'est en combat que les Radiants sont les plus épanouis, car là, ils peuvent exercer leur talent de nombreuses fois sans avoir à insister. Souvent, même, on le leur demande, et cela les emplit de joie, même si la situation s'avère critique...");
+		radiant = metierRepository.save(radiant);
+
+		telluriste.setNomMetier("Telluriste");
+		telluriste.setVoie("Voie de la Terre");
+//		telluriste.setSpecialisation(empathieMinerale);
+		telluriste.setCasteLie(shaanistes);
+		telluriste.setDescription(
+				"Le Telluriste affectionne particulièrement les souterrains, les grottes et autres habitats troglodytes. En communion avec la pierre, la roche et la terre, il peut ressentir les micro-secousses sismiques qui agitent le continent en permanence mais auxquelles personne ne prête aucune attention. Pourtant, c'est grâce à ces secousses que le Telluriste peut s'orienter, connaître la nature d'un terrain ou d'un gaz. Mais ce qui rend le Telluriste particulièrement intéressant, c'est le lien privilégié qu'il entretient avec la Trihnite, grâce auquel il peut communiquer avec une porte de transfert pour obtenir des informations sur les personnes qui l'ont traversée...");
+		telluriste = metierRepository.save(telluriste);
+
+		arcanien.setNomMetier("Arcanien");
+		arcanien.setVoie("Voie du Végétal");
+//		arcanien.setSpecialisation(arcanes);
+		arcanien.setCasteLie(magiciens);
+		arcanien.setDescription(
+				"Les Arcaniens sont de vrais rats de bibliothèque, scrutant, archivant, lisant et relisant cent fois les mêmes passages de grands grimoires séculaires afin d'en débusquer le sens caché. Les Arcaniens connaissent toutes les formes de magie et peuvent avoir des notions dans chacune d'elles.");
+		arcanien = metierRepository.save(arcanien);
+
+		conjurateur.setNomMetier("Conjurateur");
+		conjurateur.setVoie("Voie des Limbes");
+//		conjurateur.setSpecialisation(conjuration);
+		conjurateur.setCasteLie(magiciens);
+		conjurateur.setDescription(
+				"La peau tannée, craquelée, le regard noir, les Conjurateurs sont entre deux mondes, celui des Limbes et l'Héossie. Au bord du gouffre sans jamais tomber, ils arpentent les terres nécrotiques afin de les nettoyer de leurs Âmes corrompues. La vie et la mort sont pour eux sans importance, ils savent que l'un ne va pas sans l'autre et que les deux forment un cycle que l'on peut rompre ou accélérer à force de rigueur de de travail.");
+		conjurateur = metierRepository.save(conjurateur);
+
+		enchanteur.setNomMetier("Enchanteur");
+		enchanteur.setVoie("Voie de l'Objet");
+//		enchanteur.setSpecialisation(enchantement);
+		enchanteur.setCasteLie(magiciens);
+		enchanteur.setDescription(
+				"Sages et laborieux, les Enchanteurs déroutent les gens par leur lenteur apparente. Mais ne vous y trompez pas, c'est une véritable tornade qui souffle dans la tête de ces individus. Un peu à part, le métier des Enchanteurs compte le plus de vieillards parmi ses membres. Il faut dire que la voie de l'enchantement est longue et rigoureuse. Elle laisse peu de temps aux autres activités.");
+		enchanteur = metierRepository.save(enchanteur);
+
+		illusionniste.setNomMetier("Illusionniste");
+		illusionniste.setVoie("Voie de l'Eau");
+//		illusionniste.setSpecialisation(voile);
+		illusionniste.setCasteLie(magiciens);
+		illusionniste.setDescription(
+				"Ce sont les maîtres de la suggestion et de la discrétion. Les Illusionnistes savent camoufler les actes magiques afin qu'ils soient invisibles au commun des mortels. Privilégiant les sorts fondés sur la perception, ils peuvent avoir la capacité de faire entrer quelqu'un dans une monde virtuel et de l'y piéger... Du temps de l'Héossie flamboyante, les Illusionnistes avaient un statut très important au sein de la population. Ils permettaient aux gens de se divertir et de quitter le quotidien le temps d'un \"rêve éveillé\". Maintenant, de nombreux Illusionnistes gagnent leur vie en flattant les sens de gouverneurs humains et nécrosiens, trop heureux qu'il n'y ait pas d'accoutumance à ce moyen de quitter la réalité.");
+		illusionniste = metierRepository.save(illusionniste);
+
+		mageItinerant.setNomMetier("Mage itinerant");
+		mageItinerant.setVoie("Voie du feu");
+//		mageItinerant.setSpecialisation(incandescence);
+		mageItinerant.setCasteLie(magiciens);
+		mageItinerant.setDescription(
+				"Les Mages itinérants passent leur vie sur les routes afin de proposer leurs services à ceux qui en ont besoin. Habitués à vivre en extérieur, ils aiment voyager de nuit afin d'optimiser leurs déplacements. Leur spécialisation leur permet de voir dans l'obscurité et de toujours avoir un feu de camp à disposition. D'un tempérament vif, ils ont souvent tendance à s'emporter pour pas grand-chose.");
+		mageItinerant = metierRepository.save(mageItinerant);
+
+		regenerateur.setNomMetier("Régénérateur");
+		regenerateur.setVoie("Voie de la Terre");
+//		regenerateur.setSpecialisation(regeneration);
+		regenerateur.setCasteLie(magiciens);
+		regenerateur.setDescription(
+				"Les Régénérateurs privilégient les Sorts de guérison afin de pouvoir subvenir rapidement aux besoins de leurs alliés blessés qui ont été victimes de traumatismes physiques, de violentes émotions ou de chocs psychologiques graves. Leur capacité à se régénérer les poussent à prendre soin des autres et à développer des Sorts de guérison ou d’autres Spécialisations de soins. Véritables médecins du Corps, de l’Âme et de l’Esprit, les Régénérateurs sont des compagnons indispensables pour les aventures dangereuses qui risquent de mettre en péril la santé de leurs alliés.");
+		regenerateur = metierRepository.save(regenerateur);
+
+		revocateur.setNomMetier("Révocateur");
+		revocateur.setVoie("Voie du Moi");
+//		revocateur.setSpecialisation(defenseMagique);
+		revocateur.setCasteLie(magiciens);
+		revocateur.setDescription(
+				"Passé maître dans l'art de se protéger des attaques magiques, les Révocateurs sont très appréciés des membres des autres castes. On peut même dire que c'est le métier le plus prisé de tous, tant la magie peut représenter une force de frappe redoutable et sur de nombreuses cibles. Les Révocateurs, d'un tempérament calme et posé, n'agissent jamais à la légère et préfèrent toujours être certains du type d'attaque dont il faut se protéger afin d'être le plus efficace possible : malheureusement il peut arriver que cette inertie soit fatale...");
+		revocateur = metierRepository.save(revocateur);
+
+		shaman.setNomMetier("Shaman");
+		shaman.setVoie("Voie de l'Animal");
+//		shaman.setSpecialisation(empathieMinerale);
+		shaman.setCasteLie(magiciens);
+		shaman.setDescription(
+				"En communion avec les Trihns, le Shaman sait les invoquer afin de les utiliser pour lancer des sortilèges. Lorsqu'un Trihn est utilisé, il donne juste de sa puissance au magicien, mais n'est pas détruit, il retourne ensuite dans son plan d'origine. Les Shamans connaissent bien les Trihns et restent particulièrement réceptifs aux besoins du Trihneï...");
+		shaman = metierRepository.save(shaman);
+
+		sorcier.setNomMetier("Sorcier");
+		sorcier.setVoie("Voie de l'Air");
+//		sorcier.setSpecialisation(maitriseDesSchemes);
+		sorcier.setCasteLie(magiciens);
+		sorcier.setDescription(
+				"Le Sorcier vit en ermite, se consacrant à la lecture et à l'apprentissage du langage des schèmes. Ayant souvent à sa disposition toutes sortes de grimoires où sont consignés quantité de Sorts sous forme de schèmes, il a la possibilité de créer lui-même ses propres Sorts et de les consigner sur papier.");
+		sorcier = metierRepository.save(sorcier);
+
+		voleurDeTrihn.setNomMetier("Voleur de trihn");
+		voleurDeTrihn.setVoie("Voie de l'Autre");
+//		voleurDeTrihn.setSpecialisation(transfert);
+		voleurDeTrihn.setCasteLie(magiciens);
+		voleurDeTrihn.setDescription(
+				"Le Voleur de Trihn a mauvaise réputation. Quand il est allié, on apprécie sa compagnie et ses talents galvanisent le groupe. Mais lorsqu'il se présente en ennemi, il devient souvent la principale cible des mages adverses qui ne peuvent se permettre de se laisser voler leurs Trihns. Pour cette raison, le Voleur de Trihn garde généralement la nature de son métier secrète et préfère mentir sur sa spécialisation.");
+		voleurDeTrihn = metierRepository.save(voleurDeTrihn);
 
 //-------------------------------------------------------------------------------------------------------------------------
 //		REMPLISSAGE OBJET MOTIVATION

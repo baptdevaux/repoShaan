@@ -1,7 +1,9 @@
 package createurShaan.repository;
 
+import org.springframework.data.jpa.repository.JpaRepository;
+
 import createurShaan.model.Joueur;
 
-public interface IJoueurRepository extends IRepository<Joueur, Long>{
+public interface IJoueurRepository extends JpaRepository<Joueur, Long>{
 
 }

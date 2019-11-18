@@ -1,6 +1,8 @@
 package createurShaan.repository;
 
+import org.springframework.data.jpa.repository.JpaRepository;
+
 import createurShaan.model.MotivationPersonnage;
-public interface IMotivationPersonnageRepository extends IRepository<MotivationPersonnage, Long>{
+public interface IMotivationPersonnageRepository extends JpaRepository<MotivationPersonnage, Long>{
 
 }
