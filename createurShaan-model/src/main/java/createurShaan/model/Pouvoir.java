@@ -35,14 +35,16 @@ public class Pouvoir {
 	@Column
 	private String cible;
 	@Column
-	private Integer nbCible;
+	private String nbCible;
 	@Column
 	private String typeDegat;
 	@Column
 	private String duree;
 	@Column
 	private String cout;
-	@Column (length = 500)
+	@Column
+	private String degats;
+	@Column (length = 5000)
 	private String description;
 	
 	@ManyToOne
@@ -55,6 +57,14 @@ public class Pouvoir {
 
 	public void setId(Long id) {
 		this.id = id;
+	}
+
+	public String getDegats() {
+		return degats;
+	}
+
+	public void setDegats(String degats) {
+		this.degats = degats;
 	}
 
 	public Integer getVersion() {
@@ -129,12 +139,12 @@ public class Pouvoir {
 		this.cible = cible;
 	}
 
-	public Integer getNbCible() {
+	public String getNbCible() {
 		return nbCible;
 	}
 
-	public void setNbCible(Integer nbCible) {
-		this.nbCible = nbCible;
+	public void setNbCible(String string) {
+		this.nbCible = string;
 	}
 
 	public String getTypeDegat() {
