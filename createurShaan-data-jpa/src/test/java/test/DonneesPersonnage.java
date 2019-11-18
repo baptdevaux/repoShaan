@@ -952,10 +952,65 @@ public class DonneesPersonnage {
 		percerMysteres.setDomaineLie(magie);
 		percerMysteres = motivationRepository.save(percerMysteres);
 
-		charmer.setNomMotivation("");
-		charmer.setDescription(".");
-		charmer.setDomaineLie(arts);
-		charmer = motivationRepository.save(charmer);
+		communier.setNomMotivation("Communier avec d'autres élémentaliste");
+		communier.setDescription("Vous parcourez le monde à la recherche de Maîtres ou de Disciples partageant la même foi en votre Élément afin d’entrer en communion avec eux. C’est grâce à cette dernière que vous pouvez vous ressourcer, devenir meilleur. Les Élémentalistes motivés par la communion sont plus tolérants que les autres et partagent de nombreux points de vue avec les Shaanistes..");
+		communier.setDomaineLie(rituels);
+		communier = motivationRepository.save(communier);
+		
+		progresserDogme.setNomMotivation("Progresser au sein de son dogme");
+		progresserDogme.setDescription("Vous expérimentez les voies internes de votre dogme et aspirez à progresser dans la symbiose avec votre Élément. Vous êtes enclin à faire de multiples expériences, braver de nombreux dangers afin de tester votre foi. Au moindre signe de faiblesse, vous redoublez d’efforts pour chercher à vous transcender. Vous avez parfois tendance à provoquer des situations qui pourraient vous mettre en mauvaise posture, rien que pour voir si vous êtes dignes de votre Élément..");
+		progresserDogme.setDomaineLie(rituels);
+		progresserDogme = motivationRepository.save(progresserDogme);
+		
+		confronterElement.setNomMotivation("Se confronter à son Elément");
+		confronterElement.setDescription("Vous cherchez à tout prix à défier votre Élément pour faire Corps avec lui. Selon la nature de celui-ci, vous vous imprégnez de tout ce qui caractérise votre Élément (couleur symbolique, attitude, lieu, manifestation naturelle,...) afin de mieux entrer en contact avec lui. Investi de votre Élément, vous voyagez afin de vous confronter aux manifestations naturelles de celui-ci. Par exemple, un Élémentaliste du Feu parcourra le monde à la recherche de brasiers ou d’incendies auxquels il pourrait se confronter, un Élémentaliste de l’Objet se plaira à arpenter les Cités technologiques afin d’en maîtriser tous les rouages, un Élémentaliste de l’Eau sillonnera les mers en espérant être pris dans des tempêtes et ainsi éprouver son pouvoir sur les eaux,....");
+		confronterElement.setDomaineLie(arts);
+		confronterElement = motivationRepository.save(confronterElement);
+		
+		explorer.setNomMotivation("Explorer un territoire");
+		explorer.setDescription("Connaître le territoire qui nous entoure et savoir en exploiter les moindres parcelles constitue l’une des Motivations les plus ancestrales, du temps où les peuplades primitives vivaient en Héossie, afin de pouvoir mieux se protéger en cas d’agression, de repérer des ressources potentielles, ou de s’adapter à des conditions climatiques inhabituelles..");
+		explorer.setDomaineLie(survie);
+		explorer = motivationRepository.save(explorer);
+		
+		construireVoyage.setNomMotivation("Se construire par le voyage");
+		construireVoyage.setDescription("Peu importe la destination, ce qui compte, c’est le voyage. C’est en ce dernier que réside toute l’expérience qu’il est possible d’acquérir lors de situations extrêmes. Amener vos compagnons ou des clients à bon port vous procure une grande fierté et un sentiment d’harmonie avec l’environnement. Les voyages créent des souvenirs, les souvenirs engendrent l’expérience, l’expérience forge la compétence, la compétence crée le statut, qui peut donner lieu à du Prestige. Une fois connu, vous pourrez raconter votre histoire et donner envie à vos auditeurs de voyager à leur tour..");
+		construireVoyage.setDomaineLie(survie);
+		construireVoyage = motivationRepository.save(construireVoyage);
+		
+		nourrir.setNomMotivation("Se nourrir");
+		nourrir.setDescription("C’est la Motivation la plus essentielle. La plupart du temps, la faim est comblée car vous savez vous organiser. Vous êtes censés prévoir des rations lorsque vous voyagez et pouvez vous rendre dans des auberges ou des restaurants pour vous nourrir. Lorsque vous vous retrouvez en pleine nature et que vous n’avez rien à vous mettre sous la dent, vous vous en remettez à vos connaissances en Survie. Mais si vous n’arrivez pas à trouver de la nourriture, cela peut vous plonger dans un état assez irrationnel où se nourrir devient une priorité absolue. Cet état peut vous rendre très violent. Il n’est pas rare qu’un inoffensif marchand se change en bête féroce et attaque à mains nues un Voyageur qui disposerait de quoi le sustenter. En théorie, vous pouvez jeûner pendant (Corps) jours, mais au-delà, si vous n’avez toujours rien avalé, votre Corps s’affaiblit et le moindre effort devient insurmontable. Vous êtes alors obligé de rester allongé, votre Corps n’ayant plus assez d’énergie pour se déplacer. Difficile alors de chasser dans ces conditions....");
+		nourrir.setDomaineLie(arts);
+		nourrir = motivationRepository.save(nourrir);
+		
+		defierMort.setNomMotivation("Defier la mort");
+		defierMort.setDescription("Vous êtes un risque-tout. Vous n’exprimez pleinement votre talent que lorsque votre vie est en danger. La proximité de la mort devient alors pour vous un exutoire que vous recherchez dans le but de vous améliorer sans cesse. Le danger et l’adrénaline qu’il vous procure agissent comme une drogue sur votre organisme. Pendant les longues périodes où votre vie n’est pas menacée, vous vous ennuyez profondément, rongé par l’appel de l’aventure et l’excitation de l’inconnu.");
+		defierMort.setDomaineLie(combat);
+		defierMort = motivationRepository.save(defierMort);
+		
+		protegerFaibles.setNomMotivation("Protéger les faibles");
+		protegerFaibles.setDescription("Vous avez découvert, souvent à vos dépens, que c’est la loi du plus fort qui gagne bien souvent. Et cela vous insupporte. Par obligation, vous êtes devenu fort à votre tour pour pouvoir défendre toutes les victimes de cette loi impitoyable. Cette voie est très longue car plus vous êtes fort, plus la tâche de protéger ceux qui vous entourent est lourde de responsabilités et chargée en émotions.");
+		protegerFaibles.setDomaineLie(combat);
+		protegerFaibles = motivationRepository.save(protegerFaibles);
+		
+		venger.setNomMotivation("Se venger");
+		venger.setDescription("Vous avez une blessure d’enfance : la mort violente d’un proche, l’extermination de votre Peuple, les humiliations d’un Notable, le vol d’un bien précieux, la honte sur votre nom, la ruine de votre famille, ou toute autre raison. Vous n’aspirez plus désormais qu’à une seule chose : la vengeance. On dit que c’est un plat qui se mange froid, mais il se prépare dans la fournaise d’une haine féroce qui s’est entretenue jour après jour. La seule issue possible pour vous, c’est de laver votre blessure dans le sang..");
+		venger.setDomaineLie(arts);
+		venger = motivationRepository.save(venger);
+		
+		peurGens.setNomMotivation("Faire peur aux gens");
+		peurGens.setDescription("Enfant déjà, vous adoriez vous cacher et surgir pour prendre les gens au dépourvu et leur flanquer la peur de leur vie. Avec le temps, ces enfantillages s’estompent, mais pas pour vous. Ce plaisir de faire peur s’est mué en culte de la terreur. Faire peur à l’autre c’est une façon de prendre un peu de son être et de remplir le vide qui vous habite..");
+		peurGens.setDomaineLie(arts);
+		peurGens = motivationRepository.save(peurGens);
+		
+		jouerLoi.setNomMotivation("Jouer avec la loi");
+		jouerLoi.setDescription("Les règles vous ont toujours mis mal à l’aise, comme si elles n’étaient faites que pour briser vos rêves et votre liberté. Vous avez donc appris à les contourner et espérez bien continuer à le faire le plus longtemps possible. Les représentants de l’ordre deviennent des partenaires de jeu avec lesquels vous disputez des matchs dont vous décidez des règles et du terrain. Jusqu’à présent, vous avez toujours réussi à vous en sortir... Jusqu’à présent...");
+		jouerLoi.setDomaineLie(arts);
+		jouerLoi = motivationRepository.save(jouerLoi);
+		
+		venererCapital.setNomMotivation("Vénérer le Grand Capital");
+		venererCapital.setDescription("Vous êtes un leader, un entrepreneur. Pour vous, les Négociants n’ont rien compris à l’économie. Peu importe ce que l’on vend ou ce que l’on achète, ni à qui l'on s’adresse, seul compte le Grand Capital qu’il faut nourrir coûte que coûte en lui dégageant des bénéfices. Les personnes que vous employez sont en fait des offrandes conditionnées pour sacrifier leurs Âme sur l’autel du dieu numéraire. Vous allez faire fortune car vous avez la foi.");
+		venererCapital.setDomaineLie(arts);
+		venererCapital = motivationRepository.save(venererCapital);
 //-------------------------------------------------------------------------------------------------------------------------
 //		REMPLISSAGE OBJET POUVOIR
 //-------------------------------------------------------------------------------------------------------------------------	
