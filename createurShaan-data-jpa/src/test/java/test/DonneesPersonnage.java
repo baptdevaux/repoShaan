@@ -1629,7 +1629,7 @@ public class DonneesPersonnage {
 		enchantement.setNom("Défense magique");
 		enchantement.setDomaineLie(magie);
 		enchantement.setMetier(revocateur);
-		enchantement = specialisationRepository.save(defenseMagique);
+		enchantement = specialisationRepository.save(enchantement);
 
 		incandescence.setDescription(
 				"Allumer un feu sans combustible. Irradier de la chaleur. Émettre une lumière éclairante. Résister aux dégâts liés au froid.");

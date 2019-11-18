@@ -22,13 +22,13 @@ public class IDomaineRepositoryTestSpring {
 	
 	@Test
 	public void testDomaine() {
-		int startNumber = domaineRepo.findAll().size();
 		
 		Domaine arts = new Domaine();
 		arts.setNom("Arts");
 		arts.setElementLie("Autre");
 		arts.setDescription("Exprime la firme artistique");
 		arts = domaineRepo.save(arts);
+		int startNumber = domaineRepo.findAll().size();
 		
 		Optional<Domaine> artsBis = domaineRepo.findById(arts.getId());
 		
