@@ -195,7 +195,7 @@ public class DonneesPersonnage {
 		Metier medecin = new Metier();
 		Metier percepteur = new Metier();
 		Metier zoologue = new Metier();
-		Metier courtisant = new Metier();
+		Metier courtisan = new Metier();
 		Metier cyberien = new Metier();
 		Metier diplomate = new Metier();
 		Metier enseignant = new Metier();
@@ -213,7 +213,7 @@ public class DonneesPersonnage {
 		Metier danseur = new Metier();
 		Metier ecrivain = new Metier();
 		Metier evocateur = new Metier();
-		Metier muscien = new Metier();
+		Metier musicien = new Metier();
 		Metier prestidigitateur = new Metier();
 		Metier ameVive = new Metier();
 		Metier chasseurDeSteles = new Metier();
@@ -1061,13 +1061,13 @@ public class DonneesPersonnage {
 				"Le Zoologue est un collectionneur, il passe son temps à collecter et mettre à jour toutes les informations liées à une espèce animale ou à un écosystème. Bon nombre de Zoologues disposent de petits talents artistiques qui leur permettent de dessiner ce qu'ils sont amenés à observer sur le terrain. Certains Zoologues se spécialisent dans la connaissance de certains types d'animaux, les prédateurs, les herbivores, les nomades, les poissons, les oiseaux, les amphibiens, les reptiles... Un Zoologue est aussi un peu vétérinaire et connait les premiers soins à apporter à un animal blessé, et les gestes à effectuer pour sauver des vies. Assez impulsif dans son comportement, le Zoologue accorde beaucoup d'importance à son odorat : il peut ainsi récupérer des informations que les autres sens ne lui permettent pas de saisir. C'est pour cette raison que les meilleurs Zoologues sont Woons.");
 		zoologue = metierRepository.save(zoologue);
 
-		courtisant.setNomMetier("Courtisant");
-		courtisant.setVoie("Voie du feu");
-		courtisant.setSpecialisation(seduction);
-		courtisant.setCasteLie(negociants);
-		courtisant.setDescription(
+		courtisan.setNomMetier("Courtisant");
+		courtisan.setVoie("Voie du feu");
+		courtisan.setSpecialisation(seduction);
+		courtisan.setCasteLie(negociants);
+		courtisan.setDescription(
 				"Les Courtisans savent obtenir tout ce qu'ils désirent en jouant avec les instincts primaires des individus. Se créer un personnage qui fera rêver son ou sa partenaire est pour le courtisan une habitude qu'il n'est pas toujours facile à tenir, surtout lorsque les conquêtes sont nombreuses. Les Courtisans œuvrent principalement auprès des Notables et des personnes de pouvoir, afin d'obtenir des informations ou de l'argent, selon qu'ils agissent pour des commanditaires ou pour leur propre compte. Certain Courtisans aiment juste séduire pour le plaisir, car ils se sentent ainsi désirés et donc exister. Les Courtisans savent enivrer les Corps, bousculer les Esprits et cueillir les Âmes. Le vrai talent du Courtisan est de ne jamais rompre, de s'arranger pour que les personnes qu'il a séduites reste toujours dans l'attente d'une éventuelle poursuite de la relation. C'est ce qui prend le plus de temps aux Courtisans : entretenir la flamme de ceux qu'ils ont envoûtés afin que l'amour ne se transforme jamais en haine... Mais rares sont ceux qui y arrivent et pour la plupart des Courtisans et Courtisanes, il y a des villes au sein desquelles ils ne peuvent plus mettre les pieds, sous peine d'être arrêtés sur-le-champ par un potentat local qui se sera senti trahi...");
-		courtisant = metierRepository.save(courtisant);
+		courtisan = metierRepository.save(courtisan);
 
 		cyberien.setNomMetier("Cybérien");
 		cyberien.setVoie("Voie de l'Objet");
@@ -1204,13 +1204,13 @@ public class DonneesPersonnage {
 				"Souvent ermite et retranché dans son atelier, l'Évocateur oscille entre deux mondes : celui de sa pensée et celui de son inconscient. Peu importe le support, peinture, dessin, sculpture, il effectue un voyage intérieur pour tenter d'y trouver ce qui lui permettra de créer une œuvre universelle. Souvent dépressif, l'Évocateur ne cesse de dire que l'on ne peut créer en étant heureux.... Hyper sensible, il est sans cesse meurtri par la violence du quotidien. Il absorbe cette violence, la canalise et la transcende en une évocation picturale ou en volume chargé de trouver son public. Mais malheureusement, les Évocateurs restent souvent des artistes incompris.");
 		evocateur = metierRepository.save(evocateur);
 
-		muscien.setNomMetier("Muscien");
-		muscien.setVoie("Voie du Moi");
-		muscien.setSpecialisation(musique);
-		muscien.setCasteLie(artistes);
-		muscien.setDescription(
+		musicien.setNomMetier("Muscien");
+		musicien.setVoie("Voie du Moi");
+		musicien.setSpecialisation(musique);
+		musicien.setCasteLie(artistes);
+		musicien.setDescription(
 				"On dit que la musique adoucit les mœurs, c'est une réalité. Le Musicien est une sorte de médecin de l'Âme. Dès qu'il se met à jouer, les tensions se figent, les inimitiés cessent. Le temps d'un morceau, les pires ennemis peuvent faire une trêve pour l'écouter ensemble.... Il existe une hiérarchie au sein des Musiciens, du simple interprète au compositeur, en passant par le virtuose ou le chef d'orchestre, chacun a sa place, mais doit la tenir... Il n'est pas bien vu de changer d'étiquette. La plus grande injustice pour les Musiciens est liée au temps. Certains voient leurs compositions traverser les âges là où d'autres ne seront l'auteur que d'une musique de mode, oubliée et chassée par la suivante...");
-		muscien = metierRepository.save(muscien);
+		musicien = metierRepository.save(musicien);
 
 		prestidigitateur.setNomMetier("Prestidigitateur");
 		prestidigitateur.setVoie("Voie de l'Objet");
