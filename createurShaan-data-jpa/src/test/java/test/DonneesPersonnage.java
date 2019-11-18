@@ -52,7 +52,8 @@ public class DonneesPersonnage {
 	public static void main(String[] args) throws ParseException {
 
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("application-context.xml");
-		IAlterationPersonnageRepository alterationPersonnageRepository = context.getBean(IAlterationPersonnageRepository.class);
+		IAlterationPersonnageRepository alterationPersonnageRepository = context
+				.getBean(IAlterationPersonnageRepository.class);
 		IJoueurRepository joueurRepository = context.getBean(IJoueurRepository.class);
 		IPeupleRepository peupleRepository = context.getBean(IPeupleRepository.class);
 		IPersonnageRepository personnageRepository = context.getBean(IPersonnageRepository.class);
@@ -67,7 +68,8 @@ public class DonneesPersonnage {
 		IAcquisRepository acquisRepository = context.getBean(IAcquisRepository.class);
 		ISpecialisationRepository specialisationRepository = context.getBean(ISpecialisationRepository.class);
 		IMotivationRepository motivationRepository = context.getBean(IMotivationRepository.class);
-		IMotivationPersonnageRepository motivationPersonnageRepository = context.getBean(IMotivationPersonnageRepository.class);
+		IMotivationPersonnageRepository motivationPersonnageRepository = context
+				.getBean(IMotivationPersonnageRepository.class);
 		IMotivationRepository motivRepository = context.getBean(IMotivationRepository.class);
 		IPouvoirPersonnageRepository pouvoirPersonnageRepository = context.getBean(IPouvoirPersonnageRepository.class);
 		IPouvoirRepository pouvoirRepository = context.getBean(IPouvoirRepository.class);
@@ -263,16 +265,16 @@ public class DonneesPersonnage {
 		Metier shaman = new Metier();
 		Metier sorcier = new Metier();
 		Metier voleurDeTrihn = new Metier();
-		Metier discpleDeLAir = new Metier();
-		Metier discpleDeLAnimal = new Metier();
-		Metier discpleDeLautre = new Metier();
-		Metier discpleDeLEau = new Metier();
-		Metier discpleDeLObjet = new Metier();
-		Metier discpleDaLaTerre = new Metier();
-		Metier discpleDesLimbes = new Metier();
-		Metier discpleDuFeu = new Metier();
-		Metier discpleDuMoi = new Metier();
-		Metier discpleDuVegetal = new Metier();
+		Metier discipleDeLAir = new Metier();
+		Metier discipleDeLAnimal = new Metier();
+		Metier discipleDeLautre = new Metier();
+		Metier discipleDeLEau = new Metier();
+		Metier discipleDeLObjet = new Metier();
+		Metier discipleDaLaTerre = new Metier();
+		Metier discipleDesLimbes = new Metier();
+		Metier discipleDuFeu = new Metier();
+		Metier discipleDuMoi = new Metier();
+		Metier discipleDuVegetal = new Metier();
 
 //-------------------------------------------------------------------------------------------------------------------------
 //		CREATION OBJET MOTIVATION
@@ -653,194 +655,225 @@ public class DonneesPersonnage {
 		trucages.setNom("Trucages");
 		trucages.setDomaineLie(arts);
 		trucages.setMetier(prestidigitateur);
-		trucages=specialisationRepository.save(trucages);
-		
-		langageDuCorps.setDescription("Danser en mesure, pouvoir évoluer avec un ou une partenaire. Être capable de suivre une chorégraphie imposée ou d'en inventer une. Connaître les danses traditionnelles et celles en vogue. Pratiquer les massages du corps. Séduire quelqu'un. Un très bon massage a des vertus régénérantes.");
+		trucages = specialisationRepository.save(trucages);
+
+		langageDuCorps.setDescription(
+				"Danser en mesure, pouvoir évoluer avec un ou une partenaire. Être capable de suivre une chorégraphie imposée ou d'en inventer une. Connaître les danses traditionnelles et celles en vogue. Pratiquer les massages du corps. Séduire quelqu'un. Un très bon massage a des vertus régénérantes.");
 		langageDuCorps.setNom("Langage du corps");
 		langageDuCorps.setDomaineLie(arts);
 		langageDuCorps.setMetier(danseur);
-		langageDuCorps=specialisationRepository.save(langageDuCorps);
-		
-		embiose.setDescription("Résister à la confrontation avec un Trihn lors d'un rituel d'Embiose. Maximiser le gain d'expérience lié au rituel. Connaissance des lieux qui cachent une stèle d'Embiose.");
+		langageDuCorps = specialisationRepository.save(langageDuCorps);
+
+		embiose.setDescription(
+				"Résister à la confrontation avec un Trihn lors d'un rituel d'Embiose. Maximiser le gain d'expérience lié au rituel. Connaissance des lieux qui cachent une stèle d'Embiose.");
 		embiose.setNom("Embiose");
 		embiose.setDomaineLie(shaan);
 		embiose.setMetier(chasseurDeSteles);
-		embiose=specialisationRepository.save(embiose);
-		
-		empathieAnimale.setDescription("Être en synergie avec le règne animal. Développer un lien empathique avec les animaux pour connaître leurs besoins vitaux, ainsi que la façon de les traiter. Établir une symbiose avec les armimales pacifistes ou utilitaires (mais pas les armimales d'attaque) et utiliser leurs capacités. Avoir accès intuitivement à des connaissances assez pointues sur les animaux.");
+		embiose = specialisationRepository.save(embiose);
+
+		empathieAnimale.setDescription(
+				"Être en synergie avec le règne animal. Développer un lien empathique avec les animaux pour connaître leurs besoins vitaux, ainsi que la façon de les traiter. Établir une symbiose avec les armimales pacifistes ou utilitaires (mais pas les armimales d'attaque) et utiliser leurs capacités. Avoir accès intuitivement à des connaissances assez pointues sur les animaux.");
 		empathieAnimale.setNom("Empathie animale");
 		empathieAnimale.setDomaineLie(shaan);
 		empathieAnimale.setMetier(eleveur);
-		empathieAnimale=specialisationRepository.save(empathieAnimale);
-		
-		empathieAntheenne.setDescription("Être en synergie avec les 10 races du Cercle des Réalités. Développer un lien empathique avec l'Âme des anthéens pour les calmer quand ils sont pris de folie, ou éviter de se faire bluffer. Avoir accès intuitivement à des connaissances assez pointues sur les comportements anthéens");
+		empathieAnimale = specialisationRepository.save(empathieAnimale);
+
+		empathieAntheenne.setDescription(
+				"Être en synergie avec les 10 races du Cercle des Réalités. Développer un lien empathique avec l'Âme des anthéens pour les calmer quand ils sont pris de folie, ou éviter de se faire bluffer. Avoir accès intuitivement à des connaissances assez pointues sur les comportements anthéens");
 		empathieAntheenne.setNom("Empathie antheenne");
 		empathieAntheenne.setDomaineLie(shaan);
 		empathieAntheenne.setMetier(mentaliste);
-		empathieAntheenne=specialisationRepository.save(empathieAntheenne);
-		
-		empathieMinerale.setDescription("Être en synergie avec le règne minéral. Développer un lien empathique avec les minéraux pour reconstituer des évènements très anciens à partir de l’empreinte magnétique qu’ils laisseraient dans le décor. Avoir accès intuitivement à des connaissances assez pointues sur les minéraux.");
+		empathieAntheenne = specialisationRepository.save(empathieAntheenne);
+
+		empathieMinerale.setDescription(
+				"Être en synergie avec le règne minéral. Développer un lien empathique avec les minéraux pour reconstituer des évènements très anciens à partir de l’empreinte magnétique qu’ils laisseraient dans le décor. Avoir accès intuitivement à des connaissances assez pointues sur les minéraux.");
 		empathieMinerale.setNom("Empathie minérale");
 		empathieMinerale.setDomaineLie(shaan);
 		empathieMinerale.setMetier(telluriste);
-		empathieMinerale=specialisationRepository.save(empathieMinerale);
-		
-		empathieVegetale.setDescription("Être en synergie avec le règne végétal. Développer un lien empathique avec les végétaux afin de savoir faire pousser n'importe quoi sur n'importe quel terrain (fleurs, arbres, fruits et légumes, algues, champignons). Avoir accès intuitivement à des connaissances assez pointues sur les plantes.");
+		empathieMinerale = specialisationRepository.save(empathieMinerale);
+
+		empathieVegetale.setDescription(
+				"Être en synergie avec le règne végétal. Développer un lien empathique avec les végétaux afin de savoir faire pousser n'importe quoi sur n'importe quel terrain (fleurs, arbres, fruits et légumes, algues, champignons). Avoir accès intuitivement à des connaissances assez pointues sur les plantes.");
 		empathieVegetale.setNom("Empathie végétale");
 		empathieVegetale.setDomaineLie(shaan);
 		empathieVegetale.setMetier(cultivateur);
-		empathieVegetale=specialisationRepository.save(empathieVegetale);
-		
-		intuition.setDescription("Rester en éveil, ne pas se laisser surprendre, déceler un détail inhabituel dans une pièce. Percevoir passivement les événements. Être sensible aux particularités de son environnement. Voir l'Invisible, les manœuvres de Discrétion, les Trucages et les Larcins.");
+		empathieVegetale = specialisationRepository.save(empathieVegetale);
+
+		intuition.setDescription(
+				"Rester en éveil, ne pas se laisser surprendre, déceler un détail inhabituel dans une pièce. Percevoir passivement les événements. Être sensible aux particularités de son environnement. Voir l'Invisible, les manœuvres de Discrétion, les Trucages et les Larcins.");
 		intuition.setNom("Intuition");
 		intuition.setDomaineLie(shaan);
 		intuition.setMetier(prescient);
-		intuition=specialisationRepository.save(intuition);
-		
-		reve.setDescription("Naviguer dans le monde des rêves. Résister aux cauchemars. Communiquer avec des personnes endormies via leurs rêves, sans contrainte de distance.");
+		intuition = specialisationRepository.save(intuition);
+
+		reve.setDescription(
+				"Naviguer dans le monde des rêves. Résister aux cauchemars. Communiquer avec des personnes endormies via leurs rêves, sans contrainte de distance.");
 		reve.setNom("Rêve");
 		reve.setDomaineLie(shaan);
 		reve.setMetier(marcheurDeReves);
-		reve=specialisationRepository.save(reve);
-		
-		soinsDeLAme.setDescription("Soigner l'Âme d'une personne qui a subi des blessures nécrotiques par la pratique de méthodes de magnétisme et de transfert d'énergie.");
+		reve = specialisationRepository.save(reve);
+
+		soinsDeLAme.setDescription(
+				"Soigner l'Âme d'une personne qui a subi des blessures nécrotiques par la pratique de méthodes de magnétisme et de transfert d'énergie.");
 		soinsDeLAme.setNom("Soins de l'âme");
 		soinsDeLAme.setDomaineLie(shaan);
 		soinsDeLAme.setMetier(ameVive);
-		soinsDeLAme=specialisationRepository.save(soinsDeLAme);
-		
-		soinsDeLEsprit.setDescription("Soigner l'Esprit d'une personne qui a subi des blessures mentales par la pratique de la rhétorique");
+		soinsDeLAme = specialisationRepository.save(soinsDeLAme);
+
+		soinsDeLEsprit.setDescription(
+				"Soigner l'Esprit d'une personne qui a subi des blessures mentales par la pratique de la rhétorique");
 		soinsDeLEsprit.setNom("Soins de l'esprit");
 		soinsDeLEsprit.setDomaineLie(shaan);
 		soinsDeLEsprit.setMetier(gardeFou);
-		soinsDeLEsprit=specialisationRepository.save(soinsDeLEsprit);
-		
-		soinsDuCorps.setDescription("Soigner le Corps d'une personne qui a subi des blessures physiques par la pratique de massages, d'acuponcture...");
+		soinsDeLEsprit = specialisationRepository.save(soinsDeLEsprit);
+
+		soinsDuCorps.setDescription(
+				"Soigner le Corps d'une personne qui a subi des blessures physiques par la pratique de massages, d'acuponcture...");
 		soinsDuCorps.setNom("Soins du corps");
 		soinsDuCorps.setDomaineLie(shaan);
 		soinsDuCorps.setMetier(radiant);
-		soinsDuCorps=specialisationRepository.save(soinsDuCorps);
-		
-		arcanes.setDescription("Connaître la théorie qui régit la Magie des schèmes. Reconnaître les traces laissées par un Sort de Magie. Identifier les pouvoirs enchantés dans un artéfact. Connaître les différentes loges et écoles, leurs responsables, leurs organisations et leurs implications.");
+		soinsDuCorps = specialisationRepository.save(soinsDuCorps);
+
+		arcanes.setDescription(
+				"Connaître la théorie qui régit la Magie des schèmes. Reconnaître les traces laissées par un Sort de Magie. Identifier les pouvoirs enchantés dans un artéfact. Connaître les différentes loges et écoles, leurs responsables, leurs organisations et leurs implications.");
 		arcanes.setNom("Arcanes");
 		arcanes.setDomaineLie(magie);
 		arcanes.setMetier(arcanien);
-		arcanes=specialisationRepository.save(arcanes);
-		
-		conjuration.setDescription("Renvoyer un Trihn ou une Anti-Âme dans son plan d'origine. Priver ses adversaires magiciens de leurs ressources trihniques et les empêcher de lancer des Sorts ou des Tourments.");
+		arcanes = specialisationRepository.save(arcanes);
+
+		conjuration.setDescription(
+				"Renvoyer un Trihn ou une Anti-Âme dans son plan d'origine. Priver ses adversaires magiciens de leurs ressources trihniques et les empêcher de lancer des Sorts ou des Tourments.");
 		conjuration.setNom("Conjuration");
 		conjuration.setDomaineLie(magie);
 		conjuration.setMetier(conjurateur);
-		conjuration=specialisationRepository.save(conjuration);
-		
-		defenseMagique.setDescription("Manipuler les flux trihniques pour former un bouclier magique qui protège des attaques nécrotiques, des Sorts et des Tourments.");
+		conjuration = specialisationRepository.save(conjuration);
+
+		defenseMagique.setDescription(
+				"Manipuler les flux trihniques pour former un bouclier magique qui protège des attaques nécrotiques, des Sorts et des Tourments.");
 		defenseMagique.setNom("Defense magique");
 		defenseMagique.setDomaineLie(magie);
 		defenseMagique.setMetier(revocateur);
-		defenseMagique=specialisationRepository.save(defenseMagique);
-		
-		enchantement.setDescription("Manipuler les flux trihniques pour former un bouclier magique qui protège des attaques nécrotiques, des Sorts et des Tourments.");
+		defenseMagique = specialisationRepository.save(defenseMagique);
+
+		enchantement.setDescription(
+				"Manipuler les flux trihniques pour former un bouclier magique qui protège des attaques nécrotiques, des Sorts et des Tourments.");
 		enchantement.setNom("Défense magique");
 		enchantement.setDomaineLie(magie);
 		enchantement.setMetier(revocateur);
-		enchantement=specialisationRepository.save(defenseMagique);
-		
-		incandescence.setDescription("Allumer un feu sans combustible. Irradier de la chaleur. Émettre une lumière éclairante. Résister aux dégâts liés au froid.");
+		enchantement = specialisationRepository.save(defenseMagique);
+
+		incandescence.setDescription(
+				"Allumer un feu sans combustible. Irradier de la chaleur. Émettre une lumière éclairante. Résister aux dégâts liés au froid.");
 		incandescence.setNom("Incandescence");
 		incandescence.setDomaineLie(magie);
 		incandescence.setMetier(mageItinerant);
-		incandescence=specialisationRepository.save(incandescence);
-		
-		invocation.setDescription("Invoquer un Trihn de Corps, d'Âme ou d'Esprit depuis son univers primordial. Un individu peut avoir un Trihn en transit autour de lui, mais peut en invoquer d'autres pour les transférer dans ses focaliseurs.");
+		incandescence = specialisationRepository.save(incandescence);
+
+		invocation.setDescription(
+				"Invoquer un Trihn de Corps, d'Âme ou d'Esprit depuis son univers primordial. Un individu peut avoir un Trihn en transit autour de lui, mais peut en invoquer d'autres pour les transférer dans ses focaliseurs.");
 		invocation.setNom("Invocation");
 		invocation.setDomaineLie(magie);
 		invocation.setMetier(shaman);
-		invocation=specialisationRepository.save(invocation);
-		
-		maitriseDesSchemes.setDescription("Appréhender la langue magique afin de savoir lire et écrire les schèmes nomoïs. Intégrer ces mots magiques dans des runes sculptées, gravées, tatouées, peintes,... qui décuplent les facultés des Magiciens. Créer de nouveaux Sorts.");
+		invocation = specialisationRepository.save(invocation);
+
+		maitriseDesSchemes.setDescription(
+				"Appréhender la langue magique afin de savoir lire et écrire les schèmes nomoïs. Intégrer ces mots magiques dans des runes sculptées, gravées, tatouées, peintes,... qui décuplent les facultés des Magiciens. Créer de nouveaux Sorts.");
 		maitriseDesSchemes.setNom("Maîtrise des schèmes");
 		maitriseDesSchemes.setDomaineLie(magie);
 		maitriseDesSchemes.setMetier(sorcier);
-		maitriseDesSchemes=specialisationRepository.save(maitriseDesSchemes);
-		
-		regeneration.setDescription("Régénérer l'essence de ses propres Trihns. Cette Spécialisation n'est applicable que pour soi-même et permet de soigner l'un de ses 3 Trihns au choix.");
+		maitriseDesSchemes = specialisationRepository.save(maitriseDesSchemes);
+
+		regeneration.setDescription(
+				"Régénérer l'essence de ses propres Trihns. Cette Spécialisation n'est applicable que pour soi-même et permet de soigner l'un de ses 3 Trihns au choix.");
 		regeneration.setNom("Régénération");
 		regeneration.setDomaineLie(magie);
 		regeneration.setMetier(regenerateur);
-		regeneration=specialisationRepository.save(regeneration);
-		
-		transfert.setDescription("Charger un Focaliseur avec un Trihn en transit autour de soi. Transférer un Trihn que l’on a invoqué vers un autre Magicien allié, ou le récupérer un Trihn invoqué par un autre Magicien. Déplacer un Trihn d’un Focaliseur vers un autre Focaliseur.");
+		regeneration = specialisationRepository.save(regeneration);
+
+		transfert.setDescription(
+				"Charger un Focaliseur avec un Trihn en transit autour de soi. Transférer un Trihn que l’on a invoqué vers un autre Magicien allié, ou le récupérer un Trihn invoqué par un autre Magicien. Déplacer un Trihn d’un Focaliseur vers un autre Focaliseur.");
 		transfert.setNom("Transfert");
 		transfert.setDomaineLie(magie);
 		transfert.setMetier(voleurDeTrihn);
-		transfert=specialisationRepository.save(transfert);
-		
-		voile.setDescription("Camoufler l’acte magique pour le rendre insoupçonnable. Atténuer les perturbations provoquées par la pratique de la magie en réduisant au minimum les gestes et les paroles magiques indispensables. Être discret dans l'utilisation des Spécialisations et Pouvoirs magiques, mais également percevoir l'invisible.");
+		transfert = specialisationRepository.save(transfert);
+
+		voile.setDescription(
+				"Camoufler l’acte magique pour le rendre insoupçonnable. Atténuer les perturbations provoquées par la pratique de la magie en réduisant au minimum les gestes et les paroles magiques indispensables. Être discret dans l'utilisation des Spécialisations et Pouvoirs magiques, mais également percevoir l'invisible.");
 		voile.setNom("Voile");
 		voile.setDomaineLie(magie);
 		voile.setMetier(illusionniste);
-		voile=specialisationRepository.save(voile);
-		
-		riteDArts.setDescription("S'investir de l'élément \"Autre\" afin de bénéficier de pouvoirs surnaturels. Effectuer un Rite consacré à l'Autre d'une Heure environ, pour augmenter de 1 le niveau d'ARTS des participants pendant une Situation.");
+		voile = specialisationRepository.save(voile);
+
+		riteDArts.setDescription(
+				"S'investir de l'élément \"Autre\" afin de bénéficier de pouvoirs surnaturels. Effectuer un Rite consacré à l'Autre d'une Heure environ, pour augmenter de 1 le niveau d'ARTS des participants pendant une Situation.");
 		riteDArts.setNom("Rite d'arts");
 		riteDArts.setDomaineLie(rituels);
 //		riteDArts.setMetier(lod);
-		riteDArts=specialisationRepository.save(riteDArts);
-		
-		riteDeCombat.setDescription("S'investir de l'élément \"Feu\" afin de bénéficier de pouvoirs surnaturels. Effectuer un Rite consacré au Feu d'une Heure environ, pour augmenter de 1 le niveau de COMBAT des participants pendant une Situation.");
+		riteDArts = specialisationRepository.save(riteDArts);
+
+		riteDeCombat.setDescription(
+				"S'investir de l'élément \"Feu\" afin de bénéficier de pouvoirs surnaturels. Effectuer un Rite consacré au Feu d'une Heure environ, pour augmenter de 1 le niveau de COMBAT des participants pendant une Situation.");
 		riteDeCombat.setNom("Rite de combat");
 		riteDeCombat.setDomaineLie(rituels);
 //		riteDeCombat.setMetier(aken);
-		riteDeCombat=specialisationRepository.save(riteDeCombat);
-		
-		riteDeLAnimal.setDescription("S'investir de l'élément \"Animal\" afin de bénéficier de pouvoirs surnaturels. Effectuer un Rite consacré à l'Animal d'une Heure environ, pour accorder un Bonus de 1 aux participants pendant une Situation. Ce Bonus s'applique aux Spécialisations suivantes : Sens du cuir (TECHNIQUE), Zoologie (SAVOIR), Langage Primal (SOCIAL), Langage du corps (ARTS), Empathie Animale (SHAAN), Invocation (MAGIE), Monture (SURVIE), Armimales (COMBAT), Harcèlement (NÉCROSE)");
+		riteDeCombat = specialisationRepository.save(riteDeCombat);
+
+		riteDeLAnimal.setDescription(
+				"S'investir de l'élément \"Animal\" afin de bénéficier de pouvoirs surnaturels. Effectuer un Rite consacré à l'Animal d'une Heure environ, pour accorder un Bonus de 1 aux participants pendant une Situation. Ce Bonus s'applique aux Spécialisations suivantes : Sens du cuir (TECHNIQUE), Zoologie (SAVOIR), Langage Primal (SOCIAL), Langage du corps (ARTS), Empathie Animale (SHAAN), Invocation (MAGIE), Monture (SURVIE), Armimales (COMBAT), Harcèlement (NÉCROSE)");
 		riteDeLAnimal.setNom("Rite de l'animal");
 		riteDeLAnimal.setDomaineLie(rituels);
 //		riteDeLAnimal.setMetier(on);
-		riteDeLAnimal=specialisationRepository.save(riteDeLAnimal);
-		
-		riteDeMagie.setDescription("S'investir de l'élément \"Moi\" afin de bénéficier de pouvoirs surnaturels.Effectuer un Rite consacré au Moi d'une Heure environ, pour augmenter de 1 le niveau de MAGIE des participants pendant une Situation.");
+		riteDeLAnimal = specialisationRepository.save(riteDeLAnimal);
+
+		riteDeMagie.setDescription(
+				"S'investir de l'élément \"Moi\" afin de bénéficier de pouvoirs surnaturels.Effectuer un Rite consacré au Moi d'une Heure environ, pour augmenter de 1 le niveau de MAGIE des participants pendant une Situation.");
 		riteDeMagie.setNom("Rite de l'animal");
 		riteDeMagie.setDomaineLie(rituels);
 //		riteDeMagie.setMetier(moi);
-		riteDeMagie=specialisationRepository.save(riteDeMagie);
-		
-		riteDeNecrose.setDescription("S'investir de l'élément \"Limbes\" afin de bénéficier de pouvoirs surnaturels. Effectuer un Rite consacré aux Limbes d'une Heure environ, pour augmenter de 1 le niveau de NÉCROSE des participants pendant une Situation.");
+		riteDeMagie = specialisationRepository.save(riteDeMagie);
+
+		riteDeNecrose.setDescription(
+				"S'investir de l'élément \"Limbes\" afin de bénéficier de pouvoirs surnaturels. Effectuer un Rite consacré aux Limbes d'une Heure environ, pour augmenter de 1 le niveau de NÉCROSE des participants pendant une Situation.");
 		riteDeNecrose.setNom("Rite de nécrose");
 		riteDeNecrose.setDomaineLie(rituels);
 //		riteDeNecrose.setMetier(gargan);
-		riteDeNecrose=specialisationRepository.save(riteDeNecrose);
-		
-		riteDeSavoir.setDescription("S'investir de l'élément \"Végétal\" afin de bénéficier de pouvoirs surnaturels. Effectuer un Rite consacré au Végétal d'une Heure environ, pour augmenter de 1 le niveau de SAVOIR des participants pendant une Situation.");
+		riteDeNecrose = specialisationRepository.save(riteDeNecrose);
+
+		riteDeSavoir.setDescription(
+				"S'investir de l'élément \"Végétal\" afin de bénéficier de pouvoirs surnaturels. Effectuer un Rite consacré au Végétal d'une Heure environ, pour augmenter de 1 le niveau de SAVOIR des participants pendant une Situation.");
 		riteDeSavoir.setNom("Rite de savoir");
 		riteDeSavoir.setDomaineLie(rituels);
 //		riteDeSavoir.setMetier(wan);
-		riteDeSavoir=specialisationRepository.save(riteDeSavoir);
-		
-		riteDeShaan.setDescription("S'investir de l'élément \"Terre\" afin de bénéficier de pouvoirs surnaturels. Effectuer un Rite consacré à la Terre d'une Heure environ, pour augmenter de 1 le niveau de SHAAN des participants pendant une Situation.");
+		riteDeSavoir = specialisationRepository.save(riteDeSavoir);
+
+		riteDeShaan.setDescription(
+				"S'investir de l'élément \"Terre\" afin de bénéficier de pouvoirs surnaturels. Effectuer un Rite consacré à la Terre d'une Heure environ, pour augmenter de 1 le niveau de SHAAN des participants pendant une Situation.");
 		riteDeShaan.setNom("Rite de shaan");
 		riteDeShaan.setDomaineLie(rituels);
 //		riteDeShaan.setMetier(ling);
-		riteDeShaan=specialisationRepository.save(riteDeShaan);
-		
-		riteDeSocial.setDescription("S'investir de l'élément \"Air\" afin de bénéficier de pouvoirs surnaturels. Effectuer un Rite consacré à l'Air d'une Heure environ, pour augmenter de 1 le niveau de SOCIAL des participants pendant une Situation.");
+		riteDeShaan = specialisationRepository.save(riteDeShaan);
+
+		riteDeSocial.setDescription(
+				"S'investir de l'élément \"Air\" afin de bénéficier de pouvoirs surnaturels. Effectuer un Rite consacré à l'Air d'une Heure environ, pour augmenter de 1 le niveau de SOCIAL des participants pendant une Situation.");
 		riteDeSocial.setNom("Rite de social");
 		riteDeSocial.setDomaineLie(rituels);
 //		riteDeSocial.setMetier(elhi);
-		riteDeSocial=specialisationRepository.save(riteDeSocial);
-		
-		riteDeSurvie.setDescription("S'investir de l'élément \"Eau\" afin de bénéficier de pouvoirs surnaturels. Effectuer un Rite consacré à l'Eau d'une Heure environ, pour augmenter de 1 le niveau de SURVIE des participants pendant une Situation.");
+		riteDeSocial = specialisationRepository.save(riteDeSocial);
+
+		riteDeSurvie.setDescription(
+				"S'investir de l'élément \"Eau\" afin de bénéficier de pouvoirs surnaturels. Effectuer un Rite consacré à l'Eau d'une Heure environ, pour augmenter de 1 le niveau de SURVIE des participants pendant une Situation.");
 		riteDeSurvie.setNom("Rite de survie");
 		riteDeSurvie.setDomaineLie(rituels);
 //		riteDeSurvie.setMetier(rea);
-		riteDeSurvie=specialisationRepository.save(riteDeSurvie);
-		
-		riteDeTechnique.setDescription("S'investir de l'élément \"Objet\" afin de bénéficier de pouvoirs surnaturels. Effectuer un Rite consacré à l'Objet d'une Heure environ, pour augmenter de 1 le niveau de TECHNIQUE des participants pendant une Situation.");
+		riteDeSurvie = specialisationRepository.save(riteDeSurvie);
+
+		riteDeTechnique.setDescription(
+				"S'investir de l'élément \"Objet\" afin de bénéficier de pouvoirs surnaturels. Effectuer un Rite consacré à l'Objet d'une Heure environ, pour augmenter de 1 le niveau de TECHNIQUE des participants pendant une Situation.");
 		riteDeTechnique.setNom("Rite de technique");
 		riteDeTechnique.setDomaineLie(rituels);
 //		riteDeTechnique.setMetier(win);
-		riteDeTechnique=specialisationRepository.save(riteDeTechnique);
-		
+		riteDeTechnique = specialisationRepository.save(riteDeTechnique);
+
 //-------------------------------------------------------------------------------------------------------------------------
 //		REMPLISSAGE OBJET RACE
 //-------------------------------------------------------------------------------------------------------------------------	
@@ -1586,6 +1619,86 @@ public class DonneesPersonnage {
 		voleurDeTrihn.setDescription(
 				"Le Voleur de Trihn a mauvaise réputation. Quand il est allié, on apprécie sa compagnie et ses talents galvanisent le groupe. Mais lorsqu'il se présente en ennemi, il devient souvent la principale cible des mages adverses qui ne peuvent se permettre de se laisser voler leurs Trihns. Pour cette raison, le Voleur de Trihn garde généralement la nature de son métier secrète et préfère mentir sur sa spécialisation.");
 		voleurDeTrihn = metierRepository.save(voleurDeTrihn);
+
+		discipleDeLAir.setNomMetier("disciple de l'air");
+		discipleDeLAir.setVoie("Voie de l'Air");
+//		discipleDeLAir.setSpecialisation(riteDeSocial);
+		discipleDeLAir.setCasteLie(elementalistes);
+		discipleDeLAir.setDescription(
+				"Le culte de l’Air pourrait se résumer en un mot : liberté. Liberté de penser, d’agir, de se déplacer, de créer. Les disciples de l’Air sont des nomades dans l’âme qui trouvent leur salut dans le voyage. Philosophes, certains disciples aiment à se perdre dans les méandres de la pensée et peuvent ainsi discuter pendant des jours sans s’arrêter. Le disciple d’Ëlhi n’est pas à la recherche de la connaissance absolue, mais de ses propres limites intellectuelles, le but étant de les repousser le plus loin possible. Adepte de l’autogestion, il a tendance à rejeter les rapports hiérarchiques. Très spontané, le disciple de l’Air dit toujours ce qu’il pense.");
+		discipleDeLAir = metierRepository.save(discipleDeLAir);
+
+		discipleDeLAnimal.setNomMetier("disciple de l'animal");
+		discipleDeLAnimal.setVoie("Voie de l'animal");
+//		discipleDeLAnimal.setSpecialisation(riteDeLAnimal);
+		discipleDeLAnimal.setCasteLie(elementalistes);
+		discipleDeLAnimal.setDescription(
+				"Le culte de l’Animal est l’un des plus répandus en Héossie. Prônant des valeurs d’énergie, de courage et d’autorité, il trouve largement sa place au sein des peuples de nature guerrière ou en prise directe avec la nature. Les disciples de l’Animal ont tendance à être assez primitifs et à réagir au quart de tour. Mais en amitié, ils savent aussi être fidèles et se comportent en chef de meute.");
+		discipleDeLAnimal = metierRepository.save(discipleDeLAnimal);
+
+		discipleDeLautre.setNomMetier("disciple de l'Autre");
+		discipleDeLautre.setVoie("Voie de l'Autre");
+//		discipleDeLautre.setSpecialisation(riteDArts);
+		discipleDeLautre.setCasteLie(elementalistes);
+		discipleDeLautre.setDescription(
+				"Le culte de l’Autre est l’un des plus appréciés en Héossie. Fondamentalement pacifiste dans l’âme, le disciple de l’Autre place le respect de la vie au cœur de toute chose. Mais le disciple de l’Autre n’est pas pour autant un imbécile, il est bien conscient que la violence peut s’avérer nécessaire pour sauver les faibles et surtout pour combattre la Nécrose. Car il n’est pas de culte plus hostile à la Nécrose que la voie de Löd. Pour ces disciples, l’âme est source de vie, la perdre, c’est ne plus être vivant.");
+		discipleDeLautre = metierRepository.save(discipleDeLautre);
+
+		discipleDeLEau.setNomMetier("disciple de l'Eau");
+		discipleDeLEau.setVoie("Voie de l'Eau");
+//		discipleDeLEau.setSpecialisation(riteDeSurvie);
+		discipleDeLEau.setCasteLie(elementalistes);
+		discipleDeLEau.setDescription(
+				"Le culte de l’Eau puise ses racines dans l’enfance, dans le fluide amniotique. Les rêves, les secrets et ce qui échappe au sens commun des mortels reste familier aux yeux du disciple de l’Eau. Très joueur, il ne peut s’empêcher de relever les défis qu’on lui propose, quitte à mettre sa vie et celle de ses proches en danger. Le disciple de l’Eau vit dans son monde et peut donner l’impression d’être parfois absent. Mais ce n’est qu’une impression car le disciple de Rhéa est en contact direct avec le fluide vital des êtres...");
+		discipleDeLEau = metierRepository.save(discipleDeLEau);
+
+		discipleDeLObjet.setNomMetier("disciple de l'Objet");
+		discipleDeLObjet.setVoie("Voie de l'Objet");
+//		discipleDeLObjet.setSpecialisation(riteDeTechnique);
+		discipleDeLObjet.setCasteLie(elementalistes);
+		discipleDeLObjet.setDescription(
+				"Le culte de l’Objet fait partie des plus appréciés en Héossie, car il est l’apanage des artisans et des techniciens. Un disciple de l’Objet ayant toujours à cœur que les choses fonctionnent bien autour de lui et ne pourra s’empêcher de réparer ce qui est cassé. Très imaginatif, un disciple de l’Objet préfèrera toujours un moyen compliqué pour résoudre un problème donné ou une solution trop évidente et donc suspecte. Méthodique, le disciple de l’Objet peut paraître froid par moment lorsqu’il est plongé dans l’analyse de ce qui l’entoure. Il peut également faire preuve d’un détachement déconcertant vis à vis de la mort qui n’est pour lui qu’une panne définitive...");
+		discipleDeLObjet = metierRepository.save(discipleDeLObjet);
+
+		discipleDaLaTerre.setNomMetier("disciple de la Terre");
+		discipleDaLaTerre.setVoie("Voie de la Terre");
+//		discipleDaLaTerre.setSpecialisation(riteDeShaan);
+		discipleDaLaTerre.setCasteLie(elementalistes);
+		discipleDaLaTerre.setDescription(
+				"Le culte de la Terre est l’un des plus déroutants. Intégrant dans son dogme le cycle des Trihns, il offre à ses adeptes une vision du monde globale peu accessible aux autres. Le relativisme et le fatalisme dont font preuve les disciples de Ling les place toujours en décalage de ce qui est communément admis. En prise directe avec l’insondable et les forces telluriques, les adeptes de la Terre font souvent preuve d’une grande détermination. Ils voient ce que les autres ne peuvent voir, comme si la terre et tout ce qu’elle avait accumulé depuis toujours était en prise directe avec leur âme...");
+		discipleDaLaTerre = metierRepository.save(discipleDaLaTerre);
+
+		discipleDesLimbes.setNomMetier("disciple des Limbes");
+		discipleDesLimbes.setVoie("Voie des Limbes");
+//		discipleDesLimbes.setSpecialisation(riteD);
+		discipleDesLimbes.setCasteLie(elementalistes);
+		discipleDesLimbes.setDescription(
+				"Le culte des Limbes est le plus décrié car le plus ambigüe. Car si certains disciples prétendent pratiquer ce culte pour mieux comprendre les Limbes de l’intérieur et pouvoir ainsi mieux les combattre, il n’empêche que cette voie est surtout pratiquée en majorité par les Nécrosiens. Le contact direct avec les névroses les plus abyssales laissent souvent des séquelles aux adeptes de Gargan. Et si tous ne finissent pas nécrosés, c’est que ceux qui restent du «bon côté» sont devenus fous... S’engager sur la voie des Limbes, c’est être sur le fil du rasoir, on peut basculer à tout moment...");
+		discipleDesLimbes = metierRepository.save(discipleDesLimbes);
+
+		discipleDuFeu.setNomMetier("disciple du Feu");
+		discipleDuFeu.setVoie("Voie du Feu");
+//		discipleDuFeu.setSpecialisation(riteDeCombat);
+		discipleDuFeu.setCasteLie(elementalistes);
+		discipleDuFeu.setDescription(
+				"Le culte du Feu exalte les passions et les conflits. Brûlant tout sur son passage, le disciple du Feu plie ses adversaires à sa volonté. Il s'enflamme pour un rien et ne recule devant rien pour atteindre ses objectifs. Ayant soif de conquêtes et de renommée, le disciple du Feu n’hésite jamais à provoquer les événements plutôt que de les subir. Assez à l’aise dans le chaos, il n’apprécie guère le consensus et peut parfois faire preuve d’esprit de contradiction, par simple plaisir d’en découdre... Les Guerriers, les Sorciers et les Ensorceleurs sont bien en phase avec cette voie.");
+		discipleDuFeu = metierRepository.save(discipleDuFeu);
+
+		discipleDuMoi.setNomMetier("disciple du Moi");
+		discipleDuMoi.setVoie("Voie du Moi");
+//		discipleDuMoi.setSpecialisation(riteDeMagie);
+		discipleDuMoi.setCasteLie(elementalistes);
+		discipleDuMoi.setDescription(
+				"Le culte du Moi est assez singulier. En effet, les disciples ne peuvent compter que sur eux-mêmes pour progresser dans leur voie. Cette dernière, faite de frustration et de solitude a tendance à couper ses adeptes du reste du monde. Égotique et orgueilleux, les adeptes du Moi nourrissent un véritable complexe de supériorité. Ils se plaisent à répéter à qui veut l’entendre qu’ils se sont faits tout seuls... Les Magiciens apprécient particulièrement ce culte qu’ils trouvent en phase avec leurs préoccupations.");
+		discipleDuMoi = metierRepository.save(discipleDuMoi);
+
+		discipleDuVegetal.setNomMetier("disciple du Végétal");
+		discipleDuVegetal.setVoie("Voie du Végétal");
+//		discipleDuVegetal.setSpecialisation(riteDeSavoir);
+		discipleDuVegetal.setCasteLie(elementalistes);
+		discipleDuVegetal.setDescription(
+				"Le culte du Végétal est l’un des plus pacifistes. Entièrement dédié à la connaissance et au culte de la transmission du savoir, il est la sève de la culture héossienne. Les disciples de Wän sont de ceux qui bâtissent des bibliothèques, impriment des livres et construisent des écoles afin de communiquer aux générations futures le fruit de leur pensée. Car les disciples du Végétal voient toujours les choses à long terme, à très long terme même, c’est ce qui les rend si sages et si respectables. Mais le végétal peut aussi se révéler empoisonné et produire des parasites. Cette voie obscure qui conduit au machiavélisme et à la folie reste heureusement assez marginale...");
+		discipleDuVegetal = metierRepository.save(discipleDuVegetal);
 
 //-------------------------------------------------------------------------------------------------------------------------
 //		REMPLISSAGE OBJET MOTIVATION
