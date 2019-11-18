@@ -215,6 +215,16 @@ public class DonneesPersonnage {
 		Metier evocateur = new Metier();
 		Metier muscien = new Metier();
 		Metier prestidigitateur = new Metier();
+		Metier ameVive = new Metier();
+		Metier chasseurDeSteles = new Metier();
+		Metier cultivateur = new Metier();
+		Metier eleveur = new Metier();
+		Metier gardeFou = new Metier();
+		Metier marcheursDeReves = new Metier();
+		Metier mentaliste = new Metier();
+		Metier prescient = new Metier();
+		Metier radiant = new Metier();
+		Metier telluriste = new Metier();
 
 //-------------------------------------------------------------------------------------------------------------------------
 //		CREATION OBJET MOTIVATION
@@ -1209,6 +1219,86 @@ public class DonneesPersonnage {
 		prestidigitateur.setDescription(
 				"Les Prestidigitateurs sont experts pour tromper l'attention de leur public et leur faire croire que ce qui n'est qu'un simple tour de passe-passe est le fruit d'une magie prodigieuse. Les Prestidigitateurs peuvent faire croire à la disparition ou à l'apparition d'objets divers de taille plus ou moins importante. Le Prestidigitateur n'est pas toujours honnête et se sert souvent de ses talents pour tricher aux jeux d'argent et ruiner ses adversaires. Beaucoup de Prestidigitateurs sont ainsi rapidement devenus des Notables. Mais ces Notables, lorsqu'ils tombent sur plus forts qu'eux, perdent très vite leur statut et peuvent finir dans la misère, brisés...");
 		prestidigitateur = metierRepository.save(prestidigitateur);
+
+		ameVive.setNomMetier("Ame-vive");
+		ameVive.setVoie("Voie du Moi");
+//		ameVive.setSpecialisation(soinsDeLAme);
+		ameVive.setCasteLie(shaanistes);
+		ameVive.setDescription(
+				"Les Âmes-vives sont les compagnons préférés de tous ceux qui doivent approcher la Nécrose de près ou de loin, ou qui peuvent être amenés à subir des effets nécrotiques... Cela fait beaucoup de monde en fait, si bien que les Âmes-vives sont très souvent sollicités, trop estiment-ils... Car les Âmes-vives ne sont pas des individus très sociables et il faut souvent déployer des trésors d'argumentation afin de les convaincre de bien vouloir exercer leurs compétences sur quelqu'un. Une Âme-vive, individualiste comme elle est, cherchera toujours un prétexte ou tentera de minimiser la situation pour ne pas avoir à rendre service... Mais la plupart des gens passent outre ce côté un peu antipathique car pour les Héossiens, l'Âme reste le Trihn le plus précieux pour éviter de passer du côté des Limbes...");
+		ameVive = metierRepository.save(ameVive);
+
+		chasseurDeSteles.setNomMetier("Chasseur de stèles");
+		chasseurDeSteles.setVoie("Voie de l'Objet");
+//		chasseurDeSteles.setSpecialisation(embiose);
+		chasseurDeSteles.setCasteLie(shaanistes);
+		chasseurDeSteles.setDescription(
+				"Les Chasseurs de stèles parcourent le monde à la recherche de stèles d'Embiose, afin de pratiquer le fameux rituel qui leur permet d'augmenter rapidement leurs capacités. Ils sont souvent de cheville avec les Traqueurs de stèles qui connaissent de très nombreux emplacements de stèles et les réseaux auxquels elles sont liées. Mais certains Chasseurs de stèles se nécrosent rapidement et pour endiguer le phénomène, voyagent avec des Âmes-vives afin de limiter la casse... Les Chasseurs de stèles ont du mal à se satisfaire de ce qu'ils ont : toujours portés vers l'avenir, ils ont souvent du mal à concilier le Shaan avec leurs aspirations.");
+		chasseurDeSteles = metierRepository.save(chasseurDeSteles);
+
+		cultivateur.setNomMetier("Cultivateur");
+		cultivateur.setVoie("Voie du Végétal");
+//		cultivateur.setSpecialisation(empathieVegetale);
+		cultivateur.setCasteLie(shaanistes);
+		cultivateur.setDescription(
+				"Propriétaire terrien ou simple vacataire, le Cultivateur passe sa vie dans les champs à semer et récolter des céréales, des fruits, des légumes ou des plantes aux vertus extraordinaires. Le Cultivateur peut parler au règne végétal et ainsi obtenir de précieuses informations sur un convoi qui aurait traversé une forêt ou bien sur les causes d'une projection de pollen empoisonné... Moins instruit qu'un Botaniste, le Cultivateur agit par instinct et suit le cycle des saisons de façon innée.");
+		cultivateur = metierRepository.save(cultivateur);
+
+		eleveur.setNomMetier("Eleveur");
+		eleveur.setVoie("Voie de l'Animal");
+//		eleveur.setSpecialisation(empathieAnimale);
+		eleveur.setCasteLie(shaanistes);
+		eleveur.setDescription(
+				"La plupart des Éleveurs choisissent une seule espèce animale à élever, que ce soit pour leur viande, leur laine, leur cuir, leur lait, leurs cornes, leur graisse, leur sang ou toute autre matière utile... Ce peuvent être des animaux d'agrément, des bêtes de somme, des armimales, des montures ou des animaux pour le spectacle... Les Éleveurs prennent un grand soin à choisir les mâles et les femelles afin de pouvoir garantir un bon pedigree à leurs acheteurs. Les Éleveurs sont souvent en relation avec des Novateurs spécialisés qui s'occupent de récupérer les matières premières de l'animal. Normalement, les Éleveurs ne s'attachent pas à leurs animaux, afin de ne pas souffrir lorsque ces derniers les quittent d’une façon ou d’une autre. Mais certains tissent des liens empathiques très forts avec un animal : ce dernier perd alors son statut de bête pour gagner celui de compagnon et suivra l'Éleveur durant toute sa vie.");
+		eleveur = metierRepository.save(eleveur);
+
+		gardeFou.setNomMetier("Garde-fou");
+		gardeFou.setVoie("Voie de l'Air");
+//		gardeFou.setSpecialisation(soinsDeLEsprit);
+		gardeFou.setCasteLie(shaanistes);
+		gardeFou.setDescription(
+				"Les Garde-fous aiment explorer les limites de ce qu'un cerveau peut accepter sans tomber dans la folie, tout en cherchant à repousser ces limites toujours plus loin... Pour cela, ils recherchent les situations les plus extrêmes et les environnements les plus déstabilisants... Adeptes des expéditions au sein de ruines oubliées, de forteresses hantées, et autres territoires terrifiants, les Garde-fous ont appris à dompter leur peur et celle de leurs proches. Peu appréciés des Négociants, les Garde-fous sont respectés par toutes les autres castes car ils permettent par leur simple présence de rassurer tous les membres d'un convoi qui doit se rendre dans des contrées hostiles.");
+		gardeFou = metierRepository.save(gardeFou);
+
+		marcheursDeReves.setNomMetier("Marcheurs de rêves");
+		marcheursDeReves.setVoie("Voie des Limbes");
+//		marcheursDeReves.setSpecialisation(reve);
+		marcheursDeReves.setCasteLie(shaanistes);
+		marcheursDeReves.setDescription(
+				"Les Marcheurs de rêves sont des traqueurs de songes nécrotiques. Leur capacité leur permet de résister aux assauts des cauchemars et de leur porter des attaques décisives. Les Marcheurs de rêves peuvent aussi envoyer des messages à ceux qui dorment, quel que soit l'endroit où ils se trouvent... Ils constituent ainsi un véritable rempart contre les empires nécrosiens qui terrorisent les populations dans leur sommeil. Les Marcheurs de rêves sont souvent accueillis en héros où qu'ils aillent, car la peur du nécrosien reste vivace dans chaque Esprit...");
+		marcheursDeReves = metierRepository.save(marcheursDeReves);
+
+		mentaliste.setNomMetier("Mentaliste");
+		mentaliste.setVoie("Voie de l'Autre");
+//		mentaliste.setSpecialisation(empathieAntheenne);
+		mentaliste.setCasteLie(shaanistes);
+		mentaliste.setDescription(
+				"Les Mentalistes font partie des Shaanistes les plus appréciés au sein de la population héossienne. Toujours de bon conseil, ils connaissent parfaitement la psychologie anthéenne avec laquelle ils jouent pour tirer le meilleur parti de chaque individu, afin de créer de bonnes synergies entre les Peuples. Le Mentaliste ne perd jamais son sang-froid et aime beaucoup parler par enigmes ou métaphores : quelle que soit la situation, qu’il se trouve dans une Guilde sévère avec ses employés, ou dans une taverne sordide,. Il sait user de la rhétorique pour calmer les Esprits échauffés ou au contraire galvaniser ceux qui doutent d’eux. Le Mentaliste sait déchiffrer le moindre regard, le moindre geste et reste à l’affut de tous les signes que l’on émet inconsciemment...");
+		mentaliste = metierRepository.save(mentaliste);
+
+		prescient.setNomMetier("Prescient");
+		prescient.setVoie("Voie de l'Eau");
+//		prescient.setSpecialisation(intuition);
+		prescient.setCasteLie(shaanistes);
+		prescient.setDescription(
+				"Le Prescient vit dans un autre monde, fait de symboles et d'inspiration. Il a du flair et sait s'en servir. Il peut ainsi éviter de se faire surprendre et sentir lorsque l'on cherche à l'embobiner. L'intuition du Prescient est très utile dans toutes sortes de domaines, de la navigation, à la diplomatie en passant par la stratégie militaire ou encore la gastronomie... Le Prescient sait toujours ce qu'il doit faire et où il doit aller, cette aptitude en fait souvent un leader respecté.");
+		prescient = metierRepository.save(prescient);
+
+		radiant.setNomMetier("Radiant");
+		radiant.setVoie("Voie de du Feu");
+//		radiant.setSpecialisation(soinsDuCorps);
+		radiant.setCasteLie(shaanistes);
+		radiant.setDescription(
+				"Il est coutume de dire que les Radiants ont du feu qui coulent dans les veines... Ils ont toujours chaud, où qu'ils se trouvent, cette chaleur surnaturelle leur permet lorsqu'ils apposent les mains sur quelqu'un de soigner le Corps. Contrairement aux Âmes-vives qui ont tendance à se faire prier pour faire usage de leurs compétences, les Radiants, à l'inverse, passent leur temps à demander autour d'eux si quelqu'un a besoin d'un soin, même si cela n'est pas indispensable. Ainsi, souvent, devant l'insistance des Radiants, on accepte leur aide pour ensuite avoir la paix. C'est en combat que les Radiants sont les plus épanouis, car là, ils peuvent exercer leur talent de nombreuses fois sans avoir à insister. Souvent, même, on le leur demande, et cela les emplit de joie, même si la situation s'avère critique...");
+		radiant = metierRepository.save(radiant);
+
+		telluriste.setNomMetier("Telluriste");
+		telluriste.setVoie("Voie de la Terre");
+//		telluriste.setSpecialisation(empathieMinerale);
+		telluriste.setCasteLie(shaanistes);
+		telluriste.setDescription(
+				"Le Telluriste affectionne particulièrement les souterrains, les grottes et autres habitats troglodytes. En communion avec la pierre, la roche et la terre, il peut ressentir les micro-secousses sismiques qui agitent le continent en permanence mais auxquelles personne ne prête aucune attention. Pourtant, c'est grâce à ces secousses que le Telluriste peut s'orienter, connaître la nature d'un terrain ou d'un gaz. Mais ce qui rend le Telluriste particulièrement intéressant, c'est le lien privilégié qu'il entretient avec la Trihnite, grâce auquel il peut communiquer avec une porte de transfert pour obtenir des informations sur les personnes qui l'ont traversée...");
+		telluriste = metierRepository.save(telluriste);
 
 //-------------------------------------------------------------------------------------------------------------------------
 //		REMPLISSAGE OBJET MOTIVATION
