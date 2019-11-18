@@ -152,6 +152,16 @@ public class DonneesPersonnage {
 		Specialisation regeneration = new Specialisation();
 		Specialisation transfert = new Specialisation();
 		Specialisation voile = new Specialisation();
+		Specialisation riteDArts = new Specialisation();
+		Specialisation riteDeCombat = new Specialisation();
+		Specialisation riteDeLAnimal = new Specialisation();
+		Specialisation riteDeMagie = new Specialisation();
+		Specialisation riteDeNecrose = new Specialisation();
+		Specialisation riteDeSavoir = new Specialisation();
+		Specialisation riteDeShaan = new Specialisation();
+		Specialisation riteDeSocial = new Specialisation();
+		Specialisation riteDeSurvie = new Specialisation();
+		Specialisation riteDeTechnique = new Specialisation();
 //-------------------------------------------------------------------------------------------------------------------------
 //		CREATION OBJET RACE
 //-------------------------------------------------------------------------------------------------------------------------	
@@ -733,10 +743,65 @@ public class DonneesPersonnage {
 //		voile.setMetier(illusionniste);
 		voile=specialisationRepository.save(voile);
 		
+		riteDArts.setDescription("S'investir de l'élément \"Autre\" afin de bénéficier de pouvoirs surnaturels. Effectuer un Rite consacré à l'Autre d'une Heure environ, pour augmenter de 1 le niveau d'ARTS des participants pendant une Situation.");
+		riteDArts.setNom("Rite d'arts");
+		riteDArts.setDomaineLie(rituels);
+//		riteDArts.setMetier(lod);
+		riteDArts=specialisationRepository.save(riteDArts);
 		
+		riteDeCombat.setDescription("S'investir de l'élément \"Feu\" afin de bénéficier de pouvoirs surnaturels. Effectuer un Rite consacré au Feu d'une Heure environ, pour augmenter de 1 le niveau de COMBAT des participants pendant une Situation.");
+		riteDeCombat.setNom("Rite de combat");
+		riteDeCombat.setDomaineLie(rituels);
+//		riteDeCombat.setMetier(aken);
+		riteDeCombat=specialisationRepository.save(riteDeCombat);
 		
+		riteDeLAnimal.setDescription("S'investir de l'élément \"Animal\" afin de bénéficier de pouvoirs surnaturels. Effectuer un Rite consacré à l'Animal d'une Heure environ, pour accorder un Bonus de 1 aux participants pendant une Situation. Ce Bonus s'applique aux Spécialisations suivantes : Sens du cuir (TECHNIQUE), Zoologie (SAVOIR), Langage Primal (SOCIAL), Langage du corps (ARTS), Empathie Animale (SHAAN), Invocation (MAGIE), Monture (SURVIE), Armimales (COMBAT), Harcèlement (NÉCROSE)");
+		riteDeLAnimal.setNom("Rite de l'animal");
+		riteDeLAnimal.setDomaineLie(rituels);
+//		riteDeLAnimal.setMetier(on);
+		riteDeLAnimal=specialisationRepository.save(riteDeLAnimal);
 		
+		riteDeMagie.setDescription("S'investir de l'élément \"Moi\" afin de bénéficier de pouvoirs surnaturels.Effectuer un Rite consacré au Moi d'une Heure environ, pour augmenter de 1 le niveau de MAGIE des participants pendant une Situation.");
+		riteDeMagie.setNom("Rite de l'animal");
+		riteDeMagie.setDomaineLie(rituels);
+//		riteDeMagie.setMetier(moi);
+		riteDeMagie=specialisationRepository.save(riteDeMagie);
 		
+		riteDeNecrose.setDescription("S'investir de l'élément \"Limbes\" afin de bénéficier de pouvoirs surnaturels. Effectuer un Rite consacré aux Limbes d'une Heure environ, pour augmenter de 1 le niveau de NÉCROSE des participants pendant une Situation.");
+		riteDeNecrose.setNom("Rite de nécrose");
+		riteDeNecrose.setDomaineLie(rituels);
+//		riteDeNecrose.setMetier(gargan);
+		riteDeNecrose=specialisationRepository.save(riteDeNecrose);
+		
+		riteDeSavoir.setDescription("S'investir de l'élément \"Végétal\" afin de bénéficier de pouvoirs surnaturels. Effectuer un Rite consacré au Végétal d'une Heure environ, pour augmenter de 1 le niveau de SAVOIR des participants pendant une Situation.");
+		riteDeSavoir.setNom("Rite de savoir");
+		riteDeSavoir.setDomaineLie(rituels);
+//		riteDeSavoir.setMetier(wan);
+		riteDeSavoir=specialisationRepository.save(riteDeSavoir);
+		
+		riteDeShaan.setDescription("S'investir de l'élément \"Terre\" afin de bénéficier de pouvoirs surnaturels. Effectuer un Rite consacré à la Terre d'une Heure environ, pour augmenter de 1 le niveau de SHAAN des participants pendant une Situation.");
+		riteDeShaan.setNom("Rite de shaan");
+		riteDeShaan.setDomaineLie(rituels);
+//		riteDeShaan.setMetier(ling);
+		riteDeShaan=specialisationRepository.save(riteDeShaan);
+		
+		riteDeSocial.setDescription("S'investir de l'élément \"Air\" afin de bénéficier de pouvoirs surnaturels. Effectuer un Rite consacré à l'Air d'une Heure environ, pour augmenter de 1 le niveau de SOCIAL des participants pendant une Situation.");
+		riteDeSocial.setNom("Rite de social");
+		riteDeSocial.setDomaineLie(rituels);
+//		riteDeSocial.setMetier(elhi);
+		riteDeSocial=specialisationRepository.save(riteDeSocial);
+		
+		riteDeSurvie.setDescription("S'investir de l'élément \"Eau\" afin de bénéficier de pouvoirs surnaturels. Effectuer un Rite consacré à l'Eau d'une Heure environ, pour augmenter de 1 le niveau de SURVIE des participants pendant une Situation.");
+		riteDeSurvie.setNom("Rite de survie");
+		riteDeSurvie.setDomaineLie(rituels);
+//		riteDeSurvie.setMetier(rea);
+		riteDeSurvie=specialisationRepository.save(riteDeSurvie);
+		
+		riteDeTechnique.setDescription("S'investir de l'élément \"Objet\" afin de bénéficier de pouvoirs surnaturels. Effectuer un Rite consacré à l'Objet d'une Heure environ, pour augmenter de 1 le niveau de TECHNIQUE des participants pendant une Situation.");
+		riteDeTechnique.setNom("Rite de technique");
+		riteDeTechnique.setDomaineLie(rituels);
+//		riteDeTechnique.setMetier(win);
+		riteDeTechnique=specialisationRepository.save(riteDeTechnique);
 		
 //-------------------------------------------------------------------------------------------------------------------------
 //		REMPLISSAGE OBJET RACE
