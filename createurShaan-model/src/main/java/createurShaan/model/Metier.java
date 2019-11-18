@@ -22,10 +22,9 @@ public class Metier {
 	private String nomMetier;
 	@Column
 	private String voie;
-	@Column(length = 500)
+	@Column(length = 5000)
 	private String description;
-	@OneToOne
-	@JoinColumn(name = "Specialisation_ID")
+	@OneToOne(mappedBy = "metier")
 	private Specialisation specialisation;
 	@OneToOne
 	@JoinColumn(name = "Caste_ID")

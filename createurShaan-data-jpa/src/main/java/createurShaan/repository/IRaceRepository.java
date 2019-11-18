@@ -1,7 +1,9 @@
 package createurShaan.repository;
 
+import org.springframework.data.jpa.repository.JpaRepository;
+
 import createurShaan.model.Race;
 
-public interface IRaceRepository extends IRepository<Race, Long> {
+public interface IRaceRepository extends JpaRepository<Race, Long> {
 
 }
