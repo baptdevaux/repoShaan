@@ -932,207 +932,239 @@ public class DonneesPersonnage {
 		riteDeTechnique.setNom("Rite de technique");
 		riteDeTechnique.setDomaineLie(rituels);
 		riteDeTechnique.setMetier(discipleDeLObjet);
-		riteDeTechnique=specialisationRepository.save(riteDeTechnique);
-		
-		acrobatie.setDescription("Être dynamique, souple, et rapide. Avoir le sens de l'équilibre. Faire des prouesses acrobatiques, faire l’équilibriste, amortir une chute, se contorsionner… Esquiver une attaque physique.");
+		riteDeTechnique = specialisationRepository.save(riteDeTechnique);
+
+		acrobatie.setDescription(
+				"Être dynamique, souple, et rapide. Avoir le sens de l'équilibre. Faire des prouesses acrobatiques, faire l’équilibriste, amortir une chute, se contorsionner… Esquiver une attaque physique.");
 		acrobatie.setNom("Acrobatie");
 		acrobatie.setDomaineLie(survie);
-//		acrobatie.setMetier(voltigeur);
-		acrobatie=specialisationRepository.save(acrobatie);
-		
-		caravane.setDescription("Manœuvrer un attelage, une charrette, un carrosse, un char. Gérer une caravane et la logistique de ravitaillement qu'elle nécessite. Connaître les dispositifs de sécurité à mettre en place lorsqu'une menace survient.");
+		acrobatie.setMetier(voltigeur);
+		acrobatie = specialisationRepository.save(acrobatie);
+
+		caravane.setDescription(
+				"Manœuvrer un attelage, une charrette, un carrosse, un char. Gérer une caravane et la logistique de ravitaillement qu'elle nécessite. Connaître les dispositifs de sécurité à mettre en place lorsqu'une menace survient.");
 		caravane.setNom("Caravane");
 		caravane.setDomaineLie(survie);
-//		caravane.setMetier(caravanier);
-		caravane=specialisationRepository.save(caravane);
-		
-		cultureHeossienne.setDescription("Connaître les us et coutumes des peuples héossiens, ainsi que la géographie de l'Héossie. Cette Spécialisation est principalement ancrée dans le présent. Le passé des peuples héossiens sont plus du ressort de la Spécialisation Histoire d'Héos (SAVOIR).");
+		caravane.setMetier(caravanier);
+		caravane = specialisationRepository.save(caravane);
+
+		cultureHeossienne.setDescription(
+				"Connaître les us et coutumes des peuples héossiens, ainsi que la géographie de l'Héossie. Cette Spécialisation est principalement ancrée dans le présent. Le passé des peuples héossiens sont plus du ressort de la Spécialisation Histoire d'Héos (SAVOIR).");
 		cultureHeossienne.setNom("Culture héossienne");
 		cultureHeossienne.setDomaineLie(survie);
-//		cultureHeossienne.setMetier(guide);
-		cultureHeossienne=specialisationRepository.save(cultureHeossienne);
-		
-		cultureNecrosienne.setDescription("Connaître les différents stades de la nécrose, du maudit à l'incarnation, ainsi que des différentes voies qui mènent aux Limbes. Situer les divers empires nécrosiens, leurs modes de non-vie, leurs lois et leurs rituels. Rechercher l'emplacement de stèles d'Embiose.");
+		cultureHeossienne.setMetier(guide);
+		cultureHeossienne = specialisationRepository.save(cultureHeossienne);
+
+		cultureNecrosienne.setDescription(
+				"Connaître les différents stades de la nécrose, du maudit à l'incarnation, ainsi que des différentes voies qui mènent aux Limbes. Situer les divers empires nécrosiens, leurs modes de non-vie, leurs lois et leurs rituels. Rechercher l'emplacement de stèles d'Embiose.");
 		cultureNecrosienne.setNom("Culture nécrosienne");
 		cultureNecrosienne.setDomaineLie(survie);
-//		cultureNecrosienne.setMetier(traqueurdestele);
-		cultureNecrosienne=specialisationRepository.save(cultureNecrosienne);
-		
-		discretion.setDescription("Se déplacer en silence, se cacher dans les ombres, se camoufler dans la nature. Tendre une embuscade. Semer quelqu'un autrement que par la course.");
+		cultureNecrosienne.setMetier(traqueurDeStele);
+		cultureNecrosienne = specialisationRepository.save(cultureNecrosienne);
+
+		discretion.setDescription(
+				"Se déplacer en silence, se cacher dans les ombres, se camoufler dans la nature. Tendre une embuscade. Semer quelqu'un autrement que par la course.");
 		discretion.setNom("Discrétion");
 		discretion.setDomaineLie(survie);
-//		discretion.setMetier(espion);
-		discretion=specialisationRepository.save(discretion);
-		
-		educationPhysique.setDescription("Courir, sauter, escalader, ramper, rouler, nager,... Avoir une bonne coordination motrice. Être endurant.");
+		discretion.setMetier(espion);
+		discretion = specialisationRepository.save(discretion);
+
+		educationPhysique.setDescription(
+				"Courir, sauter, escalader, ramper, rouler, nager,... Avoir une bonne coordination motrice. Être endurant.");
 		educationPhysique.setNom("Education physique");
 		educationPhysique.setDomaineLie(survie);
-//		educationPhysique.setMetier(athlete);
-		educationPhysique=specialisationRepository.save(educationPhysique);
-		
-		monture.setDescription("Chevaucher tout type de monture. Diriger des créatures volantes, terrestres ou marines.");
+		educationPhysique.setMetier(athlete);
+		educationPhysique = specialisationRepository.save(educationPhysique);
+
+		monture.setDescription(
+				"Chevaucher tout type de monture. Diriger des créatures volantes, terrestres ou marines.");
 		monture.setNom("Monture");
 		monture.setDomaineLie(survie);
-//		monture.setMetier(messager);
-		monture=specialisationRepository.save(monture);
-		
-		monture.setDescription("Chevaucher tout type de monture. Diriger des créatures volantes, terrestres ou marines.");
+		monture.setMetier(messager);
+		monture = specialisationRepository.save(monture);
+
+		monture.setDescription(
+				"Chevaucher tout type de monture. Diriger des créatures volantes, terrestres ou marines.");
 		monture.setNom("Monture");
 		monture.setDomaineLie(survie);
-//		monture.setMetier(messager);
-		monture=specialisationRepository.save(monture);
-		
-		navigation.setDescription("Naviguer en milieu aquatique ou en milieu aérien. Reconnaître les courants et les interpréter, maîtriser les principes aérodynamiques et hydrauliques permettant de voyager dans les airs et dans l’eau. S'orienter en mer ou dans les airs. Piloter tous types d'engins volants ou marins qui ne comportent pas de technologie humaine. Prédire la météo.");
+		monture.setMetier(messager);
+		monture = specialisationRepository.save(monture);
+
+		navigation.setDescription(
+				"Naviguer en milieu aquatique ou en milieu aérien. Reconnaître les courants et les interpréter, maîtriser les principes aérodynamiques et hydrauliques permettant de voyager dans les airs et dans l’eau. S'orienter en mer ou dans les airs. Piloter tous types d'engins volants ou marins qui ne comportent pas de technologie humaine. Prédire la météo.");
 		navigation.setNom("Navigation");
 		navigation.setDomaineLie(survie);
-//		navigation.setMetier(navigateur);
-		navigation=specialisationRepository.save(navigation);
-		
-		vieSauvage.setDescription("Connaître tout ce qui a trait au milieu terrestre et à son adaptation. Pister, chasser, poser des pièges, allumer un feu par grand vent, établir un campement réconfortant, se laver à l'eau froide,…");
+		navigation.setMetier(navigateur);
+		navigation = specialisationRepository.save(navigation);
+
+		vieSauvage.setDescription(
+				"Connaître tout ce qui a trait au milieu terrestre et à son adaptation. Pister, chasser, poser des pièges, allumer un feu par grand vent, établir un campement réconfortant, se laver à l'eau froide,…");
 		vieSauvage.setNom("Vie sauvage");
 		vieSauvage.setDomaineLie(survie);
-//		vieSauvage.setMetier(chasseur);
-		vieSauvage=specialisationRepository.save(vieSauvage);
-		
-		vieSauvage.setDescription("Connaître tout ce qui a trait au milieu terrestre et à son adaptation. Pister, chasser, poser des pièges, allumer un feu par grand vent, établir un campement réconfortant, se laver à l'eau froide,…");
+		vieSauvage.setMetier(chasseur);
+		vieSauvage = specialisationRepository.save(vieSauvage);
+
+		vieSauvage.setDescription(
+				"Connaître tout ce qui a trait au milieu terrestre et à son adaptation. Pister, chasser, poser des pièges, allumer un feu par grand vent, établir un campement réconfortant, se laver à l'eau froide,…");
 		vieSauvage.setNom("Vie sauvage");
 		vieSauvage.setDomaineLie(survie);
-//		vieSauvage.setMetier(chasseur);
-		vieSauvage=specialisationRepository.save(vieSauvage);
-		
-		vigilance.setDescription("Mettre ses sens en éveil, percevoir activement son environnement, contrairement à l'Intuition du Shaan qui traduit la perception passive. Scruter l’horizon pour y découvrir une silhouette inhabituelle. Guetter une proie. Identifier un élément lointain. Avoir le sens de l’orientation.");
+		vieSauvage.setMetier(chasseur);
+		vieSauvage = specialisationRepository.save(vieSauvage);
+
+		vigilance.setDescription(
+				"Mettre ses sens en éveil, percevoir activement son environnement, contrairement à l'Intuition du Shaan qui traduit la perception passive. Scruter l’horizon pour y découvrir une silhouette inhabituelle. Guetter une proie. Identifier un élément lointain. Avoir le sens de l’orientation.");
 		vigilance.setNom("Vigilance");
 		vigilance.setDomaineLie(survie);
-//		vigilance.setMetier(eclaireur);
-		vigilance=specialisationRepository.save(vigilance);
-		
-		armesAProjectiles.setDescription("Savoir manipuler toutes les armes à déclencheur mécanique comme les arbalètes, mais également les armes sans déclencheur tels que arc, fronde, sarbacane, arbalète, lance-pointe, lance-feu, servant à propulser après tension d’une corde ou utilisation de la force giratoire, divers projectiles.");
+		vigilance.setMetier(eclaireur);
+		vigilance = specialisationRepository.save(vigilance);
+
+		armesAProjectiles.setDescription(
+				"Savoir manipuler toutes les armes à déclencheur mécanique comme les arbalètes, mais également les armes sans déclencheur tels que arc, fronde, sarbacane, arbalète, lance-pointe, lance-feu, servant à propulser après tension d’une corde ou utilisation de la force giratoire, divers projectiles.");
 		armesAProjectiles.setNom("Armes à projectiles");
 		armesAProjectiles.setDomaineLie(combat);
-//		armesAProjectiles.setMetier(archer);
-		armesAProjectiles=specialisationRepository.save(armesAProjectiles);
-		
-		armesDeMelee.setDescription("Savoir utiliser toutes les armes de corps à corps, des armes courtes comme la dague, le glaive et autres couteaux, shaar, serpine, seltar, aux armes moyennes comme l’épée mélodienne, feling, les petites masses, le yink, mais aussi les armes longues et lourdes comme l’épée darken, la lame lune, la masse woon, les armes d’hast,...");
+		armesAProjectiles.setMetier(archer);
+		armesAProjectiles = specialisationRepository.save(armesAProjectiles);
+
+		armesDeMelee.setDescription(
+				"Savoir utiliser toutes les armes de corps à corps, des armes courtes comme la dague, le glaive et autres couteaux, shaar, serpine, seltar, aux armes moyennes comme l’épée mélodienne, feling, les petites masses, le yink, mais aussi les armes longues et lourdes comme l’épée darken, la lame lune, la masse woon, les armes d’hast,...");
 		armesDeMelee.setNom("Armes de mêlee");
 		armesDeMelee.setDomaineLie(combat);
-//		armesDeMelee.setMetier(gladiateur);
-		armesDeMelee=specialisationRepository.save(armesDeMelee);
-		
-		armesLancees.setDescription("Savoir utiliser les armes à propulsion directe, sans intervention de force autre que celle du bras, tels que filets, couteaux de lancer, nashen, lance mélodienne, boomerangs, bolas,…");
+		armesDeMelee.setMetier(gladiateur);
+		armesDeMelee = specialisationRepository.save(armesDeMelee);
+
+		armesLancees.setDescription(
+				"Savoir utiliser les armes à propulsion directe, sans intervention de force autre que celle du bras, tels que filets, couteaux de lancer, nashen, lance mélodienne, boomerangs, bolas,…");
 		armesLancees.setNom("Armes lancées");
 		armesLancees.setDomaineLie(combat);
-//		armesLancees.setMetier(francTireur);
-		armesLancees=specialisationRepository.save(armesLancees);
-		
-		armimales.setDescription("Dresser les armimales d’attaque et de défense afin qu’elles offrent l’efficacité maximale en combat. Savoir comment s’en occuper et connaître leurs besoins.");
+		armesLancees.setMetier(francTireur);
+		armesLancees = specialisationRepository.save(armesLancees);
+
+		armimales.setDescription(
+				"Dresser les armimales d’attaque et de défense afin qu’elles offrent l’efficacité maximale en combat. Savoir comment s’en occuper et connaître leurs besoins.");
 		armimales.setNom("Armimales");
 		armimales.setDomaineLie(combat);
-//		armimales.setMetier(armimalier);
-		armimales=specialisationRepository.save(armimales);
-		
-		enginsDeGuerre.setDescription("Savoir utiliser des engins de guerre comme les armes de siège, les catapultes, balistes et autres trébuchets. Les Engins de Guerre regroupent toutes les armes qui sont conçues pour détruire les bâtiments et les véhicules.");
+		armimales.setMetier(armimalier);
+		armimales = specialisationRepository.save(armimales);
+
+		enginsDeGuerre.setDescription(
+				"Savoir utiliser des engins de guerre comme les armes de siège, les catapultes, balistes et autres trébuchets. Les Engins de Guerre regroupent toutes les armes qui sont conçues pour détruire les bâtiments et les véhicules.");
 		enginsDeGuerre.setNom("Engins de guerre");
 		enginsDeGuerre.setDomaineLie(combat);
-//		enginsDeGuerre.setMetier(artilleur);
-		enginsDeGuerre=specialisationRepository.save(enginsDeGuerre);
-		
-		esquive.setDescription("Manœuvrer avec une posture défensive dans un combat pour se retrouver en position avantageuse pour fuir ou contre-attaquer le tour suivant.");
+		enginsDeGuerre.setMetier(artilleur);
+		enginsDeGuerre = specialisationRepository.save(enginsDeGuerre);
+
+		esquive.setDescription(
+				"Manœuvrer avec une posture défensive dans un combat pour se retrouver en position avantageuse pour fuir ou contre-attaquer le tour suivant.");
 		esquive.setNom("Esquive");
 		esquive.setDomaineLie(combat);
-//		esquive.setMetier(fantassin);
-		esquive=specialisationRepository.save(esquive);
-		
-		forcer.setDescription("Manœuvrer avec une posture défensive dans un combat pour se retrouver en position avantageuse pour fuir ou contre-attaquer le tour suivant.");
+		esquive.setMetier(fantassin);
+		esquive = specialisationRepository.save(esquive);
+
+		forcer.setDescription(
+				"Manœuvrer avec une posture défensive dans un combat pour se retrouver en position avantageuse pour fuir ou contre-attaquer le tour suivant.");
 		forcer.setNom("Forcer");
 		forcer.setDomaineLie(combat);
-//		forcer.setMetier(soldat);
-		forcer=specialisationRepository.save(forcer);
-		
-		intimidation.setDescription("Faire changer d'avis quelqu'un qui aurait de mauvaises intentions à votre égard, d'un regard ou en arborant une attitude combattive. Obtenir des renseignements lors d'interrogatoires et par d’autres pratiques peu morales. Impressionner son adversaire au combat. Donner des ordres indiscutables dans le feu de l’action.");
+		forcer.setMetier(soldat);
+		forcer = specialisationRepository.save(forcer);
+
+		intimidation.setDescription(
+				"Faire changer d'avis quelqu'un qui aurait de mauvaises intentions à votre égard, d'un regard ou en arborant une attitude combattive. Obtenir des renseignements lors d'interrogatoires et par d’autres pratiques peu morales. Impressionner son adversaire au combat. Donner des ordres indiscutables dans le feu de l’action.");
 		intimidation.setNom("Intimidation");
 		intimidation.setDomaineLie(combat);
-//		intimidation.setMetier(protecteur);
-		intimidation=specialisationRepository.save(intimidation);
-		
-		pugilat.setDescription("N'utiliser que son corps pour vaincre l'adversaire. Appliquer les diverses techniques de combat visant à frapper avec toutes les parties du corps mais également à neutraliser un adversaire à l'aide de blocages et de strangulations. C’est la Spécialisation utilisée pour les armes directement fixées sur le corps telles que lameur, coudines, gants de métal, griffes etc.");
+		intimidation.setMetier(protecteur);
+		intimidation = specialisationRepository.save(intimidation);
+
+		pugilat.setDescription(
+				"N'utiliser que son corps pour vaincre l'adversaire. Appliquer les diverses techniques de combat visant à frapper avec toutes les parties du corps mais également à neutraliser un adversaire à l'aide de blocages et de strangulations. C’est la Spécialisation utilisée pour les armes directement fixées sur le corps telles que lameur, coudines, gants de métal, griffes etc.");
 		pugilat.setNom("Pugilat");
 		pugilat.setDomaineLie(combat);
-//		pugilat.setMetier(gardeMine);
-		pugilat=specialisationRepository.save(pugilat);
-		
-		strategie.setDescription("Définir une tactique à grande échelle visant à vaincre des armées entières. Commander à des troupes militaires. Manœuvrer dans un combat au contact pour exploiter les avantages du terrain et gêner ses adversaires. Obtenir des informations sur l'état des Trihns d'un adversaire.");
+		pugilat.setMetier(gardeMine);
+		pugilat = specialisationRepository.save(pugilat);
+
+		strategie.setDescription(
+				"Définir une tactique à grande échelle visant à vaincre des armées entières. Commander à des troupes militaires. Manœuvrer dans un combat au contact pour exploiter les avantages du terrain et gêner ses adversaires. Obtenir des informations sur l'état des Trihns d'un adversaire.");
 		strategie.setNom("Strategie");
 		strategie.setDomaineLie(combat);
-//		strategie.setMetier(gardienDesForets);
-		strategie=specialisationRepository.save(strategie);
-		
-		armesHumaines.setDescription("Utiliser toutes les armes technologiques humaines, depuis les armes de poing et les armes d’épaules (pistolet, étourdisseur, gazeur, arbalète de poing à fusion, fusils d'assaut, encapsuleurs, arcs magnétiques,…), jusqu'aux armes lourdes, type dépeupleurs, brûleurs, lance-roquettes, bazookas, ainsi que les armes à pied ou embarquées à bord de véhicules (tourelles, torpilles, canon à plasma,...). Savoir tirer le meilleur parti des combinaisons de combat, de la plus légère à l’exosquelette des légions d’Antarès.");
+		strategie.setMetier(gardienDesForets);
+		strategie = specialisationRepository.save(strategie);
+
+		armesHumaines.setDescription(
+				"Utiliser toutes les armes technologiques humaines, depuis les armes de poing et les armes d’épaules (pistolet, étourdisseur, gazeur, arbalète de poing à fusion, fusils d'assaut, encapsuleurs, arcs magnétiques,…), jusqu'aux armes lourdes, type dépeupleurs, brûleurs, lance-roquettes, bazookas, ainsi que les armes à pied ou embarquées à bord de véhicules (tourelles, torpilles, canon à plasma,...). Savoir tirer le meilleur parti des combinaisons de combat, de la plus légère à l’exosquelette des légions d’Antarès.");
 		armesHumaines.setNom("Armes humaines");
 		armesHumaines.setDomaineLie(necrose);
-//		armesHumaines.setMetier(mitrailleur);
-		armesHumaines=specialisationRepository.save(armesHumaines);
-		
-		biomorphie.setDescription("Étudier les principes vivants et les écosystèmes auxquels ils sont associés d'un point de vue scientifique. Maîtriser les techniques chirurgicales assistées par ordinateur ou traditionnelles, les greffes mais également la génétique et les moyens de manipuler l'ADN. Élever des morphes afin de les fondre à un module de tâche spécifique. Soigner ou changer un morphe défectueux ou améliorer ses performances");
+		armesHumaines.setMetier(mitrailleur);
+		armesHumaines = specialisationRepository.save(armesHumaines);
+
+		biomorphie.setDescription(
+				"Étudier les principes vivants et les écosystèmes auxquels ils sont associés d'un point de vue scientifique. Maîtriser les techniques chirurgicales assistées par ordinateur ou traditionnelles, les greffes mais également la génétique et les moyens de manipuler l'ADN. Élever des morphes afin de les fondre à un module de tâche spécifique. Soigner ou changer un morphe défectueux ou améliorer ses performances");
 		biomorphie.setNom("Biomorphie");
 		biomorphie.setDomaineLie(necrose);
-//		biomorphie.setMetier(geneticien);
-		biomorphie=specialisationRepository.save(biomorphie);
-		
-		cauchemar.setDescription("S'immiscer dans les rêves des êtres pour les transformer en cauchemars, empêchant ainsi toute régénération de Trihn pendant quelques jours. Le Cauchemar de la NÉCROSE est opposé au Rêve du SHAAN.");
+		biomorphie.setMetier(geneticien);
+		biomorphie = specialisationRepository.save(biomorphie);
+
+		cauchemar.setDescription(
+				"S'immiscer dans les rêves des êtres pour les transformer en cauchemars, empêchant ainsi toute régénération de Trihn pendant quelques jours. Le Cauchemar de la NÉCROSE est opposé au Rêve du SHAAN.");
 		cauchemar.setNom("Cauchemar");
 		cauchemar.setDomaineLie(necrose);
-//		cauchemar.setMetier(ensorceleur);
-		cauchemar=specialisationRepository.save(cauchemar);
-		
-		contrebande.setDescription("Acheter, vendre et acheminer des marchandises illégales. Importer des armes interdites, faire transiter un chargement d’explosifs, transporter des esclaves clandestins, négocier le prix de renseignements ou gérer un réseau de marché noir.");
+		cauchemar.setMetier(ensorceleur);
+		cauchemar = specialisationRepository.save(cauchemar);
+
+		contrebande.setDescription(
+				"Acheter, vendre et acheminer des marchandises illégales. Importer des armes interdites, faire transiter un chargement d’explosifs, transporter des esclaves clandestins, négocier le prix de renseignements ou gérer un réseau de marché noir.");
 		contrebande.setNom("Contrebande");
 		contrebande.setDomaineLie(necrose);
-//		contrebande.setMetier(trafiquant);
-		contrebande=specialisationRepository.save(contrebande);
-		
-		corruption.setDescription("Acheter le silence de quelqu'un afin de contourner la légalité. Exploiter les vices d’une personne pour en tirer un avantage personnel.");
+		contrebande.setMetier(trafiquant);
+		contrebande = specialisationRepository.save(contrebande);
+
+		corruption.setDescription(
+				"Acheter le silence de quelqu'un afin de contourner la légalité. Exploiter les vices d’une personne pour en tirer un avantage personnel.");
 		corruption.setNom("Corruption");
 		corruption.setDomaineLie(necrose);
-//		corruption.setMetier(escroc);
-		corruption=specialisationRepository.save(corruption);
-		
-		explosifs.setDescription("Connaître les diverses techniques de sabotage pour détruire un édifice ou un véhicule. Mettre hors d'état de nuire un nombre important de personnes. Manipuler tous les types d'explosifs de la grenade au TNT en passant par la dynamite et les capsules à fusion.");
+		corruption.setMetier(escroc);
+		corruption = specialisationRepository.save(corruption);
+
+		explosifs.setDescription(
+				"Connaître les diverses techniques de sabotage pour détruire un édifice ou un véhicule. Mettre hors d'état de nuire un nombre important de personnes. Manipuler tous les types d'explosifs de la grenade au TNT en passant par la dynamite et les capsules à fusion.");
 		explosifs.setNom("Explosifs");
 		explosifs.setDomaineLie(necrose);
-//		explosifs.setMetier(artificier);
-		explosifs=specialisationRepository.save(explosifs);
-		
-		fraude.setDescription("Savoir faire de la contrefaçon ou des faux papiers. Connaître les failles d'un système politique, financier, juridique ou administratif afin de les détourner à son avantage.");
+		explosifs.setMetier(artificier);
+		explosifs = specialisationRepository.save(explosifs);
+
+		fraude.setDescription(
+				"Savoir faire de la contrefaçon ou des faux papiers. Connaître les failles d'un système politique, financier, juridique ou administratif afin de les détourner à son avantage.");
 		fraude.setNom("Fraude");
 		fraude.setDomaineLie(necrose);
-//		fraude.setMetier(faussaire);
-		fraude=specialisationRepository.save(fraude);
-		
-		harcelement.setDescription("Savoir utiliser toutes les techniques permettant de déstabiliser et de nécroser une cible en la giflant, lui crachant dessus, la bousculant et en lui faisant perdre tous ses moyens. Le Harcèlement répété peut nécroser rapidement une victime si l'on n'y prend pas garde...");
+		fraude.setMetier(faussaire);
+		fraude = specialisationRepository.save(fraude);
+
+		harcelement.setDescription(
+				"Savoir utiliser toutes les techniques permettant de déstabiliser et de nécroser une cible en la giflant, lui crachant dessus, la bousculant et en lui faisant perdre tous ses moyens. Le Harcèlement répété peut nécroser rapidement une victime si l'on n'y prend pas garde...");
 		harcelement.setNom("Harcèlement");
 		harcelement.setDomaineLie(necrose);
-//		harcelement.setMetier(voyou);
-		harcelement=specialisationRepository.save(harcelement);
-		
-		larcin.setDescription("Faire les poches. Connaître également les jeux de hasard ou de stratégie et les milieux où on les pratique. Tricher, accessoirement. Repérer, reconnaître et neutraliser les systèmes de surveillance et de protection de bâtiments ou de véhicules.");
+		harcelement.setMetier(voyou);
+		harcelement = specialisationRepository.save(harcelement);
+
+		larcin.setDescription(
+				"Faire les poches. Connaître également les jeux de hasard ou de stratégie et les milieux où on les pratique. Tricher, accessoirement. Repérer, reconnaître et neutraliser les systèmes de surveillance et de protection de bâtiments ou de véhicules.");
 		larcin.setNom("Larcin");
 		larcin.setDomaineLie(necrose);
-//		larcin.setMetier(voleur);
-		larcin=specialisationRepository.save(larcin);
-		
-		pacteNecrotique.setDescription("Invoquer une Anti-Âme, essence négative issue des Limbes, et l'utiliser pour pratiquer la Magie des Limbes. Pactiser avec une incarnation");
+		larcin.setMetier(voleur);
+		larcin = specialisationRepository.save(larcin);
+
+		pacteNecrotique.setDescription(
+				"Invoquer une Anti-Âme, essence négative issue des Limbes, et l'utiliser pour pratiquer la Magie des Limbes. Pactiser avec une incarnation");
 		pacteNecrotique.setNom("Pacte necrotique");
 		pacteNecrotique.setDomaineLie(necrose);
-//		pacteNecrotique.setMetier(voleur);
-		pacteNecrotique=specialisationRepository.save(pacteNecrotique);
-		
+		pacteNecrotique.setMetier(voleur);
+		pacteNecrotique = specialisationRepository.save(pacteNecrotique);
+
 //-------------------------------------------------------------------------------------------------------------------------
 //		REMPLISSAGE OBJET RACE
 //-------------------------------------------------------------------------------------------------------------------------	
 		boreals.setNomRace("boreals");
 		boreals.setDomaine(survie);
-//		boreals.setSpecialisation1(vigilance);
-//		boreals.setSpecialisation2(navigation);
+		boreals.setSpecialisation1(vigilance);
+		boreals.setSpecialisation2(navigation);
 		boreals.setTailleEstimation("1,6m à 1,9 m");
 		boreals.setPoidsEstimation("60 à 120 kg");
 		boreals.setLangues("Héossien, Boréal");
@@ -1145,8 +1177,8 @@ public class DonneesPersonnage {
 
 		darkens.setNomRace("Darkens");
 		darkens.setDomaine(combat);
-//		darkens.setSpecialisation1(armeDeMelee);
-//		darkens.setSpecialisation2(monture);
+		darkens.setSpecialisation1(armesDeMelee);
+		darkens.setSpecialisation2(monture);
 		darkens.setTailleEstimation("1,9m à 2,3 m");
 		darkens.setPoidsEstimation("80 à 200 kg");
 		darkens.setLangues("Héossien, Darken");
@@ -1159,8 +1191,8 @@ public class DonneesPersonnage {
 
 		delhions.setNomRace("Delhions");
 		delhions.setDomaine(social);
-//		delhions.setSpecialisation1(musique);
-//		delhions.setSpecialisation2(enseignement);
+		delhions.setSpecialisation1(musique);
+		delhions.setSpecialisation2(enseignement);
 		delhions.setTailleEstimation("1,7m à 1,9 m");
 		delhions.setPoidsEstimation("70 à 100 kg");
 		delhions.setLangues("Héossien, Delhion");
@@ -1173,8 +1205,8 @@ public class DonneesPersonnage {
 
 		felings.setNomRace("Felings");
 		felings.setDomaine(shaan);
-//		felings.setSpecialisation1(intuition);
-//		felings.setSpecialisation2(discretion);
+		felings.setSpecialisation1(intuition);
+		felings.setSpecialisation2(discretion);
 		felings.setTailleEstimation("1,5m à 1,9 m");
 		felings.setPoidsEstimation("50 à 100 kg");
 		felings.setLangues("Héossien, Feling");
@@ -1201,8 +1233,8 @@ public class DonneesPersonnage {
 
 		melodiens.setNomRace("Melodiens");
 		melodiens.setDomaine(arts);
-//		melodiens.setSpecialisation1(chant);
-//		melodiens.setSpecialisation2(seduction);
+		melodiens.setSpecialisation1(chant);
+		melodiens.setSpecialisation2(seduction);
 		melodiens.setTailleEstimation("1,5 m à 1,9 m");
 		melodiens.setPoidsEstimation("30 à 80 kg");
 		melodiens.setLangues("Héossien, Mélodian");
@@ -1216,7 +1248,7 @@ public class DonneesPersonnage {
 		nomois.setNomRace("Nomoïs");
 		nomois.setDomaine(magie);
 		nomois.setSpecialisation1(geologie);
-//		nomois.setSpecialisation2(maitriseDesSchemes);
+		nomois.setSpecialisation2(maitriseDesSchemes);
 		nomois.setTailleEstimation("1,5 m à 1,9 m");
 		nomois.setPoidsEstimation("40 à 80 kg");
 		nomois.setLangues("Héossien, Nomoï");
@@ -1230,8 +1262,8 @@ public class DonneesPersonnage {
 
 		woons.setNomRace("Woons");
 		woons.setDomaine(rituels);
-//		woons.setSpecialisation1(educationPhysique);
-//		woons.setSpecialisation2(intimidation);
+		woons.setSpecialisation1(educationPhysique);
+		woons.setSpecialisation2(intimidation);
 		woons.setTailleEstimation("2,2 m à 2,7 m");
 		woons.setPoidsEstimation("100 à 300 kg");
 		woons.setLangues("Héossien, Woon");
@@ -1245,8 +1277,8 @@ public class DonneesPersonnage {
 
 		ygwans.setNomRace("Ygwans");
 		ygwans.setDomaine(savoir);
-//		ygwans.setSpecialisation1(histoireDHeos);
-//		ygwans.setSpecialisation2(vieSauvage);
+		ygwans.setSpecialisation1(histoireDHeos);
+		ygwans.setSpecialisation2(vieSauvage);
 		ygwans.setTailleEstimation("1,5 m à 1,9 m");
 		ygwans.setPoidsEstimation("60 à 150 kg");
 		ygwans.setLangues("Héossien, Ygwan");
@@ -1259,7 +1291,7 @@ public class DonneesPersonnage {
 
 		humains.setNomRace("Humains");
 		humains.setDomaine(necrose);
-//		humains.setSpecialisation1(cultureHumaine);
+		humains.setSpecialisation1(cultureHumaine);
 		humains.setSpecialisation2(technologie);
 		humains.setTailleEstimation("1,6 m à 1,9 m");
 		humains.setPoidsEstimation("60 à 120 kg");
@@ -1276,39 +1308,39 @@ public class DonneesPersonnage {
 
 		foretsBlanches.setNomPeuple("Forêts Blanches");
 		foretsBlanches.setDomaine(rituels);
-//		foretsBlanches.setSpecialisation1(langageDuCorps);
-//		foretsBlanches.setSpecialisation2(educationPhysique);
+		foretsBlanches.setSpecialisation1(langageDuCorps);
+		foretsBlanches.setSpecialisation2(educationPhysique);
 		foretsBlanches.setDescription(
 				"De vastes forêts de conifères se recouvrent de neige l'hiver venu. La taïga, ou forêt boréale, étonne par sa densité et sa persistance à des altitudes défiant l'imagination. Les arbres sont moins grands que dans les régions chaudes mais les variétés de plantes sont tout aussi foisonnantes. De nombreux Temples rythment les haltes des Voyageurs.");
 		foretsBlanches = peupleRepository.save(foretsBlanches);
 
 		glaces.setNomPeuple("Glaces");
 		glaces.setDomaine(magie);
-//		glaces.setSpecialisation1(arcanes);
-//		glaces.setSpecialisation2(langagePrimal);
+		glaces.setSpecialisation1(arcanes);
+		glaces.setSpecialisation2(langagePrimal);
 		glaces.setDescription(
 				"Les côtes sont bordées par une zone de glace aux contours instables. De nombreux plateaux recouverts de glaciers s'élèvent à plus de deux mille mètres. La vie au milieu des terres est impossible. Seul le littoral offre une réserve de gibier susceptible de nourrir les populations locales.");
 		glaces = peupleRepository.save(glaces);
 
 		grandsArbres.setNomPeuple("Grands Arbres");
 		grandsArbres.setDomaine(shaan);
-//		grandsArbres.setSpecialisation1(empathieVegetale);
-//		grandsArbres.setSpecialisation2(empathieAnimale);
+		grandsArbres.setSpecialisation1(empathieVegetale);
+		grandsArbres.setSpecialisation2(empathieAnimale);
 		grandsArbres.setDescription(
 				"Cette épaisse forêt de gigantesques arbres verts peut atteindre une centaine de mètres de hauteur et son feuillage est persistant.");
 		grandsArbres = peupleRepository.save(grandsArbres);
 
 		hautesHerbes.setNomPeuple("Hautes Herbes");
 		hautesHerbes.setDomaine(arts);
-//		hautesHerbes.setSpecialisation1(musique);
-//		hautesHerbes.setSpecialisation2(commerce);
+		hautesHerbes.setSpecialisation1(musique);
+		hautesHerbes.setSpecialisation2(commerce);
 		hautesHerbes.setDescription(
 				"De vastes plaines d'herbe grasse s'étendent à l'infini. Parsemées d'arbres et de petits bosquets, ces régions sont principalement exploitées pour l'agriculture et l'élevage.");
 		hautesHerbes = peupleRepository.save(hautesHerbes);
 
 		marais.setNomPeuple("Hautes Herbes");
 		marais.setDomaine(savoir);
-//		marais.setSpecialisation1(zoologie);
+		marais.setSpecialisation1(zoologie);
 		marais.setSpecialisation2(botanique);
 		marais.setDescription(
 				"De hauts arbres plongent leurs puissantes racines dans les vastes étendues d'eau peu profondes des marais verts, jaunes et rouges. On ne trouve quasiment que des Ygwans dans les Marais, car eux seuls semblent apprécier la constante humidité et la chaleur de l'endroit.");
@@ -1316,31 +1348,31 @@ public class DonneesPersonnage {
 
 		montagnes.setNomPeuple("Montagnes");
 		montagnes.setDomaine(social);
-//		montagnes.setSpecialisation1(educationPhysique);
-//		montagnes.setSpecialisation2(languesExotiques);
+		montagnes.setSpecialisation1(educationPhysique);
+		montagnes.setSpecialisation2(languesExotiques);
 		montagnes.setDescription(
 				"De roches et de pics, cette région froide a été prise d'assaut par les Delhions. Des conifères parsèment le pied des Montagnes, pour rapidement laisser place à la roche puis à la neige. Les conditions de vie y sont rigoureuses, car l'oxygène se raréfie en haute altitude. La montagne est un environnement très dangereux pour celui qui ne la connait pas. L'.entre-aide reste donc une priorité pour ceux qui doivent survivre dans ce milieu. Habitués à cotoyer des natifs de tous horizons, les montagnards ont développé une facilité à communiquer dans d'autres langages que les leurs.");
 		montagnes = peupleRepository.save(montagnes);
 
 		rivages.setNomPeuple("Rivages");
 		rivages.setDomaine(survie);
-//		rivages.setSpecialisation1(navigation);
-//		rivages.setSpecialisation2(educationPhysique);
+		rivages.setSpecialisation1(navigation);
+		rivages.setSpecialisation2(educationPhysique);
 		rivages.setDescription(
 				"Le milieu varie selon le climat de la région, allant de la plage de sable fin bordée d'arbres enchanteurs dans les régions chaudes aux gigantesques falaises abruptes des contrées plus froides. Sur Héos, les marées ont une amplitude colossale. Cela oblige les Peuples de la mer à consolider constamment les digues et barrages nécessaires à leur survie. Les Ygwans et les Kelwi ns de ces milieux maîtrisent la construction de ces édifices protecteurs et un maçon a droit au même respect qu'un grand navigateur. Le littoral et les fonds marins offrent une profusion de plantes et d' animaux divers. Les cités lacustres peuvent s'étendre sur des kilomètres le long des côtes et se prolongent dans la mer grâce aux ports.");
 		rivages = peupleRepository.save(rivages);
 
 		sables.setNomPeuple("Sables");
 		sables.setDomaine(combat);
-//		sables.setSpecialisation1(monture);
-//		sables.setSpecialisation2(histoireDHeos);
+		sables.setSpecialisation1(monture);
+		sables.setSpecialisation2(histoireDHeos);
 		sables.setDescription(
 				"Les Sables sont de vastes étendues arides de sable tassé ou en formation dunaire et de rochers plus ou moins saillants. Perpétuellement balayé par de terribles vents, le désert est une transition entre les Terres Brûlées et les Hautes Herbes chaudes. Selon la présence ou l'absence des pluies, il oscillera entre ces deux régions.");
 		sables = peupleRepository.save(sables);
 
 		terresBrulees.setNomPeuple("Terres Brûlées");
 		terresBrulees.setDomaine(technique);
-//		terresBrulees.setSpecialisation1(navigation);
+		terresBrulees.setSpecialisation1(navigation);
 		terresBrulees.setSpecialisation2(recuperation);
 		terresBrulees.setDescription(
 				"De gigantesques canyons, des plateaux qui s'élèvent à l'infini, des gouffres et des ravins qui transforment la lumière en ténèbres, tel est le décor des Terres Brûlées. Les Peuples des Terres Brûlées sont obligés de compenser la dureté de leur environnement par de rastuce et des trouvailles techniques. Si personne ne veut habiter les Terres Brûlées, nombreux sont ceux qui rêvent d'en récupérer toutes les richesses ...");
@@ -1348,8 +1380,8 @@ public class DonneesPersonnage {
 
 		cites.setNomPeuple("Cités");
 		cites.setDomaine(necrose);
-//		cites.setSpecialisation1(cultureHumaine);
-//		cites.setSpecialisation2(vieUrbaine);
+		cites.setSpecialisation1(cultureHumaine);
+		cites.setSpecialisation2(vieUrbaine);
 		cites.setDescription(
 				"Cités tentaculaires de bâtiments aux formes improbables, dressant leurs tours de pierre et de verre en offrande au ciel, ou au contraire plongeant leurs souterrains (égouts et habitations troglodytes) dans les entrailles de la terre, les mégalopoles héossiennes regorgent de vie . . . et de mort. Car si la vie y est agréable et animée dans les beaux quartiers et dans les secteurs résidentiels, les bas-fonds restent de vrais coupe-gorges et constituent des enclaves où l'Ombre impose ses lois.");
 		cites = peupleRepository.save(cites);
@@ -2052,6 +2084,76 @@ public class DonneesPersonnage {
 		soldat.setDescription(
 				"Le Soldat est un homme de terrain, habitué à vivre à la dure, sans confort et sans ménagement. Obéissant, il est au service de sa hiérarchie et offre sa vie à la cause qu’il sert. Il vit souvent en collectivité, mais mène son combat intérieur en solitaire, tiraillé entre ses doutes et ses convictions. L’entraînement des Soldats est intense et très dur, au point que même le plus gringalet est amené à devenir une montagne de muscles. Cette force, acquise par l’expérience et le travail, leur permet d’avoir un avantage décisif en combat.");
 		soldat = metierRepository.save(soldat);
+
+		artificier.setNomMetier("Artificier");
+		artificier.setVoie("Voie du Feu");
+		artificier.setCasteLie(ombres);
+		artificier.setDescription(
+				"L'Artificier est un pyromane fasciné par le feu et les explosions. Il démarre au quart de tour et a tendance à vouloir tout brûler autour de lui. D'un tempérament suicidaire, il brûle la vie par les deux bouts et agit souvent avant de réfléchir. Il s'emporte pour un rien et peut, par excès de colère, commettre des bavures. Pour toutes ces raisons, l'Artificier suscite la crainte autour de lui car il a la réputation d'être totalement incontrôlable et surtout extrêmement destructeur.");
+		artificier = metierRepository.save(artificier);
+
+		ensorceleur.setNomMetier("Ensorceleur");
+		ensorceleur.setVoie("Voie des Limbes");
+		ensorceleur.setCasteLie(ombres);
+		ensorceleur.setDescription(
+				"L'Ensorceleur reste le métier le plus craint des Héossiens. Pourchassant leurs cibles jusque dans leur sommeil, ils vivent entre deux mondes où réel et imaginaire ne font qu'un...Même s'il n'est pas nécrosé, l'Ensorceleur en prend tous les aspects psychologiques, paranoïa, égocentrisme, stress et colères incontrôlables. Profondément névrotique, il a du mal à trouver sa place, nécrosien pour les Anthéens et anthéen chez les Nécrosiens. Pour cette raison, les Ensorceleurs finissent par se nécroser d'eux-mêmes afin d'avoir enfin une place dans la société...");
+		ensorceleur = metierRepository.save(ensorceleur);
+
+		escroc.setNomMetier("Escroc");
+		escroc.setVoie("Voie de l'Autre");
+		escroc.setCasteLie(ombres);
+		escroc.setDescription(
+				"L'Escroc se sent comme un poisson dans l'eau au sein du pouvoir humain. Il monte de nombreuses affaires pour exploiter des Héossiens et même des Humains afin de faire le maximum de profit avec le minimum de dépenses. Adepte des passe-droits, il graisse la patte de tous ceux qui tiennent une place stratégique au sein des rouages de la mécanique administrative humaine. Il arrive toujours à ses fins et ne supporte pas la contradiction. Car l'Escroc se sent invulnérable, doté d'une essence divine, il achète ses ennemis, vend ses alliés et veut devenir maître du monde. Mais l'Escroc finit toujours ses jours seul, ignoré de tous...");
+		escroc = metierRepository.save(escroc);
+
+		faussaire.setNomMetier("Faussaire");
+		faussaire.setVoie("Voie de la Terre");
+		faussaire.setCasteLie(ombres);
+		faussaire.setDescription(
+				"Le Faussaire est un artiste frustré qui s'exprime dans le contournement des lois et la réalisation de faux documents en vue de tromper la vigilance des administrations ou d'un système social. Capable de reproduire à la perfection des sceaux officiels, des laissez-passer, des faux papiers mais également des cartes numériques d'identification personnelle, ou des fausses clés, il peut permettre à des voleurs de forcer n'importe quel système de sécurité. Très matérialiste, le faussaire est quelqu'un de rationnel qui déteste les imprévus.");
+		faussaire = metierRepository.save(faussaire);
+
+		geneticien.setNomMetier("Généticien");
+		geneticien.setVoie("Voie du Végétal");
+		geneticien.setCasteLie(ombres);
+		geneticien.setDescription(
+				"Les Généticiens sont tous un peu fêlés. Véritables savants fous, ils aiment mener des expérimentations douteuses sur la matière vivante... Ils travaillent sur les morphes qu'ils essayent d'adapter aux nouvelles fonctions que requièrent les nouvelles technologies. La miniaturisation des morphes restent le graal des généticiens.");
+		geneticien = metierRepository.save(geneticien);
+
+		mitrailleur.setNomMetier("Mitrailleur");
+		mitrailleur.setVoie("Voie de l'Objet");
+		mitrailleur.setCasteLie(ombres);
+		mitrailleur.setDescription(
+				"Le Mitrailleur est un maître d'armes entraîné à manier toutes les armes technologiques humaines, du simple pistolet à décharge au canon à ondes embarqué. Il sait aussi utiliser les armures et autres boucliers énergétiques qui lui permettent de se prémunir de tous types d'attaques. Obsessionnel, le Mitrailleur entretient une relation assez malsaine avec ses armes. Pour lui, elles sont dotées de personnalités féminines auxquelles il se plaît à confier ses états d'Âmes. Perdre une arme pour un Mitrailleur est une blessure considérable, comme s'il avait perdu un être cher. D'un profil psychologique assez déséquilibré, le Mitrailleur est souvent en proie à de nombreuses perversions qui l'empêchent d'avoir une perception rationnelle de tout ce qui l'entoure.");
+		mitrailleur = metierRepository.save(mitrailleur);
+
+		necromant.setNomMetier("Nécromant");
+		necromant.setVoie("Voie du Moi");
+		necromant.setCasteLie(ombres);
+		necromant.setDescription(
+				"Les Nécromants sont des magiciens des Limbes qui peuvent invoquer des âmes nécrosées, qu'ils utilisent ensuite comme combustible pour créer de puissants tourments. Très dangereux et redoutés à juste titre, ils sèment la terreur dès qu'ils apparaissent. Les Héossiens sont pétrifiés lorsqu'ils sont en présence de Nécromants et ces derniers abusent de cette emprise pour assouvir leurs noirs desseins... Les Nécromants ont très vite su se faire une place de choix au sein de la théocratie humaine et ont beaucoup œuvré pour la persécution des Shaanistes et des Magiciens.");
+		necromant = metierRepository.save(necromant);
+
+		trafiquant.setNomMetier("Trafiquant");
+		trafiquant.setVoie("Voie de l'Air");
+		trafiquant.setCasteLie(ombres);
+		trafiquant.setDescription(
+				"Le Trafiquant peut prendre de nombreux visages, du petit escroc sans envergure qui tente de revendre des marchandises prohibées, au caïd à la tête de nombreux réseaux d'économie parallèle où trafics d'esclaves, vente de produits pharmaceutiques périmés, drogues dures et prostitution sauvage sont légion. Généralement affilié à l'Ombre, le Trafiquant doit toujours des comptes à un Trafiquant plus influent que lui. Il évolue principalement en milieu urbain, dont il connaît tous les codes sociaux et maîtrise toute la géopolitique liée aux gangs et aux divers réseaux d'influence locaux. Les modes changent très vite au sein des cités et il est difficile de se tenir toujours à la page pour ne pas paraître hors propos. De plus, d'une ville à l'autre ces codes peuvent changer du tout au tout...");
+		trafiquant = metierRepository.save(trafiquant);
+
+		voleur.setNomMetier("Voleur");
+		voleur.setVoie("Voie de l'eau");
+		voleur.setCasteLie(ombres);
+		voleur.setDescription(
+				"Le Voleur est capable de dérober n'importe quoi à l'insu de n'importe qui et ce, n'importe où. Tout est affaire de préparation, de repérage et de psychologie. Le reste n'est qu'une question de doigter. Le Voleur sait s'adapter à la technologie qui lui fait face, de la neutralisation du piège déclenché par une dalle, à la caméra de surveillance qu'il faut mettre hors circuit. Expert en pickpocket, le Voleur a également une bonne connaissance des jeux de hasard et de stratégie et surtout du meilleur moyen de tricher sans éveiller les soupçons. Toujours sur le qui-vive, le Voleur fait tout pour canaliser ses pulsions d'adrénaline afin que son esprit soit toujours aussi calme que l'eau d'un lac.");
+		voleur = metierRepository.save(voleur);
+
+		voyou.setNomMetier("Voyou");
+		voyou.setVoie("Voie de l'Animal");
+		voyou.setCasteLie(ombres);
+		voyou.setDescription(
+				"Les Voyous arpentent les Cités à la recherche de proies potentielles. Passés maîtres dans l’art du Harcèlement, ils savent utiliser toutes les techniques permettant de déstabiliser et de nécroser une cible en la giflant, lui crachant dessus, la bousculant et en lui faisant perdre tous ses moyens. Les voyous infiltrent également les Guildes, au sein desquelles ils se plaisent à harceler leurs subalternes.");
+		voyou = metierRepository.save(voyou);
 
 //-------------------------------------------------------------------------------------------------------------------------
 //		REMPLISSAGE OBJET MOTIVATION
