@@ -26,7 +26,7 @@ public class Specialisation {
 	private Integer version;
 	@Column(nullable = false)
 	private String nom;
-	@Column(length = 500)
+	@Column(length = 5000)
 	private String description;
 	@OneToOne
 	@JoinColumn(name = "Metier_ID")
