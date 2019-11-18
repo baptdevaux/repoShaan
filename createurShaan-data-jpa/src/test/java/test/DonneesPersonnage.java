@@ -132,6 +132,16 @@ public class DonneesPersonnage {
 		Specialisation lettres = new Specialisation();
 		Specialisation musique = new Specialisation();
 		Specialisation trucages = new Specialisation();
+		Specialisation embiose = new Specialisation();
+		Specialisation empathieAnimale = new Specialisation();
+		Specialisation empathieAntheenne = new Specialisation();
+		Specialisation empathieMinerale = new Specialisation();
+		Specialisation empathieVegetale = new Specialisation();
+		Specialisation intuition = new Specialisation();
+		Specialisation reve = new Specialisation();
+		Specialisation soinsDeLAme = new Specialisation();
+		Specialisation soinsDeLEsprit = new Specialisation();
+		Specialisation soinsDuCorps = new Specialisation();
 //-------------------------------------------------------------------------------------------------------------------------
 //		CREATION OBJET RACE
 //-------------------------------------------------------------------------------------------------------------------------	
@@ -521,6 +531,7 @@ public class DonneesPersonnage {
 //		gastronomie.setMetier(cuisinier);
 		gastronomie=specialisationRepository.save(gastronomie);
 		
+		
 		lettres.setDescription("Préparer des repas très élaborés, suivre des recettes et savoir en inventer. Reconnaître les bons produits et les préparer pour ensuite les cuisiner. Repérer si un plat est empoisonné. Un très bon repas a des vertus régénérantes.");
 		lettres.setNom("Lettres");
 		lettres.setDomaineLie(arts);
@@ -539,6 +550,71 @@ public class DonneesPersonnage {
 //		trucages.setMetier(prestidigitateur);
 		trucages=specialisationRepository.save(trucages);
 		
+		langageDuCorps.setDescription("Danser en mesure, pouvoir évoluer avec un ou une partenaire. Être capable de suivre une chorégraphie imposée ou d'en inventer une. Connaître les danses traditionnelles et celles en vogue. Pratiquer les massages du corps. Séduire quelqu'un. Un très bon massage a des vertus régénérantes.");
+		langageDuCorps.setNom("Langage du corps");
+		langageDuCorps.setDomaineLie(arts);
+//		langageDuCorps.setMetier(danseur);
+		langageDuCorps=specialisationRepository.save(langageDuCorps);
+		
+		embiose.setDescription("Résister à la confrontation avec un Trihn lors d'un rituel d'Embiose. Maximiser le gain d'expérience lié au rituel. Connaissance des lieux qui cachent une stèle d'Embiose.");
+		embiose.setNom("Embiose");
+		embiose.setDomaineLie(shaan);
+//		embiose.setMetier(chasseurDeSteles);
+		embiose=specialisationRepository.save(embiose);
+		
+		empathieAnimale.setDescription("Être en synergie avec le règne animal. Développer un lien empathique avec les animaux pour connaître leurs besoins vitaux, ainsi que la façon de les traiter. Établir une symbiose avec les armimales pacifistes ou utilitaires (mais pas les armimales d'attaque) et utiliser leurs capacités. Avoir accès intuitivement à des connaissances assez pointues sur les animaux.");
+		empathieAnimale.setNom("Empathie animale");
+		empathieAnimale.setDomaineLie(shaan);
+//		empathieAnimale.setMetier(eleveur);
+		empathieAnimale=specialisationRepository.save(empathieAnimale);
+		
+		empathieAntheenne.setDescription("Être en synergie avec les 10 races du Cercle des Réalités. Développer un lien empathique avec l'Âme des anthéens pour les calmer quand ils sont pris de folie, ou éviter de se faire bluffer. Avoir accès intuitivement à des connaissances assez pointues sur les comportements anthéens");
+		empathieAntheenne.setNom("Empathie antheenne");
+		empathieAntheenne.setDomaineLie(shaan);
+//		empathieAntheenne.setMetier(eleveur);
+		empathieAntheenne=specialisationRepository.save(empathieAntheenne);
+		
+		empathieMinerale.setDescription("Être en synergie avec le règne minéral. Développer un lien empathique avec les minéraux pour reconstituer des évènements très anciens à partir de l’empreinte magnétique qu’ils laisseraient dans le décor. Avoir accès intuitivement à des connaissances assez pointues sur les minéraux.");
+		empathieMinerale.setNom("Empathie minérale");
+		empathieMinerale.setDomaineLie(shaan);
+//		empathieMinerale.setMetier(telluriste);
+		empathieMinerale=specialisationRepository.save(empathieMinerale);
+		
+		empathieVegetale.setDescription("Être en synergie avec le règne végétal. Développer un lien empathique avec les végétaux afin de savoir faire pousser n'importe quoi sur n'importe quel terrain (fleurs, arbres, fruits et légumes, algues, champignons). Avoir accès intuitivement à des connaissances assez pointues sur les plantes.");
+		empathieVegetale.setNom("Empathie végétale");
+		empathieVegetale.setDomaineLie(shaan);
+//		empathieVegetale.setMetier(cultivateur);
+		empathieVegetale=specialisationRepository.save(empathieVegetale);
+		
+		intuition.setDescription("Rester en éveil, ne pas se laisser surprendre, déceler un détail inhabituel dans une pièce. Percevoir passivement les événements. Être sensible aux particularités de son environnement. Voir l'Invisible, les manœuvres de Discrétion, les Trucages et les Larcins.");
+		intuition.setNom("Intuition");
+		intuition.setDomaineLie(shaan);
+//		intuition.setMetier(prescient);
+		intuition=specialisationRepository.save(intuition);
+		
+		reve.setDescription("Naviguer dans le monde des rêves. Résister aux cauchemars. Communiquer avec des personnes endormies via leurs rêves, sans contrainte de distance.");
+		reve.setNom("Rêve");
+		reve.setDomaineLie(shaan);
+//		reve.setMetier(marcheurDeReves);
+		reve=specialisationRepository.save(reve);
+		
+		soinsDeLAme.setDescription("Soigner l'Âme d'une personne qui a subi des blessures nécrotiques par la pratique de méthodes de magnétisme et de transfert d'énergie.");
+		soinsDeLAme.setNom("Soins de l'âme");
+		soinsDeLAme.setDomaineLie(shaan);
+//		soinsDeLAme.setMetier(ameVive);
+		soinsDeLAme=specialisationRepository.save(soinsDeLAme);
+		
+		soinsDeLEsprit.setDescription("Soigner l'Esprit d'une personne qui a subi des blessures mentales par la pratique de la rhétorique");
+		soinsDeLEsprit.setNom("Soins de l'esprit");
+		soinsDeLEsprit.setDomaineLie(shaan);
+//		soinsDeLEsprit.setMetier(gardeFou);
+		soinsDeLEsprit=specialisationRepository.save(soinsDeLEsprit);
+		
+		soinsDuCorps.setDescription("Soigner le Corps d'une personne qui a subi des blessures physiques par la pratique de massages, d'acuponcture...");
+		soinsDuCorps.setNom("Soins du corps");
+		soinsDuCorps.setDomaineLie(shaan);
+//		soinsDuCorps.setMetier(radiant);
+		soinsDuCorps=specialisationRepository.save(soinsDuCorps);
 		
 		
 		
