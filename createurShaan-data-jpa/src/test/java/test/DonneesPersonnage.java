@@ -172,6 +172,26 @@ public class DonneesPersonnage {
 		Specialisation navigation = new Specialisation();
 		Specialisation vieSauvage = new Specialisation();
 		Specialisation vigilance = new Specialisation();
+		Specialisation armesAProjectiles = new Specialisation();
+		Specialisation armesDeMelee = new Specialisation();
+		Specialisation armesLancees = new Specialisation();
+		Specialisation armimales = new Specialisation();
+		Specialisation enginsDeGuerre = new Specialisation();
+		Specialisation esquive = new Specialisation();
+		Specialisation forcer = new Specialisation();
+		Specialisation intimidation = new Specialisation();
+		Specialisation pugilat = new Specialisation();
+		Specialisation strategie = new Specialisation();
+		Specialisation armesHumaines = new Specialisation();
+		Specialisation biomorphie = new Specialisation();
+		Specialisation cauchemar = new Specialisation();
+		Specialisation contrebande = new Specialisation();
+		Specialisation corruption = new Specialisation();
+		Specialisation explosifs = new Specialisation();
+		Specialisation fraude = new Specialisation();
+		Specialisation harcelement = new Specialisation();
+		Specialisation larcin = new Specialisation();
+		Specialisation pacteNecrotique = new Specialisation();
 //-------------------------------------------------------------------------------------------------------------------------
 //		CREATION OBJET RACE
 //-------------------------------------------------------------------------------------------------------------------------	
@@ -912,8 +932,200 @@ public class DonneesPersonnage {
 		riteDeTechnique.setNom("Rite de technique");
 		riteDeTechnique.setDomaineLie(rituels);
 		riteDeTechnique.setMetier(discipleDeLObjet);
-		riteDeTechnique = specialisationRepository.save(riteDeTechnique);
-
+		riteDeTechnique=specialisationRepository.save(riteDeTechnique);
+		
+		acrobatie.setDescription("Être dynamique, souple, et rapide. Avoir le sens de l'équilibre. Faire des prouesses acrobatiques, faire l’équilibriste, amortir une chute, se contorsionner… Esquiver une attaque physique.");
+		acrobatie.setNom("Acrobatie");
+		acrobatie.setDomaineLie(survie);
+//		acrobatie.setMetier(voltigeur);
+		acrobatie=specialisationRepository.save(acrobatie);
+		
+		caravane.setDescription("Manœuvrer un attelage, une charrette, un carrosse, un char. Gérer une caravane et la logistique de ravitaillement qu'elle nécessite. Connaître les dispositifs de sécurité à mettre en place lorsqu'une menace survient.");
+		caravane.setNom("Caravane");
+		caravane.setDomaineLie(survie);
+//		caravane.setMetier(caravanier);
+		caravane=specialisationRepository.save(caravane);
+		
+		cultureHeossienne.setDescription("Connaître les us et coutumes des peuples héossiens, ainsi que la géographie de l'Héossie. Cette Spécialisation est principalement ancrée dans le présent. Le passé des peuples héossiens sont plus du ressort de la Spécialisation Histoire d'Héos (SAVOIR).");
+		cultureHeossienne.setNom("Culture héossienne");
+		cultureHeossienne.setDomaineLie(survie);
+//		cultureHeossienne.setMetier(guide);
+		cultureHeossienne=specialisationRepository.save(cultureHeossienne);
+		
+		cultureNecrosienne.setDescription("Connaître les différents stades de la nécrose, du maudit à l'incarnation, ainsi que des différentes voies qui mènent aux Limbes. Situer les divers empires nécrosiens, leurs modes de non-vie, leurs lois et leurs rituels. Rechercher l'emplacement de stèles d'Embiose.");
+		cultureNecrosienne.setNom("Culture nécrosienne");
+		cultureNecrosienne.setDomaineLie(survie);
+//		cultureNecrosienne.setMetier(traqueurdestele);
+		cultureNecrosienne=specialisationRepository.save(cultureNecrosienne);
+		
+		discretion.setDescription("Se déplacer en silence, se cacher dans les ombres, se camoufler dans la nature. Tendre une embuscade. Semer quelqu'un autrement que par la course.");
+		discretion.setNom("Discrétion");
+		discretion.setDomaineLie(survie);
+//		discretion.setMetier(espion);
+		discretion=specialisationRepository.save(discretion);
+		
+		educationPhysique.setDescription("Courir, sauter, escalader, ramper, rouler, nager,... Avoir une bonne coordination motrice. Être endurant.");
+		educationPhysique.setNom("Education physique");
+		educationPhysique.setDomaineLie(survie);
+//		educationPhysique.setMetier(athlete);
+		educationPhysique=specialisationRepository.save(educationPhysique);
+		
+		monture.setDescription("Chevaucher tout type de monture. Diriger des créatures volantes, terrestres ou marines.");
+		monture.setNom("Monture");
+		monture.setDomaineLie(survie);
+//		monture.setMetier(messager);
+		monture=specialisationRepository.save(monture);
+		
+		monture.setDescription("Chevaucher tout type de monture. Diriger des créatures volantes, terrestres ou marines.");
+		monture.setNom("Monture");
+		monture.setDomaineLie(survie);
+//		monture.setMetier(messager);
+		monture=specialisationRepository.save(monture);
+		
+		navigation.setDescription("Naviguer en milieu aquatique ou en milieu aérien. Reconnaître les courants et les interpréter, maîtriser les principes aérodynamiques et hydrauliques permettant de voyager dans les airs et dans l’eau. S'orienter en mer ou dans les airs. Piloter tous types d'engins volants ou marins qui ne comportent pas de technologie humaine. Prédire la météo.");
+		navigation.setNom("Navigation");
+		navigation.setDomaineLie(survie);
+//		navigation.setMetier(navigateur);
+		navigation=specialisationRepository.save(navigation);
+		
+		vieSauvage.setDescription("Connaître tout ce qui a trait au milieu terrestre et à son adaptation. Pister, chasser, poser des pièges, allumer un feu par grand vent, établir un campement réconfortant, se laver à l'eau froide,…");
+		vieSauvage.setNom("Vie sauvage");
+		vieSauvage.setDomaineLie(survie);
+//		vieSauvage.setMetier(chasseur);
+		vieSauvage=specialisationRepository.save(vieSauvage);
+		
+		vieSauvage.setDescription("Connaître tout ce qui a trait au milieu terrestre et à son adaptation. Pister, chasser, poser des pièges, allumer un feu par grand vent, établir un campement réconfortant, se laver à l'eau froide,…");
+		vieSauvage.setNom("Vie sauvage");
+		vieSauvage.setDomaineLie(survie);
+//		vieSauvage.setMetier(chasseur);
+		vieSauvage=specialisationRepository.save(vieSauvage);
+		
+		vigilance.setDescription("Mettre ses sens en éveil, percevoir activement son environnement, contrairement à l'Intuition du Shaan qui traduit la perception passive. Scruter l’horizon pour y découvrir une silhouette inhabituelle. Guetter une proie. Identifier un élément lointain. Avoir le sens de l’orientation.");
+		vigilance.setNom("Vigilance");
+		vigilance.setDomaineLie(survie);
+//		vigilance.setMetier(eclaireur);
+		vigilance=specialisationRepository.save(vigilance);
+		
+		armesAProjectiles.setDescription("Savoir manipuler toutes les armes à déclencheur mécanique comme les arbalètes, mais également les armes sans déclencheur tels que arc, fronde, sarbacane, arbalète, lance-pointe, lance-feu, servant à propulser après tension d’une corde ou utilisation de la force giratoire, divers projectiles.");
+		armesAProjectiles.setNom("Armes à projectiles");
+		armesAProjectiles.setDomaineLie(combat);
+//		armesAProjectiles.setMetier(archer);
+		armesAProjectiles=specialisationRepository.save(armesAProjectiles);
+		
+		armesDeMelee.setDescription("Savoir utiliser toutes les armes de corps à corps, des armes courtes comme la dague, le glaive et autres couteaux, shaar, serpine, seltar, aux armes moyennes comme l’épée mélodienne, feling, les petites masses, le yink, mais aussi les armes longues et lourdes comme l’épée darken, la lame lune, la masse woon, les armes d’hast,...");
+		armesDeMelee.setNom("Armes de mêlee");
+		armesDeMelee.setDomaineLie(combat);
+//		armesDeMelee.setMetier(gladiateur);
+		armesDeMelee=specialisationRepository.save(armesDeMelee);
+		
+		armesLancees.setDescription("Savoir utiliser les armes à propulsion directe, sans intervention de force autre que celle du bras, tels que filets, couteaux de lancer, nashen, lance mélodienne, boomerangs, bolas,…");
+		armesLancees.setNom("Armes lancées");
+		armesLancees.setDomaineLie(combat);
+//		armesLancees.setMetier(francTireur);
+		armesLancees=specialisationRepository.save(armesLancees);
+		
+		armimales.setDescription("Dresser les armimales d’attaque et de défense afin qu’elles offrent l’efficacité maximale en combat. Savoir comment s’en occuper et connaître leurs besoins.");
+		armimales.setNom("Armimales");
+		armimales.setDomaineLie(combat);
+//		armimales.setMetier(armimalier);
+		armimales=specialisationRepository.save(armimales);
+		
+		enginsDeGuerre.setDescription("Savoir utiliser des engins de guerre comme les armes de siège, les catapultes, balistes et autres trébuchets. Les Engins de Guerre regroupent toutes les armes qui sont conçues pour détruire les bâtiments et les véhicules.");
+		enginsDeGuerre.setNom("Engins de guerre");
+		enginsDeGuerre.setDomaineLie(combat);
+//		enginsDeGuerre.setMetier(artilleur);
+		enginsDeGuerre=specialisationRepository.save(enginsDeGuerre);
+		
+		esquive.setDescription("Manœuvrer avec une posture défensive dans un combat pour se retrouver en position avantageuse pour fuir ou contre-attaquer le tour suivant.");
+		esquive.setNom("Esquive");
+		esquive.setDomaineLie(combat);
+//		esquive.setMetier(fantassin);
+		esquive=specialisationRepository.save(esquive);
+		
+		forcer.setDescription("Manœuvrer avec une posture défensive dans un combat pour se retrouver en position avantageuse pour fuir ou contre-attaquer le tour suivant.");
+		forcer.setNom("Forcer");
+		forcer.setDomaineLie(combat);
+//		forcer.setMetier(soldat);
+		forcer=specialisationRepository.save(forcer);
+		
+		intimidation.setDescription("Faire changer d'avis quelqu'un qui aurait de mauvaises intentions à votre égard, d'un regard ou en arborant une attitude combattive. Obtenir des renseignements lors d'interrogatoires et par d’autres pratiques peu morales. Impressionner son adversaire au combat. Donner des ordres indiscutables dans le feu de l’action.");
+		intimidation.setNom("Intimidation");
+		intimidation.setDomaineLie(combat);
+//		intimidation.setMetier(protecteur);
+		intimidation=specialisationRepository.save(intimidation);
+		
+		pugilat.setDescription("N'utiliser que son corps pour vaincre l'adversaire. Appliquer les diverses techniques de combat visant à frapper avec toutes les parties du corps mais également à neutraliser un adversaire à l'aide de blocages et de strangulations. C’est la Spécialisation utilisée pour les armes directement fixées sur le corps telles que lameur, coudines, gants de métal, griffes etc.");
+		pugilat.setNom("Pugilat");
+		pugilat.setDomaineLie(combat);
+//		pugilat.setMetier(gardeMine);
+		pugilat=specialisationRepository.save(pugilat);
+		
+		strategie.setDescription("Définir une tactique à grande échelle visant à vaincre des armées entières. Commander à des troupes militaires. Manœuvrer dans un combat au contact pour exploiter les avantages du terrain et gêner ses adversaires. Obtenir des informations sur l'état des Trihns d'un adversaire.");
+		strategie.setNom("Strategie");
+		strategie.setDomaineLie(combat);
+//		strategie.setMetier(gardienDesForets);
+		strategie=specialisationRepository.save(strategie);
+		
+		armesHumaines.setDescription("Utiliser toutes les armes technologiques humaines, depuis les armes de poing et les armes d’épaules (pistolet, étourdisseur, gazeur, arbalète de poing à fusion, fusils d'assaut, encapsuleurs, arcs magnétiques,…), jusqu'aux armes lourdes, type dépeupleurs, brûleurs, lance-roquettes, bazookas, ainsi que les armes à pied ou embarquées à bord de véhicules (tourelles, torpilles, canon à plasma,...). Savoir tirer le meilleur parti des combinaisons de combat, de la plus légère à l’exosquelette des légions d’Antarès.");
+		armesHumaines.setNom("Armes humaines");
+		armesHumaines.setDomaineLie(necrose);
+//		armesHumaines.setMetier(mitrailleur);
+		armesHumaines=specialisationRepository.save(armesHumaines);
+		
+		biomorphie.setDescription("Étudier les principes vivants et les écosystèmes auxquels ils sont associés d'un point de vue scientifique. Maîtriser les techniques chirurgicales assistées par ordinateur ou traditionnelles, les greffes mais également la génétique et les moyens de manipuler l'ADN. Élever des morphes afin de les fondre à un module de tâche spécifique. Soigner ou changer un morphe défectueux ou améliorer ses performances");
+		biomorphie.setNom("Biomorphie");
+		biomorphie.setDomaineLie(necrose);
+//		biomorphie.setMetier(geneticien);
+		biomorphie=specialisationRepository.save(biomorphie);
+		
+		cauchemar.setDescription("S'immiscer dans les rêves des êtres pour les transformer en cauchemars, empêchant ainsi toute régénération de Trihn pendant quelques jours. Le Cauchemar de la NÉCROSE est opposé au Rêve du SHAAN.");
+		cauchemar.setNom("Cauchemar");
+		cauchemar.setDomaineLie(necrose);
+//		cauchemar.setMetier(ensorceleur);
+		cauchemar=specialisationRepository.save(cauchemar);
+		
+		contrebande.setDescription("Acheter, vendre et acheminer des marchandises illégales. Importer des armes interdites, faire transiter un chargement d’explosifs, transporter des esclaves clandestins, négocier le prix de renseignements ou gérer un réseau de marché noir.");
+		contrebande.setNom("Contrebande");
+		contrebande.setDomaineLie(necrose);
+//		contrebande.setMetier(trafiquant);
+		contrebande=specialisationRepository.save(contrebande);
+		
+		corruption.setDescription("Acheter le silence de quelqu'un afin de contourner la légalité. Exploiter les vices d’une personne pour en tirer un avantage personnel.");
+		corruption.setNom("Corruption");
+		corruption.setDomaineLie(necrose);
+//		corruption.setMetier(escroc);
+		corruption=specialisationRepository.save(corruption);
+		
+		explosifs.setDescription("Connaître les diverses techniques de sabotage pour détruire un édifice ou un véhicule. Mettre hors d'état de nuire un nombre important de personnes. Manipuler tous les types d'explosifs de la grenade au TNT en passant par la dynamite et les capsules à fusion.");
+		explosifs.setNom("Explosifs");
+		explosifs.setDomaineLie(necrose);
+//		explosifs.setMetier(artificier);
+		explosifs=specialisationRepository.save(explosifs);
+		
+		fraude.setDescription("Savoir faire de la contrefaçon ou des faux papiers. Connaître les failles d'un système politique, financier, juridique ou administratif afin de les détourner à son avantage.");
+		fraude.setNom("Fraude");
+		fraude.setDomaineLie(necrose);
+//		fraude.setMetier(faussaire);
+		fraude=specialisationRepository.save(fraude);
+		
+		harcelement.setDescription("Savoir utiliser toutes les techniques permettant de déstabiliser et de nécroser une cible en la giflant, lui crachant dessus, la bousculant et en lui faisant perdre tous ses moyens. Le Harcèlement répété peut nécroser rapidement une victime si l'on n'y prend pas garde...");
+		harcelement.setNom("Harcèlement");
+		harcelement.setDomaineLie(necrose);
+//		harcelement.setMetier(voyou);
+		harcelement=specialisationRepository.save(harcelement);
+		
+		larcin.setDescription("Faire les poches. Connaître également les jeux de hasard ou de stratégie et les milieux où on les pratique. Tricher, accessoirement. Repérer, reconnaître et neutraliser les systèmes de surveillance et de protection de bâtiments ou de véhicules.");
+		larcin.setNom("Larcin");
+		larcin.setDomaineLie(necrose);
+//		larcin.setMetier(voleur);
+		larcin=specialisationRepository.save(larcin);
+		
+		pacteNecrotique.setDescription("Invoquer une Anti-Âme, essence négative issue des Limbes, et l'utiliser pour pratiquer la Magie des Limbes. Pactiser avec une incarnation");
+		pacteNecrotique.setNom("Pacte necrotique");
+		pacteNecrotique.setDomaineLie(necrose);
+//		pacteNecrotique.setMetier(voleur);
+		pacteNecrotique=specialisationRepository.save(pacteNecrotique);
+		
 //-------------------------------------------------------------------------------------------------------------------------
 //		REMPLISSAGE OBJET RACE
 //-------------------------------------------------------------------------------------------------------------------------	
