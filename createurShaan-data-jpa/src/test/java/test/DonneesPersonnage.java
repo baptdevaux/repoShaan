@@ -1722,7 +1722,7 @@ public class DonneesPersonnage {
 
 		athlete.setNomMetier("Athlète");
 		athlete.setVoie("Voie du Feu");
-//		athlete.setSpecialisation(educationPhysique);
+		athlete.setSpecialisation(educationPhysique);
 		athlete.setCasteLie(voyageurs);
 		athlete.setDescription(
 				"Les Athlètes parcourent l’Héossie à la recherche de défis à relever et pour participer aux nombreux tournois qui sont organisés tout au long de l’année dans les différentes régions. Course, nage, saut d’obstacle, lancer de disque, de pierre, usage de force ou d’adresse, toutes les disciplines sont représentées et ont leurs champions. Les Athlètes sont la plupart du temps sponsorisés par des Castes ou des Guildes locales. Selon leur niveau ils peuvent prétendre à des salaires plus ou moins importants. Certains Athlètes, dont les mécènes sont de puissants Notables ou des Grandes Familles, ont des salaires mirobolants et une notoriété écrasante. L’Athlète ne lâche jamais prise, contre vents et marées, il sait faire face à tous les obstacles. Grâce à leur mental en acier trempé, les Athlètes à la retraite sont souvent amenés à exercer de hautes responsabilités au sein de diverses Guildes.");
@@ -1730,7 +1730,7 @@ public class DonneesPersonnage {
 
 		caravanier.setNomMetier("Caravanier");
 		caravanier.setVoie("Voie de l'Objet");
-//		caravanier.setSpecialisation(caravane);
+		caravanier.setSpecialisation(caravane);
 		caravanier.setCasteLie(voyageurs);
 		caravanier.setDescription(
 				"Le Caravanier sillonne les terres héossiennes pour y transporter toutes sortes de marchandises. Les caravanes intègrent souvent des troupeaux de bêtes de somme qui servent de garde-manger, ou d’animaux de rechange pour tracter les gigantesques roulottes à plusieurs étages, véritables bâtisses ambulantes disposant de tout le confort urbain, y compris eau courante, chauffage, système de cuisson et système réfrigérant grâce au réseau de Trihnite domestique. Les caravanes peuvent être constituées de quelques roulottes à plusieurs centaines, donnant à de tels convois des allures de villes nomades. Les caravanes peuvent prendre de nombreuses formes, des frégates de gigantesques navires à ski sillonnant les glaces, aux cohortes de carrioles à plusieurs étages, tirées par des insectes géants traversant les hautes herbes.");
@@ -1738,7 +1738,7 @@ public class DonneesPersonnage {
 
 		chasseur.setNomMetier("Chasseur");
 		chasseur.setVoie("Voie du Moi");
-//		chasseur.setSpecialisation(vieSauvage);
+		chasseur.setSpecialisation(vieSauvage);
 		chasseur.setCasteLie(voyageurs);
 		chasseur.setDescription(
 				"Ne faire qu'un avec sa proie, sentir la respiration de l'arbre, telles sont les pensées du Chasseur qui sait faire Corps avec la nature et lire tous les signes qui peuvent lui permettre de se fondre en elle. Très respectueux de ce qui l'entoure, il connait sa place au sein des règnes animal et végétal. C'est ce qui lui donne un avantage décisif sur sa proie. Capable de rester immobile pendant des heures, puis de fondre sur sa cible à la vitesse de l'éclair, le Chasseur reste un instinctif qui parle peu mais agit efficacement. Peu à l'aise dans les villes, le Chasseur se satisfait de peu, un feu de camp, une tente, une brochette et c'est le nirvana....");
@@ -1746,7 +1746,7 @@ public class DonneesPersonnage {
 
 		eclaireur.setNomMetier("Eclaireur");
 		eclaireur.setVoie("Voie de la Terre");
-//		eclaireur.setSpecialisation(vigilance);
+		eclaireur.setSpecialisation(vigilance);
 		eclaireur.setCasteLie(voyageurs);
 		eclaireur.setDescription(
 				"Les Éclaireurs sont ceux qui ouvrent de nouvelles routes commerciales, tracent de nouveaux itinéraires et découvrent des territoires inconnus. Toujours sur le qui-vive, à l'écoute du moindre danger, ils savent identifier les signes qu'ils ne connaissent pas pour garder toujours un temps d’avance sur d'éventuels agresseurs. Le voyageur dispose d'une excellente mémoire visuelle, qui lui permet de repérer très vite un détail incongru ou une variation subtile de l'environnement.");
@@ -1754,7 +1754,7 @@ public class DonneesPersonnage {
 
 		espion.setNomMetier("Espion");
 		espion.setVoie("Voie de l'Air");
-//		espion.setSpecialisation(discretion);
+		espion.setSpecialisation(discretion);
 		espion.setCasteLie(voyageurs);
 		espion.setDescription(
 				"De tous temps, les Espions ont toujours été nécessaires pour obtenir des informations qu’il aurait été impossible d’obtenir autrement… Être invisible, se fondre dans les ombres, se déplacer en silence, telles sont les aptitudes de l’Espion qui lui permettent d’aller où il veut sans attirer l’attention. Même au sein d’un groupe, l’Espion cultive l’art de la discrétion, il reste toujours celui que l’on ne voit pas ou que l’on oublie sitôt avoir été vu… Avec l'arrivée des humains et de leur technologie de repérage très sophistiquée, la tache de l'Espion s'est relativement complexifiée, car l'on ne pénètre pas de la même façon dans une forteresse héossienne que dans un complexe industriel d'une Grande Famille. Certains Espions ont ainsi dû apprendre la magie ou s'équiper de brouilleurs sensitifs afin de pouvoir s'acquitter de leur mission dans de meilleures conditions.");
@@ -1762,7 +1762,7 @@ public class DonneesPersonnage {
 
 		guide.setNomMetier("Guide");
 		guide.setVoie("Voie du Végétal");
-//		guide.setSpecialisation(cultureHeossienne);
+		guide.setSpecialisation(cultureHeossienne);
 		guide.setCasteLie(voyageurs);
 		guide.setDescription(
 				"Les Guides disposent d’une culture héossienne hors du commun et leur sens inné de la géopolitique leur permet de voyager en évitant les zones sensibles. Connaître l’histoire des peuples et les us et coutumes de chaque race reste le meilleur moyen de ne pas faire d’impairs lorsqu’une situation conflictuelle se présente. Les Guides sont intarissables sur ce qu’ils connaissent mais ont parfois tendance à submerger d’informations leurs interlocuteurs.");
@@ -1770,32 +1770,35 @@ public class DonneesPersonnage {
 
 		messager.setNomMetier("Messager");
 		messager.setVoie("Voie de l'Animal");
-//		messager.setSpecialisation(monture);
+		messager.setSpecialisation(monture);
 		messager.setCasteLie(voyageurs);
 		messager.setDescription(
 				"Cavalier émérite, le Messager change de monture comme d'autres de chemise, afin d'avoir toujours une bête qui soit au maximum de ses capacités pour être la plus rapide possible. La mise en place des réseaux de portes de transferts n'a jamais amoindri la tâche des Messagers, car si les distances ont été raccourcies et que la communication entre les grandes villes se fait relativement facilement, il en va tout autrement dès qu'il faut s'aventurer dans les provinces héossiennes, où des cités perdues dans des coins reculés sont menacées par l'isolement.");
 		messager = metierRepository.save(messager);
 
-//		athlete.setNomMetier("athlete");
-//		athlete.setVoie("Voie du Feu");
-////		athlete.setSpecialisation(educationPhysique);
-//		athlete.setCasteLie(voyageurs);
-//		athlete.setDescription("");
-//		athlete = metierRepository.save(athlete);
+		navigateur.setNomMetier("Navigateur");
+		navigateur.setVoie("Voie de l'Eau");
+		navigateur.setSpecialisation(navigation);
+		navigateur.setCasteLie(voyageurs);
+		navigateur.setDescription(
+				"Les voies maritimes ont toujours été privilégiées aux voies terrestres, plus dangereuses en raison des nombreux aléas qui peuvent survenir : animaux sauvages, brigands, nécrosiens, catastrophes naturelles… Certes la mer et les océans comportent leur lot de grands dangers, mais les Navigateurs émérites savent les contourner et les anticiper... De plus les mers n'ont jamais été investies par les Humains, ce qui en a toujours fait un espace de liberté absolu.");
+		navigateur = metierRepository.save(navigateur);
 
-//		athlete.setNomMetier("athlete");
-//		athlete.setVoie("Voie du Feu");
-////		athlete.setSpecialisation(educationPhysique);
-//		athlete.setCasteLie(voyageurs);
-//		athlete.setDescription("");
-//		athlete = metierRepository.save(athlete);
+		traqueurDeStele.setNomMetier("Traqueur de stèle");
+		traqueurDeStele.setVoie("Voie des Limbes");
+		traqueurDeStele.setSpecialisation(cultureNecrosienne);
+		traqueurDeStele.setCasteLie(voyageurs);
+		traqueurDeStele.setDescription(
+				"Les Traqueurs de stèle sont extrêmement recherchés à travers toute l'Héossie, car leur connaissance des emplacements de stèle d'Embiose peut permettre à n'importe qui de devenir rapidement très puissant, rien qu'en suivant un parcours ayant ces stèles comme étapes initiatiques. Deux archétypes de Traqueur de stèle prédominent : le guide et l'expérimenteur. Le guide se contente d'amener ses clients sur les différents sites qu'il connaît en mettant à profit sa connaissance de la culture nécrosienne pour éviter les mauvaises rencontres ou savoir temporiser le cas échéant. L'expérimenteur est quant à lui d'une nature plus solitaire, voir égotique et poursuit une quête de pouvoir absolu, de perfection. En raison de sa frénésie, l'expérimenteur finit tôt ou tard par se nécroser. Tout dépend alors de sa force de caractère. Certains réussissent à revenir dans le monde du vivant, d'autres se perdent à jamais dans les ténèbres...");
+		traqueurDeStele = metierRepository.save(traqueurDeStele);
 
-//		athlete.setNomMetier("athlete");
-//		athlete.setVoie("Voie du Feu");
-////		athlete.setSpecialisation(educationPhysique);
-//		athlete.setCasteLie(voyageurs);
-//		athlete.setDescription("");
-//		athlete = metierRepository.save(athlete);
+		voltigeur.setNomMetier("Voltigeur");
+		voltigeur.setVoie("Voie de l'Autre");
+		voltigeur.setSpecialisation(acrobatie);
+		voltigeur.setCasteLie(voyageurs);
+		voltigeur.setDescription(
+				"Le Voltigeur se met au service des autres, il fait ce que personne ne peut faire et va là où personne ne va... Qu'il s'agisse de glisser sur une voilure pour récupérer un outil malencontreusement perdu, escalader un mât, se faufiler sous une roulotte en mouvement pour réparer une courroie de transmission, ou encore d'aller calmer une bête de trait enragée en devant sauter par-dessus toutes les autres, le Voltigeur est toujours prêt... Un peu hommes à tout faire, les Voltigeurs sont très prisés par les autres Voyageurs et les membres des autres castes qui apprécient beaucoup leur serviabilité et leur débrouillardise...");
+		voltigeur = metierRepository.save(voltigeur);
 
 //-------------------------------------------------------------------------------------------------------------------------
 //		REMPLISSAGE OBJET MOTIVATION
