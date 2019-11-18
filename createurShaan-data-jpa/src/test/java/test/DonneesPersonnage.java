@@ -200,7 +200,7 @@ public class DonneesPersonnage {
 		Metier diplomate = new Metier();
 		Metier enseignant = new Metier();
 		Metier informateur = new Metier();
-		Metier marchant = new Metier();
+		Metier marchand = new Metier();
 		Metier politicien = new Metier();
 		Metier prospecteur = new Metier();
 		Metier tenancier = new Metier();
@@ -318,196 +318,196 @@ public class DonneesPersonnage {
 				"Manipuler des petits mécanismes tels que serrures ou horloges. Poser et désarmocer des pièges complexes. Comprendre les systèmes à engrenages et poulies, mais également les machines à vapeur.");
 		engrenages.setNom("Engrenages");
 		engrenages.setDomaineLie(technique);
-//		engrenages.setMetier(mecaniste);
+		engrenages.setMetier(mecaniste);
 		engrenages = specialisationRepository.save(engrenages);
 
 		pilotage.setDescription(
 				"Conduire tout type de véhicule motorisé, du tank à la moto à réaction, en passant par l'aérojet, ou l'hydroglisseur. Connaître des rudiments techniques nécessaires à l'entretien et au bon fonctionnement du véhicule.");
 		pilotage.setNom("Pilotage");
 		pilotage.setDomaineLie(technique);
-//		pilotage.setMetier(pilote);
+		pilotage.setMetier(pilote);
 		pilotage = specialisationRepository.save(pilotage);
 
 		recuperation.setDescription(
 				"Conduire tout type de véhicule motorisé, du tank à la moto à réaction, en passant par l'aérojet, ou l'hydroglisseur. Connaître des rudiments techniques nécessaires à l'entretien et au bon fonctionnement du véhicule.");
 		recuperation.setNom("Récupération");
 		recuperation.setDomaineLie(technique);
-//		recuperation.setMetier(recuperateur);
+		recuperation.setMetier(recuperateur);
 		recuperation = specialisationRepository.save(recuperation);
 
 		sensDeLaPierre.setDescription(
 				"Construire des murs, des ponts, des sols et des routes. Préparer de la trihnite pour en faire des portes de transfert. Connaître le modelage, la taille de pierre et l'architecture. Situer les sites riches en roche, en trihnite et savoir en extraire de la matière première. Apprécier la qualité, la valeur et la résistance d'un bâtiment ou d'une caverne.");
 		sensDeLaPierre.setNom("Sens de la pierre");
 		sensDeLaPierre.setDomaineLie(technique);
-//		sensDeLaPierre.setMetier(batisseur);
+		sensDeLaPierre.setMetier(batisseur);
 		sensDeLaPierre = specialisationRepository.save(sensDeLaPierre);
 
 		sensDuBois.setDescription(
 				"Fabriquer du mobilier, du papier, de la corde, des bateaux, des charpentes. Connaître la menuiserie, la charpenterie, la papeterie, la découpe et le traitement du bois pour en faire une bonne matière première. Apprécier la qualité, la valeur et la résistance d'un bateau, d'un meuble, d'un plancher.");
 		sensDuBois.setNom("Sens du bois");
 		sensDuBois.setDomaineLie(technique);
-//		sensDuBois.setMetier(charpentier);
+		sensDuBois.setMetier(charpentier);
 		sensDuBois = specialisationRepository.save(sensDuBois);
 
 		sensDuCuir.setDescription(
 				"Confectionner des sacs, des armures en cuir, des lanières, des chaussures, des sièges. Connaître la tannerie, la zoologie et le traitement de la peau d'un animal pour en faire une bonne matière première. Apprécier la qualité, la valeur et la résistance d'un objet ou d'une pièce de cuir.");
 		sensDuCuir.setNom("Sens du cuir");
 		sensDuCuir.setDomaineLie(technique);
-//		sensDuCuir.setMetier(tanneur);
+		sensDuCuir.setMetier(tanneur);
 		sensDuCuir = specialisationRepository.save(sensDuCuir);
 
 		sensDuMetal.setDescription(
 				"Fabriquer des engrenages, des armes, des armures et des pièces mécaniques. Connaître la métallurgie et l'armurerie. Situer les sites riches en métaux et savoir en extraire de la matière première. Apprécier la qualité, la valeur et la résistance d'un objet ou d'une pièce en métal.");
 		sensDuMetal.setNom("Sens du metal");
 		sensDuMetal.setDomaineLie(technique);
-//		sensDuMetal.setMetier(forgeron);
+		sensDuMetal.setMetier(forgeron);
 		sensDuMetal = specialisationRepository.save(sensDuMetal);
 
 		sensDuTissu.setDescription(
 				"Tisser des vêtements, des voiles pour les bateaux, des coussins, des draps, des tapis. Connaître le tissage, le stylisme et le traitement du coton ou de la soie pour en faire une bonne matière première. Apprécier la qualité, la valeur et la résistance d'une étoffe ou d'une voile.");
 		sensDuTissu.setNom("Sens du tissu");
 		sensDuTissu.setDomaineLie(technique);
-//		sensDuTissu.setMetier(couturier);
+		sensDuTissu.setMetier(couturier);
 		sensDuTissu = specialisationRepository.save(sensDuTissu);
 
 		sensDuVerre.setDescription(
 				"Façonner des bijoux, des outils, des fioles, mais aussi des armes, des artefacts, des loupes, des miroirs, des lunettes et des écrans. Connaître l’orfèvrerie. Apprécier la qualité, la valeur et la résistance d'un bijou, d'une fiole...");
 		sensDuVerre.setNom("Sens du verre");
 		sensDuVerre.setDomaineLie(technique);
-//		sensDuVerre.setMetier(joaillier);
+		sensDuVerre.setMetier(joaillier);
 		sensDuVerre = specialisationRepository.save(sensDuVerre);
 
 		technologie.setDescription(
 				"Connaître les sources d'énergie et leurs applications pour faire fonctionner un appareil régi par la technologie humaine. Construire ou réparer une arme à feu, un moteur de véhicule, un appareil électronique, etc. Composer des programmes informatiques en \"Code Note\" qui tournent sur le rézo Arpège (logiciels, interfaces, virus, démons, espions, lutins, judas, cryptographie...)");
 		technologie.setNom("Technologie");
 		technologie.setDomaineLie(technique);
-//		technologie.setMetier(infotek);
+		technologie.setMetier(infotek);
 		technologie = specialisationRepository.save(technologie);
 
 		alchimie.setDescription(
 				"Connaître les éléments de base qui constituent la matière et les forces qui agissent entre eux. Analyser la nature d'un matériau et en déduire ce qu'il faut pour le creuser, le percer, le briser, le faire fondre, le rendre friable, en un mot, changer son état...");
 		alchimie.setNom("Alchimie");
 		alchimie.setDomaineLie(savoir);
-//		alchimie.setMetier(alchimiste);
+		alchimie.setMetier(alchimiste);
 		alchimie = specialisationRepository.save(alchimie);
 
 		bibliotheque.setDescription(
 				"Savoir tirer le meilleur d’une source conséquente de documents pour obtenir des informations sur un sujet précis.");
 		bibliotheque.setNom("Bibliotheque");
 		bibliotheque.setDomaineLie(savoir);
-//		bibliotheque.setMetier(archiviste);
+		bibliotheque.setMetier(archiviste);
 		bibliotheque = specialisationRepository.save(bibliotheque);
 
 		botanique.setDescription(
 				"Connaître le règne végétal terrestre et marin, ainsi que toutes les variétés de champignons. Reconnaître les végétaux empoisonnés des comestibles. Confectionner des cataplasmes et autres mixtures aux facultés curatives dont les effets dépendent des végétaux et de leurs propriétés.");
 		botanique.setNom("Botanique");
 		botanique.setDomaineLie(savoir);
-//		botanique.setMetier(botaniste);
+		botanique.setMetier(botaniste);
 		botanique = specialisationRepository.save(botanique);
 
 		cultureHumaine.setDescription(
 				"Connaître la vie et les mœurs des Humains, mais aussi leur technologie. Avoir une idée de la puissance du Nouvel Ordre et du pouvoir qu’exercent les Grandes Familles. Savoir lire et écrire le Langdiv");
 		cultureHumaine.setNom("Culture Humaine");
 		cultureHumaine.setDomaineLie(savoir);
-//		cultureHumaine.setMetier(percepteur);
+		cultureHumaine.setMetier(percepteur);
 		cultureHumaine = specialisationRepository.save(cultureHumaine);
 
 		esoterisme.setDescription(
 				"Consulter les astres à l'aide de tarots, d'osselets, de dés, de plateaux de divination, ou même dans le cercle des réalités pour percer les secrets du temps, des lieux et des individus. L'ésotérisme peut constituer un refuge contre les agressions mentales.");
 		esoterisme.setNom("Esoterisme");
 		esoterisme.setDomaineLie(savoir);
-//		esoterisme.setMetier(esoteriste);
+		esoterisme.setMetier(esoteriste);
 		esoterisme = specialisationRepository.save(esoterisme);
 
 		geologie.setDescription(
 				"Connaître l'histoire de la formation des gouffres et des montagnes, des volcans et des séismes. Évaluer la constitution d'un sol et l'énergie que l'on peut en tirer. Cette Spécialisation est également utilisée pour l'archéologie");
 		geologie.setNom("Geologie");
 		geologie.setDomaineLie(savoir);
-//		geologie.setMetier(geologue);
+		geologie.setMetier(geologue);
 		geologie = specialisationRepository.save(geologie);
 
 		histoireDHeos.setDescription(
 				"Connaître l'histoire générale d’Héos, mais aussi les contes, légendes et mythes existants, qui relatent les épopées d'êtres imaginaires, des dieux de l'ancien panthéon ou de héros ayant réellement vécu en Héossie. Connaître les flux migratoires, les grandes guerres et l'évolution des civilisations.");
 		histoireDHeos.setNom("Histoire d'Héos");
 		histoireDHeos.setDomaineLie(savoir);
-//		histoireDHeos.setMetier(historien);
+		histoireDHeos.setMetier(historien);
 		histoireDHeos = specialisationRepository.save(histoireDHeos);
 
 		medecine.setDescription(
 				"Diagnostiquer une maladie. Procéder à des opérations chirurgicales. Connaître parfaitement l'anatomie anthéenne. Savoir quel antidote correspond à chaque poison, sa composition et son mode de fabrication. Soigner le Corps d'une personne atteinte de maladie, d'une intoxication ou qui a subi des blessures physiques.");
 		medecine.setNom("Médecine");
 		medecine.setDomaineLie(savoir);
-//		medecine.setMetier(medecin);
+		medecine.setMetier(medecin);
 		medecine = specialisationRepository.save(medecine);
 
 		protocoles.setDescription(
 				"Connaître les diverses formes de gouvernement, ainsi que les lois régissant administration et pouvoir. Mettre en place les procédures pour accéder à n’importe quel tribunal ou obtenir des laissez-passer. Être à l’aise avec la paperasse qui va avec. Fait également office de Diplomatie vis à vis de cultures inconnues.");
 		protocoles.setNom("Protocoles");
 		protocoles.setDomaineLie(savoir);
-//		protocoles.setMetier(juriste);
+		protocoles.setMetier(juriste);
 		protocoles = specialisationRepository.save(protocoles);
 
 		zoologie.setDescription(
 				"Connaître le règne animal, de la cellule aux mammifères, en passant par les poissons, les insectes et les oiseaux. Connaître les divers écosystèmes qui régissent un lieu, les modes de vie des diverses espèces qui le peuplent, ainsi que les propriétés des organes des animaux.");
 		zoologie.setNom("Zoologie");
 		zoologie.setDomaineLie(savoir);
-//		zoologie.setMetier(zoologue);
+		zoologie.setMetier(zoologue);
 		zoologie = specialisationRepository.save(zoologie);
 
 		arpege.setDescription(
 				"Naviguer sur le rézo Arpège en utilisant une console dotée d'une interface graphique. Connaître ce monde virtuel tentaculaire de l'information et de la communication. Maîtriser les logiciels de capture et de restitution d'images 2D ou 3D pour réaliser des trucages et effets spéciaux. Forcer certains barrages informatiques pour obtenir des données confidentielles. Utiliser des logiciels pour composer des programmes compilés en lignes de notes.");
 		arpege.setNom("Arpege");
 		arpege.setDomaineLie(social);
-//		arpege.setMetier(cyberien);
+		arpege.setMetier(cyberien);
 		arpege = specialisationRepository.save(arpege);
 
 		bluff.setDescription(
 				"Mentir ou baratiner quelqu'un. L’effet d’un bluff est en général temporaire, la victime mettra quelques minutes à se rendre compte qu'elle s’est fait berner.");
 		bluff.setNom("Bluff");
 		bluff.setDomaineLie(social);
-//		bluff.setMetier(politicien);
+		bluff.setMetier(politicien);
 		bluff = specialisationRepository.save(bluff);
 
 		commerce.setDescription(
 				"Marchander. Estimer des objets de valeur. Acheter les services de quelqu’un. Connaître le niveau de rareté d'un Acquis à un endroit donné et donc les fluctuations des prix du marché en fonction de la localité.");
 		commerce.setNom("Commerce");
 		commerce.setDomaineLie(social);
-//		commerce.setMetier(marchand);
+		commerce.setMetier(marchand);
 		commerce = specialisationRepository.save(commerce);
 
 		diplomatie.setDescription(
 				"Savoir faire passer ses idées en douceur. Réussir à détendre un climat tendu. Négocier des traités entre deux belligérants. Parler à un auditoire en faisant preuve d'éloquence. Chercher à convaincre un interlocuteur grâce à des arguments cohérents. Calmer des personnes hostiles. Avoir une idée des divers conflits qui peuvent tourmenter une région. Connaître le rang de quelqu'un dans n'importe quel milieu social, du plus élevé au plus primitif. Savoir comment se comporter pour ne pas commettre d'impairs, même si on ne parle pas la langue.");
 		diplomatie.setNom("Diplomatie");
 		diplomatie.setDomaineLie(social);
-//		diplomatie.setMetier(diplomate);
+		diplomatie.setMetier(diplomate);
 		diplomatie = specialisationRepository.save(diplomatie);
 
 		enseignement.setDescription(
 				"Enseigner une Spécialisation à une autre personne. Faire preuve de pédagogie. Mettre en place un programme d’apprentissage. Apprendre plus vite d’un autre enseignant.");
 		enseignement.setNom("Enseignement");
 		enseignement.setDomaineLie(social);
-//		enseignement.setMetier(enseignant);
+		enseignement.setMetier(enseignant);
 		enseignement = specialisationRepository.save(enseignement);
 
 		langagePrimal.setDescription(
 				"Communiquer de façon très basique, par des gestes, des attitudes et des expressions faciales avec des êtres primitifs ou dotés d'un langage complètement inconnu. Communiquer sommairement avec les animaux.");
 		langagePrimal.setNom("Langage primal");
 		langagePrimal.setDomaineLie(social);
-//		langagePrimal.setMetier(prospecteur);
+		langagePrimal.setMetier(prospecteur);
 		langagePrimal = specialisationRepository.save(langagePrimal);
 
 		languesExotiques.setDescription(
 				"Se baser sur diverses langues existantes pour aborder un dialecte inconnu et le maîtriser par la pratique. Un anthéen parle l'héossien (langue commune) et le langdiv (langue humaine), ainsi que sa langue raciale, mais cette Spécialisation devient fort utile pour comprendre et parler les autres langages raciaux et dialectes dérivés.");
 		languesExotiques.setNom("Langues exotiques");
 		languesExotiques.setDomaineLie(social);
-//		languesExotiques.setMetier(traducteur);
+		languesExotiques.setMetier(traducteur);
 		languesExotiques = specialisationRepository.save(languesExotiques);
 
 		psychologie.setDescription(
 				"Soigner l'Esprit d'une personne qui a subi des blessures mentales en la rassurant, et en lui redonnant confiance en elle. Déterminer les pensées d'autrui par ses attitudes et son comportement. Anticiper les intentions. Comprendre la folie. Contrairement au Bluff, la Psychologie a des effets durables.");
 		psychologie.setNom("Psychologie");
 		psychologie.setDomaineLie(social);
-//		psychologie.setMetier(tenancier);
+		psychologie.setMetier(tenancier);
 		psychologie = specialisationRepository.save(psychologie);
 
 		seduction.setDescription(
@@ -620,8 +620,8 @@ public class DonneesPersonnage {
 
 		delhions.setNomRace("Delhions");
 		delhions.setDomaine(social);
-//		delhions.setSpecialisation1(musique);
-//		delhions.setSpecialisation2(enseignement);
+		delhions.setSpecialisation1(musique);
+		delhions.setSpecialisation2(enseignement);
 		delhions.setTailleEstimation("1,7m à 1,9 m");
 		delhions.setPoidsEstimation("70 à 100 kg");
 		delhions.setLangues("Héossien, Delhion");
@@ -662,8 +662,8 @@ public class DonneesPersonnage {
 
 		melodiens.setNomRace("Melodiens");
 		melodiens.setDomaine(arts);
-//		melodiens.setSpecialisation1(chant);
-//		melodiens.setSpecialisation2(seduction);
+		melodiens.setSpecialisation1(chant);
+		melodiens.setSpecialisation2(seduction);
 		melodiens.setTailleEstimation("1,5 m à 1,9 m");
 		melodiens.setPoidsEstimation("30 à 80 kg");
 		melodiens.setLangues("Héossien, Mélodian");
@@ -684,7 +684,6 @@ public class DonneesPersonnage {
 		nomois.setPouvoirDeRace("Sagesse Nomoï");
 		nomois.setPeupleOrigine(glaces);
 		nomois.setCastePredilection(magiciens);
-		;
 		nomois.setElementTotem("Moi");
 		nomois.setCouleurSymbolique("Argent");
 		nomois = raceRepository.save(nomois);
@@ -706,7 +705,7 @@ public class DonneesPersonnage {
 
 		ygwans.setNomRace("Ygwans");
 		ygwans.setDomaine(savoir);
-//		ygwans.setSpecialisation1(histoireDHeos);
+		ygwans.setSpecialisation1(histoireDHeos);
 //		ygwans.setSpecialisation2(vieSauvage);
 		ygwans.setTailleEstimation("1,5 m à 1,9 m");
 		ygwans.setPoidsEstimation("60 à 150 kg");
@@ -720,7 +719,7 @@ public class DonneesPersonnage {
 
 		humains.setNomRace("Humains");
 		humains.setDomaine(necrose);
-//		humains.setSpecialisation1(cultureHumaine);
+		humains.setSpecialisation1(cultureHumaine);
 		humains.setSpecialisation2(technologie);
 		humains.setTailleEstimation("1,6 m à 1,9 m");
 		humains.setPoidsEstimation("60 à 120 kg");
@@ -761,15 +760,15 @@ public class DonneesPersonnage {
 
 		hautesHerbes.setNomPeuple("Hautes Herbes");
 		hautesHerbes.setDomaine(arts);
-//		hautesHerbes.setSpecialisation1(musique);
-//		hautesHerbes.setSpecialisation2(commerce);
+		hautesHerbes.setSpecialisation1(musique);
+		hautesHerbes.setSpecialisation2(commerce);
 		hautesHerbes.setDescription(
 				"De vastes plaines d'herbe grasse s'étendent à l'infini. Parsemées d'arbres et de petits bosquets, ces régions sont principalement exploitées pour l'agriculture et l'élevage.");
 		hautesHerbes = peupleRepository.save(hautesHerbes);
 
 		marais.setNomPeuple("Hautes Herbes");
 		marais.setDomaine(savoir);
-//		marais.setSpecialisation1(zoologie);
+		marais.setSpecialisation1(zoologie);
 		marais.setSpecialisation2(botanique);
 		marais.setDescription(
 				"De hauts arbres plongent leurs puissantes racines dans les vastes étendues d'eau peu profondes des marais verts, jaunes et rouges. On ne trouve quasiment que des Ygwans dans les Marais, car eux seuls semblent apprécier la constante humidité et la chaleur de l'endroit.");
@@ -778,7 +777,7 @@ public class DonneesPersonnage {
 		montagnes.setNomPeuple("Montagnes");
 		montagnes.setDomaine(social);
 //		montagnes.setSpecialisation1(educationPhysique);
-//		montagnes.setSpecialisation2(languesExotiques);
+		montagnes.setSpecialisation2(languesExotiques);
 		montagnes.setDescription(
 				"De roches et de pics, cette région froide a été prise d'assaut par les Delhions. Des conifères parsèment le pied des Montagnes, pour rapidement laisser place à la roche puis à la neige. Les conditions de vie y sont rigoureuses, car l'oxygène se raréfie en haute altitude. La montagne est un environnement très dangereux pour celui qui ne la connait pas. L'.entre-aide reste donc une priorité pour ceux qui doivent survivre dans ce milieu. Habitués à cotoyer des natifs de tous horizons, les montagnards ont développé une facilité à communiquer dans d'autres langages que les leurs.");
 		montagnes = peupleRepository.save(montagnes);
@@ -794,7 +793,7 @@ public class DonneesPersonnage {
 		sables.setNomPeuple("Sables");
 		sables.setDomaine(combat);
 //		sables.setSpecialisation1(monture);
-//		sables.setSpecialisation2(histoireDHeos);
+		sables.setSpecialisation2(histoireDHeos);
 		sables.setDescription(
 				"Les Sables sont de vastes étendues arides de sable tassé ou en formation dunaire et de rochers plus ou moins saillants. Perpétuellement balayé par de terribles vents, le désert est une transition entre les Terres Brûlées et les Hautes Herbes chaudes. Selon la présence ou l'absence des pluies, il oscillera entre ces deux régions.");
 		sables = peupleRepository.save(sables);
@@ -809,8 +808,8 @@ public class DonneesPersonnage {
 
 		cites.setNomPeuple("Cités");
 		cites.setDomaine(necrose);
-//		cites.setSpecialisation1(cultureHumaine);
-//		cites.setSpecialisation2(vieUrbaine);
+		cites.setSpecialisation1(cultureHumaine);
+		cites.setSpecialisation2(vieUrbaine);
 		cites.setDescription(
 				"Cités tentaculaires de bâtiments aux formes improbables, dressant leurs tours de pierre et de verre en offrande au ciel, ou au contraire plongeant leurs souterrains (égouts et habitations troglodytes) dans les entrailles de la terre, les mégalopoles héossiennes regorgent de vie . . . et de mort. Car si la vie y est agréable et animée dans les beaux quartiers et dans les secteurs résidentiels, les bas-fonds restent de vrais coupe-gorges et constituent des enclaves où l'Ombre impose ses lois.");
 		cites = peupleRepository.save(cites);
@@ -1057,12 +1056,12 @@ public class DonneesPersonnage {
 				"L'Informateur est un élément indispensable, dès qu'il s'agit de faire une enquête ou d'obtenir des informations au sein d'un milieu urbain. Il entend tout, voit tout et sait tout, grâce à ses nombreux réseaux de renseignement qui lui rendent compte en temps réel de la situation sociale, politique, économique d'un quartier et même de toute une ville pour les plus influents. Curieux et à l'affût des moindres faits et gestes des puissants et des Notables, les Informateurs connaissent et maîtrisent tous les us et coutumes citadins afin de se fondre dans la masse.");
 		informateur = metierRepository.save(informateur);
 
-		marchant.setNomMetier("Marchant");
-		marchant.setVoie("Voie de l'Air");
-		marchant.setSpecialisation(commerce);
-		marchant.setDescription(
+		marchand.setNomMetier("marchand");
+		marchand.setVoie("Voie de l'Air");
+		marchand.setSpecialisation(commerce);
+		marchand.setDescription(
 				"Le commerce a toujours été moteur au sein de la civilisation héossienne, comme partout ailleurs. Les Marchands jouissent de reconnaissance et de prestige auprès des Notables car ils constituent l'un des rouages fondamentaux de l'économie. Du simple vendeur au négociateur de contrats avec de grandes puissances, les Marchands sillonnent l'Héossie à la recherche de la bonne affaire qui fera d'eux des hommes riches. Car devenir Notable est pour un Marchand le but absolu. Pour un Marchand tout se vend ou s'achète, même l'amitié... Cela peut parfois créer des tensions au sein du groupe dont il peut faire partie, car malheureusement la plupart des marchands mettra toujours le profit avant l'éthique...");
-		marchant = metierRepository.save(marchant);
+		marchand = metierRepository.save(marchand);
 
 		politicien.setNomMetier("Politicien");
 		politicien.setVoie("Voie du Moi");
@@ -1205,62 +1204,74 @@ public class DonneesPersonnage {
 		percerMysteres = motivationRepository.save(percerMysteres);
 
 		communier.setNomMotivation("Communier avec d'autres élémentaliste");
-		communier.setDescription("Vous parcourez le monde à la recherche de Maîtres ou de Disciples partageant la même foi en votre Élément afin d’entrer en communion avec eux. C’est grâce à cette dernière que vous pouvez vous ressourcer, devenir meilleur. Les Élémentalistes motivés par la communion sont plus tolérants que les autres et partagent de nombreux points de vue avec les Shaanistes..");
+		communier.setDescription(
+				"Vous parcourez le monde à la recherche de Maîtres ou de Disciples partageant la même foi en votre Élément afin d’entrer en communion avec eux. C’est grâce à cette dernière que vous pouvez vous ressourcer, devenir meilleur. Les Élémentalistes motivés par la communion sont plus tolérants que les autres et partagent de nombreux points de vue avec les Shaanistes..");
 		communier.setDomaineLie(rituels);
 		communier = motivationRepository.save(communier);
-		
+
 		progresserDogme.setNomMotivation("Progresser au sein de son dogme");
-		progresserDogme.setDescription("Vous expérimentez les voies internes de votre dogme et aspirez à progresser dans la symbiose avec votre Élément. Vous êtes enclin à faire de multiples expériences, braver de nombreux dangers afin de tester votre foi. Au moindre signe de faiblesse, vous redoublez d’efforts pour chercher à vous transcender. Vous avez parfois tendance à provoquer des situations qui pourraient vous mettre en mauvaise posture, rien que pour voir si vous êtes dignes de votre Élément..");
+		progresserDogme.setDescription(
+				"Vous expérimentez les voies internes de votre dogme et aspirez à progresser dans la symbiose avec votre Élément. Vous êtes enclin à faire de multiples expériences, braver de nombreux dangers afin de tester votre foi. Au moindre signe de faiblesse, vous redoublez d’efforts pour chercher à vous transcender. Vous avez parfois tendance à provoquer des situations qui pourraient vous mettre en mauvaise posture, rien que pour voir si vous êtes dignes de votre Élément..");
 		progresserDogme.setDomaineLie(rituels);
 		progresserDogme = motivationRepository.save(progresserDogme);
-		
+
 		confronterElement.setNomMotivation("Se confronter à son Elément");
-		confronterElement.setDescription("Vous cherchez à tout prix à défier votre Élément pour faire Corps avec lui. Selon la nature de celui-ci, vous vous imprégnez de tout ce qui caractérise votre Élément (couleur symbolique, attitude, lieu, manifestation naturelle,...) afin de mieux entrer en contact avec lui. Investi de votre Élément, vous voyagez afin de vous confronter aux manifestations naturelles de celui-ci. Par exemple, un Élémentaliste du Feu parcourra le monde à la recherche de brasiers ou d’incendies auxquels il pourrait se confronter, un Élémentaliste de l’Objet se plaira à arpenter les Cités technologiques afin d’en maîtriser tous les rouages, un Élémentaliste de l’Eau sillonnera les mers en espérant être pris dans des tempêtes et ainsi éprouver son pouvoir sur les eaux,....");
+		confronterElement.setDescription(
+				"Vous cherchez à tout prix à défier votre Élément pour faire Corps avec lui. Selon la nature de celui-ci, vous vous imprégnez de tout ce qui caractérise votre Élément (couleur symbolique, attitude, lieu, manifestation naturelle,...) afin de mieux entrer en contact avec lui. Investi de votre Élément, vous voyagez afin de vous confronter aux manifestations naturelles de celui-ci. Par exemple, un Élémentaliste du Feu parcourra le monde à la recherche de brasiers ou d’incendies auxquels il pourrait se confronter, un Élémentaliste de l’Objet se plaira à arpenter les Cités technologiques afin d’en maîtriser tous les rouages, un Élémentaliste de l’Eau sillonnera les mers en espérant être pris dans des tempêtes et ainsi éprouver son pouvoir sur les eaux,....");
 		confronterElement.setDomaineLie(arts);
 		confronterElement = motivationRepository.save(confronterElement);
-		
+
 		explorer.setNomMotivation("Explorer un territoire");
-		explorer.setDescription("Connaître le territoire qui nous entoure et savoir en exploiter les moindres parcelles constitue l’une des Motivations les plus ancestrales, du temps où les peuplades primitives vivaient en Héossie, afin de pouvoir mieux se protéger en cas d’agression, de repérer des ressources potentielles, ou de s’adapter à des conditions climatiques inhabituelles..");
+		explorer.setDescription(
+				"Connaître le territoire qui nous entoure et savoir en exploiter les moindres parcelles constitue l’une des Motivations les plus ancestrales, du temps où les peuplades primitives vivaient en Héossie, afin de pouvoir mieux se protéger en cas d’agression, de repérer des ressources potentielles, ou de s’adapter à des conditions climatiques inhabituelles..");
 		explorer.setDomaineLie(survie);
 		explorer = motivationRepository.save(explorer);
-		
+
 		construireVoyage.setNomMotivation("Se construire par le voyage");
-		construireVoyage.setDescription("Peu importe la destination, ce qui compte, c’est le voyage. C’est en ce dernier que réside toute l’expérience qu’il est possible d’acquérir lors de situations extrêmes. Amener vos compagnons ou des clients à bon port vous procure une grande fierté et un sentiment d’harmonie avec l’environnement. Les voyages créent des souvenirs, les souvenirs engendrent l’expérience, l’expérience forge la compétence, la compétence crée le statut, qui peut donner lieu à du Prestige. Une fois connu, vous pourrez raconter votre histoire et donner envie à vos auditeurs de voyager à leur tour..");
+		construireVoyage.setDescription(
+				"Peu importe la destination, ce qui compte, c’est le voyage. C’est en ce dernier que réside toute l’expérience qu’il est possible d’acquérir lors de situations extrêmes. Amener vos compagnons ou des clients à bon port vous procure une grande fierté et un sentiment d’harmonie avec l’environnement. Les voyages créent des souvenirs, les souvenirs engendrent l’expérience, l’expérience forge la compétence, la compétence crée le statut, qui peut donner lieu à du Prestige. Une fois connu, vous pourrez raconter votre histoire et donner envie à vos auditeurs de voyager à leur tour..");
 		construireVoyage.setDomaineLie(survie);
 		construireVoyage = motivationRepository.save(construireVoyage);
-		
+
 		nourrir.setNomMotivation("Se nourrir");
-		nourrir.setDescription("C’est la Motivation la plus essentielle. La plupart du temps, la faim est comblée car vous savez vous organiser. Vous êtes censés prévoir des rations lorsque vous voyagez et pouvez vous rendre dans des auberges ou des restaurants pour vous nourrir. Lorsque vous vous retrouvez en pleine nature et que vous n’avez rien à vous mettre sous la dent, vous vous en remettez à vos connaissances en Survie. Mais si vous n’arrivez pas à trouver de la nourriture, cela peut vous plonger dans un état assez irrationnel où se nourrir devient une priorité absolue. Cet état peut vous rendre très violent. Il n’est pas rare qu’un inoffensif marchand se change en bête féroce et attaque à mains nues un Voyageur qui disposerait de quoi le sustenter. En théorie, vous pouvez jeûner pendant (Corps) jours, mais au-delà, si vous n’avez toujours rien avalé, votre Corps s’affaiblit et le moindre effort devient insurmontable. Vous êtes alors obligé de rester allongé, votre Corps n’ayant plus assez d’énergie pour se déplacer. Difficile alors de chasser dans ces conditions....");
+		nourrir.setDescription(
+				"C’est la Motivation la plus essentielle. La plupart du temps, la faim est comblée car vous savez vous organiser. Vous êtes censés prévoir des rations lorsque vous voyagez et pouvez vous rendre dans des auberges ou des restaurants pour vous nourrir. Lorsque vous vous retrouvez en pleine nature et que vous n’avez rien à vous mettre sous la dent, vous vous en remettez à vos connaissances en Survie. Mais si vous n’arrivez pas à trouver de la nourriture, cela peut vous plonger dans un état assez irrationnel où se nourrir devient une priorité absolue. Cet état peut vous rendre très violent. Il n’est pas rare qu’un inoffensif marchand se change en bête féroce et attaque à mains nues un Voyageur qui disposerait de quoi le sustenter. En théorie, vous pouvez jeûner pendant (Corps) jours, mais au-delà, si vous n’avez toujours rien avalé, votre Corps s’affaiblit et le moindre effort devient insurmontable. Vous êtes alors obligé de rester allongé, votre Corps n’ayant plus assez d’énergie pour se déplacer. Difficile alors de chasser dans ces conditions....");
 		nourrir.setDomaineLie(arts);
 		nourrir = motivationRepository.save(nourrir);
-		
+
 		defierMort.setNomMotivation("Defier la mort");
-		defierMort.setDescription("Vous êtes un risque-tout. Vous n’exprimez pleinement votre talent que lorsque votre vie est en danger. La proximité de la mort devient alors pour vous un exutoire que vous recherchez dans le but de vous améliorer sans cesse. Le danger et l’adrénaline qu’il vous procure agissent comme une drogue sur votre organisme. Pendant les longues périodes où votre vie n’est pas menacée, vous vous ennuyez profondément, rongé par l’appel de l’aventure et l’excitation de l’inconnu.");
+		defierMort.setDescription(
+				"Vous êtes un risque-tout. Vous n’exprimez pleinement votre talent que lorsque votre vie est en danger. La proximité de la mort devient alors pour vous un exutoire que vous recherchez dans le but de vous améliorer sans cesse. Le danger et l’adrénaline qu’il vous procure agissent comme une drogue sur votre organisme. Pendant les longues périodes où votre vie n’est pas menacée, vous vous ennuyez profondément, rongé par l’appel de l’aventure et l’excitation de l’inconnu.");
 		defierMort.setDomaineLie(combat);
 		defierMort = motivationRepository.save(defierMort);
-		
+
 		protegerFaibles.setNomMotivation("Protéger les faibles");
-		protegerFaibles.setDescription("Vous avez découvert, souvent à vos dépens, que c’est la loi du plus fort qui gagne bien souvent. Et cela vous insupporte. Par obligation, vous êtes devenu fort à votre tour pour pouvoir défendre toutes les victimes de cette loi impitoyable. Cette voie est très longue car plus vous êtes fort, plus la tâche de protéger ceux qui vous entourent est lourde de responsabilités et chargée en émotions.");
+		protegerFaibles.setDescription(
+				"Vous avez découvert, souvent à vos dépens, que c’est la loi du plus fort qui gagne bien souvent. Et cela vous insupporte. Par obligation, vous êtes devenu fort à votre tour pour pouvoir défendre toutes les victimes de cette loi impitoyable. Cette voie est très longue car plus vous êtes fort, plus la tâche de protéger ceux qui vous entourent est lourde de responsabilités et chargée en émotions.");
 		protegerFaibles.setDomaineLie(combat);
 		protegerFaibles = motivationRepository.save(protegerFaibles);
-		
+
 		venger.setNomMotivation("Se venger");
-		venger.setDescription("Vous avez une blessure d’enfance : la mort violente d’un proche, l’extermination de votre Peuple, les humiliations d’un Notable, le vol d’un bien précieux, la honte sur votre nom, la ruine de votre famille, ou toute autre raison. Vous n’aspirez plus désormais qu’à une seule chose : la vengeance. On dit que c’est un plat qui se mange froid, mais il se prépare dans la fournaise d’une haine féroce qui s’est entretenue jour après jour. La seule issue possible pour vous, c’est de laver votre blessure dans le sang..");
+		venger.setDescription(
+				"Vous avez une blessure d’enfance : la mort violente d’un proche, l’extermination de votre Peuple, les humiliations d’un Notable, le vol d’un bien précieux, la honte sur votre nom, la ruine de votre famille, ou toute autre raison. Vous n’aspirez plus désormais qu’à une seule chose : la vengeance. On dit que c’est un plat qui se mange froid, mais il se prépare dans la fournaise d’une haine féroce qui s’est entretenue jour après jour. La seule issue possible pour vous, c’est de laver votre blessure dans le sang..");
 		venger.setDomaineLie(arts);
 		venger = motivationRepository.save(venger);
-		
+
 		peurGens.setNomMotivation("Faire peur aux gens");
-		peurGens.setDescription("Enfant déjà, vous adoriez vous cacher et surgir pour prendre les gens au dépourvu et leur flanquer la peur de leur vie. Avec le temps, ces enfantillages s’estompent, mais pas pour vous. Ce plaisir de faire peur s’est mué en culte de la terreur. Faire peur à l’autre c’est une façon de prendre un peu de son être et de remplir le vide qui vous habite..");
+		peurGens.setDescription(
+				"Enfant déjà, vous adoriez vous cacher et surgir pour prendre les gens au dépourvu et leur flanquer la peur de leur vie. Avec le temps, ces enfantillages s’estompent, mais pas pour vous. Ce plaisir de faire peur s’est mué en culte de la terreur. Faire peur à l’autre c’est une façon de prendre un peu de son être et de remplir le vide qui vous habite..");
 		peurGens.setDomaineLie(arts);
 		peurGens = motivationRepository.save(peurGens);
-		
+
 		jouerLoi.setNomMotivation("Jouer avec la loi");
-		jouerLoi.setDescription("Les règles vous ont toujours mis mal à l’aise, comme si elles n’étaient faites que pour briser vos rêves et votre liberté. Vous avez donc appris à les contourner et espérez bien continuer à le faire le plus longtemps possible. Les représentants de l’ordre deviennent des partenaires de jeu avec lesquels vous disputez des matchs dont vous décidez des règles et du terrain. Jusqu’à présent, vous avez toujours réussi à vous en sortir... Jusqu’à présent...");
+		jouerLoi.setDescription(
+				"Les règles vous ont toujours mis mal à l’aise, comme si elles n’étaient faites que pour briser vos rêves et votre liberté. Vous avez donc appris à les contourner et espérez bien continuer à le faire le plus longtemps possible. Les représentants de l’ordre deviennent des partenaires de jeu avec lesquels vous disputez des matchs dont vous décidez des règles et du terrain. Jusqu’à présent, vous avez toujours réussi à vous en sortir... Jusqu’à présent...");
 		jouerLoi.setDomaineLie(arts);
 		jouerLoi = motivationRepository.save(jouerLoi);
-		
+
 		venererCapital.setNomMotivation("Vénérer le Grand Capital");
-		venererCapital.setDescription("Vous êtes un leader, un entrepreneur. Pour vous, les Négociants n’ont rien compris à l’économie. Peu importe ce que l’on vend ou ce que l’on achète, ni à qui l'on s’adresse, seul compte le Grand Capital qu’il faut nourrir coûte que coûte en lui dégageant des bénéfices. Les personnes que vous employez sont en fait des offrandes conditionnées pour sacrifier leurs Âme sur l’autel du dieu numéraire. Vous allez faire fortune car vous avez la foi.");
+		venererCapital.setDescription(
+				"Vous êtes un leader, un entrepreneur. Pour vous, les Négociants n’ont rien compris à l’économie. Peu importe ce que l’on vend ou ce que l’on achète, ni à qui l'on s’adresse, seul compte le Grand Capital qu’il faut nourrir coûte que coûte en lui dégageant des bénéfices. Les personnes que vous employez sont en fait des offrandes conditionnées pour sacrifier leurs Âme sur l’autel du dieu numéraire. Vous allez faire fortune car vous avez la foi.");
 		venererCapital.setDomaineLie(arts);
 		venererCapital = motivationRepository.save(venererCapital);
 //-------------------------------------------------------------------------------------------------------------------------
