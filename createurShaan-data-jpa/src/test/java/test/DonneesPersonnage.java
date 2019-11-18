@@ -182,6 +182,16 @@ public class DonneesPersonnage {
 		Specialisation intimidation = new Specialisation();
 		Specialisation pugilat = new Specialisation();
 		Specialisation strategie = new Specialisation();
+		Specialisation armesHumaines = new Specialisation();
+		Specialisation biomorphie = new Specialisation();
+		Specialisation cauchemar = new Specialisation();
+		Specialisation contrebande = new Specialisation();
+		Specialisation corruption = new Specialisation();
+		Specialisation explosifs = new Specialisation();
+		Specialisation fraude = new Specialisation();
+		Specialisation harcelement = new Specialisation();
+		Specialisation larcin = new Specialisation();
+		Specialisation pacteNecrotique = new Specialisation();
 //-------------------------------------------------------------------------------------------------------------------------
 //		CREATION OBJET RACE
 //-------------------------------------------------------------------------------------------------------------------------	
@@ -1035,6 +1045,67 @@ public class DonneesPersonnage {
 		strategie.setDomaineLie(combat);
 //		strategie.setMetier(gardienDesForets);
 		strategie=specialisationRepository.save(strategie);
+		
+		armesHumaines.setDescription("Utiliser toutes les armes technologiques humaines, depuis les armes de poing et les armes d’épaules (pistolet, étourdisseur, gazeur, arbalète de poing à fusion, fusils d'assaut, encapsuleurs, arcs magnétiques,…), jusqu'aux armes lourdes, type dépeupleurs, brûleurs, lance-roquettes, bazookas, ainsi que les armes à pied ou embarquées à bord de véhicules (tourelles, torpilles, canon à plasma,...). Savoir tirer le meilleur parti des combinaisons de combat, de la plus légère à l’exosquelette des légions d’Antarès.");
+		armesHumaines.setNom("Armes humaines");
+		armesHumaines.setDomaineLie(necrose);
+//		armesHumaines.setMetier(mitrailleur);
+		armesHumaines=specialisationRepository.save(armesHumaines);
+		
+		biomorphie.setDescription("Étudier les principes vivants et les écosystèmes auxquels ils sont associés d'un point de vue scientifique. Maîtriser les techniques chirurgicales assistées par ordinateur ou traditionnelles, les greffes mais également la génétique et les moyens de manipuler l'ADN. Élever des morphes afin de les fondre à un module de tâche spécifique. Soigner ou changer un morphe défectueux ou améliorer ses performances");
+		biomorphie.setNom("Biomorphie");
+		biomorphie.setDomaineLie(necrose);
+//		biomorphie.setMetier(geneticien);
+		biomorphie=specialisationRepository.save(biomorphie);
+		
+		cauchemar.setDescription("S'immiscer dans les rêves des êtres pour les transformer en cauchemars, empêchant ainsi toute régénération de Trihn pendant quelques jours. Le Cauchemar de la NÉCROSE est opposé au Rêve du SHAAN.");
+		cauchemar.setNom("Cauchemar");
+		cauchemar.setDomaineLie(necrose);
+//		cauchemar.setMetier(ensorceleur);
+		cauchemar=specialisationRepository.save(cauchemar);
+		
+		contrebande.setDescription("Acheter, vendre et acheminer des marchandises illégales. Importer des armes interdites, faire transiter un chargement d’explosifs, transporter des esclaves clandestins, négocier le prix de renseignements ou gérer un réseau de marché noir.");
+		contrebande.setNom("Contrebande");
+		contrebande.setDomaineLie(necrose);
+//		contrebande.setMetier(trafiquant);
+		contrebande=specialisationRepository.save(contrebande);
+		
+		corruption.setDescription("Acheter le silence de quelqu'un afin de contourner la légalité. Exploiter les vices d’une personne pour en tirer un avantage personnel.");
+		corruption.setNom("Corruption");
+		corruption.setDomaineLie(necrose);
+//		corruption.setMetier(escroc);
+		corruption=specialisationRepository.save(corruption);
+		
+		explosifs.setDescription("Connaître les diverses techniques de sabotage pour détruire un édifice ou un véhicule. Mettre hors d'état de nuire un nombre important de personnes. Manipuler tous les types d'explosifs de la grenade au TNT en passant par la dynamite et les capsules à fusion.");
+		explosifs.setNom("Explosifs");
+		explosifs.setDomaineLie(necrose);
+//		explosifs.setMetier(artificier);
+		explosifs=specialisationRepository.save(explosifs);
+		
+		fraude.setDescription("Savoir faire de la contrefaçon ou des faux papiers. Connaître les failles d'un système politique, financier, juridique ou administratif afin de les détourner à son avantage.");
+		fraude.setNom("Fraude");
+		fraude.setDomaineLie(necrose);
+//		fraude.setMetier(faussaire);
+		fraude=specialisationRepository.save(fraude);
+		
+		harcelement.setDescription("Savoir utiliser toutes les techniques permettant de déstabiliser et de nécroser une cible en la giflant, lui crachant dessus, la bousculant et en lui faisant perdre tous ses moyens. Le Harcèlement répété peut nécroser rapidement une victime si l'on n'y prend pas garde...");
+		harcelement.setNom("Harcèlement");
+		harcelement.setDomaineLie(necrose);
+//		harcelement.setMetier(voyou);
+		harcelement=specialisationRepository.save(harcelement);
+		
+		larcin.setDescription("Faire les poches. Connaître également les jeux de hasard ou de stratégie et les milieux où on les pratique. Tricher, accessoirement. Repérer, reconnaître et neutraliser les systèmes de surveillance et de protection de bâtiments ou de véhicules.");
+		larcin.setNom("Larcin");
+		larcin.setDomaineLie(necrose);
+//		larcin.setMetier(voleur);
+		larcin=specialisationRepository.save(larcin);
+		
+		pacteNecrotique.setDescription("Invoquer une Anti-Âme, essence négative issue des Limbes, et l'utiliser pour pratiquer la Magie des Limbes. Pactiser avec une incarnation");
+		pacteNecrotique.setNom("Pacte necrotique");
+		pacteNecrotique.setDomaineLie(necrose);
+//		pacteNecrotique.setMetier(voleur);
+		pacteNecrotique=specialisationRepository.save(pacteNecrotique);
+		
 //-------------------------------------------------------------------------------------------------------------------------
 //		REMPLISSAGE OBJET RACE
 //-------------------------------------------------------------------------------------------------------------------------	
