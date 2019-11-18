@@ -577,7 +577,7 @@ public class DonneesPersonnage {
 		gastronomie = specialisationRepository.save(gastronomie);
 
 		lettres.setDescription(
-				"Préparer des repas très élaborés, suivre des recettes et savoir en inventer. Reconnaître les bons produits et les préparer pour ensuite les cuisiner. Repérer si un plat est empoisonné. Un très bon repas a des vertus régénérantes.");
+				"Transmettre les émotions par des mots. Écrire des poèmes, faire de la philosophie, mais également posséder une culture littéraire importante. Savoir lire et écrire une langue héossienne que l’on parle. Séduire quelqu'un.");
 		lettres.setNom("Lettres");
 		lettres.setDomaineLie(arts);
 //		lettres.setMetier(ecrivain);
