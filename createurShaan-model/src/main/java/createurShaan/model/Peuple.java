@@ -20,7 +20,7 @@ public class Peuple {
 	private int version;
 	@Column(nullable = false)
 	private String nomPeuple;
-	@Column(length = 500)
+	@Column(length = 5000)
 	private String description;
 	@OneToOne
 	@JoinColumn(name = "Domaine_ID")
