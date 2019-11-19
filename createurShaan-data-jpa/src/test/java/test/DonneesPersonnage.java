@@ -2,79 +2,39 @@ package test;
 
 import java.text.ParseException;
 
-import javax.persistence.EntityManagerFactory;
-
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import createurShaan.model.Acquis;
-import createurShaan.model.AlterationEtat;
-import createurShaan.model.AlterationPersonnage;
-import createurShaan.model.BonusPersonnage;
 import createurShaan.model.Caste;
 import createurShaan.model.Domaine;
-import createurShaan.model.DomainePersonnage;
-import createurShaan.model.Joueur;
-import createurShaan.model.MaitreDuJeu;
 import createurShaan.model.Metier;
 import createurShaan.model.Motivation;
-import createurShaan.model.MotivationPersonnage;
-import createurShaan.model.Personnage;
-import createurShaan.model.PersonnageNonJoueur;
 import createurShaan.model.Peuple;
 import createurShaan.model.Pouvoir;
-import createurShaan.model.PouvoirPersonnage;
 import createurShaan.model.Race;
 import createurShaan.model.Specialisation;
-import createurShaan.model.SpecialisationAcquis;
-import createurShaan.model.TableDeJeu;
-import createurShaan.repository.IAcquisRepository;
-import createurShaan.repository.IAlterationEtatRepository;
-import createurShaan.repository.IAlterationPersonnageRepository;
-import createurShaan.repository.IBonusPersonnageRepository;
 import createurShaan.repository.ICasteRepository;
-import createurShaan.repository.IDomainePersonnageRepository;
 import createurShaan.repository.IDomaineRepository;
-import createurShaan.repository.IJoueurRepository;
-import createurShaan.repository.IMaitreDuJeuRepository;
 import createurShaan.repository.IMetierRepository;
-import createurShaan.repository.IMotivationPersonnageRepository;
 import createurShaan.repository.IMotivationRepository;
-import createurShaan.repository.IPersonnageRepository;
 import createurShaan.repository.IPeupleRepository;
-import createurShaan.repository.IPouvoirPersonnageRepository;
 import createurShaan.repository.IPouvoirRepository;
 import createurShaan.repository.IRaceRepository;
-import createurShaan.repository.ISpecialisationAcquisRepository;
 import createurShaan.repository.ISpecialisationRepository;
-import createurShaan.repository.ITableDeJeuRepository;
 
 public class DonneesPersonnage {
 	public static void main(String[] args) throws ParseException {
 
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("application-context.xml");
-		IAlterationPersonnageRepository alterationPersonnageRepository = context
-				.getBean(IAlterationPersonnageRepository.class);
-		IJoueurRepository joueurRepository = context.getBean(IJoueurRepository.class);
 		IPeupleRepository peupleRepository = context.getBean(IPeupleRepository.class);
-		IPersonnageRepository personnageRepository = context.getBean(IPersonnageRepository.class);
 		IRaceRepository raceRepository = context.getBean(IRaceRepository.class);
 		IMetierRepository metierRepository = context.getBean(IMetierRepository.class);
 		ICasteRepository casteRepository = context.getBean(ICasteRepository.class);
-		IAlterationEtatRepository alterationEtatRepository = context.getBean(IAlterationEtatRepository.class);
-		ITableDeJeuRepository tableDeJeuRepository = context.getBean(ITableDeJeuRepository.class);
-		IDomainePersonnageRepository domainePersonnageRepository = context.getBean(IDomainePersonnageRepository.class);
 		IDomaineRepository domaineRepository = context.getBean(IDomaineRepository.class);
-		IBonusPersonnageRepository bonusPersonnageRepository = context.getBean(IBonusPersonnageRepository.class);
-		IAcquisRepository acquisRepository = context.getBean(IAcquisRepository.class);
 		ISpecialisationRepository specialisationRepository = context.getBean(ISpecialisationRepository.class);
 		IMotivationRepository motivationRepository = context.getBean(IMotivationRepository.class);
-		IMotivationPersonnageRepository motivationPersonnageRepository = context
-				.getBean(IMotivationPersonnageRepository.class);
-		IMotivationRepository motivRepository = context.getBean(IMotivationRepository.class);
-		IPouvoirPersonnageRepository pouvoirPersonnageRepository = context.getBean(IPouvoirPersonnageRepository.class);
 		IPouvoirRepository pouvoirRepository = context.getBean(IPouvoirRepository.class);
-		ISpecialisationAcquisRepository speAcquisRepository = context.getBean(ISpecialisationAcquisRepository.class);
-		IMaitreDuJeuRepository maitreDuJeuRepository = context.getBean(IMaitreDuJeuRepository.class);
+		
 
 //-------------------------------------------------------------------------------------------------------------------------
 //		CREATION OBJET DOMAINE
@@ -2888,5 +2848,6 @@ public class DonneesPersonnage {
 //		REMPLISSAGE OBJET ACQUIS
 //-------------------------------------------------------------------------------------------------------------------------	
 
+		context.close();
 	}
 }
