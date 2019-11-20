@@ -375,7 +375,17 @@ public class DonneesPersonnage {
 //-------------------------------------------------------------------------------------------------------------------------
 //		CREATION OBJET ACQUIS
 //-------------------------------------------------------------------------------------------------------------------------	
-
+		Acquis brevet = new Acquis();
+		Acquis lanceClous = new Acquis();
+		Acquis herbier = new Acquis();
+		Acquis bestiaire = new Acquis();
+		Acquis trousseDuMenteur = new Acquis();
+		Acquis maquillageTribal = new Acquis();
+		Acquis feuDArtifice = new Acquis();
+		Acquis cachet = new Acquis();
+		Acquis pomolhPuant = new Acquis();
+		Acquis plantesCuratives = new Acquis();
+		
 //*************************************************************************************************************************
 //		REMPLISSAGE
 //*************************************************************************************************************************
@@ -2847,7 +2857,83 @@ public class DonneesPersonnage {
 //-------------------------------------------------------------------------------------------------------------------------
 //		REMPLISSAGE OBJET ACQUIS
 //-------------------------------------------------------------------------------------------------------------------------	
-
+		brevet.setNom("Brevet");
+		brevet.setCategorie("Richesse");
+		brevet.setClasse(1);
+		brevet.setValeur(500);
+		brevet.setDescription("Récompense offerte par un maître Novateur pour saluer une invention marquante.");
+		brevet.setPrestige(1);
+		brevet.setType("Acquis du quotidien");
+		
+		lanceClous.setNom("Lance-clous");
+		lanceClous.setCategorie("Armement");
+		lanceClous.setClasse(1);
+		lanceClous.setValeur(200);
+		lanceClous.setDescription("Le Lance-clous se présente sous la forme d'une petite boîte métallique qui se manipule à deux mains et qui permet de propulser des petits projectiles métalliques.");
+		lanceClous.setType("Acquis du quotidien");
+		
+		herbier.setNom("Herbier");
+		herbier.setCategorie("Manuscrit");
+		herbier.setClasse(1);
+		herbier.setValeur(200);
+		herbier.setPrestige(1);
+		herbier.setDescription("La flore d'Héos");
+		herbier.setType("Manuscrit de classe 1");
+		
+		bestiaire.setNom("Bestiaire");
+		bestiaire.setCategorie("Manuscrit");
+		bestiaire.setClasse(1);
+		bestiaire.setValeur(200);
+		bestiaire.setPrestige(1);
+		bestiaire.setDescription("La faune d'Héos");
+		bestiaire.setType("Manuscrit de classe 1");
+		
+		maquillageTribal.setNom("Maquillage tribal");
+		maquillageTribal.setCategorie("Artefact");
+		maquillageTribal.setClasse(1);
+		maquillageTribal.setValeur(500);
+		maquillageTribal.setPrestige(2);
+		maquillageTribal.setDescription("Peintures, grigris, et autres parures tribales.");
+		maquillageTribal.setType("Artefact,encens et élixirs");
+		
+		trousseDuMenteur.setNom("Trousse du menteur");
+		trousseDuMenteur.setCategorie("Outil");
+		trousseDuMenteur.setClasse(1);
+		trousseDuMenteur.setValeur(100);
+		trousseDuMenteur.setDescription("Faux papiers, photos compromettantes floues, poils de woons,..");
+		trousseDuMenteur.setType("Acquis du quotidien");
+		
+		cachet.setNom("Cachet");
+		cachet.setCategorie("Richesse");
+		cachet.setClasse(1);
+		cachet.setValeur(800);
+		cachet.setPrestige(1);
+		cachet.setDescription("Recette du dernier spectacle à succès, assez récente pour ne pas avoir eu le temps d'être dépensée.");
+		cachet.setType("Richesses");
+		
+		feuDArtifice.setNom("Feu d'artifice");
+		feuDArtifice.setCategorie("Outil");
+		feuDArtifice.setClasse(1);
+		feuDArtifice.setValeur(100);
+		feuDArtifice.setDescription("10 fusées éclairantes multicolores, du matériel pour faire des effets pyrotechniques, 10 doses de poudre explosive,..");
+		feuDArtifice.setType("Outil de classe 1");
+		
+		pomolhPuant.setNom("Pomolh puant");
+		pomolhPuant.setCategorie("Armimale");
+		pomolhPuant.setClasse(1);
+		pomolhPuant.setValeur(1000);
+		pomolhPuant.setDescription("Le Pomolh émet un nuage de gaz anal qui vient se plaquer sur ses adversaires. L’odeur pestilentielle est insupportable et occasionne une gêne pour toute action tentée. Peuple d'origine : Marais");
+		pomolhPuant.setType("Armimale de classe 1");
+		
+		plantesCuratives.setNom("Plantes curatives");
+		plantesCuratives.setCategorie("Artefact");
+		plantesCuratives.setClasse(1);
+		plantesCuratives.setValeur(100);
+		plantesCuratives.setPrestige(2);
+		plantesCuratives.setDescription("10 doses");
+		plantesCuratives.setType("Plantes de classe 1");
+		
+		
 		context.close();
 	}
 }

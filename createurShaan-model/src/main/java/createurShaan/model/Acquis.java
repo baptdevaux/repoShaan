@@ -39,12 +39,22 @@ public class Acquis {
 	private Integer valeur;
 	@Column
 	private String type;
+	@Column
+	private Integer prestige;
 	
 	@OneToMany (mappedBy = "acquis")
 	private List <SpecialisationAcquis> speListe = new ArrayList <SpecialisationAcquis>();
 
 	public Long getId() {
 		return id;
+	}
+
+	public Integer getPrestige() {
+		return prestige;
+	}
+
+	public void setPrestige(Integer prestige) {
+		this.prestige = prestige;
 	}
 
 	public void setId(Long id) {
@@ -121,6 +131,14 @@ public class Acquis {
 
 	public void setSpeListe(List<SpecialisationAcquis> speListe) {
 		this.speListe = speListe;
+	}
+
+	public String getNom() {
+		return nom;
+	}
+
+	public void setNom(String nom) {
+		this.nom = nom;
 	}
 
 	public Acquis() {
