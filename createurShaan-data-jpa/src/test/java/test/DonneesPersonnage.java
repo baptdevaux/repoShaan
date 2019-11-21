@@ -385,6 +385,16 @@ public class DonneesPersonnage {
 		Acquis cachet = new Acquis();
 		Acquis pomolhPuant = new Acquis();
 		Acquis plantesCuratives = new Acquis();
+		Acquis schemeDEnchantementMineur = new Acquis();
+		Acquis tuniqueNomoi = new Acquis();
+		Acquis grigriDuVegetal = new Acquis();
+		Acquis batonWoon = new Acquis();
+		Acquis boomerang = new Acquis();
+		Acquis longueVue = new Acquis();
+		Acquis bolas = new Acquis();
+		Acquis sarbacane = new Acquis();
+		Acquis armeAFeu = new Acquis();
+		Acquis radar = new Acquis();
 		
 //*************************************************************************************************************************
 //		REMPLISSAGE
@@ -2933,6 +2943,77 @@ public class DonneesPersonnage {
 		plantesCuratives.setDescription("10 doses");
 		plantesCuratives.setType("Plantes de classe 1");
 		
+		tuniqueNomoi.setNom("Tunique Nomoi");
+		tuniqueNomoi.setCategorie("Protection");
+		tuniqueNomoi.setClasse(1);
+		tuniqueNomoi.setValeur(300);
+		tuniqueNomoi.setProtection("Corps +1");
+		tuniqueNomoi.setDescription("Combinaison constituée de fines plaques métalliques cousues dans les drapés d'un tissu épais.");
+		tuniqueNomoi.setType("Acquis du quotidien");
+		
+		schemeDEnchantementMineur.setNom("Scheme d'enchantement mineur");
+		schemeDEnchantementMineur.setCategorie("Artefact");
+		schemeDEnchantementMineur.setClasse(1);
+		schemeDEnchantementMineur.setValeur(500);
+		schemeDEnchantementMineur.setPrestige(2);
+		schemeDEnchantementMineur.setDescription("Schème sculpté, gravé, tatoué, peint, ... qui donne un bonus dans la Spécialisation Enchantement.");
+		schemeDEnchantementMineur.setType("Schemes de classe 1");
+		
+		batonWoon.setNom("Baton Woon");
+		batonWoon.setCategorie("Armement");
+		batonWoon.setClasse(1);
+		batonWoon.setValeur(200);
+		batonWoon.setType("Acquis du quotidien");
+		
+		grigriDuVegetal.setNom("Grigri du végétal");
+		grigriDuVegetal.setCategorie("Artefact");
+		grigriDuVegetal.setClasse(1);
+		grigriDuVegetal.setValeur(100);
+		grigriDuVegetal.setPrestige(2);
+		grigriDuVegetal.setDescription("pendentif à icônes, amulette, livre de culte, corne d’appel à la prière, talisman …");
+		grigriDuVegetal.setType("Grigri");
+		
+		longueVue.setNom("Longue vue");
+		longueVue.setCategorie("Outil");
+		longueVue.setClasse(1);
+		longueVue.setValeur(100);
+		longueVue.setType("Outils de classe 1");
+		
+		boomerang.setNom("Boomerang");
+		boomerang.setCategorie("Armement");
+		boomerang.setClasse(1);
+		boomerang.setValeur(200);
+		boomerang.setType("Armement");
+		
+		sarbacane.setNom("Sarbacane");
+		sarbacane.setCategorie("Armement");
+		sarbacane.setClasse(1);
+		sarbacane.setValeur(200);
+		sarbacane.setCapacité("Dards empoisonnés : Si le dard inflige une blessure, on applique les règles de Poison.");
+		sarbacane.setType("Armement de classe 1");
+		
+		bolas.setNom("Bolas");
+		bolas.setCategorie("Artefact");
+		bolas.setClasse(1);
+		bolas.setValeur(200);
+		bolas.setCapacité("Capacité Capturer : Si le personnage parvient à infliger une blessure, il peut choisir de ne pas infliger de dégâts pour capturer l’adversaire. La victime prisonnière sera alors considérée comme paralysée tant qu’elle ne s'est pas libérée grâce à un Test de COMBAT + Forcer ou SURVIE + Acrobatie en opposition.");
+		bolas.setType("Armement de classe 1");
+		
+		radar.setNom("Radar");
+		radar.setCategorie("Technologie");
+		radar.setClasse(1);
+		radar.setValeur(1000);
+		radar.setPrestige(1);
+		radar.setDescription("Dispositif de détection de mouvement aérien qui porte à 10km. Il est livré avec une petite console utilisée pour interpréter les signaux reçus et paramétrer le système de détection.");
+		radar.setType("Technologie de classe 1");
+		
+		armeAFeu.setNom("Arme à feu");
+		armeAFeu.setCategorie("Technologie");
+		armeAFeu.setClasse(1);
+		armeAFeu.setValeur(1000);
+		armeAFeu.setPrestige(1);
+		armeAFeu.setDescription("Tous types de pistolets de petit calibre qui tirent des munitions standard produites dans les Arsenaux des Grandes Familles. Ces armes disposent d'un télémètre (estimateur de distance), d'un objectif pour lunette de corrélation, ainsi que d'une mire laser (point rouge). Leur facilité d'utilisation et de rechargement transforme n'importe quel individu en donneur de mort.");
+		armeAFeu.setType("Armes humaine");
 		
 		context.close();
 	}
